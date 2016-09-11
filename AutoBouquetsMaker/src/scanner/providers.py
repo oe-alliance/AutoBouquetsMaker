@@ -90,12 +90,13 @@ class Providers():
 						transponder["nit_pid"] = 0x10
 						transponder["nit_current_table_id"] = 0x40
 						transponder["nit_other_table_id"] = 0x41
+						transponder["nit_other_network_id"] = 0x00	# no default value
 						transponder["sdt_pid"] = 0x11
 						transponder["sdt_current_table_id"] = 0x42
 						transponder["sdt_other_table_id"] = 0x46
 						transponder["bat_pid"] = 0x11
 						transponder["bat_table_id"] = 0x4a
-						transponder["fastscan_pid"] = 0x00			# no default value
+						transponder["fastscan_pid"] = 0x00		# no default value
 						transponder["fastscan_table_id"] = 0x00		# no default value
 						for i in range(0, node.attributes.length):
 							if node.attributes.item(i).name == "frequency":
@@ -136,6 +137,8 @@ class Providers():
 								transponder["nit_current_table_id"] = int(node.attributes.item(i).value, 16)
 							elif node.attributes.item(i).name == "nit_other_table_id":
 								transponder["nit_other_table_id"] = int(node.attributes.item(i).value, 16)
+							elif node.attributes.item(i).name == "nit_other_network_id":
+								transponder["nit_other_network_id"] = int(node.attributes.item(i).value, 16)
 							elif node.attributes.item(i).name == "sdt_pid":
 								transponder["sdt_pid"] = int(node.attributes.item(i).value, 16)
 							elif node.attributes.item(i).name == "sdt_current_table_id":
@@ -151,8 +154,10 @@ class Providers():
 							elif node.attributes.item(i).name == "fastscan_table_id":
 								transponder["fastscan_table_id"] = int(node.attributes.item(i).value, 16)
 
-						if len(transponder.keys()) in (20, 16):
+						if len(transponder.keys()) in (21, 17):
 							provider["transponder"] = transponder
+						else:
+							print>>log, "[Providers] transponder has incorrect number of fields (%d)" % len(transponder.keys())
 
 					elif node.tagName == "bouquettype":
 						node.normalize()
@@ -188,6 +193,7 @@ class Providers():
 						transponder["nit_pid"] = 0x10
 						transponder["nit_current_table_id"] = 0x40
 						transponder["nit_other_table_id"] = 0x41
+						transponder["nit_other_network_id"] = 0x00
 						transponder["sdt_pid"] = 0x11
 						transponder["sdt_current_table_id"] = 0x42
 						transponder["sdt_other_table_id"] = 0x46
@@ -237,6 +243,7 @@ class Providers():
 						transponder["nit_pid"] = 0x10
 						transponder["nit_current_table_id"] = 0x40
 						transponder["nit_other_table_id"] = 0x00
+						transponder["nit_other_network_id"] = 0x00
 						transponder["sdt_pid"] = 0x11
 						transponder["sdt_current_table_id"] = 0x42
 						transponder["sdt_other_table_id"] = 0x46
