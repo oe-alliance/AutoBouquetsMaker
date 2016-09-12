@@ -20,6 +20,7 @@ class DvbScanner():
 		self.nit_pid = 0x10
 		self.nit_current_table_id = 0x40
 		self.nit_other_table_id = 0x41
+		self.nit_other_network_id = 0
 		self.sdt_pid = 0x11
 		self.sdt_current_table_id = 0x42
 		self.sdt_other_table_id = 0x46
@@ -88,6 +89,11 @@ class DvbScanner():
 		self.nit_other_table_id = value
 		print>>log, "[DvbScanner] NIT other table id: 0x%x" % self.nit_other_table_id
 
+	def setNitOtherNetworkId(self, value):
+		self.nit_other_network_id = value
+		if value != 0:
+			print>>log, "[DvbScanner] NIT other network id: 0x%x" % self.nit_other_network_id
+
 	def setSdtPid(self, value):
 		self.sdt_pid = value
 		print>>log, "[DvbScanner] SDT pid: 0x%x" % self.sdt_pid
@@ -138,14 +144,14 @@ class DvbScanner():
 		else:
 			mask = self.nit_current_table_id ^ self.nit_other_table_id ^ 0xff
 
-		print>>log, "[DvbScanner] demuxer_device", str(self.demuxer_device)
-		print>>log, "[DvbScanner] nit_pid", str(self.nit_pid)
-		print>>log, "[DvbScanner] nit_current_table_id", str(self.nit_current_table_id)
-		print>>log, "[DvbScanner] mask", str(mask)
-		print>>log, "[DvbScanner] frontend", str(self.frontend)
 		fd = dvbreader.open(self.demuxer_device, self.nit_pid, self.nit_current_table_id, mask, self.frontend)
 		if fd < 0:
 			print>>log, "[DvbScanner] Cannot open the demuxer"
+			print>>log, "[DvbScanner] demuxer_device", str(self.demuxer_device)
+			print>>log, "[DvbScanner] nit_pid", str(self.nit_pid)
+			print>>log, "[DvbScanner] nit_current_table_id", str(self.nit_current_table_id)
+			print>>log, "[DvbScanner] mask", str(mask)
+			print>>log, "[DvbScanner] frontend", str(self.frontend)
 			return None
 
 		nit_current_section_version = -1
@@ -209,8 +215,15 @@ class DvbScanner():
 						nit_current_completed = True
 						nit_other_completed = True
 
-
 			elif section["header"]["table_id"] == self.nit_other_table_id and not nit_other_completed:
+				if self.nit_other_network_id != 0:
+					if section["header"]["network_id"] != self.nit_other_network_id:
+						if self.extra_debug:
+							print>>log, "[DvbScanner] Skipping NIT-other NID 0x%x" % section["header"]["network_id"]
+						continue
+					elif self.extra_debug:
+						print>>log, "[DvbScanner] Found NIT-other NID 0x%x" % section["header"]["network_id"]
+
 				if (section["header"]["version_number"] != nit_other_section_version or section["header"]["network_id"] != nit_other_section_network_id):
 					nit_other_section_version = section["header"]["version_number"]
 					nit_other_section_network_id = section["header"]["network_id"]
