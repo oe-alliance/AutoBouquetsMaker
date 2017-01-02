@@ -272,9 +272,9 @@ except:
 	}
 
 	channels_to_add_by_id = {
-		1251: 161, # RTE One
-		1252: 162, # RTE2
-		1253: 163, # TG4
+		1251: 283, # RTE One
+		1252: 284, # RTE2
+		1253: 285, # TG4
 		5122: 423, # eir Sport 1 (also 3601)
 		5123: 424, # eir Sport 2 (also 4551)
 		5311: 428, # Premier Sports
