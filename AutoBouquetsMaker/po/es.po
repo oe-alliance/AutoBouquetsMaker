@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-06 14:58+0200\n"
-"PO-Revision-Date: 2016-05-06 14:58+0200\n"
+"PO-Revision-Date: 2017-02-28 14:58+0200\n"
 "Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -27,11 +27,11 @@ msgstr ""
 
 #: ../src/about.py:25 ../src/menu.py:98
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
 #: ../src/about.py:37 ../src/menu.py:242
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #: ../src/deletebouquets.py:35
 msgid "Are you sure you want to remove all bouquets created by ABM?"
