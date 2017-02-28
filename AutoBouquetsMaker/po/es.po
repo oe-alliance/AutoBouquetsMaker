@@ -35,99 +35,99 @@ msgstr ""
 
 #: ../src/deletebouquets.py:35
 msgid "Are you sure you want to remove all bouquets created by ABM?"
-msgstr ""
+msgstr "Quieres borrar todos los favoritos creados por ABM?"
 
 #: ../src/hidesections.py:47
 msgid "AutoBouquetsMaker Hide sections"
-msgstr ""
+msgstr "AutoBouquetsMaker Ocultar secciones"
 
 #: ../src/hidesections.py:52 ../src/keepbouquets.py:53 ../src/ordering.py:54
 #: ../src/setup.py:57 ../src/setup.py:458
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: ../src/hidesections.py:53
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: ../src/hidesections.py:134 ../src/keepbouquets.py:134 ../src/ordering.py:171
 #: ../src/setup.py:420 ../src/setup.py:543
 msgid "Really close without saving settings?"
-msgstr ""
+msgstr "Quieres cerrar sin guardar cambios?"
 
 #: ../src/keepbouquets.py:48
 msgid "AutoBouquetsMaker Keep bouquets"
-msgstr ""
+msgstr "AutoBouquetsMaker Mantener favoritos"
 
 #: ../src/menu.py:77
 msgid "Exit"
-msgstr ""
+msgstr "Salir"
 
 #: ../src/menu.py:78
 msgid "Scan"
-msgstr ""
+msgstr "Escanear"
 
 #: ../src/menu.py:87
 msgid "Configure"
-msgstr ""
+msgstr "Configurar"
 
 #: ../src/menu.py:88
 msgid "Providers"
-msgstr ""
+msgstr "Proveedores"
 
 #: ../src/menu.py:90
 msgid "Providers order"
-msgstr ""
+msgstr "Orden proveedores"
 
 #: ../src/menu.py:92
 msgid "Hide sections"
-msgstr ""
+msgstr "Ocultar secciones"
 
 #: ../src/menu.py:94
 msgid "Keep bouquets"
-msgstr ""
+msgstr "Mantener favoritos"
 
 #: ../src/menu.py:95
 msgid "Start scan"
-msgstr ""
+msgstr "Empezar escaneo"
 
 #: ../src/menu.py:96
 msgid "Delete bouquets"
-msgstr ""
+msgstr "Borrar favoritos"
 
 #: ../src/menu.py:97
 msgid "Show log"
-msgstr ""
+msgstr "Mostrar log"
 
 #: ../src/menu.py:229
 msgid "AutoBouquetsMaker Log"
-msgstr ""
+msgstr "AutoBouquetsMaker Log"
 
 #: ../src/menu.py:241
 msgid "Save Log"
-msgstr ""
+msgstr "Guardar log"
 
 #: ../src/menu.py:248
 msgid "ABM log file has been saved to the tmp directory"
-msgstr ""
+msgstr "Archivo log guardado en carpeta tmp"
 
 #: ../src/ordering.py:43
 msgid "Bouquets order"
-msgstr ""
+msgstr "Orden favoritos"
 
 #: ../src/ordering.py:77 ../src/setup.py:66 ../src/setup.py:467
 msgid "Please wait..."
-msgstr ""
+msgstr "Por favor espere..."
 
 #: ../src/ordering.py:91 ../src/ordering.py:97 ../src/ordering.py:126
 #: ../src/ordering.py:132
 msgid "Move down"
-msgstr ""
+msgstr "Mover abajo"
 
 #: ../src/ordering.py:93 ../src/ordering.py:96 ../src/ordering.py:128
 #: ../src/ordering.py:131
 msgid "Move up"
-msgstr ""
+msgstr "Mover arriba"
 
 #: ../src/plugin.py:12
 msgid "simple"
@@ -135,27 +135,27 @@ msgstr ""
 
 #: ../src/plugin.py:12
 msgid "expert"
-msgstr ""
+msgstr "experto"
 
 #: ../src/plugin.py:17
 msgid "Daily"
-msgstr ""
+msgstr "Diario"
 
 #: ../src/plugin.py:17
 msgid "Weekly"
-msgstr ""
+msgstr "Semanal"
 
 #: ../src/plugin.py:17
 msgid "30 Days"
-msgstr ""
+msgstr "30 días"
 
 #: ../src/plugin.py:27
 msgid "Top"
-msgstr ""
+msgstr "Inicio"
 
 #: ../src/plugin.py:27
 msgid "Bottom"
-msgstr ""
+msgstr "Final"
 
 #: ../src/plugin.py:49
 msgid "AutoBouquetsMaker Scanner"
@@ -163,113 +163,115 @@ msgstr ""
 
 #: ../src/scanner/bouquetswriter.py:370
 msgid "All channels"
-msgstr ""
+msgstr "Todos los canales"
 
 #: ../src/scanner/bouquetswriter.py:426 ../src/scanner/bouquetswriter.py:588
 msgid "HD Channels"
-msgstr ""
+msgstr "Canales HD"
 
 #: ../src/scanner/bouquetswriter.py:429 ../src/scanner/bouquetswriter.py:649
 msgid "FTA HD Channels"
-msgstr ""
+msgstr "Canales HD FTA"
 
 #: ../src/scanner/bouquetswriter.py:710
 msgid "FTA Channels"
-msgstr ""
+msgstr "Canales FTA"
 
 #: ../src/scanner/bouquetswriter.py:761
 msgid "Radio Channels"
-msgstr ""
+msgstr "Canales de radio"
 
 #: ../src/scanner/main.py:49
 msgid "Starting scanner"
-msgstr ""
+msgstr "Abrir scanner"
 
 #: ../src/scanner/main.py:86
 msgid "Loading bouquets..."
-msgstr ""
+msgstr "Cargando favoritos..."
 
 #: ../src/scanner/main.py:87
 msgid "Services: 0 video - 0 radio"
-msgstr ""
+msgstr "Servicios: 0 video - 0 radio"
 
 #: ../src/scanner/main.py:92
 msgid "Please first setup, in configuration"
-msgstr ""
+msgstr "Por favor primer ajuste, en configuración"
 
 #: ../src/scanner/main.py:190
 msgid "Bouquets generation..."
-msgstr ""
+msgstr "Generando favoritos"
 
 #: ../src/scanner/main.py:191 ../src/scanner/main.py:204
 #: ../src/scanner/main.py:436 ../src/scanner/main.py:499
 #, python-format
 msgid "Services: %d video - %d radio"
-msgstr ""
+msgstr "Servicios: %d video - %d radio"
 
 #: ../src/scanner/main.py:203
 #, python-format
 msgid "Tuning %s..."
-msgstr ""
+msgstr "Sintonizando %s..."
 
 #: ../src/scanner/main.py:226
 msgid "No area found"
-msgstr ""
+msgstr "Area no encontrada"
 
 #: ../src/scanner/main.py:243
 msgid "No NIMs found for "
-msgstr ""
+msgstr "NIMs no encontrados para "
 
 #: ../src/scanner/main.py:249
 msgid "Cannot retrieve Resource Manager instance"
-msgstr ""
+msgstr "No se puede recuperar instancia del Administrador de Recursos"
 
 #: ../src/scanner/main.py:316
 msgid "No valid NIM found for "
-msgstr ""
+msgstr "Ningún NIM válido para "
 
 #: ../src/scanner/main.py:341
 msgid "Cannot free NIM because a recording is in progress"
-msgstr ""
+msgstr "No se puede liberar NIM porque hay una grabación en curso"
 
 #: ../src/scanner/main.py:345
 msgid "Cannot get the NIM"
-msgstr ""
+msgstr "No se puede obtener el NIM"
 
 #: ../src/scanner/main.py:359
 msgid "Cannot get frontend"
-msgstr ""
+msgstr "No se puede obtener el frontend"
 
 #: ../src/scanner/main.py:365
 msgid "Cannot allocate the demuxer"
-msgstr ""
+msgstr "No se puede asignar el demuxer"
 
 #: ../src/scanner/main.py:435
 #, python-format
 msgid "Reading %s..."
-msgstr ""
+msgstr "Leyendo %s..."
 
 #: ../src/scanner/main.py:447
 msgid "Timeout for tuner lock"
-msgstr ""
+msgstr "Timeout para el bloqueo del tuner"
 
 #: ../src/scanner/main.py:474
 msgid "Cannot read data"
-msgstr ""
+msgstr "No se pueden leer datos"
 
 #: ../src/scanner/main.py:498
 msgid "Done"
-msgstr ""
+msgstr "Hecho"
 
 #: ../src/scanner/main.py:650
 msgid ""
 "Your bouquets are about to be updated,\n"
 "Do you want to allow this?"
 msgstr ""
+"Tus favoritos están a punto de actualizarse"
+"Autorizas la actualización?"
 
 #: ../src/scanner/main.py:671
 msgid "Enough Retries, delaying till next schedule."
-msgstr ""
+msgstr "Demasiados reintentos, esperando hasta la próxima búsqueda."
 
 #: ../src/scanner/main.py:697
 msgid "%a %e %b  %-H:%M"
@@ -277,7 +279,7 @@ msgstr ""
 
 #: ../src/setup.py:38
 msgid "AutoBouquetsMaker Providers"
-msgstr ""
+msgstr "AutoBouquetsMaker Proveedores"
 
 #: ../src/setup.py:58 ../src/setup.py:459
 msgid "OK"
@@ -285,18 +287,18 @@ msgstr ""
 
 #: ../src/setup.py:169 ../src/setup.py:211
 msgid "yes"
-msgstr ""
+msgstr "si"
 
 #: ../src/setup.py:171
 msgid "yes (only HD)"
-msgstr ""
+msgstr "sin (solo HD)"
 
 #: ../src/setup.py:172
 msgid "yes (only FTA HD)"
-msgstr ""
+msgstr "si (solo HD FTA)"
 
 #: ../src/setup.py:189
-msgid "yes (custom)"
+msgid "si (personalizado)"
 msgstr ""
 
 #: ../src/setup.py:202 ../src/setup.py:211
@@ -305,31 +307,34 @@ msgstr ""
 
 #: ../src/setup.py:259
 msgid "This option enables the current selected provider."
-msgstr ""
+msgstr "Esta opción habilita el proveedor seleccionado"
 
 #: ../src/setup.py:262
 msgid "area"
-msgstr ""
+msgstr "área"
 
 #: ../src/setup.py:262
 msgid ""
 "This option allows you to choose what region of the country you live in, so "
 "it populates the correct channels for your region."
 msgstr ""
-
+"Esta opción te permite escoger la región del país donde vives, por tanto "
+"se rellenan los canales correctos para tu región"
 #: ../src/setup.py:267
 msgid "FTA only"
-msgstr ""
+msgstr "Solo FTA"
 
 #: ../src/setup.py:267
 msgid ""
 "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' "
 "to skip encrypted ones."
 msgstr ""
+"Esto afecta a todos los favoritos. Selecciona 'no' para escanear en todos los servicios. Selecciones 'si' "
+"para saltar los codificados."
 
 #: ../src/setup.py:270
 msgid "generate main bouquet"
-msgstr ""
+msgstr "Generar lista favoritos principal"
 
 #: ../src/setup.py:270
 msgid ""
@@ -337,135 +342,154 @@ msgid ""
 "channels in it), \"Yes HD only\", (will group all HD channels into this "
 "bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do "
 "not use a main bouquet)"
-msgstr ""
+msgstr "Esta opción tiene varias opciones \ "Si\", (crear una lista de favoritos"
+"con todos los canales dentro), \"Si, solo HD\", (agrupar todos los canales HD en"
+"esta lista), \"Personalizado\", (te permite seleccionar to propia lista), \"No\", (no "
+"usar una lista principal)"
 
 #: ../src/setup.py:273
 msgid "custom bouquet for main"
-msgstr ""
+msgstr "Lista personalizada principal"
 
 #: ../src/setup.py:273
 msgid ""
 "Select your own bouquet from the list, please note that the only the first "
 "100 channels for this bouquet will be used."
 msgstr ""
+"Selecciona tu propia lista de favoritos, ten en cuenta que solo podrán usarse "
+"los 100 primeros canales de esta lista"
 
 #: ../src/setup.py:276
 msgid "generate sections bouquets"
-msgstr ""
+msgstr "generar sección favoritos"
 
 #: ../src/setup.py:276
 msgid ""
 "This option will create bouquets for each type of channel, ie Entertainment, "
 "Movies, Documentary."
 msgstr ""
+"Esta opción creará listas de favoritos para cada tipo de canal, p.ej. Entretenimiento, "
+"Películas, Documentales."
 
 #: ../src/setup.py:279
 msgid "generate HD bouquet"
-msgstr ""
+msgstr "generar lista favoritos HD"
 
 #: ../src/setup.py:279
 msgid ""
 "This option will create a High Definition bouquet, it will group all HD "
 "channels into this bouquet."
 msgstr ""
+"Está opción creará una lista de Alta Definición, agrupará todos los canales "
+"HD en esta lista"
 
 #: ../src/setup.py:282
 msgid "generate FTA bouquet"
-msgstr ""
+msgstr "generar lista favoritos FTA"
 
 #: ../src/setup.py:282
 msgid ""
 "This option will create a FreeToAir bouquet, it will group all free channels "
 "into this bouquet."
 msgstr ""
+"Esta opción creará una lista FTA, agrupará todos los canales libres "
+"en esta lista"
 
 #: ../src/setup.py:285
 msgid "generate FTA HD bouquet"
-msgstr ""
+msgstr "generar lista favoritos FTA HD"
 
 #: ../src/setup.py:285
 msgid ""
 "This option will create a FreeToAir High Definition bouquet, it will group "
 "all FTA HD channels into this bouquet."
 msgstr ""
+"Esta opción creará una lista FTA de Alta Definición, agrupará "
+"todos los canales libres en esta lista"
 
 #: ../src/setup.py:291 ../src/setup.py:300 ../src/setup.py:308
 msgid "swap channels"
-msgstr ""
+msgstr "intercambiar canales"
 
 #: ../src/setup.py:291 ../src/setup.py:300 ../src/setup.py:308
 msgid ""
 "This option will swap SD versions of channels with HD versions. (eg BBC One "
 "SD with BBC One HD, Channel Four SD with with Channel Four HD)"
 msgstr ""
+"Esta opción intercambiará las versiones SD de los canales con las versiones HD. (ej. "
+"BBC One SD con BBC One HD, Canal AXN SD con canal AXN HD)"
 
 #: ../src/setup.py:439
 msgid "AutoBouquetsMaker Configure"
-msgstr ""
+msgstr "Configurar AutoBouquetsMaker"
 
 #: ../src/setup.py:484
 msgid "Setup mode"
-msgstr ""
+msgstr "Modo congifuración"
 
 #: ../src/setup.py:484
 msgid ""
 "Choose which level of settings to display. 'Expert'-level shows all items, "
 "this also adds more options in the providers menu."
 msgstr ""
+"Escoge el nivel de configuración a mostrar. 'Experto'-muestra todas las opciones, "
+"también añade más opciones en el menú proveedores."
 
 #: ../src/setup.py:485
 msgid "Schedule scan"
-msgstr ""
+msgstr "Programar escaneo"
 
 #: ../src/setup.py:485
 msgid "Allows you to set a schedule to perform a scan "
-msgstr ""
+msgstr "Te permite configurar una programación para hacer un escaneo"
 
 #: ../src/setup.py:487
 msgid "Time of scan to start"
-msgstr ""
+msgstr "Hora inicio escaneo"
 
 #: ../src/setup.py:487
 msgid "Set the time of day to perform the scan."
-msgstr ""
+msgstr "Configura la hora del día para ejecutar el escaneo"
 
 #: ../src/setup.py:488
 msgid "Repeat how often"
-msgstr ""
+msgstr "Repite la frecuencia"
 
 #: ../src/setup.py:488
 msgid "Set the repeat interval of the schedule."
-msgstr ""
+msgstr "Configura el intervalo de repetición de la programación"
 
 #: ../src/setup.py:490
 msgid "Keep all non-ABM bouquets"
-msgstr ""
+msgstr "Mantener todas las lista no-ABM"
 
 #: ../src/setup.py:490
 msgid ""
 "When disabled this will enable the 'Keep bouquets' option in the main menu, "
 "allowing you to hide some 'existing' bouquets."
 msgstr ""
+"Cuando está deshabilitada, se habilitará la opción 'Mantener favoritos' en el menú principal, "
+"permitiendo esconder algunas listas existentes."
 
 #: ../src/setup.py:491
 msgid "Add provider prefix to bouquets"
-msgstr ""
+msgstr "Añadir prefijo de proveedor a la lista de favoritos"
 
 #: ../src/setup.py:491
 msgid "This option will prepend the provider name to bouquet name."
-msgstr ""
+msgstr "Esta opción añadirá el nombre del proveedor al nombre del favorito "
 
 #: ../src/setup.py:492
 msgid "Place bouquets at"
-msgstr ""
+msgstr "Situar listas en"
 
 #: ../src/setup.py:492
 msgid "This option will allow you choose where to place the created bouquets."
-msgstr ""
+msgstr "Esta opción permitirá escoger donde situar la lista creada"
 
 #: ../src/setup.py:493
 msgid "Skip services on not configured sats"
-msgstr ""
+msgstr "Saltar servicios de satélites no configurados"
 
 #: ../src/setup.py:493
 msgid ""
@@ -473,10 +497,13 @@ msgid ""
 "the channel will not appear in the channel list, 'no' means the channel will "
 "show in the channel list but be greyed out and not be accessible."
 msgstr ""
+"Si un servicio se lleva a cabo en un satélite que no está configurado, 'sí' significa"
+"que el canal no aparecerá en la lista de canales, 'no' significa que el canal"
+"se mostrará en la lista de canales, pero estará en gris y no será accesible."
 
 #: ../src/setup.py:494
 msgid "Include 'not indexed' channels"
-msgstr ""
+msgstr "Incluir canales 'no indexados'"
 
 #: ../src/setup.py:494
 msgid ""
@@ -484,21 +511,26 @@ msgid ""
 "number, 'yes' will add these at the end of the channel list, and 'no' means "
 "these will not be included."
 msgstr ""
+"Cuando una búsqueda encuentra canales adicionales que no tienen un número de canal "
+"asignado, 'sí' agregará estos al final de la lista de canales, y 'no' significa"
+"que no serán incluidos."
 
 #: ../src/setup.py:495
 msgid "Extra debug"
-msgstr ""
+msgstr "Depuración extra"
 
 #: ../src/setup.py:495
 msgid ""
 "This feature is for development only. Requires debug logs to be enabled or "
 "enigma2 to be started in console mode."
 msgstr ""
+"Esta característica es solo para el desarrollo. Requiere registros de depuración para ser habilitado o "
+"iniciar enigma2 en modo cónsola."
 
 #: ../src/setup.py:496
 msgid "Show in extensions"
-msgstr ""
+msgstr "Mostrar en extensiones"
 
 #: ../src/setup.py:496
 msgid "When enabled, allows you start a scan from the extensions list."
-msgstr ""
+msgstr "Cuando esté habilitado, permite iniciar un escaneo desde el menú extensiones"
