@@ -35,7 +35,7 @@ msgstr "Cerrar"
 
 #: ../src/deletebouquets.py:35
 msgid "Are you sure you want to remove all bouquets created by ABM?"
-msgstr "Quieres borrar todos los favoritos creados por ABM?"
+msgstr "Estás seguro que quieres borrar todos los favoritos creados por ABM?"
 
 #: ../src/hidesections.py:47
 msgid "AutoBouquetsMaker Hide sections"
@@ -53,7 +53,7 @@ msgstr "Guardar"
 #: ../src/hidesections.py:134 ../src/keepbouquets.py:134 ../src/ordering.py:171
 #: ../src/setup.py:420 ../src/setup.py:543
 msgid "Really close without saving settings?"
-msgstr "Quieres cerrar sin guardar cambios?"
+msgstr "Estás seguro que quieres cerrar sin guardar cambios?"
 
 #: ../src/keepbouquets.py:48
 msgid "AutoBouquetsMaker Keep bouquets"
@@ -109,7 +109,7 @@ msgstr "Guardar log"
 
 #: ../src/menu.py:248
 msgid "ABM log file has been saved to the tmp directory"
-msgstr "Archivo log guardado en carpeta tmp"
+msgstr "Archivo log ABM guardado en carpeta tmp"
 
 #: ../src/ordering.py:43
 msgid "Bouquets order"
@@ -291,7 +291,7 @@ msgstr "si"
 
 #: ../src/setup.py:171
 msgid "yes (only HD)"
-msgstr "sin (solo HD)"
+msgstr "si (solo HD)"
 
 #: ../src/setup.py:172
 msgid "yes (only FTA HD)"
@@ -344,7 +344,7 @@ msgid ""
 "not use a main bouquet)"
 msgstr "Esta opción tiene varias opciones \ "Si\", (crear una lista de favoritos"
 "con todos los canales dentro), \"Si, solo HD\", (agrupar todos los canales HD en"
-"esta lista), \"Personalizado\", (te permite seleccionar to propia lista), \"No\", (no "
+"esta lista), \"Personalizado\", (te permite seleccionar tu propia lista), \"No\", (no "
 "usar una lista principal)"
 
 #: ../src/setup.py:273
