@@ -1,0 +1,28 @@
+<provider>
+	<name>HD+ #2</name>
+	<dependent>sat_0192_hd+</dependent>
+	<streamtype>dvbs</streamtype>
+	<protocol>lcn</protocol>
+	<transponder
+		orbital_position="192"
+		frequency="10803000"
+		symbol_rate="22000000"
+		polarization="0"
+		fec_inner="3"
+		inversion="2"
+		system="1"
+		modulation="2"
+		roll_off="0"
+		pilot="2"
+	/>
+	<sections>
+		<section number="1">HD+</section>
+	</sections>
+	<servicehacks>
+<![CDATA[
+# Austrian HD services are encrypted and not available through HD+.
+if service["service_name"][-11:] == " HD Austria":
+	skip = True
+]]>
+	</servicehacks>
+</provider>

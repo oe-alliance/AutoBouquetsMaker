@@ -1,0 +1,56 @@
+<provider>
+	<name>HD+ #13</name>
+	<dependent>sat_0192_hd+</dependent>
+	<streamtype>dvbs</streamtype>
+	<protocol>lcn</protocol>
+	<transponder
+		orbital_position="192"
+		frequency="12633000"
+		symbol_rate="22000000"
+		polarization="0"
+		fec_inner="4"
+		inversion="2"
+		system="0"
+		modulation="1"
+		roll_off="0"
+		pilot="2"
+	/>
+	<sections>
+		<section number="1">HD+</section>
+	</sections>
+	<servicehacks>
+<![CDATA[
+blacklist = (
+              12606, # Lustkanal24 TV
+              12607, # MEDIA BROADCAST - Test 6
+              12612, # GayBoys LIVE
+              12615, # Deutsche Girls 24 TV 
+              12616, # Juwelo TV
+              12618, # Dreamgirls24 TV
+              12619, # Erotiksat24 TV
+              12620, # 123-Damenwahl
+              12621, # MEDIA BROADCAST - Test 3
+              12622, # Maennersache TV
+              12623, # Date Line
+              12624, # Fotohandy
+              12625, # Mobile Sex
+              12626, # SEX-Kontakte
+              12627, # Eros TV
+              12628, # Achtung Sexy TV
+              12629, # Traumfrauen TV
+              12630, # Heiss und Sexy TV
+              12635, # Babestation24
+              12636, # Fundorado TV
+              12639, # EROTIKA TV - NEU!
+              12640, # BunnyClub24
+              12641, # Clipmobile
+              12642, # MEDIA BROADCAST - Test 4
+              12643, # ALT Sendersuchlauf starten!!
+              12644, # multithek (Internet)
+            )
+
+if service["service_id"] in blacklist:
+	skip = True
+]]>
+	</servicehacks>
+</provider>
