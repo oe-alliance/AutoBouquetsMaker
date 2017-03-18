@@ -265,8 +265,9 @@ except:
 	}
 
 	channels_to_add_by_id = {
-		1251: 291, # RTE One
-		1252: 292, # RTE2
+		1251: 290, # RTE One
+		1252: 291, # RTE2
+                1255: 292, # TV3
 		1253: 293, # TG4
 		5122: 423, # eir Sport 1 (also 3601)
 		5123: 424, # eir Sport 2 (also 4551)
