@@ -284,6 +284,9 @@ Provider key: sat_282_freesat
 Provider name: FreeView (UK)
 Provider key: terrestrial_uk_freeview
 
+Provider name: HD+ (DE)
+Provider key: sat_0192_hd+
+
 Provider name: Kabel (NL)
 Provider key: cable_nl
 

@@ -20,9 +20,8 @@
 	</sections>
 	<servicehacks>
 <![CDATA[
-# 10121 = SES Demo
-# Austrian HD services are encrypted and not available through HD+.
-if service["service_id"] == 10121 or service["service_name"][-11:] == " HD Austria":
+# Skip test service and non-HD+ encrypted services.
+if service["service_name"] == "SES Demo" or service["service_name"][-11:] == " HD Austria":
 	skip = True
 ]]>
 	</servicehacks>

@@ -20,36 +20,37 @@
 	</sections>
 	<servicehacks>
 <![CDATA[
+# Skip test services, interactive services, and chat line spam.
 blacklist = (
-              12606, # Lustkanal24 TV
-              12607, # MEDIA BROADCAST - Test 6
-              12612, # GayBoys LIVE
-              12615, # Deutsche Girls 24 TV 
-              12616, # Juwelo TV
-              12618, # Dreamgirls24 TV
-              12619, # Erotiksat24 TV
-              12620, # 123-Damenwahl
-              12621, # MEDIA BROADCAST - Test 3
-              12622, # Maennersache TV
-              12623, # Date Line
-              12624, # Fotohandy
-              12625, # Mobile Sex
-              12626, # SEX-Kontakte
-              12627, # Eros TV
-              12628, # Achtung Sexy TV
-              12629, # Traumfrauen TV
-              12630, # Heiss und Sexy TV
-              12635, # Babestation24
-              12636, # Fundorado TV
-              12639, # EROTIKA TV - NEU!
-              12640, # BunnyClub24
-              12641, # Clipmobile
-              12642, # MEDIA BROADCAST - Test 4
-              12643, # ALT Sendersuchlauf starten!!
-              12644, # multithek (Internet)
+              "123-Damenwahl",
+              "ALT Sendersuchlauf starten!!",
+              "Achtung Sexy TV",
+              "Babestation24",
+              "BunnyClub24",
+              "Clipmobile",
+              "Date Line",
+              "Deutsche Girls 24 TV",
+              "Dreamgirls24 TV",
+              "EROTIKA TV - NEU!",
+              "Eros TV",
+              "Erotiksat24 TV",
+              "Fotohandy",
+              "Fundorado TV",
+              "GayBoys LIVE",
+	      "health.tv",                    # test card
+              "Heiss und Sexy TV",
+              "Lustkanal24 TV",
+              "MEDIA BROADCAST - Test 3",
+              "MEDIA BROADCAST - Test 4",
+              "MEDIA BROADCAST - Test 6",
+              "Maennersache TV",
+              "Mobile Sex",
+              "multithek (Internet)",
+              "SEX-Kontakte",
+              "Traumfrauen TV"
             )
 
-if service["service_id"] in blacklist:
+if service["service_name"] in blacklist:
 	skip = True
 ]]>
 	</servicehacks>

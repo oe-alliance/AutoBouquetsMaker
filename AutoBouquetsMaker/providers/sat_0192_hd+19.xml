@@ -1,11 +1,11 @@
 <provider>
-	<name>HD+ #11</name>
+	<name>HD+ #19</name>
 	<dependent>sat_0192_hd+</dependent>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcn</protocol>
 	<transponder
 		orbital_position="192"
-		frequency="11244000"
+		frequency="12662000"
 		symbol_rate="22000000"
 		polarization="0"
 		fec_inner="4"
@@ -14,15 +14,14 @@
 		modulation="1"
 		roll_off="0"
 		pilot="2"
-		nit_other_table_id="0x00"
 	/>
 	<sections>
 		<section number="1">HD+</section>
 	</sections>
 	<servicehacks>
 <![CDATA[
-# Skip encrypted services, test services and VoD services.
-if service["free_ca"] == 1 or service["service_name"] in ("ATVsmart", "Service 13231", "Service 13232", "Service 13233"):
+# Skip encrypted services, interactive services and chat spam.
+if service["free_ca"] == 1 or service["service_name"] in ("4News", "VISIT-X.tv"):
 	skip = True
 ]]>
 	</servicehacks>

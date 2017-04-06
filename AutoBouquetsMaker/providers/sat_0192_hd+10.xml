@@ -20,51 +20,8 @@
 	</sections>
 	<servicehacks>
 <![CDATA[
-blacklist = (
-# SD versions of HD services
-              28006, # ZDF
-              28007, # 3sat
-              28008, # KiKA
-              28011, # ZDFinfo
-              28014, # zdf_neo
-              28106, # Das Erste
-              28107, # BR Fernsehen Süd
-              28108, # hr-fernsehen
-              28110, # BR Fernsehen Nord
-              28111, # WDR Köln
-              28113, # SWR Fernsehen BW
-              28205, # rbb Brandenburg
-              28206, # rbb Berlin
-              28224, # NDR FS MV
-              28225, # NDR FS HH
-              28226, # NDR FS NDS
-              28227, # NDR FS SH
-              28228, # MDR Sachsen
-              28229, # MDR S-Anhalt
-              28230, # MDR Thüringen
-              28231, # SWR Fernsehen RP
-              28306, # WDR Bielefeld
-              28307, # WDR Dortmund
-              28308, # WDR Düsseldorf
-              28309, # WDR Essen
-              28310, # WDR Münster
-              28311, # WDR Siegen
-              28486, # SR Fernsehen
-              28534, # WDR Aachen
-              28535, # WDR Wuppertal
-              28536, # WDR Bonn
-              28537, # WDR Duisburg
-              28721, # tagesschau24
-              28722, # ONE
-              28724, # arte
-              28725, # PHOENIX
-# Test services
-              28221, # ARD-TEST-1
-              28395, # WDR Test A
-              28726, # Test-R
-            )
-
-if service["service_id"] in blacklist:
+# Skip test services.
+if service["service_name"] in ("ARD-TEST-1", "Test-R", "WDR Test A"):
 	skip = True
 ]]>
 	</servicehacks>

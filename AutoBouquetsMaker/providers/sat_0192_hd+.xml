@@ -1,5 +1,5 @@
 <provider>
-	<name>HD+</name>
+	<name>HD+ (DE)</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcn</protocol>
 	<transponder
@@ -15,13 +15,23 @@
 		pilot="2"
 	/>
 	<sections>
-		<section number="1">HD+</section>
+		<section number="1">Vollprogramme</section>
+		<section number="10">Kinder</section>
+		<section number="16">Unterhaltung</section>
+		<section number="29">Doku</section>
+		<section number="41">Nachrichten</section>
+		<section number="45">Sport</section>
+		<section number="47">Musik</section>
+		<section number="57">Regionales</section>
+		<section number="104">Einkaufen</section>
+		<section number="128">Religion</section>
+		<section number="134">Österreich</section>
+		<section number="201">SD-Versionen</section>
 	</sections>
 	<servicehacks>
 <![CDATA[
-# SES 75 (21111) is a test card.
-# Austrian HD services are encrypted and not available through HD+.
-if service["service_id"] == 21111 or service["service_name"][-11:] == " HD Austria" or service["service_name"][-6:] == " HD AT":
+# Skip test service and non-HD+ encrypted services.
+if service["service_name"] == "SES 75" or service["service_name"][-11:] == " HD Austria" or service["service_name"][-6:] == " HD AT":
 	skip = True
 ]]>
 	</servicehacks>

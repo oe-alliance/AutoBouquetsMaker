@@ -21,8 +21,8 @@
 	</sections>
 	<servicehacks>
 <![CDATA[
-# RTL Living (11971) and Austrian HD services are encrypted and not available through HD+.
-if service["service_id"] == 11971 or service["service_name"][-11:] == " HD Austria":
+# Skip non-HD+ encrypted services.
+if service["service_name"] == "RTL Living" or service["service_name"][-11:] == " HD Austria":
 	skip = True
 ]]>
 	</servicehacks>

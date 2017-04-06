@@ -1,0 +1,72 @@
+<custom>
+	<include>yes</include>
+	<lcnlist>
+		<configuration lcn="1" channelnumber="28013" description="DLF"></configuration>
+		<configuration lcn="2" channelnumber="28012" description="DKULTUR"></configuration>
+		<configuration lcn="3" channelnumber="28017" description="DRadio Wissen"></configuration>
+		<configuration lcn="4" channelnumber="28015" description="DRadio DokDeb"></configuration>
+		<configuration lcn="5" channelnumber="28400" description="Bayern 1"></configuration>
+		<configuration lcn="6" channelnumber="28401" description="Bayern 2"></configuration>
+		<configuration lcn="7" channelnumber="28402" description="BAYERN 3"></configuration>
+		<configuration lcn="8" channelnumber="28403" description="BR-KLASSIK"></configuration>
+		<configuration lcn="9" channelnumber="28404" description="B5 aktuell"></configuration>
+		<configuration lcn="10" channelnumber="28405" description="BAYERN plus"></configuration>
+		<configuration lcn="11" channelnumber="28406" description="PULS"></configuration>
+		<configuration lcn="12" channelnumber="28407" description="BR Heimat"></configuration>
+		<configuration lcn="13" channelnumber="28408" description="B5 plus"></configuration>
+		<configuration lcn="14" channelnumber="28419" description="hr1"></configuration>
+		<configuration lcn="15" channelnumber="28420" description="hr2"></configuration>
+		<configuration lcn="16" channelnumber="28421" description="hr3"></configuration>
+		<configuration lcn="17" channelnumber="28422" description="hr4"></configuration>
+		<configuration lcn="18" channelnumber="28424" description="hr-iNFO"></configuration>
+		<configuration lcn="19" channelnumber="28423" description="YOU FM"></configuration>
+		<configuration lcn="20" channelnumber="28428" description="MDR1 SACHSEN"></configuration>
+		<configuration lcn="21" channelnumber="28429" description="MDR S-ANHALT"></configuration>
+		<configuration lcn="22" channelnumber="28430" description="MDR THRINGEN"></configuration>
+		<configuration lcn="23" channelnumber="28434" description="MDR AKTUELL"></configuration>
+		<configuration lcn="24" channelnumber="28431" description="MDR KULTUR"></configuration>
+		<configuration lcn="25" channelnumber="28435" description="MDR KLASSIK"></configuration>
+		<configuration lcn="26" channelnumber="28432" description="MDR JUMP"></configuration>
+		<configuration lcn="27" channelnumber="28433" description="MDR SPUTNIK"></configuration>
+		<configuration lcn="28" channelnumber="28444" description="NDR 1 Nieders."></configuration>
+		<configuration lcn="29" channelnumber="28443" description="NDR 1 Radio MV"></configuration>
+		<configuration lcn="30" channelnumber="28442" description="NDR1WelleNord"></configuration>
+		<configuration lcn="31" channelnumber="28441" description="NDR 90,3"></configuration>
+		<configuration lcn="32" channelnumber="28437" description="NDR 2"></configuration>
+		<configuration lcn="33" channelnumber="28439" description="NDR Info"></configuration>
+		<configuration lcn="34" channelnumber="28438" description="NDR Kultur"></configuration>
+		<configuration lcn="35" channelnumber="28440" description="N-JOY"></configuration>
+		<configuration lcn="36" channelnumber="28445" description="NDR Info Spez."></configuration>
+		<configuration lcn="37" channelnumber="28446" description="NDR Blue"></configuration>
+		<configuration lcn="38" channelnumber="28447" description="NDR Plus"></configuration>
+		<configuration lcn="39" channelnumber="28448" description="Bremen Eins"></configuration>
+		<configuration lcn="40" channelnumber="28450" description="Bremen Vier"></configuration>
+		<configuration lcn="41" channelnumber="28449" description="Nordwestradio"></configuration>
+		<configuration lcn="42" channelnumber="28454" description="Antenne Brandenburg"></configuration>
+		<configuration lcn="43" channelnumber="28455" description="radioBERLIN 88,8"></configuration>
+		<configuration lcn="44" channelnumber="28456" description="radioeins"></configuration>
+		<configuration lcn="45" channelnumber="28452" description="Inforadio"></configuration>
+		<configuration lcn="46" channelnumber="28453" description="Kulturradio"></configuration>
+		<configuration lcn="47" channelnumber="28457" description="Fritz"></configuration>
+		<configuration lcn="48" channelnumber="28461" description="SR 1 Europawelle"></configuration>
+		<configuration lcn="49" channelnumber="28462" description="SR 2 KulturRadio"></configuration>
+		<configuration lcn="50" channelnumber="28463" description="SR 3 Saarlandwelle"></configuration>
+		<configuration lcn="51" channelnumber="28465" description="SWR1 BW"></configuration>
+		<configuration lcn="52" channelnumber="28466" description="SWR1 RP"></configuration>
+		<configuration lcn="53" channelnumber="28467" description="SWR2"></configuration>
+		<configuration lcn="54" channelnumber="28468" description="SWR3"></configuration>
+		<configuration lcn="55" channelnumber="28469" description="SWR4 BW"></configuration>
+		<configuration lcn="56" channelnumber="28470" description="SWR4 RP"></configuration>
+		<configuration lcn="57" channelnumber="28471" description="DASDING"></configuration>
+		<configuration lcn="58" channelnumber="28472" description="SWR Aktuell"></configuration>
+		<configuration lcn="59" channelnumber="28475" description="1LIVE"></configuration>
+		<configuration lcn="60" channelnumber="28481" description="1LIVE diGGi"></configuration>
+		<configuration lcn="61" channelnumber="28476" description="WDR 2"></configuration>
+		<configuration lcn="62" channelnumber="28477" description="WDR 3"></configuration>
+		<configuration lcn="63" channelnumber="28478" description="WDR 4"></configuration>
+		<configuration lcn="64" channelnumber="28479" description="WDR 5"></configuration>
+		<configuration lcn="65" channelnumber="28480" description="COSMO"></configuration>
+		<configuration lcn="66" channelnumber="28482" description="KIRAKA"></configuration>
+		<configuration lcn="67" channelnumber="28483" description="WDR Event"></configuration>
+	</lcnlist>
+</custom>
