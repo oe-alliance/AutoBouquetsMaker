@@ -286,6 +286,7 @@ except:
 		1256: 635, # RTEjr
 		2709: 128, # ComedyXtra
 		4335: 122, # Sky Living+1
+		1325: 406, # Sky Sp NewsHQ
 		1301: 401, # Sky Sports 1
 		1324: 404, # Sky Sports 4
 		1325: 406, # Sky Sp NewsHQ		
