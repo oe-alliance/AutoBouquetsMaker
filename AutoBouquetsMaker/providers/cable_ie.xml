@@ -37,6 +37,17 @@
 if service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and service["service_type"] not in DvbScanner.HD_ALLOWED_TYPES and service["service_name"][-2:] == 'HD':
 	service["service_type"] = 25
 
+#List channels
+rename = {
+	# Eurosport
+	423: "Eurosport 1 HD",
+	425: "Eurosport 2 HD"		
+	}
+	
+# Rename channels
+if "number" in service and service["number"] in rename:
+	service["provider_name"] = rename[service["number"]]
+
 service["service_name"] = service["provider_name"]
 service["interactive_name"] = service["provider_name"]
 
