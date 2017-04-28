@@ -29,7 +29,7 @@ blacklist = (
               "BunnyClub24",
               "Clipmobile",
               "Date Line",
-              "Deutsche Girls 24 TV",
+              "Deutsche Girls 24 TV ",
               "Dreamgirls24 TV",
               "EROTIKA TV - NEU!",
               "Eros TV",
@@ -40,9 +40,6 @@ blacklist = (
 	      "health.tv",                    # test card
               "Heiss und Sexy TV",
               "Lustkanal24 TV",
-              "MEDIA BROADCAST - Test 3",
-              "MEDIA BROADCAST - Test 4",
-              "MEDIA BROADCAST - Test 6",
               "Maennersache TV",
               "Mobile Sex",
               "multithek (Internet)",
@@ -50,7 +47,7 @@ blacklist = (
               "Traumfrauen TV"
             )
 
-if service["service_name"] in blacklist:
+if service["service_name"] in blacklist or "Test" in service["service_name"]:
 	skip = True
 ]]>
 	</servicehacks>

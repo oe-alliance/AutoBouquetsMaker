@@ -1,5 +1,5 @@
 <provider>
-	<name>HD+ (DE)</name>
+	<name>HD+</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcn</protocol>
 	<transponder
