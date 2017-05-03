@@ -237,6 +237,7 @@
 		<channel number="506" with="579" /><!-- CNN HD -->
 		<channel number="512" with="518" /><!-- RT HD -->
 		<channel number="514" with="691" /><!-- Al Jazeera HD -->
+		<channel number="519" with="693" /><!-- TRT World HD -->
 		<channel number="583" with="596" /><!-- Daystar HD -->
 		<channel number="613" with="633" /><!-- CBBC HD -->
 		<channel number="614" with="624" /><!-- CBeebies HD -->
@@ -374,7 +375,8 @@ except:
 		5152, # eir Sport 2 HD
 		5153, # Premier HD
 		5154, # eir Sport 2 HD
-		5272  # Racing UK HD
+		5272, # Racing UK HD
+		5237  # TRT World HD
 	]
 
 	blacklist = ["10001", "10002"]

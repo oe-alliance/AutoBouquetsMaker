@@ -55,6 +55,7 @@
 		<channel number="102" with="115" /><!-- RTE 2 HD -->
 		<channel number="135" with="227" /><!-- Channel 4 HD -->
 		<channel number="141" with="215" /><!-- BBC One HD -->
+		<channel number="519" with="693" /><!-- TRT World HD -->
 	</swapchannels>
 	<servicehacks>
 <![CDATA[
@@ -201,6 +202,7 @@ except:
 		5153, # Premier HD
 		5154, # Setanta HD
 		5272, # Racing UK HD
+		5237  # TRT World HD
 	]
 
 	blacklist = [899,950,"10001", "10002",]
