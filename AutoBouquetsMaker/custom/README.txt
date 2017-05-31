@@ -293,6 +293,12 @@ Provider key: cable_nl
 Provider name: NL Terrestrial
 Provider key: terrestrial_NL_bouquet1
 
+Provider name: Saorsat
+Provider key: sat_0090_saorsat
+
+Provider name: Saorsat (toroidal dish)
+Provider key: sat_0090_saorsat_reversed
+
 Provider name: Saorview (IE)
 Provider key: terrestrial_ie_saorview_PSB1
 

@@ -1,0 +1,33 @@
+<!-- Saorsat is transmitted in the Ka band with left circular polarity. It is received using a special Ka band LNB that emulates a
+     standard Ku band universal LNB, downconverting the received Ka band signal into the Ku band frequency range and converting
+     left circular to vertical polarity. Saorsat cannot be received (and this provider will not work) with a standard universal LNB.
+     The double-reflector design of a toroidal dish like the Wavefrontier T90 effectively reverses the received polarity to right
+     circular, which the LNB converts to horizontal. This version of the Saorsat provider specifies horizontal polarity for users
+     of such dishes. -->
+<provider>
+	<name>Saorsat (toroidal dish)</name>
+	<streamtype>dvbs</streamtype>
+	<protocol>lcn</protocol>
+	<transponder
+		orbital_position="90"
+		frequency="10765000"
+		symbol_rate="25000000"
+		polarization="0"
+		fec_inner="2"
+		inversion="2"
+		system="1"
+		modulation="1"
+		roll_off="0"
+		pilot="2"
+	/>
+	<sections>
+		<section number="1">Channels</section>
+	</sections>
+	<servicehacks>
+<![CDATA[
+# Skip test services.
+if service["service_name"] == "(...)":
+	skip = True
+]]>
+	</servicehacks>
+</provider>
