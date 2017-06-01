@@ -1,0 +1,67 @@
+<provider>
+	<name>BIS TV HD</name>
+	<streamtype>dvbs</streamtype>
+	<protocol>lcnbat</protocol>
+	<transponder
+		orbital_position="3550"
+		frequency="11512000"
+		symbol_rate="29950000"
+		polarization="1"
+		fec_inner="3"
+		inversion="2"
+		system="1"
+		modulation="2"
+		roll_off="0"
+		pilot="2"
+		bat_pid="0x11"
+	/>
+	<sections>
+		<section number="1">Chaînes</section>
+	</sections>
+	<dvbsconfigs>
+		<configuration key="hd_01361" bouquet="0x0551" region="0x83">BIS TV HD (5.0°W)</configuration>
+	</dvbsconfigs>
+	<servicehacks>
+<![CDATA[
+# Some HD services are not properly identified as such by service_type or by name.
+hd_services = (
+	'TF1',
+	'FRANCE 2',
+	'CANAL+',
+	'FRANCE 5',
+	'M6',
+	'ARTE',
+	'C8',
+	'W9',
+	'TMC',
+	'NT1',
+	'NRJ12',
+	'LCP',
+	'FRANCE 4',
+	'BFM TV',
+	'CNEWS',
+	'CSTAR',
+	'GULLI',
+	'HD1',
+	"L'EQUIPE",
+	'6TER',
+	'NUMERO 23'
+	'RMC DECOUVERTE',
+	'CHERIE 25',
+	'RTL9',
+	'AB 1',
+	'BEIN SPORTS 1',
+	'BEIN SPORTS 2',
+	'TREK',
+	'ANIMAUX',
+	'SCIENCE ET VIE',
+	'AB MOTEURS',
+	'ACTION',
+	'TV8 MONT BLANC',
+)
+
+if service["service_type"] == 1 and (service["service_name"][0:8] == 'FRANCE 3' or service["service_name"] in hd_services):
+	service["service_type"] = 25
+]]>
+	</servicehacks>
+</provider>

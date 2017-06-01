@@ -1,5 +1,5 @@
 <provider>
-	<name>Bis TV 13E</name>
+	<name>BIS TV</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcnbat</protocol>
 	<transponder
@@ -16,13 +16,24 @@
 		bat_pid="0x11"
 	/>
 	<sections>
-		<section number="1">Bis TV 13E</section>
+		<section number="1">Chaînes</section>
 	</sections>
 	<dvbsconfigs>
-		<configuration key="hd_00306" bouquet="0x0132" region="0x83">Bis TV</configuration>
+		<configuration key="hd_00306" bouquet="0x0132" region="0x83">BIS TV (13.0°E)</configuration>
 	</dvbsconfigs>
 	<servicehacks>
 <![CDATA[
+# Some HD services are not properly identified as such by service_type or by name.
+hd_services = (
+	'RTL9',
+	'TREK',
+	'Science et Vie',
+	'AB MOTEURS',
+	'ACTION',
+)
+
+if service["service_type"] == 1 and (service["service_name"][-3:] == ' HD' or service["service_name"] in hd_services):
+	service["service_type"] = 25
 ]]>
 	</servicehacks>
 </provider>
