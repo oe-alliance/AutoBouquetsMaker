@@ -1,0 +1,31 @@
+<!-- The Saorsat LNB must be correctly set up in advanced tuner settings to enable Ka band reception. Select LOF: KA-SAT if this
+     setting is available in your Enigma 2 image, otherwise configure the local oscillator frequency manually as follows:
+          LOF: User defined
+          LOF/L: 0000021200
+          LOF/H: 0000021200
+          Threshold: 0000021200
+-->
+<provider>
+	<name>Saorsat</name>
+	<streamtype>dvbs</streamtype>
+	<protocol>lcn</protocol>
+	<transponder
+		orbital_position="90"
+		frequency="20185000"
+		symbol_rate="25000000"
+		polarization="2"
+		fec_inner="2"
+		inversion="2"
+		system="1"
+		modulation="1"
+		roll_off="0"
+		pilot="2"
+	/>
+	<sections>
+		<section number="1">Channels</section>
+	</sections>
+	<servicehacks>
+<![CDATA[
+]]>
+	</servicehacks>
+</provider>
