@@ -223,6 +223,6 @@
 		<configuration lcn="311" channelnumber="765" description="pearl.tv Shop"></configuration>
 		<configuration lcn="312" channelnumber="1794" description="QVC"></configuration>
 		<configuration lcn="313" channelnumber="64" description="QVC BEAUTY+STYLE"></configuration>
-		<configuration lcn="315" channelnumber="32" description="Sonnenklar TV"></configuration>
+		<configuration lcn="314" channelnumber="32" description="Sonnenklar TV"></configuration>
 	</lcnlist>
 </custom>
