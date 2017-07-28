@@ -101,7 +101,7 @@ rename = {
 	}
 
 #Some encrypted channels are wrongly flagged as FreToAir.
-	not_fta = ['Sky Disney HD']
+not_fta = ['Sky Disney HD']
 
 #List channels to skip
 blacklist = [731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 751,752,753,754,999]
