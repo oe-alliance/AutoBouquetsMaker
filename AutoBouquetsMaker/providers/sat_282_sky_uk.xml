@@ -419,6 +419,7 @@ except:
 #Some channels are FTA, but tables are wrong	
 	fta_by_id = [
 		5237, # TRT World HD
+		2306, # Dave
 	]
 
 	broken_TSIDS = [
