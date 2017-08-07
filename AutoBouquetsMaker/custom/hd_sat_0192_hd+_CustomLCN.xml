@@ -53,111 +53,112 @@
 		<!-- Sport -->
 		<configuration lcn="45" channelnumber="5505" description="SPORT1 HD"></configuration>
 		<configuration lcn="46" channelnumber="12502" description="Eurosport 1 HD"></configuration>
+		<configuration lcn="47" channelnumber="12503" description="Eurosport 2 HD Xtra"></configuration>
 		<!-- Musik -->
-		<configuration lcn="47" channelnumber="5503" description="Deluxe Music HD"></configuration>
-		<configuration lcn="48" channelnumber="10103" description="MTV HD"></configuration>
-		<configuration lcn="49" channelnumber="12604" description="Deutsches Musik Fernsehen"></configuration>
-		<configuration lcn="50" channelnumber="13018" description="Folx TV"></configuration>
-		<configuration lcn="51" channelnumber="13021" description="gotv"></configuration>
-		<configuration lcn="52" channelnumber="13013" description="HITRADIO OE3"></configuration>
-		<configuration lcn="53" channelnumber="13015" description="Mei Musi TV"></configuration>
-		<configuration lcn="54" channelnumber="13229" description="MELODIE TV"></configuration>
-		<configuration lcn="55" channelnumber="12634" description="nice"></configuration>
-		<configuration lcn="56" channelnumber="13222" description="Volksmusik"></configuration>
+		<configuration lcn="48" channelnumber="5503" description="Deluxe Music HD"></configuration>
+		<configuration lcn="49" channelnumber="10103" description="MTV HD"></configuration>
+		<configuration lcn="50" channelnumber="12604" description="Deutsches Musik Fernsehen"></configuration>
+		<configuration lcn="51" channelnumber="13018" description="Folx TV"></configuration>
+		<configuration lcn="52" channelnumber="13021" description="gotv"></configuration>
+		<configuration lcn="53" channelnumber="13013" description="HITRADIO OE3"></configuration>
+		<configuration lcn="54" channelnumber="13015" description="Mei Musi TV"></configuration>
+		<configuration lcn="55" channelnumber="13229" description="MELODIE TV"></configuration>
+		<configuration lcn="56" channelnumber="12634" description="nice"></configuration>
+		<configuration lcn="57" channelnumber="13222" description="Volksmusik"></configuration>
 		<!-- Regionales -->
-		<configuration lcn="57" channelnumber="10326" description="BR Fernsehen Nord HD"></configuration>
-		<configuration lcn="58" channelnumber="10325" description="BR Fernsehen Süd HD"></configuration>
-		<configuration lcn="59" channelnumber="10355" description="hr-fernsehen HD"></configuration>
-		<configuration lcn="60" channelnumber="10352" description="MDR Sachsen HD"></configuration>
-		<configuration lcn="61" channelnumber="10353" description="MDR S-Anhalt HD"></configuration>
-		<configuration lcn="62" channelnumber="10354" description="MDR Thüringen HD"></configuration>
-		<configuration lcn="63" channelnumber="10329" description="NDR FS HH HD"></configuration>
-		<configuration lcn="64" channelnumber="10328" description="NDR FS MV HD"></configuration>
-		<configuration lcn="65" channelnumber="10327" description="NDR FS NDS HD"></configuration>
-		<configuration lcn="66" channelnumber="10330" description="NDR FS SH HD"></configuration>
-		<configuration lcn="67" channelnumber="28385" description="Radio Bremen TV"></configuration>
-		<configuration lcn="68" channelnumber="10351" description="rbb Berlin HD"></configuration>
-		<configuration lcn="69" channelnumber="10350" description="rbb Brandenburg HD"></configuration>
-		<configuration lcn="70" channelnumber="10378" description="SR Fernsehen HD"></configuration>
-		<configuration lcn="71" channelnumber="10303" description="SWR BW HD"></configuration>
-		<configuration lcn="72" channelnumber="10304" description="SWR RP HD"></configuration>
-		<configuration lcn="73" channelnumber="28325" description="WDR HD Köln"></configuration>
-		<configuration lcn="74" channelnumber="28544" description="WDR HD Aachen"></configuration>
-		<configuration lcn="75" channelnumber="28326" description="WDR HD Bielefeld"></configuration>
-		<configuration lcn="76" channelnumber="28546" description="WDR HD Bonn"></configuration>
-		<configuration lcn="77" channelnumber="28327" description="WDR HD Dortmund"></configuration>
-		<configuration lcn="78" channelnumber="28328" description="WDR HD Düsseldorf"></configuration>
-		<configuration lcn="79" channelnumber="28547" description="WDR HD Duisburg"></configuration>
-		<configuration lcn="80" channelnumber="28329" description="WDR HD Essen"></configuration>
-		<configuration lcn="81" channelnumber="28330" description="WDR HD Münster"></configuration>
-		<configuration lcn="82" channelnumber="28331" description="WDR HD Siegen"></configuration>
-		<configuration lcn="83" channelnumber="28545" description="WDR HD Wuppertal"></configuration>
-		<configuration lcn="84" channelnumber="70" description="BB-MV Lokal-TV"></configuration>
-		<configuration lcn="85" channelnumber="4601" description="Franken Fernsehen"></configuration>
-		<configuration lcn="86" channelnumber="4602" description="intv"></configuration>
-		<configuration lcn="87" channelnumber="4690" description="Lokal TV Portal"></configuration>
-		<configuration lcn="88" channelnumber="13113" description="L-TV/TVM"></configuration>
-		<configuration lcn="89" channelnumber="4606" description="Mainfranken"></configuration>
-		<configuration lcn="90" channelnumber="4604" description="münchen.tv"></configuration>
-		<configuration lcn="91" channelnumber="4609" description="Niederbayern"></configuration>
-		<configuration lcn="92" channelnumber="47" description="REGIO TV"></configuration>
-		<configuration lcn="93" channelnumber="12614" description="rhein main tv"></configuration>
-		<configuration lcn="94" channelnumber="4605" description="rfo Regional Oberbayern"></configuration>
-		<configuration lcn="95" channelnumber="4607" description="TV Oberfranken"></configuration>
-		<configuration lcn="96" channelnumber="4608" description="TVA-OTV"></configuration>
-		<configuration lcn="97" channelnumber="4603" description="Ulm-Allgäu"></configuration>
-		<configuration lcn="98" channelnumber="12006" description="RTL FS"></configuration>
-		<configuration lcn="99" channelnumber="12005" description="RTL HB NDS"></configuration>
-		<configuration lcn="100" channelnumber="12009" description="RTL HH SH"></configuration>
-		<configuration lcn="101" channelnumber="12004" description="RTL Regional NRW"></configuration>
-		<configuration lcn="102" channelnumber="17507" description="SAT.1 Bayern"></configuration>
-		<configuration lcn="103" channelnumber="17508" description="SAT.1 NRW"></configuration>
+		<configuration lcn="58" channelnumber="10326" description="BR Fernsehen Nord HD"></configuration>
+		<configuration lcn="59" channelnumber="10325" description="BR Fernsehen Süd HD"></configuration>
+		<configuration lcn="60" channelnumber="10355" description="hr-fernsehen HD"></configuration>
+		<configuration lcn="61" channelnumber="10352" description="MDR Sachsen HD"></configuration>
+		<configuration lcn="62" channelnumber="10353" description="MDR S-Anhalt HD"></configuration>
+		<configuration lcn="63" channelnumber="10354" description="MDR Thüringen HD"></configuration>
+		<configuration lcn="64" channelnumber="10329" description="NDR FS HH HD"></configuration>
+		<configuration lcn="65" channelnumber="10328" description="NDR FS MV HD"></configuration>
+		<configuration lcn="66" channelnumber="10327" description="NDR FS NDS HD"></configuration>
+		<configuration lcn="67" channelnumber="10330" description="NDR FS SH HD"></configuration>
+		<configuration lcn="68" channelnumber="28385" description="Radio Bremen TV"></configuration>
+		<configuration lcn="69" channelnumber="10351" description="rbb Berlin HD"></configuration>
+		<configuration lcn="70" channelnumber="10350" description="rbb Brandenburg HD"></configuration>
+		<configuration lcn="71" channelnumber="10378" description="SR Fernsehen HD"></configuration>
+		<configuration lcn="72" channelnumber="10303" description="SWR BW HD"></configuration>
+		<configuration lcn="73" channelnumber="10304" description="SWR RP HD"></configuration>
+		<configuration lcn="74" channelnumber="28325" description="WDR HD Köln"></configuration>
+		<configuration lcn="75" channelnumber="28544" description="WDR HD Aachen"></configuration>
+		<configuration lcn="76" channelnumber="28326" description="WDR HD Bielefeld"></configuration>
+		<configuration lcn="77" channelnumber="28546" description="WDR HD Bonn"></configuration>
+		<configuration lcn="78" channelnumber="28327" description="WDR HD Dortmund"></configuration>
+		<configuration lcn="79" channelnumber="28328" description="WDR HD Düsseldorf"></configuration>
+		<configuration lcn="80" channelnumber="28547" description="WDR HD Duisburg"></configuration>
+		<configuration lcn="81" channelnumber="28329" description="WDR HD Essen"></configuration>
+		<configuration lcn="82" channelnumber="28330" description="WDR HD Münster"></configuration>
+		<configuration lcn="83" channelnumber="28331" description="WDR HD Siegen"></configuration>
+		<configuration lcn="84" channelnumber="28545" description="WDR HD Wuppertal"></configuration>
+		<configuration lcn="85" channelnumber="70" description="BB-MV Lokal-TV"></configuration>
+		<configuration lcn="86" channelnumber="4601" description="Franken Fernsehen"></configuration>
+		<configuration lcn="87" channelnumber="4602" description="intv"></configuration>
+		<configuration lcn="88" channelnumber="4690" description="Lokal TV Portal"></configuration>
+		<configuration lcn="89" channelnumber="13113" description="L-TV/TVM"></configuration>
+		<configuration lcn="90" channelnumber="4606" description="Mainfranken"></configuration>
+		<configuration lcn="91" channelnumber="4604" description="münchen.tv"></configuration>
+		<configuration lcn="92" channelnumber="4609" description="Niederbayern"></configuration>
+		<configuration lcn="93" channelnumber="47" description="REGIO TV"></configuration>
+		<configuration lcn="94" channelnumber="12614" description="rhein main tv"></configuration>
+		<configuration lcn="95" channelnumber="4605" description="rfo Regional Oberbayern"></configuration>
+		<configuration lcn="96" channelnumber="4607" description="TV Oberfranken"></configuration>
+		<configuration lcn="97" channelnumber="4608" description="TVA-OTV"></configuration>
+		<configuration lcn="98" channelnumber="4603" description="Ulm-Allgäu"></configuration>
+		<configuration lcn="99" channelnumber="12006" description="RTL FS"></configuration>
+		<configuration lcn="100" channelnumber="12005" description="RTL HB NDS"></configuration>
+		<configuration lcn="101" channelnumber="12009" description="RTL HH SH"></configuration>
+		<configuration lcn="102" channelnumber="12004" description="RTL Regional NRW"></configuration>
+		<configuration lcn="103" channelnumber="17507" description="SAT.1 Bayern"></configuration>
+		<configuration lcn="104" channelnumber="17508" description="SAT.1 NRW"></configuration>
 		<!-- Einkaufen -->
-		<configuration lcn="104" channelnumber="12501" description="Fashion 4K Preview"></configuration>
-		<configuration lcn="105" channelnumber="5502" description="1-2-3.tv HD"></configuration>
-		<configuration lcn="106" channelnumber="10104" description="Channel21 HD"></configuration>
-		<configuration lcn="107" channelnumber="21104" description="HSE24 HD"></configuration>
-		<configuration lcn="108" channelnumber="5501" description="HSE24 EXTRA HD"></configuration>
-		<configuration lcn="109" channelnumber="5403" description="Juwelo HD"></configuration>
-		<configuration lcn="110" channelnumber="10102" description="mediaspar HD"></configuration>
-		<configuration lcn="111" channelnumber="5404" description="pearl.tv HD Shop"></configuration>
-		<configuration lcn="112" channelnumber="21103" description="QVC HD"></configuration>
-		<configuration lcn="113" channelnumber="10105" description="QVC BEAUTY + STYLE HD"></configuration>
-		<configuration lcn="114" channelnumber="5504" description="QVC PLUS HD"></configuration>
-		<configuration lcn="115" channelnumber="5400" description="sonnenklar.TV HD"></configuration>
-		<configuration lcn="116" channelnumber="661" description="AstroTV"></configuration>
-		<configuration lcn="117" channelnumber="54" description="Beauty TV"></configuration>
-		<configuration lcn="118" channelnumber="769" description="Channel21"></configuration>
-		<configuration lcn="119" channelnumber="897" description="e8 television"></configuration>
-		<configuration lcn="120" channelnumber="21113" description="Genius Plus"></configuration>
-		<configuration lcn="121" channelnumber="77" description="HSE24 TREND"></configuration>
-		<configuration lcn="122" channelnumber="514" description="JML Shop"></configuration>
-		<configuration lcn="123" channelnumber="775" description="MediaShop- Meine Einkaufswelt"></configuration>
-		<configuration lcn="124" channelnumber="898" description="MediaShop- Neuheiten"></configuration>
-		<configuration lcn="125" channelnumber="899" description="meinTVshop"></configuration>
-		<configuration lcn="126" channelnumber="12633" description="Shop24Direct"></configuration>
-		<configuration lcn="127" channelnumber="659" description="Sparhandy TV"></configuration>
+		<configuration lcn="105" channelnumber="12501" description="Fashion 4K Preview"></configuration>
+		<configuration lcn="106" channelnumber="5502" description="1-2-3.tv HD"></configuration>
+		<configuration lcn="107" channelnumber="10104" description="Channel21 HD"></configuration>
+		<configuration lcn="108" channelnumber="21104" description="HSE24 HD"></configuration>
+		<configuration lcn="109" channelnumber="5501" description="HSE24 EXTRA HD"></configuration>
+		<configuration lcn="110" channelnumber="5403" description="Juwelo HD"></configuration>
+		<configuration lcn="111" channelnumber="10102" description="mediaspar HD"></configuration>
+		<configuration lcn="112" channelnumber="5404" description="pearl.tv HD Shop"></configuration>
+		<configuration lcn="113" channelnumber="21103" description="QVC HD"></configuration>
+		<configuration lcn="114" channelnumber="10105" description="QVC BEAUTY + STYLE HD"></configuration>
+		<configuration lcn="115" channelnumber="5504" description="QVC PLUS HD"></configuration>
+		<configuration lcn="116" channelnumber="5400" description="sonnenklar.TV HD"></configuration>
+		<configuration lcn="117" channelnumber="661" description="AstroTV"></configuration>
+		<configuration lcn="118" channelnumber="54" description="Beauty TV"></configuration>
+		<configuration lcn="119" channelnumber="769" description="Channel21"></configuration>
+		<configuration lcn="120" channelnumber="897" description="e8 television"></configuration>
+		<configuration lcn="121" channelnumber="21113" description="Genius Plus"></configuration>
+		<configuration lcn="122" channelnumber="77" description="HSE24 TREND"></configuration>
+		<configuration lcn="123" channelnumber="514" description="JML Shop"></configuration>
+		<configuration lcn="124" channelnumber="775" description="MediaShop- Meine Einkaufswelt"></configuration>
+		<configuration lcn="125" channelnumber="898" description="MediaShop- Neuheiten"></configuration>
+		<configuration lcn="126" channelnumber="899" description="meinTVshop"></configuration>
+		<configuration lcn="127" channelnumber="12633" description="Shop24Direct"></configuration>
+		<configuration lcn="128" channelnumber="659" description="Sparhandy TV"></configuration>
 		<!-- Religion -->
-		<configuration lcn="128" channelnumber="13224" description="Bibel TV HD"></configuration>
-		<configuration lcn="129" channelnumber="62" description="EWTN katholisches TV"></configuration>
-		<configuration lcn="130" channelnumber="774" description="GOD Channel"></configuration>
-		<configuration lcn="131" channelnumber="13227" description="HOPE Channel HD"></configuration>
-		<configuration lcn="132" channelnumber="12601" description="K-TV"></configuration>
-		<configuration lcn="133" channelnumber="21112" description="SOPHIA TV"></configuration>
+		<configuration lcn="129" channelnumber="13224" description="Bibel TV HD"></configuration>
+		<configuration lcn="130" channelnumber="62" description="EWTN katholisches TV"></configuration>
+		<configuration lcn="131" channelnumber="774" description="GOD Channel"></configuration>
+		<configuration lcn="132" channelnumber="13227" description="HOPE Channel HD"></configuration>
+		<configuration lcn="133" channelnumber="12601" description="K-TV"></configuration>
+		<configuration lcn="134" channelnumber="21112" description="SOPHIA TV"></configuration>
 		<!-- Österreich -->
-		<configuration lcn="134" channelnumber="13014" description="ORF2E"></configuration>
-		<configuration lcn="135" channelnumber="4600" description="a.tv"></configuration>
-		<configuration lcn="136" channelnumber="61" description="NICKELODEON AT"></configuration>
-		<configuration lcn="137" channelnumber="13102" description="RTL NITRO A"></configuration>
-		<configuration lcn="138" channelnumber="60" description="Comedy Central / VIVA AT"></configuration>
-		<configuration lcn="139" channelnumber="13106" description="sixx Austria"></configuration>
-		<configuration lcn="140" channelnumber="13111" description="ServusTV Oesterreich"></configuration>
-		<configuration lcn="141" channelnumber="73" description="DMAX Austria"></configuration>
-		<configuration lcn="142" channelnumber="53" description="N24 Austria"></configuration>
-		<configuration lcn="143" channelnumber="13225" description="Schau TV"></configuration>
-		<configuration lcn="144" channelnumber="13226" description="Starparadies AT"></configuration>
-		<configuration lcn="145" channelnumber="13141" description="BTV"></configuration>
-		<configuration lcn="146" channelnumber="13104" description="LT1-OOE"></configuration>
+		<configuration lcn="135" channelnumber="13014" description="ORF2E"></configuration>
+		<configuration lcn="136" channelnumber="4600" description="a.tv"></configuration>
+		<configuration lcn="137" channelnumber="61" description="NICKELODEON AT"></configuration>
+		<configuration lcn="138" channelnumber="13102" description="RTL NITRO A"></configuration>
+		<configuration lcn="139" channelnumber="60" description="Comedy Central / VIVA AT"></configuration>
+		<configuration lcn="140" channelnumber="13106" description="sixx Austria"></configuration>
+		<configuration lcn="141" channelnumber="13111" description="ServusTV Oesterreich"></configuration>
+		<configuration lcn="142" channelnumber="73" description="DMAX Austria"></configuration>
+		<configuration lcn="143" channelnumber="53" description="N24 Austria"></configuration>
+		<configuration lcn="144" channelnumber="13225" description="Schau TV"></configuration>
+		<configuration lcn="145" channelnumber="13226" description="Starparadies AT"></configuration>
+		<configuration lcn="146" channelnumber="13141" description="BTV"></configuration>
+		<configuration lcn="147" channelnumber="13104" description="LT1-OOE"></configuration>
 		<!-- SD-Versionen -->
 		<configuration lcn="201" channelnumber="28106" description="Das Erste"></configuration>
 		<configuration lcn="202" channelnumber="28006" description="ZDF"></configuration>
