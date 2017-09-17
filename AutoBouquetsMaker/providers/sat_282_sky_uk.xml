@@ -367,6 +367,7 @@ except:
 		3527: "STV Edinburgh",
 		4012: "UTV Ireland",
 		4055: "STV HD",
+		5070: "STV 2",
 		6000: "ITV London",
 		6010: "ITV Central South",
 		6011: "ITV Central East",
