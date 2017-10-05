@@ -4,7 +4,7 @@
 	<protocol>lcnbat2</protocol>
 	<transponder
 		orbital_position="3592"
-		frequency="12034000"		
+		frequency="12034000"
 		symbol_rate="30000000"
 		polarization="1"
 		fec_inner="3"
@@ -14,7 +14,7 @@
 		roll_off="0"
 		pilot="2"
 		bat_pid="0x11"
-    		tsid="705"
+		tsid="705"
 		onid="1536"
 	/>
 	<sections>
