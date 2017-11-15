@@ -163,7 +163,7 @@ except:
 	
 	PIDs = {
 		# 00 = video, 01 = MPEG audio, 02 = teletext, 03 = PCR, 04 = AC3 audio... followed by 4 hexadecimal chars
-				'4SevenHD': 'c:000135,c:010155,c:02015f,c:030135,c:04014b',
+		'4SevenHD': 'c:000135,c:010155,c:02015f,c:030135,c:04014b',
 		'alibi HD': 'c:000135,c:010155,c:02015f,c:030135,c:04014b',
 		'Animal Planet HD': 'c:000135,c:010155,c:02015f,c:030135,c:04014b',
 		'BBC FOUR HD': 'c:000135,c:010155,c:02015f,c:030135,c:04014b',
