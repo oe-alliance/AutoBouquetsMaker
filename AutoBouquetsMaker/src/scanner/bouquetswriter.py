@@ -927,7 +927,8 @@ class BouquetsWriter():
 		print>>log, "[ABM-BouquetsWriter] Done"
 
 	def bouquetServiceLine(self, service):
-		return "#SERVICE 1:0:%x:%x:%x:%x:%x:0:0:0:%s\n%s" % (
+		return "#SERVICE %s:0:%x:%x:%x:%x:%x:0:0:0:%s\n%s" % (
+			(("%s" % config.autobouquetsmaker.servicetype.value) if "stream" in service else "1"),
 			service["service_type"],
 			service["service_id"],
 			service["transport_stream_id"],
