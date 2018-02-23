@@ -113,10 +113,10 @@ except:
 	not_fta = ['Sky Disney HD'] # by service name
 
 	# FTA channels that are wrongly flagged as encrypted. Listed by service name.
-	fta_corrections = ["Virgin 100","RTE One","Euronews","Cula4","DCTV","CCTv",]
+	fta_corrections = ["Virgin 100","RTE One","Euronews","DCTV","CCTv",]
 
 	#Channels to skip. Listed by LCN
-	blacklist = [731,732,733,734,735,736,737,738,739,740,751,752,753,754,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,999]
+	blacklist = [731,732,733,734,735,736,737,738,739,740,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,999]
 
 service["interactive_name"] = service["service_name"] = service["provider_name"]
 
