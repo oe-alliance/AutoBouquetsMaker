@@ -3,34 +3,92 @@
 	<streamtype>dvbc</streamtype>
 	<protocol>lcn</protocol>
 	<dvbcconfigs>
-		<configuration key="hd_skv_______" netid="9640" bouquettype="hd" frequency="234000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">SKV</configuration>
-		<configuration key="hd_pijnacker_" netid="757" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Pijnacker</configuration>
+		<!-- Caiway -->
+		<configuration key="hd_caiway2000" netid="2000" bouquettype="hd" frequency="325000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway Hendrik Ido Ambacht / Albrandswaard</configuration>
+		<configuration key="hd_caiway2222" netid="2222" bouquettype="hd" frequency="338000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway Krimpen a/d IJssel</configuration>
+		<configuration key="hd_caiway2244" netid="2244" bouquettype="hd" frequency="456000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [CAIH] St. CAI Harderwijk</configuration>
+		<configuration key="hd_caiway2249" netid="2249" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [CAIW] CAIW Westland</configuration>
+		<configuration key="hd_caiway2257" netid="2257" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [AALS] CAIW Aalsmeer</configuration>
+		<configuration key="hd_caiway2273" netid="2273" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [CAPD] Capelle aan den IJssel</configuration>
+		<configuration key="hd_caiway3667" netid="3667" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [DOOR] CAIW Doorn</configuration>
+		<configuration key="hd_caiway4458" netid="4458" bouquettype="hd" frequency="444000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [HILV] Hilvarenbeek</configuration>
+		<configuration key="hd_caiway4683" netid="4683" bouquettype="hd" frequency="538000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [GOUD] REKAM Gouda</configuration>
+		<configuration key="hd_caiway5636" netid="5636" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [LOEN] CAIWAY RTV Loenen</configuration>
+		<configuration key="hd_caiway6227" netid="6227" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [MAAS] CAIW Maassluis</configuration>
+		<configuration key="hd_caiway6228" netid="6228" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [MAAS] CAIW Maassluis TEST</configuration>
+		<configuration key="hd_caiway6536" netid="6536" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [OKEM] CAIW Oudenbosch</configuration>
+		<configuration key="hd_caiway7224" netid="7224" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [SCAI] SCAIJ IJsselstein</configuration>
+		<configuration key="hd_caiway7244" netid="7244" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [SCHI] Schiedam</configuration>
+		<configuration key="hd_caiway7271" netid="7271" bouquettype="hd" frequency="369000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway 7271</configuration>
+		<configuration key="hd_caiway7524" netid="7524" bouquettype="hd" frequency="316000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [SKBG] St. Kabeltelevisie Bra/Gel</configuration>
+		<configuration key="hd_caiway7571" netid="7571" bouquettype="hd" frequency="369000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway Borculo</configuration>
+		<configuration key="hd_caiway8378" netid="8378" bouquettype="hd" frequency="369000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway [TEST] CAIW Test intern</configuration>
+		<configuration key="hd_caiway9004" netid="9004" bouquettype="hd" frequency="369000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway Twente ( vm. Cogas netwerk)</configuration>
+		<!-- Delta -->
+		<configuration key="hd_delta1000_" netid="1000" bouquettype="hd" frequency="402000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 1000 Noord</configuration>
+		<configuration key="hd_delta2000_" netid="2000" bouquettype="hd" frequency="402000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 2000 West (Walcheren)</configuration>
+		<configuration key="hd_delta3000_" netid="3000" bouquettype="hd" frequency="402000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 3000 Zuid (Zeeuws Vlaanderen)</configuration>
+		<configuration key="hd_delta4000_" netid="4000" bouquettype="hd" frequency="402000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 4000 Ongecodeerd</configuration>
+		<configuration key="hd_delta2180_" netid="2180" bouquettype="hd" frequency="304000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 2180 </configuration>
+		<configuration key="hd_delta3300_" netid="3300" bouquettype="hd" frequency="304000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 3300</configuration>
+		<configuration key="hd_delta3900_" netid="3900" bouquettype="hd" frequency="304000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 3900</configuration>
+		<configuration key="hd_delta5600_" netid="5600" bouquettype="hd" frequency="304000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 5600</configuration>
+		<configuration key="hd_delta6040_" netid="6040" bouquettype="hd" frequency="304000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 6040</configuration>
+		<configuration key="hd_delta7461_" netid="7461" bouquettype="hd" frequency="304000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 7461</configuration>
+		<configuration key="hd_delta8200_" netid="8200" bouquettype="hd" frequency="304000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 8200</configuration>
+		<configuration key="hd_delta8900_" netid="8900" bouquettype="hd" frequency="304000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 8900 Leeuwarden, Groningen</configuration>
+		<configuration key="hd_delta9410_" netid="9410" bouquettype="hd" frequency="304000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta 9410 Beilen, Emmen</configuration>
+		<!-- Ziggo -->
+		<configuration key="hd_ziggo1536_" netid="1536" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Intern netwerk</configuration>
+		<configuration key="hd_ziggo3333_" netid="3333" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Ongecodeerd zakelijk</configuration>
+		<configuration key="hd_ziggo4444_" netid="4444" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Ongecodeerd</configuration>
+		<configuration key="hd_ziggo6666_" netid="6666" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Standaard-lijst zakelijk</configuration>
+		<configuration key="hd_ziggo9876_" netid="9876" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Test Region II</configuration>        
+		<configuration key="hd_ziggo_____" netid="5555" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Standaard-lijst</configuration>
+		<configuration key="hd_ziggo43184" netid="43184" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Sassenheim</configuration>
+		<configuration key="hd_ziggo43185" netid="43185" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Alphen a/d Rijn</configuration>
+		<configuration key="hd_ziggo43186" netid="43186" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Den Haag</configuration>
+		<configuration key="hd_ziggo43187" netid="43186" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Utrecht</configuration>
+		<configuration key="hd_ziggo43188" netid="43188" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Veenendaal</configuration>
+		<configuration key="hd_ziggo43189" netid="43189" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Driebergen</configuration>
+		<configuration key="hd_ziggo43190" netid="43190" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Gorinchem</configuration>
+		<configuration key="hd_ziggo43191" netid="43191" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Breda</configuration>
+		<configuration key="hd_ziggo43192" netid="43192" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Alkmaar</configuration>
+		<configuration key="hd_ziggo43193" netid="43193" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Velsen</configuration>
+		<configuration key="hd_ziggo43194" netid="43194" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Capelle</configuration>
+		<configuration key="hd_ziggo43195" netid="43195" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Amersfoort</configuration>
+		<configuration key="hd_ziggo43196" netid="43196" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Hilversum</configuration>
+		<configuration key="hd_ziggo43197" netid="43197" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Mill</configuration>
+		<configuration key="hd_ziggo43198" netid="43198" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Den Bosch</configuration>
+		<configuration key="hd_ziggo43199" netid="43199" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Roosendaal</configuration>
+		<configuration key="hd_ziggo43200" netid="43200" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Tilburg</configuration>
+		<configuration key="hd_ziggo43201" netid="43201" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Venlo</configuration>
+		<configuration key="hd_ziggo43202" netid="43202" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Roermond</configuration>
+		<configuration key="hd_ziggo43203" netid="43203" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Schoonbron</configuration>
+		<configuration key="hd_ziggo43204" netid="43204" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Zwolle</configuration>
+		<configuration key="hd_ziggo43205" netid="43205" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Hoogeveen</configuration>
+		<configuration key="hd_ziggo43206" netid="43206" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Groningen</configuration>
+		<configuration key="hd_ziggo43207" netid="43207" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Winschoten</configuration>
+		<configuration key="hd_ziggo43208" netid="43208" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Emmen</configuration>
+		<configuration key="hd_ziggo43209" netid="43209" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Gorredijk</configuration>
+		<configuration key="hd_ziggo43210" netid="43210" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Sneek</configuration>
+		<configuration key="hd_ziggo43211" netid="43211" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Hengelo</configuration>
+		<!-- Ziggo voormalig UPC gebied -->
+		<configuration key="hd_ziggo43136" netid="43136" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo N-Holland</configuration>
+		<configuration key="hd_ziggo43138" netid="43138" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Flevoland</configuration>
+		<configuration key="hd_ziggo43140" netid="43140" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Friesland</configuration>
+		<configuration key="hd_ziggo43142" netid="43142" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Gelderland</configuration>
+		<configuration key="hd_ziggo43144" netid="43144" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo N-Brabant</configuration>
+		<configuration key="hd_ziggo43146" netid="43146" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Z-Holland</configuration>
+		<configuration key="hd_ziggo50136" netid="50136" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">One way DTV Amsterdam</configuration>  
+		<configuration key="hd_ziggo50142" netid="50142" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">One way DTV Gelderland</configuration>
+		<configuration key="hd_ziggo50146" netid="50146" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">One way DTV Rotterdam</configuration>
+		<!-- Overige -->
+		<configuration key="hd_skv_______" netid="9640" bouquettype="hd" frequency="234000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">SKV Stichting Kabelnet Veendam</configuration>
+		<configuration key="hd_pijnacker_" netid="757" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">SKP Pijnacker</configuration>
 		<configuration key="hd_kabeltex__" netid="1791" bouquettype="hd" frequency="284000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Kabeltex</configuration>
 		<configuration key="hd_kabelnoord" netid="9101" bouquettype="hd" frequency="306000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="5">KabelNoord</configuration>
 		<configuration key="hd_harderwijk" netid="2244" bouquettype="hd" frequency="456000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Harderwijk</configuration>
-		<configuration key="hd_delta1000_" netid="1000" bouquettype="hd" frequency="402000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta1000</configuration>
-		<configuration key="hd_delta2000_" netid="2000" bouquettype="hd" frequency="402000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta2000</configuration>
-		<configuration key="hd_delta3000_" netid="3000" bouquettype="hd" frequency="402000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Delta3000</configuration>
-		<configuration key="hd_caiway2000" netid="2000" bouquettype="hd" frequency="325000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway2000</configuration>
-		<configuration key="hd_caiway2222" netid="2222" bouquettype="hd" frequency="338000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway2222</configuration>
-		<configuration key="hd_caiway2249" netid="2249" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway2249</configuration>
-		<configuration key="hd_caiway2257" netid="2257" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway2257</configuration>
-		<configuration key="hd_caiway2273" netid="2273" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway2273</configuration>
-		<configuration key="hd_caiway3667" netid="3667" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway3667</configuration>
-		<configuration key="hd_caiway4458" netid="4458" bouquettype="hd" frequency="444000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway4458</configuration>
-		<configuration key="hd_caiway4683" netid="4683" bouquettype="hd" frequency="538000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway4683</configuration>
-		<configuration key="hd_caiway5636" netid="5636" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway5636</configuration>
-		<configuration key="hd_caiway6227" netid="6227" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway6227</configuration>
-		<configuration key="hd_caiway6536" netid="6536" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway6536</configuration>
-		<configuration key="hd_caiway7224" netid="7224" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway7224</configuration>
-		<configuration key="hd_caiway7244" netid="7244" bouquettype="hd" frequency="554000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Caiway7244</configuration>
-		<configuration key="hd_ziggo_____" netid="5555" bouquettype="hd" frequency="474000" symbol_rate="6875000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Alg</configuration>
-		<configuration key="hd_ziggo43136" netid="43136" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo N-Holland</configuration> 
-		<configuration key="hd_ziggo43146" netid="43146" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Z-Holland</configuration> 
-		<configuration key="hd_ziggo43138" netid="43138" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Flevoland</configuration> 
-		<configuration key="hd_ziggo43140" netid="43140" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Friesland</configuration> 
-		<configuration key="hd_ziggo43142" netid="43142" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo Gelderland</configuration> 
-		<configuration key="hd_ziggo43144" netid="43144" bouquettype="hd" frequency="164000" symbol_rate="6900000" system="0" fec_inner="0" inversion="2" modulation="3">Ziggo N-Brabant</configuration> 
 	</dvbcconfigs>
 	<sections>
 		<section number="1">Kanaal lijst</section>
