@@ -181,7 +181,7 @@ except:
 
 	# Remove some services unless in netID whitelist
 	# Channel names have quotes, channel numbers do not. Example: ['ITV HD', 250, 500]
-	selective_blacklist = [501, 502, 503, 504, 505, "Sky Sports F1 HD", "Sky Sports Action HD", "Sky Sports Arena HD", "Sky Sports News HD",
+	selective_blacklist = [501, 502, 503, 504, 505, "Sky Sports F1 HD", "Sky Sports Action HD", "Sky Sports Arena HD",
 	]
 
 if (service["service_name"] in selective_blacklist or service["number"]  in selective_blacklist) and netID not in netID_whitelist:
