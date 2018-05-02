@@ -223,7 +223,7 @@
 	</sdchannelsontop>
 	<!-- swapchannels affects main and sections bouquets. "number" is the SD channel. "with" is the HD channel. Swap will not occur if target is not HD -->
 	<swapchannels>
-		<channel number="101" with="115"/> <!-- BBC One HD -->
+		<channel number="101" with="801"/> <!-- BBC One HD -->
 		<channel number="102" with="802"/> <!-- BBC Two HD -->
 		<channel number="103" with="803"/> <!-- ITV HD -->
 		<channel number="104" with="804"/> <!-- Channel 4 HD -->
@@ -345,7 +345,7 @@ except:
 		5311: 428, # Premier Sports
 		#slow death section
 		3705: 112, # ComedyCentral
-		2709: 128, # ComedyXtra
+		2709: 127, # ComedyXtra
 		1355: 415, # At the races
 		2418: 522, # ID
 		2517: 604, # Nicelodeon
@@ -469,12 +469,18 @@ except:
 	]
 
 # BBC HD channel numbers
+if service["channel_id"] in (2076,2081,2082,2083) and 115 in service["numbers"]: # BBC1 HD
+	service["numbers"][service["numbers"].index(115)] = 801
+	service["number"] = 801
+
 if service["channel_id"] in (2075,) and 115 in service["numbers"]: # BBC2 HD
-	service["numbers"][service["numbers"].index(115)] = 141
-	service["number"] = 141
-if service["channel_id"] in (2076,2081,2082,2083) and 141 in service["numbers"]: # BBC1 HD
-	service["numbers"][service["numbers"].index(141)] = 115
-	service["number"] = 115
+	service["numbers"][service["numbers"].index(115)] = 802
+	service["number"] = 802
+
+# Channel 4 HD numbers
+if service["channel_id"] in (4075,) and 138 in service["numbers"]: # Channel 4 HD
+	service["numbers"][service["numbers"].index(138)] = 804
+	service["number"] = 804
 
 # S4C swap problem when region is Wales
 if service["channel_id"] == 5701 and service["number"] == 104:
