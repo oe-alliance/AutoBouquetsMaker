@@ -311,10 +311,10 @@ except:
 
 	channels_to_add_by_id = {
 		1025: 296, # TV3+1
-		5122: 424, # eir Sport 1 (also 3601)
-		5123: 425, # eir Sport 2 (also 4551)
+		5122: 421, # eir Sport 1 (also 3601)
+		5123: 424, # eir Sport 2 (also 4551)
 		5152: 460, # eir Sport 2 HD (also 5154)
-		5153: 462, # Premier HD
+		5153: 412, # Premier HD
 		5311: 428, # Premier Sports
 		#slow death section
 		3705: 112, # ComedyCentral
