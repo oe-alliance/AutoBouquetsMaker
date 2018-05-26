@@ -455,6 +455,8 @@ except:
 
 #Some channels are FTA, but tables are wrong
 	fta_by_id = [
+		3358, # Sony Crime
+		3216, # Sony Crime+1
 		5237, # TRT World HD
 	]
 
