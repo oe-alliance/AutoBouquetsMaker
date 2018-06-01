@@ -121,6 +121,7 @@
 		<channel number="103" with="113" /><!-- ITV HD -->
 		<channel number="104" with="141" /><!-- Channel 4HD -->
 		<channel number="105" with="150" /><!-- Channel 5 HD -->
+		<channel number="106" with="145" /><!-- E4 HD -->
 		<channel number="107" with="163" /><!-- BBC FOUR HD -->
 		<channel number="115" with="176" /><!-- ITV2 HD -->
 		<channel number="117" with="177" /><!-- ITV3 HD -->
