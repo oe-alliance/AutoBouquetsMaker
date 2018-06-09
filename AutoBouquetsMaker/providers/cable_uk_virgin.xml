@@ -46,7 +46,7 @@
 		<configuration key="hd_40979_dvbc_uk" netid="40979" bouquettype="hd" frequency="611000" symbol_rate="6952000" system="0" modulation="3">40979 Croydon</configuration>
 		<configuration key="hd_40980_dvbc_uk" netid="40980" bouquettype="hd" frequency="539000" symbol_rate="6952000" system="0" modulation="3">40980 Hayes</configuration>
 		<configuration key="hd_40981_dvbc_uk" netid="40981" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="3">40981 Edinburgh 1 (SCOTLAND)</configuration>
-		<configuration key="hd_40982_dvbc_uk" netid="40982" bouquettype="hd" frequency="610750" symbol_rate="6952000" system="0" modulation="3">40982 Dundee (Edinburgh 2 SCOTLAND)</configuration>
+		<configuration key="hd_40982_dvbc_uk" netid="40982" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="3">40982 Dundee (Edinburgh 2 SCOTLAND)</configuration>
 		<configuration key="hd_40983_dvbc_uk" netid="40983" bouquettype="hd" frequency="539000" symbol_rate="6952000" system="0" modulation="3">40983 TTA Knowsley DMC (Hayes_RHE)</configuration>
 		<configuration key="hd_40984_dvbc_uk" netid="40984" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="3">40984 Uddingston (SCOTLAND)</configuration>
 		<configuration key="hd_40985_dvbc_uk" netid="40985" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40985 Haringey</configuration>
