@@ -65,7 +65,7 @@
 		<configuration key="hd_41015_dvbc_uk" netid="41015" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">41015 Birmingham TDN</configuration>
 		<configuration key="hd_41016_dvbc_uk" netid="41016" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">41016 Liverpool TDN</configuration>
 		<configuration key="hd_41018_dvbc_uk" netid="41018" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">41018 Preston TDN</configuration>
-		<configuration key="hd_41020_dvbc_uk" netid="41020" bouquettype="hd" frequency="411000" symbol_rate="6952000" system="0" modulation="3">41020 Crawley</configuration>
+		<configuration key="hd_41020_dvbc_uk" netid="41020" bouquettype="hd" frequency="643000" symbol_rate="6952000" system="0" modulation="3">41020 Crawley</configuration>
 		<configuration key="hd_41026_dvbc_uk" netid="41026" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">41026 Southport</configuration>
 		<configuration key="hd_41040_dvbc_uk" netid="41040" bouquettype="hd" frequency="666750" symbol_rate="6952000" system="0" modulation="3">41040 VM Hammersmith</configuration>
 		<configuration key="hd_41041_dvbc_uk" netid="41041" bouquettype="hd" frequency="666750" symbol_rate="6952000" system="0" modulation="3">41041 Bromley</configuration>
