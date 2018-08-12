@@ -267,6 +267,7 @@
 		<channel number="135" with="829"/> <!-- E4 HD -->
 		<channel number="136" with="830"/> <!-- More4 HD -->
 		<channel number="140" with="831"/> <!-- TLC HD -->
+		<channel number="144" with="866"/> <!-- Quest HD -->
 		<channel number="151" with="834"/> <!-- E HD -->
 		<channel number="156" with="835"/> <!-- Crime+Inv HD -->
 		<channel number="162" with="836"/> <!-- Animal Planet HD -->
