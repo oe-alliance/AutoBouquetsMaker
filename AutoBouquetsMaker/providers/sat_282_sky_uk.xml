@@ -430,7 +430,7 @@ except:
 		5386: "BT Sport Extra 6",
 	}
 
-	whitelist = ['ITV HD','ITV2 HD','ITV3 HD','ITV4 HD',752,'BoxNation HD']
+	whitelist = ['ITV HD','ITV2 HD','ITV3 HD','ITV4 HD',752,'BoxNation HD','Quest HD']
 
 	whitelist_by_id = [
 		1003, # MUTV HD
