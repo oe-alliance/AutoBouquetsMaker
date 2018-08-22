@@ -97,11 +97,11 @@
 	</dvbcconfigs>
 	<sections>
 		<section number="100">Entertainment</section>
-		<section number="250">Factual</section>
-		<section number="284">Lifestyle</section>
-		<section number="300">Music</section>
+		<section number="245">Factual</section>
+		<section number="278">Lifestyle</section>
+		<section number="310">Music</section>
 		<section number="400">Movies</section>
-		<section number="500">Sports</section>
+		<section number="501">Sports</section>
 		<section number="601">News</section>
 		<section number="700">Kids</section>
 		<section number="740">Shopping</section>
