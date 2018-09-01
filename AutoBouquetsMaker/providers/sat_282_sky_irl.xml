@@ -116,9 +116,9 @@
 		<channel number="414" with="868"/> <!-- BT Sport2 HD-->
 		<channel number="417" with="869"/> <!-- BT Sport3 HD-->
 		<channel number="418" with="870"/> <!-- MUTV HD -->
+		<channel number="421" with="873"/> <!-- eir sport 1 HD -->
 		<channel number="422" with="871"/> <!-- eir Sport 2 HD -->
 		<channel number="423" with="872"/> <!-- BTSpt ESPN HD -->
-		<channel number="425" with="873"/> <!-- LFCTV TV HD -->
 		<channel number="426" with="874"/> <!-- Racing UK HD -->
 		<channel number="501" with="875"/> <!-- Sky News HD -->
 		<channel number="502" with="876"/> <!-- Bloomberg HD -->
@@ -298,6 +298,7 @@ except:
 	whitelist_by_id = [
 		1003, # MUTV HD
 		1047, # Insight HD
+		1163, # eir Sport 1 HD
 		5152, # eir Sport 2 HD
 		5153, # Premier HD
 		5154, # eir Sport 2 HD
