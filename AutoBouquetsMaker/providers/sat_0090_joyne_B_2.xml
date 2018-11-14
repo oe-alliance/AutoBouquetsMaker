@@ -1,6 +1,6 @@
 <provider>
-	<name>Joyne NL 2/3</name>
-	<dependent>sat_0090_joyne_1</dependent>
+	<name>Joyne BE 2/3</name>
+	<dependent>sat_0090_joyne_B_1</dependent>
 	<streamtype>dvbs</streamtype>
 	<protocol>nolcn</protocol><!-- We do not want to harvest LCN data from this transponder -->
 	<transponder
@@ -19,16 +19,16 @@
 		onid="158"
 	/>
 	<sections>
-		<section number="1">Joyne NL</section>
+		<section number="1">Joyne BE</section>
 	</sections>
 	<dvbsconfigs>
-		<configuration key="hd_00001" bouquet="0x01" region="0x83">Joyne NL</configuration>
+		<configuration key="hd_00001" bouquet="0x01" region="0x83">Joyne BE</configuration>
 	</dvbsconfigs>
 	<servicehacks>
 <![CDATA[
 
 # Clear any LCN data (if any existed in the NIT). 
-# We are going to add LCN data later for all three transponders using a CustomLCN file saved from the BAT on 11747 H
+# We are going to add LCN data later for all three transponders using a CustomLCN file saved from the BAT on 11727 V
 service["number"] = service["service_id"]
 service["numbers"] = [service["service_id"]]
 

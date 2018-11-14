@@ -158,53 +158,53 @@
 		<configuration key="sd_west_anglia" bouquet="0x1001" region="0x19">West Anglia SD</configuration>
 		<configuration key="sd_west_dorset" bouquet="0x1003" region="0x43">West Dorset SD</configuration>
 		<configuration key="sd_westcountry" bouquet="0x1001" region="0x06">Westcountry SD</configuration>
-		<configuration key="sdcustom_atherstone" bouquet="0x1001" region="0x13">Atherstone Custom</configuration>
-		<configuration key="sdcustom_border_england" bouquet="0x1001" region="0x0c">Border England Custom</configuration>
-		<configuration key="sdcustom_border_scotland" bouquet="0x1002" region="0x24">Border Scotland Custom</configuration>
-		<configuration key="sdcustom_brighton" bouquet="0x1003" region="0x41">Brighton Custom</configuration>
-		<configuration key="sdcustom_central_midlands" bouquet="0x1001" region="0x03">Central Midlands Custom</configuration>
-		<configuration key="sdcustom_channel_isles" bouquet="0x1004" region="0x22">Channel Isles Custom</configuration>
-		<configuration key="sdcustom_dundee" bouquet="0x1002" region="0x27">Dundee Custom</configuration>
-		<configuration key="sdcustom_east_midlands" bouquet="0x1001" region="0x14">East Midlands Custom</configuration>
-		<configuration key="sdcustom_essex" bouquet="0x1001" region="0x02">Essex Custom</configuration>
-		<configuration key="sdcustom_gloucester" bouquet="0x1001" region="0x18">Gloucester Custom</configuration>
-		<configuration key="sdcustom_grampian" bouquet="0x1002" region="0x23">Grampian Custom</configuration>
-		<configuration key="sdcustom_granada" bouquet="0x1001" region="0x07">Granada Custom</configuration>
-		<configuration key="sdcustom_henley_on_thames" bouquet="0x1003" region="0x46">Henley On Thames Custom</configuration>
-		<configuration key="sdcustom_htv_wales" bouquet="0x1003" region="0x2b">HTV Wales Custom</configuration>
-		<configuration key="sdcustom_htv_west" bouquet="0x1001" region="0x04">HTV West Custom</configuration>
-		<configuration key="sdcustom_htv_west_thames_valley" bouquet="0x1003" region="0x3f">HTV West / Thames Valley Custom</configuration>
-		<configuration key="sdcustom_humber" bouquet="0x1001" region="0x1d">Humber Custom</configuration>
-		<configuration key="sdcustom_london" bouquet="0x1001" region="0x01">London Custom</configuration>
-		<configuration key="sdcustom_london_essex" bouquet="0x1001" region="0x12">London / Essex Custom</configuration>
-		<configuration key="sdcustom_london_kent" bouquet="0x1003" region="0x40">London Kent Custom</configuration>
-		<configuration key="sdcustom_london_thames_valley" bouquet="0x1003" region="0x42">London / Thames Valley Custom</configuration>
-		<configuration key="sdcustom_meridian_east" bouquet="0x1001" region="0x0b">Meridian East Custom</configuration>
-		<configuration key="sdcustom_meridian_north" bouquet="0x1003" region="0x44">Meridian North Custom</configuration>
-		<configuration key="sdcustom_meridian_south" bouquet="0x1001" region="0x05">Meridian South Custom</configuration>
-		<configuration key="sdcustom_meridian_south_east" bouquet="0x1001" region="0x0a">Meridian South East Custom</configuration>
-		<configuration key="sdcustom_merseyside" bouquet="0x1003" region="0x2d">Merseyside Custom</configuration>
-		<configuration key="sdcustom_norfolk" bouquet="0x1001" region="0x15">Norfolk Custom</configuration>
-		<configuration key="sdcustom_north_east_midlands" bouquet="0x1003" region="0x3e">North East Midlands Custom</configuration>
-		<configuration key="sdcustom_north_west_yorkshire" bouquet="0x1001" region="0x08">North West Yorkshire Custom</configuration>
-		<configuration key="sdcustom_north_yorkshire" bouquet="0x1001" region="0x1a">North Yorkshire Custom</configuration>
-		<configuration key="sdcustom_northern_ireland" bouquet="0x1004" region="0x21">Northern Ireland Custom</configuration>
-		<configuration key="sdcustom_oxford" bouquet="0x1003" region="0x47">Oxford Custom</configuration>
-		<configuration key="sdcustom_ridge_hill" bouquet="0x1003" region="0x29">Ridge Hill Custom</configuration>
-		<configuration key="sdcustom_scarborough" bouquet="0x1003" region="0x3d">Scarborough Custom</configuration>
-		<configuration key="sdcustom_scottish_east" bouquet="0x1002" region="0x26">Scottish East Custom</configuration>
-		<configuration key="sdcustom_scottish_west" bouquet="0x1002" region="0x25">Scottish West Custom</configuration>
-		<configuration key="sdcustom_sheffield" bouquet="0x1003" region="0x3c">Sheffield Custom</configuration>
-		<configuration key="sdcustom_south_lakeland" bouquet="0x1001" region="0x1c">South Lakeland Custom</configuration>
-		<configuration key="sdcustom_south_yorkshire" bouquet="0x1003" region="0x48">South Yorkshire Custom</configuration>
-		<configuration key="sdcustom_tees" bouquet="0x1003" region="0x45">Tees Custom</configuration>
-		<configuration key="sdcustom_thames_valley" bouquet="0x1001" region="0x09">Thames Valley Custom</configuration>
-		<configuration key="sdcustom_tring" bouquet="0x1001" region="0x1b">Tring Custom</configuration>
-		<configuration key="sdcustom_tyne" bouquet="0x1001" region="0x0d">Tyne Custom</configuration>
-		<configuration key="sdcustom_wales" bouquet="0x1004" region="0x20">Wales Custom</configuration>
-		<configuration key="sdcustom_west_anglia" bouquet="0x1001" region="0x19">West Anglia Custom</configuration>
-		<configuration key="sdcustom_west_dorset" bouquet="0x1003" region="0x43">West Dorset Custom</configuration>
-		<configuration key="sdcustom_westcountry" bouquet="0x1001" region="0x06">Westcountry Custom</configuration>
+		<configuration key="sdcustom_atherstone" bouquet="0x1001" region="0x13">Atherstone SD Custom</configuration>
+		<configuration key="sdcustom_border_england" bouquet="0x1001" region="0x0c">Border England SD Custom</configuration>
+		<configuration key="sdcustom_border_scotland" bouquet="0x1002" region="0x24">Border Scotland SD Custom</configuration>
+		<configuration key="sdcustom_brighton" bouquet="0x1003" region="0x41">Brighton SD Custom</configuration>
+		<configuration key="sdcustom_central_midlands" bouquet="0x1001" region="0x03">Central Midlands SD Custom</configuration>
+		<configuration key="sdcustom_channel_isles" bouquet="0x1004" region="0x22">Channel Isles SD Custom</configuration>
+		<configuration key="sdcustom_dundee" bouquet="0x1002" region="0x27">Dundee SD Custom</configuration>
+		<configuration key="sdcustom_east_midlands" bouquet="0x1001" region="0x14">East Midlands SD Custom</configuration>
+		<configuration key="sdcustom_essex" bouquet="0x1001" region="0x02">Essex SD Custom</configuration>
+		<configuration key="sdcustom_gloucester" bouquet="0x1001" region="0x18">Gloucester SD Custom</configuration>
+		<configuration key="sdcustom_grampian" bouquet="0x1002" region="0x23">Grampian SD Custom</configuration>
+		<configuration key="sdcustom_granada" bouquet="0x1001" region="0x07">Granada SD Custom</configuration>
+		<configuration key="sdcustom_henley_on_thames" bouquet="0x1003" region="0x46">Henley On Thames SD Custom</configuration>
+		<configuration key="sdcustom_htv_wales" bouquet="0x1003" region="0x2b">HTV Wales SD Custom</configuration>
+		<configuration key="sdcustom_htv_west" bouquet="0x1001" region="0x04">HTV West SD Custom</configuration>
+		<configuration key="sdcustom_htv_west_thames_valley" bouquet="0x1003" region="0x3f">HTV West / Thames Valley SD Custom</configuration>
+		<configuration key="sdcustom_humber" bouquet="0x1001" region="0x1d">Humber SD Custom</configuration>
+		<configuration key="sdcustom_london" bouquet="0x1001" region="0x01">London SD Custom</configuration>
+		<configuration key="sdcustom_london_essex" bouquet="0x1001" region="0x12">London / Essex SD Custom</configuration>
+		<configuration key="sdcustom_london_kent" bouquet="0x1003" region="0x40">London Kent SD Custom</configuration>
+		<configuration key="sdcustom_london_thames_valley" bouquet="0x1003" region="0x42">London / Thames Valley SD Custom</configuration>
+		<configuration key="sdcustom_meridian_east" bouquet="0x1001" region="0x0b">Meridian East SD Custom</configuration>
+		<configuration key="sdcustom_meridian_north" bouquet="0x1003" region="0x44">Meridian North SD Custom</configuration>
+		<configuration key="sdcustom_meridian_south" bouquet="0x1001" region="0x05">Meridian South SD Custom</configuration>
+		<configuration key="sdcustom_meridian_south_east" bouquet="0x1001" region="0x0a">Meridian South East SD Custom</configuration>
+		<configuration key="sdcustom_merseyside" bouquet="0x1003" region="0x2d">Merseyside SD Custom</configuration>
+		<configuration key="sdcustom_norfolk" bouquet="0x1001" region="0x15">Norfolk SD Custom</configuration>
+		<configuration key="sdcustom_north_east_midlands" bouquet="0x1003" region="0x3e">North East Midlands SD Custom</configuration>
+		<configuration key="sdcustom_north_west_yorkshire" bouquet="0x1001" region="0x08">North West Yorkshire SD Custom</configuration>
+		<configuration key="sdcustom_north_yorkshire" bouquet="0x1001" region="0x1a">North Yorkshire SD Custom</configuration>
+		<configuration key="sdcustom_northern_ireland" bouquet="0x1004" region="0x21">Northern Ireland SD Custom</configuration>
+		<configuration key="sdcustom_oxford" bouquet="0x1003" region="0x47">Oxford SD Custom</configuration>
+		<configuration key="sdcustom_ridge_hill" bouquet="0x1003" region="0x29">Ridge Hill SD Custom</configuration>
+		<configuration key="sdcustom_scarborough" bouquet="0x1003" region="0x3d">Scarborough SD Custom</configuration>
+		<configuration key="sdcustom_scottish_east" bouquet="0x1002" region="0x26">Scottish East SD Custom</configuration>
+		<configuration key="sdcustom_scottish_west" bouquet="0x1002" region="0x25">Scottish West SD Custom</configuration>
+		<configuration key="sdcustom_sheffield" bouquet="0x1003" region="0x3c">Sheffield SD Custom</configuration>
+		<configuration key="sdcustom_south_lakeland" bouquet="0x1001" region="0x1c">South Lakeland SD Custom</configuration>
+		<configuration key="sdcustom_south_yorkshire" bouquet="0x1003" region="0x48">South Yorkshire SD Custom</configuration>
+		<configuration key="sdcustom_tees" bouquet="0x1003" region="0x45">Tees SD Custom</configuration>
+		<configuration key="sdcustom_thames_valley" bouquet="0x1001" region="0x09">Thames Valley SD Custom</configuration>
+		<configuration key="sdcustom_tring" bouquet="0x1001" region="0x1b">Tring SD Custom</configuration>
+		<configuration key="sdcustom_tyne" bouquet="0x1001" region="0x0d">Tyne SD Custom</configuration>
+		<configuration key="sdcustom_wales" bouquet="0x1004" region="0x20">Wales SD Custom</configuration>
+		<configuration key="sdcustom_west_anglia" bouquet="0x1001" region="0x19">West Anglia SD Custom</configuration>
+		<configuration key="sdcustom_west_dorset" bouquet="0x1003" region="0x43">West Dorset SD Custom</configuration>
+		<configuration key="sdcustom_westcountry" bouquet="0x1001" region="0x06">Westcountry SD Custom</configuration>
 	</dvbsconfigs>
 	<sections>
 		<section number="101">Entertainment</section>

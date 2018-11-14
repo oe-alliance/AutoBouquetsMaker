@@ -10,7 +10,7 @@
 	<streamtype>dvbs</streamtype>
 	<protocol>lcn</protocol>
 	<transponder
-		orbital_position="90"
+		orbital_position="92"
 		frequency="20185000"
 		symbol_rate="25000000"
 		polarization="2"

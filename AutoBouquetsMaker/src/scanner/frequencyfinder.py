@@ -238,8 +238,8 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 					if self.config_mode(nim) not in ("nothing",) and (nim.isCompatible("DVB-T") or (nim.isCompatible("DVB-S") and nim.canBeCompatible("DVB-T"))):
 						nimList.append(nim.slot)
 			if len(nimList) == 0:
-				print "[ABM-FrequencyFinder][getFrontend] No terrestrial tuner found"
-				self.showError(_('No terrestrial tuner found'))
+				print "[ABM-FrequencyFinder][getFrontend] No terrestrial tuner found."
+				self.showError(_('No terrestrial tuner found.'))
 				return
 		else: # manual tuner selection, and subsequent iterations
 			nim = nimmanager.nim_slots[self.selectedNIM]
@@ -252,12 +252,12 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 					nimList.append(nim.slot)
 			if len(nimList) == 0:
 				print "[ABM-FrequencyFinder][getFrontend] User selected tuner not configured"
-				self.showError(_('Selected tuner is not configured'))
+				self.showError(_('Selected tuner is not configured.'))
 				return
 
 		if len(nimList) == 0:
-			print "[ABM-FrequencyFinder][getFrontend] No terrestrial tuner found"
-			self.showError(_('No terrestrial tuner found'))
+			print "[ABM-FrequencyFinder][getFrontend] No terrestrial tuner found."
+			self.showError(_('No terrestrial tuner found.'))
 			return
 
 		resmanager = eDVBResourceManager.getInstance()
@@ -304,7 +304,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 
 		if current_slotid == -1:
 			print "[ABM-FrequencyFinder][getFrontend] No valid NIM found"
-			self.showError(_('No valid NIM found for terrestrial'))
+			self.showError(_('No valid NIM found for terrestrial.'))
 			return
 
 		if not self.rawchannel:
@@ -346,8 +346,8 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 
 		self.demuxer_id = self.rawchannel.reserveDemux()
 		if self.demuxer_id < 0:
-			print>>log, "[ABM-FrequencyFinder][getFrontend] Cannot allocate the demuxer"
-			self.showError(_('Cannot allocate the demuxer'))
+			print>>log, "[ABM-FrequencyFinder][getFrontend] Cannot allocate the demuxer."
+			self.showError(_('Cannot allocate the demuxer.'))
 			return
 
 		self.frontend.tune(setParamsFe(setParams(self.frequency, self.system, self.bandwidth)))
@@ -500,7 +500,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 					nit_current_sections_read.append(section["header"]["section_number"])
 					nit_current_content += section["content"]
 
-					if section["header"]["network_name"] != "Unknown":
+					if 'network_name' in section["header"] and section["header"]["network_name"] != "Unknown":
 						self.network_name = section["header"]["network_name"]
 
 					if len(nit_current_sections_read) == nit_current_sections_count:

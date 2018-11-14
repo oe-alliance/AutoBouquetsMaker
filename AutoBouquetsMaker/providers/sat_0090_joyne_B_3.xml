@@ -1,12 +1,13 @@
 <provider>
-	<name>Joyne NL</name>
+	<name>Joyne BE 3/3</name>
+	<dependent>sat_0090_joyne_B_1</dependent>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcnbat</protocol>
 	<transponder
 		orbital_position="90"
-		frequency="11747000"
+		frequency="11727000"
 		symbol_rate="30000000"
-		polarization="0"
+		polarization="1"
 		fec_inner="3"
 		inversion="2"
 		system="1"
@@ -14,14 +15,14 @@
 		roll_off="0"
 		pilot="2"
 		bat_pid="0x11"
-		tsid="50020"
+		tsid="50010"
 		onid="158"
 	/>
 	<sections>
-		<section number="1">Joyne NL</section>
+		<section number="1">Joyne BE</section>
 	</sections>
 	<dvbsconfigs>
-		<configuration key="hd_00001" bouquet="0x01" region="0x83">Joyne NL</configuration>
+		<configuration key="hd_00001" bouquet="0x01" region="0x83">Joyne BE</configuration>
 	</dvbsconfigs>
 	<servicehacks>
 <![CDATA[
@@ -42,7 +43,7 @@ except:
 				logical_channel_number_dict[servicekey]["service_id"],
 				))
 		xml_out_list.append("\t</lcnlist>\n</custom>\n")
-		with open(custom_dir + "/hd_sat_0090_joyne_1_Custom" + ("radio" if type == "radio" else "") + "LCN.xml", "w", 0) as xmlout:
+		with open(custom_dir + "/hd_sat_0090_joyne_B_1_Custom" + ("radio" if type == "radio" else "") + "LCN.xml", "w", 0) as xmlout:
 			xmlout.write(''.join(xml_out_list))
 			xmlout.close()
 		del xml_out_list

@@ -149,7 +149,7 @@ class AutoBouquetsMaker_UpdateProviders(Screen, ConfigListScreen):
 					self.showError(_('Network connection error: \n%s') % str(e.reason))
 				else:
 					print>>log, '[ABM-UpdateProviders][checkRemoteVersion] Failed to reach Github.'
-					self.showError(_('Network connection error'))
+					self.showError(_('Network connection error.'))
 			return
 
 		try:
@@ -203,7 +203,7 @@ class AutoBouquetsMaker_UpdateProviders(Screen, ConfigListScreen):
 					self.showError(_('Network connection error: \n%s')% str(e.reason))
 				else:
 					print>>log, '[ABM-UpdateProviders][getResource] Failed to reach Github.'
-					self.showError(_('Network connection error'))
+					self.showError(_('Network connection error.'))
 			return
 
 		providerxml = response.read().replace("\r", "")
@@ -220,7 +220,7 @@ class AutoBouquetsMaker_UpdateProviders(Screen, ConfigListScreen):
 					f.close()
 				if currentProviderFileStr == providerxml:
 					self["action"].setText(_("Retrieved config file for %s") % self.provider_name)
-					self["status"].setText(_("Config file for %s does not need updating") % self.provider_name)
+					self["status"].setText(_("Config file for %s does not need updating.") % self.provider_name)
 					print>>log, "[ABM-UpdateProviders][getResource] Config file for %s did not need updating." % self.provider_name
 					self.messages.append(_("Config file for %s didn't need updating.") % (self.provider_name))
 					self.resourcetimer = eTimer()
@@ -232,7 +232,7 @@ class AutoBouquetsMaker_UpdateProviders(Screen, ConfigListScreen):
 						f.write(providerxml)
 						f.close()
 					self["action"].setText(_("Retrieved config file for %s") % self.provider_name)
-					self["status"].setText(_("Config file for %s has been updated") % self.provider_name)
+					self["status"].setText(_("Config file for %s has been updated.") % self.provider_name)
 					print>>log, "[ABM-UpdateProviders][getResource] Config file for %s has been updated to the latest version" % self.provider_name
 					self.messages.append(_("Config file for %s has been updated.") % (self.provider_name))
 					self.resourcetimer = eTimer()
@@ -241,7 +241,7 @@ class AutoBouquetsMaker_UpdateProviders(Screen, ConfigListScreen):
 
 			else:
 				self["action"].setText(_("Retrieved config file for %s") % self.provider_name)
-				self["status"].setText(_("Config file for %s does not parse") % self.provider_name)
+				self["status"].setText(_("Config file for %s does not parse.") % self.provider_name)
 				print>>log, "[ABM-UpdateProviders][getResource] Retrieved config file for %s does not parse." % self.provider_name
 				self.messages.append(_("Retrieved config file for %s does not parse.") % (self.provider_name))
 				self.resourcetimer = eTimer()
@@ -251,7 +251,7 @@ class AutoBouquetsMaker_UpdateProviders(Screen, ConfigListScreen):
 
 		else:
 			self["action"].setText(_("Retrieved provider file for %s") % self.provider_name)
-			self["status"].setText(_("Config file for %s is faulty") % self.provider_name)
+			self["status"].setText(_("Config file for %s is faulty.") % self.provider_name)
 			print>>log, "[ABM-UpdateProviders][getResource] Retrieved config file for %s is faulty or incomplete." % self.provider_name
 			self.messages.append(_("Retrieved config file for %s is faulty or incomplete.") % (self.provider_name))
 			self.resourcetimer = eTimer()

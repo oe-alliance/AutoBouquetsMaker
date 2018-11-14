@@ -1,11 +1,11 @@
 <provider>
-	<name>Joyne NL 2/3</name>
+	<name>Joyne NL 3/3</name>
 	<dependent>sat_0090_joyne_1</dependent>
 	<streamtype>dvbs</streamtype>
 	<protocol>nolcn</protocol><!-- We do not want to harvest LCN data from this transponder -->
 	<transponder
 		orbital_position="90"
-		frequency="12074000"
+		frequency="11727000"
 		symbol_rate="30000000"
 		polarization="1"
 		fec_inner="3"
@@ -15,7 +15,7 @@
 		roll_off="0"
 		pilot="2"
 		bat_pid="0x11"
-		tsid="50190"
+		tsid="50010"
 		onid="158"
 	/>
 	<sections>

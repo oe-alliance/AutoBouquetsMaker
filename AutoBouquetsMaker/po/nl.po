@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-15 10:04+0100\n"
-"PO-Revision-Date: 2018-08-17 07:56+0200\n"
+"POT-Creation-Date: 2018-09-27 18:56+0100\n"
+"PO-Revision-Date: 2018-09-28 15:18+0200\n"
 "Last-Translator: Rob van der Does <RobvanderDoes@Gmail.com>\n"
 "Language-Team: Andy Blacburn. Rob van der Does\n"
 "Language: nl\n"
@@ -148,24 +148,20 @@ msgid "Config file for %s didn't need updating."
 msgstr "Configuratiebestand voor %s hoefde niet geüpdatet te worden."
 
 #, python-format
-msgid "Config file for %s does not need updating"
-msgstr "Configuratiebestand voor %s hoeft niet geüpdatet te worden."
+msgid "Config file for %s does not need updating."
+msgstr "Configuratiebestand voor %s hoeft niet te worden geüpdatet."
 
 #, python-format
-msgid "Config file for %s does not parse"
+msgid "Config file for %s does not parse."
 msgstr "Configuratiebestand voor %s kan niet verwerkt worden."
-
-#, python-format
-msgid "Config file for %s has been updated"
-msgstr "Configuratiebestand voor %s is geüpdatet."
 
 #, python-format
 msgid "Config file for %s has been updated."
 msgstr "Configuratiebestand voor %s is geüpdatet."
 
 #, python-format
-msgid "Config file for %s is faulty"
-msgstr "Configuratiebestand voor %s is corrupt."
+msgid "Config file for %s is faulty."
+msgstr "Configuratiebestand voor %s is niet goed."
 
 msgid "Configure"
 msgstr "Configureer"
@@ -295,6 +291,9 @@ msgstr "Verplaats omhoog"
 msgid "Network connection error"
 msgstr "Netwerk verbindingsfout."
 
+msgid "Network connection error."
+msgstr "Netwerk verbindingsfout."
+
 #, python-format
 msgid ""
 "Network connection error: \n"
@@ -321,14 +320,14 @@ msgstr "Er zijn geen providers geconfigureerd."
 msgid "No terrestrial multiplexes found."
 msgstr "Geen terrestrische multiplexen gevonden."
 
-msgid "No terrestrial tuner found"
-msgstr "Geen terrestrische tuner gevonden."
+msgid "No terrestrial tuner found."
+msgstr "Geen terrestrial tuner gevonden."
 
 msgid "No valid NIM found for "
 msgstr "Geen geldige NIM gevonden voor "
 
-msgid "No valid NIM found for terrestrial"
-msgstr "Geen geldige NIM gevonden voor terrestrisch."
+msgid "No valid NIM found for terrestrial."
+msgstr "Geen geldige NIM gevonden voor terrestrial."
 
 msgid "OK"
 msgstr "OK"
@@ -368,7 +367,7 @@ msgstr "Echt afsluiten zonder op te slaan?"
 msgid "Region"
 msgstr "Regio"
 
-msgid "Repeat how often"
+msgid "Repeat how often?"
 msgstr "Hoe vaak herhalen?"
 
 #, python-format
@@ -415,8 +414,8 @@ msgstr "Kies \"Ja\" om de \"DVB-T frequentievinder\" in het hoofdmenu te tonen. 
 msgid "Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used."
 msgstr "Kies uw eigen favorietenlijst in de lijst. Let op dat alleen de eerste 100 zenders voor deze lijst zullen worden gebruikt."
 
-msgid "Selected tuner is not configured"
-msgstr "Gekozen tuner is niet geconfigureerd."
+msgid "Selected tuner is not configured."
+msgstr "De geselecteerde tuner is niet geconfigureerd."
 
 #, python-format
 msgid "Services: %d video - %d radio"
@@ -599,8 +598,32 @@ msgstr "ja (alleen HD)"
 #~ msgid "Bottom"
 #~ msgstr "Onderin"
 
+#~ msgid "Config file for %s does not need updating"
+#~ msgstr "Configuratiebestand voor %s hoeft niet geüpdatet te worden."
+
+#~ msgid "Config file for %s does not parse"
+#~ msgstr "Configuratiebestand voor %s kan niet verwerkt worden."
+
+#~ msgid "Config file for %s has been updated"
+#~ msgstr "Configuratiebestand voor %s is geüpdatet."
+
+#~ msgid "Config file for %s is faulty"
+#~ msgstr "Configuratiebestand voor %s is corrupt."
+
+#~ msgid "No terrestrial tuner found"
+#~ msgstr "Geen terrestrische tuner gevonden."
+
+#~ msgid "No valid NIM found for terrestrial"
+#~ msgstr "Geen geldige NIM gevonden voor terrestrisch."
+
 #~ msgid "None"
 #~ msgstr "Geen"
+
+#~ msgid "Repeat how often"
+#~ msgstr "Hoe vaak herhalen?"
+
+#~ msgid "Selected tuner is not configured"
+#~ msgstr "Gekozen tuner is niet geconfigureerd."
 
 #~ msgid "Top"
 #~ msgstr "Bovenin"

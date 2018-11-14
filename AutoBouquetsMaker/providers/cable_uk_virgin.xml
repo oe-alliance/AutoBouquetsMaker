@@ -23,7 +23,7 @@
 		<configuration key="hd_00018_dvbc_uk" netid="00018" bouquettype="hd" frequency="387000" symbol_rate="6887000" system="0" modulation="3">00018 Northampton</configuration>
 		<configuration key="hd_00019_dvbc_uk" netid="00019" bouquettype="hd" frequency="643000" symbol_rate="6887000" system="0" modulation="3">00019 Coventry</configuration>
 		<configuration key="hd_00020_dvbc_uk" netid="00020" bouquettype="hd" frequency="394250" symbol_rate="6887000" system="0" modulation="3">00020 Oxford</configuration>
-		<configuration key="hd_00021_dvbc_uk" netid="00021" bouquettype="hd" frequency="643000" symbol_rate="6887000" system="0" modulation="3">00021 Belfast</configuration>
+		<configuration key="hd_00021_dvbc_uk" netid="00021" bouquettype="hd" frequency="643000" symbol_rate="6952000" system="0" modulation="5">00021 Belfast</configuration>
 		<configuration key="hd_00022_dvbc_uk" netid="00022" bouquettype="hd" frequency="643000" symbol_rate="6887000" system="0" modulation="3">00022 Grimsby</configuration>
 		<configuration key="hd_00023_dvbc_uk" netid="00023" bouquettype="hd" frequency="643000" symbol_rate="6952000" system="0" modulation="3">00023 Derry (Londonderry)</configuration>
 		<configuration key="hd_40961_dvbc_uk" netid="40961" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40961 Barnsley 600MHz (Barnsley 1)</configuration>
@@ -34,7 +34,7 @@
 		<configuration key="hd_40966_dvbc_uk" netid="40966" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40966 Knowsley 2</configuration>
 		<configuration key="hd_40967_dvbc_uk" netid="40967" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40967 Preston 1</configuration>
 		<configuration key="hd_40968_dvbc_uk" netid="40968" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40968 Preston 2</configuration>
-		<configuration key="hd_40969_dvbc_uk" netid="40969" bouquettype="hd" frequency="571000" symbol_rate="6952000" system="0" modulation="3">40969 Gateshead</configuration>
+		<configuration key="hd_40969_dvbc_uk" netid="40969" bouquettype="hd" frequency="571000" symbol_rate="6952000" system="0" modulation="5">40969 Gateshead</configuration>
 		<configuration key="hd_40970_dvbc_uk" netid="40970" bouquettype="hd" frequency="651000" symbol_rate="6952000" system="0" modulation="3">40970 Bristol 1 (ex Aztec)</configuration>
 		<configuration key="hd_40971_dvbc_uk" netid="40971" bouquettype="hd" frequency="651000" symbol_rate="6952000" system="0" modulation="3">40971 Bristol 2 (ex Aztec)</configuration>
 		<configuration key="hd_40973_dvbc_uk" netid="40973" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40973 Wolverhampton 1</configuration>
@@ -45,14 +45,14 @@
 		<configuration key="hd_40978_dvbc_uk" netid="40978" bouquettype="hd" frequency="643000" symbol_rate="6952000" system="0" modulation="3">40978 Basildon 4</configuration>
 		<configuration key="hd_40979_dvbc_uk" netid="40979" bouquettype="hd" frequency="611000" symbol_rate="6952000" system="0" modulation="3">40979 Croydon</configuration>
 		<configuration key="hd_40980_dvbc_uk" netid="40980" bouquettype="hd" frequency="539000" symbol_rate="6952000" system="0" modulation="3">40980 Hayes</configuration>
-		<configuration key="hd_40981_dvbc_uk" netid="40981" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="3">40981 Edinburgh 1 (SCOTLAND)</configuration>
+		<configuration key="hd_40981_dvbc_uk" netid="40981" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="5">40981 Edinburgh 1 (SCOTLAND)</configuration>
 		<configuration key="hd_40982_dvbc_uk" netid="40982" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="3">40982 Dundee (Edinburgh 2 SCOTLAND)</configuration>
 		<configuration key="hd_40983_dvbc_uk" netid="40983" bouquettype="hd" frequency="539000" symbol_rate="6952000" system="0" modulation="3">40983 TTA Knowsley DMC (Hayes_RHE)</configuration>
 		<configuration key="hd_40984_dvbc_uk" netid="40984" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="3">40984 Uddingston (SCOTLAND)</configuration>
 		<configuration key="hd_40985_dvbc_uk" netid="40985" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40985 Haringey</configuration>
 		<configuration key="hd_40986_dvbc_uk" netid="40986" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40986 NGRHEE Knowsley</configuration>
 		<configuration key="hd_40987_dvbc_uk" netid="40987" bouquettype="hd" frequency="387000" symbol_rate="6952000" system="0" modulation="3">40987 Exeter</configuration>
-		<configuration key="hd_40988_dvbc_uk" netid="40988" bouquettype="hd" frequency="387000" symbol_rate="6952000" system="0" modulation="3">40988 Plymouth</configuration>
+		<configuration key="hd_40988_dvbc_uk" netid="40988" bouquettype="hd" frequency="379000" symbol_rate="6952000" system="0" modulation="3">40988 Plymouth</configuration>
 		<configuration key="hd_40990_dvbc_uk" netid="40990" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40990 Barnsley 2 TRIALS</configuration>
 		<configuration key="hd_40995_dvbc_uk" netid="40995" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40995 Wolverhampton TRIALS</configuration>
 		<configuration key="hd_40998_dvbc_uk" netid="40998" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40998 Barnsley 1 TRIALS</configuration>
@@ -78,7 +78,7 @@
 		<configuration key="hd_41049_dvbc_uk" netid="41049" bouquettype="hd" frequency="666750" symbol_rate="6952000" system="0" modulation="3">41049 Peterborough</configuration>
 		<configuration key="hd_41050_dvbc_uk" netid="41050" bouquettype="hd" frequency="666750" symbol_rate="6952000" system="0" modulation="3">41050 Seven Kings</configuration>
 		<configuration key="hd_41051_dvbc_uk" netid="41051" bouquettype="hd" frequency="666750" symbol_rate="6952000" system="0" modulation="3">41051 Watford</configuration>
-		<configuration key="hd_41052_dvbc_uk" netid="41052" bouquettype="hd" frequency="666750" symbol_rate="6952000" system="0" modulation="3">41052 Ashford</configuration>
+		<configuration key="hd_41052_dvbc_uk" netid="41052" bouquettype="hd" frequency="666750" symbol_rate="6952000" system="0" modulation="5">41052 Ashford</configuration>
 		<configuration key="hd_41053_dvbc_uk" netid="41053" bouquettype="hd" frequency="666750" symbol_rate="6952000" system="0" modulation="3">41053 Leeds</configuration>
 		<configuration key="hd_41054_dvbc_uk" netid="41054" bouquettype="hd" frequency="666750" symbol_rate="6952000" system="0" modulation="3">41054 Wearside</configuration>
 		<configuration key="hd_41055_dvbc_uk" netid="41055" bouquettype="hd" frequency="666750" symbol_rate="6952000" system="0" modulation="3">41055 Norwich</configuration>
@@ -163,7 +163,7 @@ except:
 	provider = "Virgin Media"
 
 	#Channel names have quotes, channel numbers do not. Example: ['ITV HD', 250, 500]
-	blacklist = [295,650,651,743,744,745,746,947,'Channel Moved','hayu','ITV PPV HD','L Pack Tier 4','M Pack Tier 1','More TV Pack Tier 2','M+ Pack Tier 3','Netflix','PIN Protection Help',"Quest HD.",'S4C HD','XL Pack Tier 5','Vevo','Worldbox','YouTube']
+	blacklist = [295,650,651,743,744,745,746,947,'Channel Moved','hayu','ITV PPV HD','L Pack Tier 4','M Pack Tier 1','More TV Pack Tier 2','motorsport.tv','M+ Pack Tier 3','Netflix','PIN Protection Help','S4C HD','XL Pack Tier 5','Vevo','Worldbox','YouTube']
 
 	bt_sports_xtra = ["BT Sport Extra 0","BT Sport Extra 1","BT Sport Extra 2","BT Sport Extra 3","BT Sport Extra 4","BT Sport Extra 5","BT Sport Extra 6"]
 
