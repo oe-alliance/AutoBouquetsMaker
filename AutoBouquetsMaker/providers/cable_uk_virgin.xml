@@ -4,7 +4,7 @@
 	<protocol>vmuk</protocol>
 	<dvbcconfigs>
 		<configuration key="hd_00001_dvbc_uk" netid="00001" bouquettype="hd" frequency="643000" symbol_rate="6887000" system="0" modulation="3">00001 West Yorkshire</configuration>
-		<configuration key="hd_00002_dvbc_uk" netid="00002" bouquettype="hd" frequency="643000" symbol_rate="6887000" system="0" modulation="3">00002 Glasgow</configuration>
+		<configuration key="hd_00002_dvbc_uk" netid="00002" bouquettype="hd" frequency="643000" symbol_rate="6925000" system="0" modulation="5">00002 Glasgow</configuration>
 		<configuration key="hd_00003_dvbc_uk" netid="00003" bouquettype="hd" frequency="643000" symbol_rate="6887000" system="0" modulation="3">00003 Farnborough</configuration>
 		<configuration key="hd_00004_dvbc_uk" netid="00004" bouquettype="hd" frequency="643000" symbol_rate="6887000" system="0" modulation="3">00004 Bridgend</configuration>
 		<configuration key="hd_00005_dvbc_uk" netid="00005" bouquettype="hd" frequency="643000" symbol_rate="6887000" system="0" modulation="3">00005 Luton</configuration>
@@ -21,7 +21,7 @@
 		<configuration key="hd_00016_dvbc_uk" netid="00016" bouquettype="hd" frequency="387000" symbol_rate="6887000" system="0" modulation="3">00016 Warwick</configuration>
 		<configuration key="hd_00017_dvbc_uk" netid="00017" bouquettype="hd" frequency="339000" symbol_rate="6887000" system="0" modulation="3">00017 Hemel</configuration>
 		<configuration key="hd_00018_dvbc_uk" netid="00018" bouquettype="hd" frequency="387000" symbol_rate="6887000" system="0" modulation="3">00018 Northampton</configuration>
-		<configuration key="hd_00019_dvbc_uk" netid="00019" bouquettype="hd" frequency="643000" symbol_rate="6887000" system="0" modulation="3">00019 Coventry</configuration>
+		<configuration key="hd_00019_dvbc_uk" netid="00019" bouquettype="hd" frequency="643000" symbol_rate="6925000" system="0" modulation="5">00019 Coventry</configuration>
 		<configuration key="hd_00020_dvbc_uk" netid="00020" bouquettype="hd" frequency="394250" symbol_rate="6887000" system="0" modulation="3">00020 Oxford</configuration>
 		<configuration key="hd_00021_dvbc_uk" netid="00021" bouquettype="hd" frequency="643000" symbol_rate="6952000" system="0" modulation="5">00021 Belfast</configuration>
 		<configuration key="hd_00022_dvbc_uk" netid="00022" bouquettype="hd" frequency="643000" symbol_rate="6887000" system="0" modulation="3">00022 Grimsby</configuration>
@@ -45,7 +45,7 @@
 		<configuration key="hd_40978_dvbc_uk" netid="40978" bouquettype="hd" frequency="643000" symbol_rate="6952000" system="0" modulation="3">40978 Basildon 4</configuration>
 		<configuration key="hd_40979_dvbc_uk" netid="40979" bouquettype="hd" frequency="611000" symbol_rate="6952000" system="0" modulation="3">40979 Croydon</configuration>
 		<configuration key="hd_40980_dvbc_uk" netid="40980" bouquettype="hd" frequency="539000" symbol_rate="6952000" system="0" modulation="3">40980 Hayes</configuration>
-		<configuration key="hd_40981_dvbc_uk" netid="40981" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="3">40981 Edinburgh 1 (SCOTLAND)</configuration>
+		<configuration key="hd_40981_dvbc_uk" netid="40981" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="5">40981 Edinburgh 1 (SCOTLAND)</configuration>
 		<configuration key="hd_40982_dvbc_uk" netid="40982" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="3">40982 Dundee (Edinburgh 2 SCOTLAND)</configuration>
 		<configuration key="hd_40983_dvbc_uk" netid="40983" bouquettype="hd" frequency="539000" symbol_rate="6952000" system="0" modulation="3">40983 TTA Knowsley DMC (Hayes_RHE)</configuration>
 		<configuration key="hd_40984_dvbc_uk" netid="40984" bouquettype="hd" frequency="619000" symbol_rate="6952000" system="0" modulation="3">40984 Uddingston (SCOTLAND)</configuration>
