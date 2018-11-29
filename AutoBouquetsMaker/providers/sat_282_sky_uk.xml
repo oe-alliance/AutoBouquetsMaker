@@ -362,8 +362,7 @@ except:
 		#slow death section
 		3705: 112, # ComedyCentral
 		2709: 127, # ComedyXtra
-		1355: 415, # At the races
-		2418: 522, # ID
+		2418: 154, # ID
 		2517: 604, # Nicelodeon
 		5527: 606, # Nicktoons
 		3356: 615, # Nick Jr
