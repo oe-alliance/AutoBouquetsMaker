@@ -165,7 +165,7 @@ except:
 	provider = "Virgin Media"
 
 	#Channel names have quotes, channel numbers do not. Example: ['ITV HD', 250, 500]
-	blacklist = [295,650,651,743,744,745,746,947,'BT Events HD','Channel Moved','hayu','ITVEvents HD','L Pack Tier 4','M Pack Tier 1','More TV Pack Tier 2','motorsport.tv','M+ Pack Tier 3','Netflix','PIN Protection Help','S4C HD','XL Pack Tier 5','Vevo','Worldbox','YouTube']
+	blacklist = [295,650,651,743,744,745,746,947,'BT Events HD','Channel Moved','Channel Closed','hayu','ITVEvents HD','L Pack Tier 4','M Pack Tier 1','More TV Pack Tier 2','motorsport.tv','M+ Pack Tier 3','Netflix','PIN Protection Help','S4C HD','XL Pack Tier 5','Vevo','Worldbox','YouTube']
 
 	bt_sports_xtra = ["BT Sport Extra 0","BT Sport Extra 1","BT Sport Extra 2","BT Sport Extra 3","BT Sport Extra 4","BT Sport Extra 5","BT Sport Extra 6"]
 
@@ -177,7 +177,7 @@ except:
 
 	# Remove some services unless in netID whitelist
 	# Channel names have quotes, channel numbers do not. Example: ['ITV HD', 250, 500]
-	selective_blacklist = [501, 502, 503, 504, 505, "Sky Sports F1 HD", "Sky Sports Action HD", "Sky Sports Arena HD",
+	selective_blacklist = [501, 502, 503, 504, 505, "Sky Sports F1 HD", "Sky Sports Action HD", "Sky Sports Arena HD", "Sky Darts HD",
 	]
 
 if (service["service_name"] in selective_blacklist or service["number"]  in selective_blacklist) and netID not in netID_whitelist:
