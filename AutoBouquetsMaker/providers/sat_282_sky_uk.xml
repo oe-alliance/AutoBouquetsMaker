@@ -360,6 +360,7 @@ except:
 		5153: 412, # Premier HD
 		5311: 428, # Premier Sports
 		#slow death section
+		1354: 415, # At The Races
 		3705: 112, # ComedyCentral
 		2709: 127, # ComedyXtra
 		2418: 154, # ID
