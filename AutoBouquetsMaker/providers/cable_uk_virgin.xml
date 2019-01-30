@@ -37,7 +37,7 @@
 		<configuration key="hd_40969_dvbc_uk" netid="40969" bouquettype="hd" frequency="571000" symbol_rate="6952000" system="0" modulation="5">40969 Gateshead</configuration>
 		<configuration key="hd_40970_dvbc_uk" netid="40970" bouquettype="hd" frequency="651000" symbol_rate="6952000" system="0" modulation="3">40970 Bristol 1 (ex Aztec)</configuration>
 		<configuration key="hd_40971_dvbc_uk" netid="40971" bouquettype="hd" frequency="651000" symbol_rate="6952000" system="0" modulation="3">40971 Bristol 2 (ex Aztec)</configuration>
-		<configuration key="hd_40973_dvbc_uk" netid="40973" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40973 Wolverhampton 1</configuration>
+		<configuration key="hd_40973_dvbc_uk" netid="40973" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="5">40973 Wolverhampton 1</configuration>
 		<configuration key="hd_40974_dvbc_uk" netid="40974" bouquettype="hd" frequency="595000" symbol_rate="6952000" system="0" modulation="3">40974 Wolverhampton 2</configuration>
 		<configuration key="hd_40975_dvbc_uk" netid="40975" bouquettype="hd" frequency="643000" symbol_rate="6952000" system="0" modulation="3">40975 Basildon 1</configuration>
 		<configuration key="hd_40976_dvbc_uk" netid="40976" bouquettype="hd" frequency="643000" symbol_rate="6952000" system="0" modulation="3">40976 Basildon 2</configuration>
