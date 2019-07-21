@@ -313,7 +313,9 @@
 		<channel number="501" with="875"/> <!-- Sky News HD -->
 		<channel number="502" with="876"/> <!-- Bloomberg HD -->
 		<channel number="503" with="877"/> <!-- BBC News HD -->
+		<channel number="505" with="890"/> <!-- CNBC HD -->
 		<channel number="506" with="878"/> <!-- CNN HD -->
+		<channel number="509" with="891"/> <!-- CGTN HD -->
 		<channel number="511" with="879"/> <!-- RT HD -->
 		<channel number="513" with="880"/> <!-- Al Jazeera HD -->
 		<channel number="516" with="881"/> <!-- TRT World HD -->
