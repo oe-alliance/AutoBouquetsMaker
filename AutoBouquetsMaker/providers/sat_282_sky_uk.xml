@@ -310,6 +310,7 @@
 		<channel number="421" with="873"/> <!-- eir sport 1 HD -->
 		<channel number="423" with="872"/> <!-- BTSpt ESPN HD -->
 		<channel number="426" with="874"/> <!-- Racing UK HD -->
+		<channel number="457" with="876" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="501" with="875"/> <!-- Sky News HD -->
 		<channel number="502" with="876"/> <!-- Bloomberg HD -->
 		<channel number="503" with="877"/> <!-- BBC News HD -->
