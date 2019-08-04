@@ -37,8 +37,8 @@ class AutoBouquetsMaker_Menu(Screen):
 <screen position="center,center" size="600,500">
 	<widget name="key_red" position="0,0" size="140,40" valign="center" halign="center" zPosition="5" transparent="1" foregroundColor="white" backgroundColor="#9f1313" font="Regular;18"/>
 	<widget name="key_green" position="150,0" size="140,40" valign="center" halign="center" zPosition="5"  transparent="1" foregroundColor="white" backgroundColor="#1f771f" font="Regular;18"/>
-	<ePixmap name="red" position="0,0" zPosition="2" size="140,40" pixmap="skin_default/buttons/red.png" transparent="1" alphatest="on"/>
-	<ePixmap name="green" position="150,0" zPosition="2" size="140,40" pixmap="skin_default/buttons/green.png" transparent="1" alphatest="on"/>
+	<ePixmap name="red" position="0,0" zPosition="2" size="140,40" pixmap="buttons/red.png" transparent="1" alphatest="on"/>
+	<ePixmap name="green" position="150,0" zPosition="2" size="140,40" pixmap="buttons/green.png" transparent="1" alphatest="on"/>
 	<widget source="list" render="Listbox" position="0,50" size="600,420" scrollbarMode="showOnDemand">
 		<convert type="TemplatedMultiContent">
 			{"template": [
@@ -238,8 +238,8 @@ class AutoBouquetsMaker_Log(Screen):
 <screen name="AutoBouquetsMakerLogView" position="center,center" size="600,500" title="Backup Log">
 	<widget name="key_red" position="0,0" size="140,40" valign="center" halign="center" zPosition="5" transparent="1" foregroundColor="white" backgroundColor="#9f1313" font="Regular;18"/>
 	<widget name="key_green" position="150,0" size="140,40" valign="center" halign="center" zPosition="5" transparent="1" foregroundColor="white" font="Regular;18"/>
-	<ePixmap name="red" position="0,0" zPosition="2" size="140,40" pixmap="skin_default/buttons/red.png" transparent="1" alphatest="on"/>
-	<ePixmap name="green" position="150,0" zPosition="2" size="140,40" pixmap="skin_default/buttons/green.png" transparent="1" alphatest="on"/>
+	<ePixmap name="red" position="0,0" zPosition="2" size="140,40" pixmap="buttons/red.png" transparent="1" alphatest="on"/>
+	<ePixmap name="green" position="150,0" zPosition="2" size="140,40" pixmap="buttons/green.png" transparent="1" alphatest="on"/>
 	<widget name="list" position="0,50" size="600,420" font="Regular;22"/>
 </screen>"""
 
