@@ -96,7 +96,7 @@
 	</dvbcconfigs>
 	<sections>
 		<section number="100">Entertainment</section>
-		<section number="245">Factual / Lifestyle</section>
+		<section number="245">Factual &amp; Lifestyle</section>
 		<section number="300">Music</section>
 		<section number="400">Movies</section>
 		<section number="500">Sports</section>
