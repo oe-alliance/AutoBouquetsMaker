@@ -137,7 +137,6 @@
 		<channel number="147" with="195" /><!-- More 4 HD -->
 		<channel number="156" with="229" /><!-- E! HD -->
 		<channel number="157" with="199" /><!-- Fox HD -->
-		<channel number="172" with="217" /><!-- Quest HD -->
 		<channel number="245" with="247" /><!-- Eden HD -->
 		<channel number="266" with="268" /><!-- Nat Geo HD -->
 		<channel number="270" with="299" /><!-- History HD -->
@@ -162,10 +161,10 @@ except:
 	provider = "Virgin Media"
 
 	#Channel names have quotes, channel numbers do not. Example: ['ITV HD', 250, 500]
-	blacklist = ['ABN TV','&TV','BT Events HD','BT Sport Ultimate','BT Sport Ultimate WSL','Channel Moved','Channel Closed',
+	blacklist = [217,'ABN TV','&TV','BT Events HD','BT Sport Ultimate','BT Sport Ultimate WSL','Channel Moved','Channel Closed','Channel Update',
 	'Desi Entertainment','Good Food HD','Good Food','Good Food +1','hayu','ITVEvents HD','Lifetime +1','Living Foodz HD','L Pack Tier 4','M Pack Tier 1','More TV Pack Tier 2',
 	'motorsport.tv','M+ Pack Tier 3','Pop Power','Netflix','New Music On Demand','PIN Protection Help','Prime Video','XL Pack Tier 5','Vevo','Virgin TV Ultra HD',
-	'Worldbox','YouTube','Zing']
+	'Worldbox','YouTube','Your TV','Zing']
 
 	bt_sports_xtra = ["BT Sport Extra 0","BT Sport Extra 1","BT Sport Extra 2","BT Sport Extra 3","BT Sport Extra 4","BT Sport Extra 5","BT Sport Extra 6"]
 
