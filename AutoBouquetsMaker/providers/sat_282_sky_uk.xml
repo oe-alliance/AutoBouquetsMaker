@@ -256,7 +256,6 @@
 		<channel number="118" with="816"/> <!-- ITV2 HD -->
 		<channel number="119" with="817"/> <!-- ITV3 HD -->
 		<channel number="120" with="818"/> <!-- ITV4 HD -->
-		<channel number="121" with="819"/> <!-- SkySp Mix HD -->
 		<channel number="122" with="820"/> <!-- Sky Arts HD -->
 		<channel number="123" with="834"/> <!-- E! HD -->
 		<channel number="124" with="821"/> <!-- FOX HD -->
@@ -270,6 +269,7 @@
 		<channel number="135" with="829"/> <!-- E4 HD -->
 		<channel number="136" with="830"/> <!-- More4 HD -->
 		<channel number="144" with="831"/> <!-- Quest HD -->
+		<channel number="145" with="838"/> <!-- SkySp Mix HD -->
 		<channel number="156" with="835"/> <!-- Crime+Inv HD -->
 		<channel number="162" with="836"/> <!-- Animal Planet HD -->
 		<channel number="164" with="838"/> <!-- Lifetime HD -->
