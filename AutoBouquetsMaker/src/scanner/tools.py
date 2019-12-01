@@ -6,6 +6,7 @@ from dvbscanner import DvbScanner
 from urllib import quote
 
 class Tools():
+	SERVICEREF_ALLOWED_TYPES = [1, 4097, 5001, 5002]
 	def parseXML(self, filename):
 		try:
 			tool = open(filename, "r")
@@ -173,6 +174,7 @@ class Tools():
 							url = ''
 							target = ''
 							name = ''
+							servicereftype = ''
 							for i in range(0, node2.attributes.length):
 								if node2.attributes.item(i).name == "name":
 									name = node2.attributes.item(i).value.encode("utf-8")
@@ -182,11 +184,14 @@ class Tools():
 										url = quote(url) # single encode url
 								elif node2.attributes.item(i).name == "target":
 									target = int(node2.attributes.item(i).value)
+								elif node2.attributes.item(i).name == "servicereftype":
+									servicereftype = int(node2.attributes.item(i).value)
 							if url and target and target in customised["video"]: # must be a current service
 								customised["video"][target]["stream"] = url
 							elif name and url and target and target not in customised["video"]: # non existing service
 								customised["video"][target] = {'service_id': 0, 'transport_stream_id': 0, 'original_network_id': 0, 'namespace': 0, 'service_name': name, 'number': target, 'numbers': [target], 'free_ca': 0, 'service_type': 1, 'stream': url}
-
+							if servicereftype and servicereftype in self.SERVICEREF_ALLOWED_TYPES and target and target in customised["video"] and "stream" in customised["video"][target]: # if a stream was added above, a custom servicereftype may also be added
+								customised["video"][target]["servicereftype"] = servicereftype
 				elif node.tagName == "deletes":
 					for node2 in node.childNodes:
 						if node2.nodeType == node2.ELEMENT_NODE and node2.tagName == "delete":

@@ -352,7 +352,7 @@ class BouquetsWriter():
 			bouquets = open(path + "/" + filename, "r")
 			content = bouquets.read().strip().split("\n")
 			bouquets.close()
-			recognised_service_lines = ["#SERVICE %d:0:" % i for i in (1,4097,5001,5002)] + ["#SERVICE 1:7:"]
+			recognised_service_lines = ["#SERVICE %d:0:" % i for i in Tools.SERVICEREF_ALLOWED_TYPES] + ["#SERVICE 1:7:"]
 			for line in content:
 				if "%s:" % ':'.join(line.split(":")[:2]) in recognised_service_lines: # service or iptv line found, eg "#SERVICE 4097:0:"
 					return True
@@ -891,7 +891,8 @@ class BouquetsWriter():
 		print>>log, "[ABM-BouquetsWriter] Done"
 
 	def bouquetServiceLine(self, service):
-		return "#SERVICE 1:0:%x:%x:%x:%x:%x:0:0:0:%s\n%s" % (
+		return "#SERVICE %d:0:%x:%x:%x:%x:%x:0:0:0:%s\n%s" % (
+			(service["servicereftype"] if "servicereftype" in service and service["servicereftype"] in Tools.SERVICEREF_ALLOWED_TYPES else 1),
 			service["service_type"],
 			service["service_id"],
 			service["transport_stream_id"],

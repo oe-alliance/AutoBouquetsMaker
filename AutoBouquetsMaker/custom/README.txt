@@ -307,6 +307,23 @@ The name and service reference will be the same as the DVB service. This will al
 	</streams>
 </custommix>
 
+
+You can also give your stream a "service reference type". This allows you to tell the receiver which playback software to use for that individual stream.
+
+In this example "servicereftype" has been added:
+
+<custommix>
+	<streams>
+		<stream url="http://stream.source:port/live/username/F36/password/308.ts" target="118" servicereftype="4097" />
+	</streams>
+</custommix>
+
+The following is a list of currently valid "service reference types":
+	1		processed by the SoC (for when buffering is not required)
+	4097	processed by gstreamer via servicemp3
+	5001	processed by gstreamer via gst-player
+	5002	processed via extplayer3
+
 You can also add streams into empty LCN slots. As these do not have a name from the DVB source, it has to be specified.
 When inserting streams into empty LCN slots, the service reference will be "1:0:1:0:0:0:0:0:0:0:".
 EPG will not work becuase of this.
