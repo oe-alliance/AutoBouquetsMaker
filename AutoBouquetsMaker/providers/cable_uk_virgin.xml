@@ -110,7 +110,6 @@
 		<section number="990">BBC Interactive</section>
 		<section number="997">Information</section>
 		<section number="1000">Red button</section>
-		<section number="1020">BT Sport Interactive</section>
 	</sections>
 	<!-- swapchannels affects main and sections bouquets. "number" is the SD channel. "with" is the HD channel. Swap will not occur if target is not HD or non-existent -->
 	<swapchannels>
@@ -185,6 +184,7 @@ except:
 				'M+ Pack Tier 3',
 				'More TV Pack Tier 2',
 				'motorsport.tv',
+                                'Nat Geo WILD',
 				'Netflix',
 				'New Music On Demand',
 				'PIN Protection Help',
@@ -216,7 +216,7 @@ except:
 
 	# Remove some services unless in netID whitelist
 	# Channel names have quotes, channel numbers do not. Example: ['ITV HD', 250, 500]
-	selective_blacklist = [501, 502, 504, 505, 506, 507, 508, 511, 512, 513, 514, 515, 516, 517, 518,]
+	selective_blacklist = [501, 502, 504, 505, 506, 507, 508, 511, 512, 513, 514, 515, 516, 517, 518, 527, 528, 529, 530,]
 
 if (service["service_name"] in selective_blacklist or service["number"]  in selective_blacklist) and netID not in netID_whitelist:
 	skip = True
