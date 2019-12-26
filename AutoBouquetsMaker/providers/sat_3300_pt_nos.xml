@@ -1,0 +1,26 @@
+<provider>
+	<name>NOS</name>
+	<streamtype>dvbs</streamtype>
+	<protocol>lcn</protocol>
+	<transponder
+		orbital_position="3300"
+		frequency="12360000"
+		symbol_rate="27500000"
+		polarization="0"
+		fec_inner="3"
+		inversion="2"
+		system="1"
+		modulation="2"
+		roll_off="0"
+		pilot="2"
+		tsid="38"
+		onid="54"
+	/>
+	<sections>
+		<section number="1">NOS</section>
+	</sections>
+	<servicehacks>
+<![CDATA[
+]]>
+	</servicehacks>
+</provider>
