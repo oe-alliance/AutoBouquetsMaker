@@ -1,0 +1,123 @@
+<custom>
+	<include>yes</include>
+	<lcnlist>
+		<configuration lcn="1" channelnumber="880" description="RTP 1 HD"></configuration>
+		<configuration lcn="2" channelnumber="881" description="RTP 2 HD"></configuration>
+		<configuration lcn="3" channelnumber="700" description="SIC HD"></configuration>
+		<configuration lcn="4" channelnumber="701" description="TVI HD"></configuration>
+		<configuration lcn="5" channelnumber="885" description="SIC Notcias"></configuration>
+		<configuration lcn="6" channelnumber="882" description="RTP 3"></configuration>
+		<configuration lcn="7" channelnumber="305" description="TVI 24"></configuration>
+		<configuration lcn="8" channelnumber="377" description="CMTV"></configuration>
+		<configuration lcn="9" channelnumber="236" description="SPORT TV+"></configuration>
+		<configuration lcn="10" channelnumber="304" description="Globo"></configuration>
+		<configuration lcn="11" channelnumber="1338" description="Canal 11 HD"></configuration>
+		<configuration lcn="12" channelnumber="230" description="TVI Reality"></configuration>
+		<configuration lcn="13" channelnumber="231" description="SIC Mulher"></configuration>
+		<configuration lcn="14" channelnumber="357" description="SIC Caras"></configuration>
+		<configuration lcn="15" channelnumber="352" description="SIC Radical"></configuration>
+		<configuration lcn="16" channelnumber="1341" description="NOS Studios HD"></configuration>
+		<configuration lcn="18" channelnumber="355" description="RTP Memria"></configuration>
+		<configuration lcn="19" channelnumber="870" description="Sport TV 1"></configuration>
+		<configuration lcn="20" channelnumber="301" description="Sport TV 2"></configuration>
+		<configuration lcn="21" channelnumber="306" description="Sport TV 3"></configuration>
+		<configuration lcn="22" channelnumber="309" description="Sport TV 4"></configuration>
+		<configuration lcn="23" channelnumber="247" description="Sport TV 5"></configuration>
+		<configuration lcn="25" channelnumber="451" description="Sport TV 1 HD"></configuration>
+		<configuration lcn="26" channelnumber="452" description="Sport TV 2 HD"></configuration>
+		<configuration lcn="27" channelnumber="453" description="Sport TV 3 HD"></configuration>
+		<configuration lcn="30" channelnumber="887" description="BTV 1"></configuration>
+		<configuration lcn="32" channelnumber="458" description="BTV 1 HD"></configuration>
+		<configuration lcn="33" channelnumber="462" description="Sport TV NBA"></configuration>
+		<configuration lcn="34" channelnumber="251" description="Sporting TV"></configuration>
+		<configuration lcn="36" channelnumber="353" description="Porto Canal"></configuration>
+		<configuration lcn="37" channelnumber="520" description="Eleven Sports 1"></configuration>
+		<configuration lcn="38" channelnumber="457" description="Eleven Sports 2"></configuration>
+		<configuration lcn="39" channelnumber="360" description="Eleven Sports 3"></configuration>
+		<configuration lcn="40" channelnumber="822" description="Disney Channel"></configuration>
+		<configuration lcn="41" channelnumber="808" description="Nickelodeon"></configuration>
+		<configuration lcn="42" channelnumber="886" description="Canal Panda"></configuration>
+		<configuration lcn="43" channelnumber="240" description="Biggs"></configuration>
+		<configuration lcn="44" channelnumber="250" description="Disney Junior"></configuration>
+		<configuration lcn="45" channelnumber="354" description="Cartoon Network"></configuration>
+		<configuration lcn="46" channelnumber="816" description="Nick Jr."></configuration>
+		<configuration lcn="47" channelnumber="234" description="Baby TV"></configuration>
+		<configuration lcn="48" channelnumber="890" description="SIC K"></configuration>
+		<configuration lcn="55" channelnumber="313" description="Hollywood"></configuration>
+		<configuration lcn="56" channelnumber="1342" description="NOS Studios HD"></configuration>
+		<configuration lcn="57" channelnumber="361" description="FTV"></configuration>
+		<configuration lcn="58" channelnumber="359" description="E! Entertainment"></configuration>
+		<configuration lcn="61" channelnumber="1305" description="AMC"></configuration>
+		<configuration lcn="64" channelnumber="233" description="FOX Movies"></configuration>
+		<configuration lcn="66" channelnumber="356" description="FOX Comedy"></configuration>
+		<configuration lcn="67" channelnumber="374" description="SYFY"></configuration>
+		<configuration lcn="70" channelnumber="365" description="Canal Q"></configuration>
+		<configuration lcn="71" channelnumber="232" description="TLC"></configuration>
+		<configuration lcn="72" channelnumber="315" description="MTV Portugal"></configuration>
+		<configuration lcn="73" channelnumber="303" description="TV Record"></configuration>
+		<configuration lcn="75" channelnumber="947" description="TVCine 1 HD"></configuration>
+		<configuration lcn="76" channelnumber="1610" description="TVCine 2 HD"></configuration>
+		<configuration lcn="77" channelnumber="1602" description="TVCine 3 HD"></configuration>
+		<configuration lcn="78" channelnumber="804" description="TVCine 4 HD"></configuration>
+		<configuration lcn="79" channelnumber="1609" description="TVSries HD"></configuration>
+		<configuration lcn="84" channelnumber="1298" description="AMC HD"></configuration>
+		<configuration lcn="86" channelnumber="455" description="AXN HD"></configuration>
+		<configuration lcn="87" channelnumber="401" description="AXN Black HD"></configuration>
+		<configuration lcn="88" channelnumber="410" description="FOX Life HD"></configuration>
+		<configuration lcn="89" channelnumber="456" description="FOX HD"></configuration>
+		<configuration lcn="91" channelnumber="403" description="FOX Crime HD"></configuration>
+		<configuration lcn="93" channelnumber="406" description="AXN White HD"></configuration>
+		<configuration lcn="96" channelnumber="402" description="24 Kitchen HD"></configuration>
+		<configuration lcn="100" channelnumber="317" description="Discovery Channel"></configuration>
+		<configuration lcn="107" channelnumber="351" description="National Geographic WILD"></configuration>
+		<configuration lcn="109" channelnumber="318" description="Odisseia"></configuration>
+		<configuration lcn="112" channelnumber="316" description="Histria"></configuration>
+		<configuration lcn="114" channelnumber="235" description="Blaze"></configuration>
+		<configuration lcn="115" channelnumber="818" description="Discovery HD"></configuration>
+		<configuration lcn="116" channelnumber="454" description="National Geographic HD"></configuration>
+		<configuration lcn="119" channelnumber="405" description="Travel Channel HD"></configuration>
+		<configuration lcn="125" channelnumber="1340" description="ZAP Viva HD"></configuration>
+		<configuration lcn="130" channelnumber="312" description="Eurosport 1"></configuration>
+		<configuration lcn="131" channelnumber="370" description="Eurosport 2"></configuration>
+		<configuration lcn="133" channelnumber="809" description="Fuel TV"></configuration>
+		<configuration lcn="135" channelnumber="521" description="Eleven Sports 1"></configuration>
+		<configuration lcn="136" channelnumber="459" description="Eleven Sports 2"></configuration>
+		<configuration lcn="137" channelnumber="373" description="Eleven Sports 3"></configuration>
+		<configuration lcn="138" channelnumber="523" description="Eleven Sports 4"></configuration>
+		<configuration lcn="139" channelnumber="524" description="Eleven Sports 5"></configuration>
+		<configuration lcn="140" channelnumber="372" description="Eleven Sports 6"></configuration>
+		<configuration lcn="141" channelnumber="248" description="Toros TV"></configuration>
+		<configuration lcn="142" channelnumber="815" description="Caa e Pesca"></configuration>
+		<configuration lcn="143" channelnumber="409" description="Eurosport 1 HD"></configuration>
+		<configuration lcn="146" channelnumber="1306" description="Motorvision"></configuration>
+		<configuration lcn="154" channelnumber="237" description="VH1"></configuration>
+		<configuration lcn="157" channelnumber="238" description="Mezzo"></configuration>
+		<configuration lcn="159" channelnumber="371" description="MCM Pop"></configuration>
+		<configuration lcn="161" channelnumber="807" description="Trace Toca"></configuration>
+		<configuration lcn="170" channelnumber="368" description="Globo Now"></configuration>
+		<configuration lcn="173" channelnumber="367" description="PFC"></configuration>
+		<configuration lcn="185" channelnumber="3000" description="Kuriakos TV HD"></configuration>
+		<configuration lcn="186" channelnumber="376" description="Cano Nova"></configuration>
+		<configuration lcn="188" channelnumber="884" description="RTP Madeira"></configuration>
+		<configuration lcn="189" channelnumber="883" description="RTP Aores"></configuration>
+		<configuration lcn="190" channelnumber="362" description="RTP frica"></configuration>
+		<configuration lcn="201" channelnumber="1309" description="BBC Entertainment"></configuration>
+		<configuration lcn="203" channelnumber="245" description="Euronews"></configuration>
+		<configuration lcn="204" channelnumber="242" description="CNN"></configuration>
+		<configuration lcn="205" channelnumber="243" description="Sky News"></configuration>
+		<configuration lcn="206" channelnumber="244" description="BBC World News"></configuration>
+		<configuration lcn="207" channelnumber="7305" description="Al Jazeera"></configuration>
+		<configuration lcn="208" channelnumber="246" description="France 24 (I)"></configuration>
+		<configuration lcn="210" channelnumber="364" description="CNBC"></configuration>
+		<configuration lcn="211" channelnumber="363" description="Bloomberg"></configuration>
+		<configuration lcn="212" channelnumber="241" description="TVE 24h"></configuration>
+		<configuration lcn="219" channelnumber="501" description="ARTV"></configuration>
+		<configuration lcn="220" channelnumber="366" description="TV Galicia"></configuration>
+		<configuration lcn="221" channelnumber="239" description="TVE Internacional"></configuration>
+		<configuration lcn="222" channelnumber="2100" description="Cubavisin Internacional"></configuration>
+		<configuration lcn="223" channelnumber="2900" description="TeleSUR"></configuration>
+		<configuration lcn="228" channelnumber="516" description="TV5 Monde"></configuration>
+		<configuration lcn="810" channelnumber="810" description="Canal NOS"></configuration>
+		<configuration lcn="821" channelnumber="821" description="Canal NOS"></configuration>
+	</lcnlist>
+</custom>

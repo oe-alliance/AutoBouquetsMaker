@@ -1,7 +1,7 @@
 <provider>
 	<name>NOS</name>
 	<streamtype>dvbs</streamtype>
-	<protocol>lcn</protocol>
+	<protocol>nolcn</protocol>
 	<transponder
 		orbital_position="3300"
 		frequency="12360000"
@@ -21,6 +21,17 @@
 	</sections>
 	<servicehacks>
 <![CDATA[
+blacklist = (
+			"Playboy TV",
+			"Hot",
+			"SW Kaon DTH",
+			"NG_Zapper_Intek",
+			"NG_Zapper_5.14",
+			"NG_DVR_5.15",
+            )
+
+if service["service_name"] in blacklist or "Test" in service["service_name"]:
+	skip = True
 ]]>
 	</servicehacks>
 </provider>
