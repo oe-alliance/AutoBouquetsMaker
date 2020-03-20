@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
+"Project-Id-Version: AutoBouquets Maker for Enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-31 12:15+0200\n"
-"PO-Revision-Date: 2017-12-27 21:35+0000\n"
+"PO-Revision-Date: 2020-03-20 12:58+0000\n"
 "Last-Translator: nunigaia\n"
 "Language-Team: BH Team\n"
 "Language: pt\n"
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 msgid "%a %e %b  %-H:%M"
@@ -60,7 +61,10 @@ msgid "About"
 msgstr "Sobre"
 
 msgid "Add provider markers"
-msgstr "Adicionar marcadores de fornecedores"
+msgstr "Adicionar marcadores de operadores"
+
+msgid "Add provider name to bouquets"
+msgstr "Adicionar nome do Operador ao buquê"
 
 msgid "Add provider prefix to bouquets"
 msgstr "Adicionar prefixo do operador aos buquês"
@@ -69,7 +73,7 @@ msgid "All channels"
 msgstr "Todos os Canais"
 
 msgid "Allows you to set a schedule to perform a scan "
-msgstr "Permite-lhe agendar para iniciar uma procura"
+msgstr "Permite-lhe agendar para iniciar uma procura "
 
 msgid "Are you sure you want to remove all bouquets created by ABM?"
 msgstr "Tem a certeza que deseja remover todos os buquês criados por ABM?"
@@ -81,7 +85,7 @@ msgid "AutoBouquetsMaker Configure"
 msgstr "Configurar AutoBouquetsMaker"
 
 msgid "AutoBouquetsMaker Hide sections"
-msgstr "Secções escondidas  AutoBouquetsMaker"
+msgstr "Secções escondidas de AutoBouquetsMaker"
 
 msgid "AutoBouquetsMaker Keep bouquets"
 msgstr "AutoBouquetsMaker manter buquês"
@@ -93,16 +97,19 @@ msgid "AutoBouquetsMaker Providers"
 msgstr "AutoBouquetsMaker Operadores"
 
 msgid "AutoBouquetsMaker Scanner"
-msgstr "AutoBouquetsMaker Scanner"
+msgstr "Busca de AutoBouquetsMaker"
 
 msgid "Bottom"
 msgstr "Fundo"
+
+msgid "bottom"
+msgstr "fundo"
 
 msgid "Bouquets generation..."
 msgstr "Geração de buquês..."
 
 msgid "Bouquets order"
-msgstr "Ordem dos Bouquets"
+msgstr "Ordem dos Buquês"
 
 msgid "Cancel"
 msgstr "Cancelar"
@@ -132,7 +139,7 @@ msgid "Checking version compatibility..."
 msgstr "Verificação de compatibilidade de versão..."
 
 msgid "Choose the style of markers that separate one provider from another in bouquet indexes."
-msgstr "Escolha o estilo de marcadores que separam um provedor do outro nos índices do buquê."
+msgstr "Escolha o estilo de marcadores que separam um operador do outro nos índices do buquê."
 
 msgid "Choose the style of the markers that separate channels into groups in the channel lists."
 msgstr "Escolha o estilo dos marcadores que separam os canais em grupos nas listas de canais."
@@ -170,11 +177,26 @@ msgstr "Arquivo de configuração para %s está danificado"
 msgid "Configure"
 msgstr "Configurar"
 
+msgid "Create main bouquet"
+msgstr "Criar buquê principal"
+
+msgid "Create HD bouquet"
+msgstr "Criar buquê HD"
+
+msgid "Create FTA bouquet"
+msgstr "Criar buquê FTA"
+
+msgid "Create FTA HD bouquet"
+msgstr "Criar buquê FTA HD"
+
 msgid "Daily"
 msgstr "Diário"
 
 msgid "Delete bouquets"
 msgstr "Apagar buquês"
+
+msgid "Delete ABM bouquets"
+msgstr "Apagar buquês ABM"
 
 msgid "Done"
 msgstr "Concluido!"
@@ -216,12 +238,17 @@ msgid ""
 "The tuner is correctly configured.\n"
 "You can receive the specified frequency."
 msgstr ""
+"Falha ao sintonizar %s no sintonizador %s.\n"
+"\n"
+"Por favor, verifique o seguinte:\n"
+"Se sintonizador está configurado corretamente.\n"
+"Se pode receber a frequência especificada."
 
 msgid "Failed..."
 msgstr "Falhou..."
 
 msgid "Finding configured providers..."
-msgstr "A procurar fornecedores configurados..."
+msgstr "A procurar operadores configurados..."
 
 msgid "HD Channels"
 msgstr "Canais HD"
@@ -284,11 +311,14 @@ msgstr "NIM não válido para"
 msgid "None"
 msgstr "Nenhum"
 
+msgid "none"
+msgstr "nenhum"
+
 msgid "OK"
 msgstr "OK"
 
 msgid "Place bouquets at"
-msgstr "Coloque os buquês em"
+msgstr "Coloque os buquês no"
 
 msgid "Please first setup, in configuration"
 msgstr "Por favor primeiro defina, em configuração"
@@ -329,7 +359,7 @@ msgstr "Arquivo de configuração obtida por %s está danificado ou incompleto."
 
 #, python-format
 msgid "Retrieved provider file for %s"
-msgstr "Arquivo de provedor obtido para %s"
+msgstr "Arquivo de operador obtido para %s"
 
 #, python-format
 msgid "Retrieving config file for %s"
@@ -350,6 +380,9 @@ msgstr "Procurar agendamento"
 msgid "Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used."
 msgstr "Selecione o seu buquê na lista, por favor, note que unicamente os primeiros 100 canais para este buquê serão usados."
 
+msgid "Select \"yes\" to show the \"DVB-T frequency finder\" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc."
+msgstr "Selecione \"sim\" para mostrar a ferramenta \"localizador de freqüência DVB-T\" no menu principal. Esta ferramenta é usada para criar um arquivo do operador de trabalho para áreas difíceis do Reino Unido, por exemplo, áreas cobertas por repetidores, etc."
+
 #, python-format
 msgid "Services: %d video - %d radio"
 msgstr "Serviços: %d Vídeo - %d Rádio"
@@ -365,6 +398,9 @@ msgstr "Defina a hora do dia para efetuar a procura."
 
 msgid "Setup mode"
 msgstr "Modo de Instalação"
+
+msgid "Show DVB-T frequency finder"
+msgstr "Mostrar localizador de frequência DVB-T"
 
 msgid "Show in extensions"
 msgstr "Mostrar em extensões"
@@ -388,7 +424,7 @@ msgid "Style of bouquet marker"
 msgstr "Estilo de marcador de buquê"
 
 msgid "Style of provider marker"
-msgstr "Estilo do marcador do Fornecedor"
+msgstr "Estilo do marcador do operador"
 
 msgid "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones."
 msgstr "Isso afeta todos os buquês. Selecione 'Não' para procurar em todos os serviços. Selecione 'Sim' para ignorar os codificados."
@@ -406,7 +442,10 @@ msgid "This option has several choices \"Yes\", (create a bouquet with all the c
 msgstr "Esta opção tem várias opções de \"Sim\", (criar um buquê com todos os canais), \"só HD\", (agrupará todos os canais HD como um buquê), \"Personalizado\", (permite que você selecione o seu próprio buquê), \"Não\", (não usa um buquê principal)"
 
 msgid "This option places markers in the bouquet index to group all bouquets of each provider."
-msgstr "Esta opção põe marcadores na indexação de buquê para agrupar todos os buquê de cada fornecedor."
+msgstr "Esta opção põe marcadores na indexação de buquê para agrupar todos os buquê de cada operador."
+
+msgid "This option will add the provider´s name to bouquet names."
+msgstr "Esta opção adicionará o nome do Operador aos nomes de buquê."
 
 msgid "This option will allow you choose where to place the created bouquets."
 msgstr "Esta opção permitirá que escolha onde colocar os buquês criados."
@@ -440,9 +479,17 @@ msgid ""
 "The tuner is correctly configured.\n"
 "You can receive the specified frequency."
 msgstr ""
+"Sintonização cronometrada %s no sintonizador %s.\n"
+"\n"
+"Por favor, verifique o seguinte:\n"
+"Se o sintonizador está configurado corretamente.\n"
+"Se pode receber a frequência especificada."
 
 msgid "Top"
-msgstr "Cima"
+msgstr "Topo"
+
+msgid "top"
+msgstr "topo"
 
 #, python-format
 msgid "Tuning %s..."
@@ -454,6 +501,9 @@ msgstr "Impossível descarregar o ficheiro de configuração para %s"
 
 msgid "Update config files"
 msgstr "Atualizar ficheiros \"config\""
+
+msgid "Update provider files"
+msgstr "Atualizar ficheiros do operador"
 
 msgid "UpdateProviders"
 msgstr "Atualizar operadores"
