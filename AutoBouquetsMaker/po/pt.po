@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: AutoBouquets Maker for Enigma2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-31 12:15+0200\n"
-"PO-Revision-Date: 2020-03-20 12:58+0000\n"
+"PO-Revision-Date: 2020-03-22 14:41+0000\n"
 "Last-Translator: nunigaia\n"
 "Language-Team: BH Team\n"
 "Language: pt\n"
@@ -577,3 +577,30 @@ msgstr "sim (só HD Livres)"
 
 msgid "yes (only HD)"
 msgstr "sim (só HD)"
+
+msgid "Schedule time of day"
+msgstr "Horário de programação do dia"
+
+msgid "Set the time of day to perform a scan."
+msgstr "Defina a hora do dia para efetuar a procura."
+
+msgid "Schedule days of the week"
+msgstr "Agendar dias da semana"
+
+msgid "Press OK to select which days to perform a scan."
+msgstr "Prima OK para selecionar em quais dias deve executar uma procura."
+
+msgid "Schedule wake from deep standby"
+msgstr "Agende para acordar do Modo de Espera"
+
+msgid "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan."
+msgstr "Se o receptor estiver em 'Modo de Espera' quando o agendamento estiver previsto, acorde-o para realizar uma procura."
+
+msgid "Schedule return to deep standby"
+msgstr "Agende o retorno para Modo de Espera"
+
+msgid "If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed."
+msgstr "Se o receptor foi acordado de 'Modo de Espera' e está atualmente em 'Espera' e nenhuma gravação está em andamento, retorne-o para 'Modo de Espera' uma vez que a procura tenha sido concluída."
+
+msgid "Press OK"
+msgstr "Prima OK"
