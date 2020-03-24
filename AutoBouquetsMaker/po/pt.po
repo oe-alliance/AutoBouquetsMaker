@@ -444,7 +444,7 @@ msgstr "Esta opção tem várias opções de \"Sim\", (criar um buquê com todos
 msgid "This option places markers in the bouquet index to group all bouquets of each provider."
 msgstr "Esta opção põe marcadores na indexação de buquê para agrupar todos os buquê de cada operador."
 
-msgid "This option will add the provider´s name to bouquet names."
+msgid "This option will add the provider's name to bouquet names."
 msgstr "Esta opção adicionará o nome do Operador aos nomes de buquê."
 
 msgid "This option will allow you choose where to place the created bouquets."
