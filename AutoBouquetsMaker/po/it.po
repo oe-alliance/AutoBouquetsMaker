@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-31 12:15+0200\n"
-"PO-Revision-Date: 2017-07-04 16:36+0200\n"
-"Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
+"PO-Revision-Date: 2020-04-18 20:57+0200\n"
+"Last-Translator: Alexwilmac\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -17,196 +17,263 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-msgid "%a %e %b  %-H:%M"
+msgid "Press OK"
+msgstr "Premi OK"
+
+msgid "Schedule time of day"
+msgstr "Scegli l'orario"
+
+msgid "Schedule days of the week"
+msgstr "Scegli il giorno della settimana"
+
+msgid "Schedule wake from deep standby"
+msgstr "Scegli se riattivare dallo stato di spegnimento"
+
+msgid "Schedule return to deep standby"
+msgstr "Scegli se riportare in stato di spegnimento alla fine"
+
+msgid "Set the time of day to perform a scan."
+msgstr "Imposta l'orario in cui programmare la scansione."
+
+msgid "Press OK to select which days to perform a scan."
+msgstr "Premi OK per la scelta dei giorni della settimana in cui effettuare la scansione."
+
+msgid "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan."
+msgstr "Se il ricevitore è spento al momento della scansione programmata, con quest'opzione decidi se accenderlo per effettuarla."
+
+msgid "If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed."
 msgstr ""
+"Se il ricevitore era stato riacceso per la scansione ed è al momento in Standby\n"
+"(e non c'è nessuna registrazione in corso), puoi decidere se farlo rispegnere."
+
+msgid "Monday"
+msgstr "Lunedì"
+
+msgid "Tuesday"
+msgstr "Martedì"
+
+msgid "Wednesday"
+msgstr "Mercoledì"
+
+msgid "Thursday"
+msgstr "Giovedì"
+
+msgid "Friday"
+msgstr "Venerdì"
+
+msgid "Saturday"
+msgstr "Sabato"
+
+msgid "Sunday"
+msgstr "Domenica"
+
+msgid "Delete ABM bouquets"
+msgstr "Cancella i bouquet ABM"
+
+msgid "Update provider files"
+msgstr "Aggiorna i file dei provider"
+
+msgid "Add provider name to bouquets"
+msgstr "Aggiungi il nome del provider ai bouquet"
+
+msgid "This option will add the provider's name to bouquet names."
+msgstr "Quest'opzione aggiunge il nome del provider al nome del bouquet."
+
+msgid "Show DVB-T frequency finder"
+msgstr "Mostra la ricerca delle frequenze DVB-T"
+
+msgid "Select \"yes\" to show the \"DVB-T frequency finder\" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc."
+msgstr ""
+"Scegli SÌ per mostrare lo strumento di ricerca di una frequenza nel menu principale.\n"
+"È utile per creare un provider per zone difficili (ad es. non coperte da ripetitori)."
+
+msgid "%a %e %b  %-H:%M"
+msgstr "%a %e %b  %-H:%M"
 
 msgid "---- ABM - 'text' ----"
-msgstr ""
+msgstr "—— ABM - ‘testo’ ——"
 
 msgid "-------- text --------"
-msgstr ""
+msgstr "———— testo ————"
 
 msgid "30 Days"
-msgstr ""
+msgstr "30 giorni"
 
 msgid "< - - text - - >"
-msgstr ""
+msgstr "< - - testo - - >"
 
 msgid "<-- text -->"
-msgstr ""
+msgstr "< — testo — >"
 
 msgid "= = = text = = ="
-msgstr ""
+msgstr "= = = testo = = ="
 
 msgid "= = text = ="
-msgstr ""
+msgstr "= = testo = ="
 
 msgid "== ABM - 'text' =="
-msgstr ""
+msgstr "== ABM - ‘testo’ =="
 
 msgid "== text =="
-msgstr ""
+msgstr "== testo =="
 
 msgid "=== text ==="
-msgstr ""
+msgstr "=== testo ==="
 
 msgid "ABM log file has been saved to the tmp directory"
-msgstr ""
+msgstr "Il registro errori di ABM è stato salvato nella cartella tmp"
 
 msgid "About"
-msgstr ""
+msgstr "Info su"
 
 msgid "Add provider markers"
-msgstr ""
+msgstr "Aggiungo delimitatori dei provider"
 
 msgid "Add provider prefix to bouquets"
-msgstr ""
+msgstr "Aggiungo i prefissi del provider ai bouquet"
 
 msgid "All channels"
-msgstr ""
+msgstr "Tutti i canali"
 
 msgid "Allows you to set a schedule to perform a scan "
-msgstr ""
+msgstr "Vi permette di programmare una scansione alle ore e nei giorni desiderati."
 
 msgid "Are you sure you want to remove all bouquets created by ABM?"
-msgstr ""
+msgstr "Sicuro di rimuovere tutti i bouquet creati da ABM?"
 
 msgid "AutoBouquetsMaker"
-msgstr ""
+msgstr "AutoBouquetsMaker"
 
 msgid "AutoBouquetsMaker Configure"
-msgstr ""
+msgstr "Configura ABM"
 
 msgid "AutoBouquetsMaker Hide sections"
-msgstr ""
+msgstr "Nascondi sezioni ABM"
 
 msgid "AutoBouquetsMaker Keep bouquets"
-msgstr ""
+msgstr "Mantieni i bouquet ABM"
 
 msgid "AutoBouquetsMaker Log"
-msgstr ""
+msgstr "Registro errori ABM"
 
 msgid "AutoBouquetsMaker Providers"
-msgstr ""
+msgstr "Provider ABM"
 
 msgid "AutoBouquetsMaker Scanner"
-msgstr ""
-
-msgid "Bottom"
-msgstr ""
+msgstr "Scanner ABM"
 
 msgid "Bouquets generation..."
-msgstr ""
+msgstr "Generazione dei bouquet..."
 
 msgid "Bouquets order"
-msgstr ""
+msgstr "Ordine dei bouquet"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 msgid "Cannot allocate the demuxer"
-msgstr ""
+msgstr "Non posso allocare il demuxer"
 
 msgid "Cannot free NIM because a recording is in progress"
-msgstr ""
+msgstr "Non posso liberare il tuner perché è in corso una registrazione"
 
 msgid "Cannot get frontend"
-msgstr ""
+msgstr "Non posso ottenere l’accesso utente"
 
 msgid "Cannot get the NIM"
-msgstr ""
+msgstr "Non posso accedere al tuner"
 
 msgid "Cannot read data"
-msgstr ""
+msgstr "Non posso leggere i dati"
 
 msgid "Cannot read version"
-msgstr ""
+msgstr "Non posso leggere la versione"
 
 msgid "Cannot retrieve Resource Manager instance"
-msgstr ""
+msgstr "Non posso recuperare l’istanza del Manager Risorse"
 
 msgid "Checking version compatibility..."
-msgstr ""
+msgstr "Controllo la compatibilità di versione..."
 
 msgid "Choose the style of markers that separate one provider from another in bouquet indexes."
-msgstr ""
+msgstr "Scegli lo stile dei separatori tra un provider e l’altro nell’indice dei bouquet."
 
 msgid "Choose the style of the markers that separate channels into groups in the channel lists."
-msgstr ""
+msgstr "Scegli lo stile dei separatori dei gruppi di canali nella lista canali."
 
 msgid "Choose which level of settings to display. 'Expert'-level shows all items, this also adds more options in the providers menu."
-msgstr ""
+msgstr "Scegli quale livello mostrare per le impostazioni: ‘Esperto’ mostra tutte le voci e aggiunge anche delle opzioni nel menu Provider."
 
 msgid "Close"
-msgstr ""
+msgstr "Chiudi"
 
 #, python-format
 msgid "Config file for %s didn't need updating."
-msgstr ""
+msgstr "Il file di configurazione per %s non necessitava aggiornamenti."
 
 #, python-format
 msgid "Config file for %s does not need updating"
-msgstr ""
+msgstr "Il file di configurazione per %s non necessita aggiornamenti."
 
 #, python-format
 msgid "Config file for %s does not parse"
-msgstr ""
+msgstr "Il file di configurazione per %s non esegue l’analisi"
 
 #, python-format
 msgid "Config file for %s has been updated"
-msgstr ""
+msgstr "Il file di configurazione per %s è stato aggiornato"
 
 #, python-format
 msgid "Config file for %s has been updated."
-msgstr ""
+msgstr "Il file di configurazione per %s è stato aggiornato."
 
 #, python-format
 msgid "Config file for %s is faulty"
-msgstr ""
+msgstr "Il file di configurazione per %s è errato"
 
 msgid "Configure"
-msgstr ""
+msgstr "Configura"
 
 msgid "Daily"
-msgstr ""
+msgstr "Giornaliero"
 
 msgid "Delete bouquets"
-msgstr ""
+msgstr "Cancella i bouquet"
 
 msgid "Done"
-msgstr ""
+msgstr "Fatto"
 
 msgid "Downloading latest file from Github..."
-msgstr ""
+msgstr "Scarico i file più recenti da Github..."
 
 msgid "Enough Retries, delaying till next schedule."
-msgstr ""
+msgstr "Troppi tentativi: rimando alla prossima programmazione."
 
 msgid "Exit"
-msgstr ""
+msgstr "Esci"
 
 msgid "Extra debug"
-msgstr ""
+msgstr "Debug aggiuntivi"
 
 msgid "FTA Channels"
-msgstr ""
+msgstr "Canali FTA"
 
 msgid "FTA HD Channels"
-msgstr ""
+msgstr "Canali FTA HD"
 
 msgid "FTA only"
-msgstr ""
+msgstr "Solo FTA"
 
 #, python-format
 msgid "Failed to retrieve file for %s. Error: %s %s"
-msgstr ""
+msgstr "Non riesco a recuperare il file per %s. Errore %s %s"
 
 #, python-format
 msgid "Failed to retrieve version file. Error: %s %s"
-msgstr ""
+msgstr "Non riesco a recuperare la versione del file. Errore %s %s"
 
 #, python-format
 msgid ""
@@ -216,221 +283,234 @@ msgid ""
 "The tuner is correctly configured.\n"
 "You can receive the specified frequency."
 msgstr ""
+"Errore di sintonia per %s nel tuner %s.\n"
+"\n"
+"Controlla quanto segue:\n"
+"-che il tuner sia correttamente configurato;\n"
+"-che puoi ricevere quella specifica frequenza."
 
 msgid "Failed..."
-msgstr ""
+msgstr "Non riuscito..."
 
 msgid "Finding configured providers..."
-msgstr ""
+msgstr "Trovo i provider configurati..."
 
 msgid "HD Channels"
-msgstr ""
+msgstr "Canali HD"
 
 msgid "Hide sections"
-msgstr ""
+msgstr "Nascondi le sezioni"
 
 msgid "If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible."
-msgstr ""
+msgstr "Se un canale è su un satellite NON configurato, ’SÌ’ non lo mostrerà nella lista canali; ‘NO’ lo mostrerà, ma sarà disabilitato e non accessibile."
 
 msgid "Include 'not indexed' channels"
-msgstr ""
+msgstr "Includi canali “non indicizzati”"
 
 #, python-format
 msgid "Incompatible versions: %s > %s"
-msgstr ""
+msgstr "Versioni incompatibili: %s > %s"
 
 msgid "Keep all non-ABM bouquets"
-msgstr ""
+msgstr "Mantieni tutti i bouquet non di ABM"
 
 msgid "Keep bouquets"
-msgstr ""
+msgstr "Mantieni i bouquet"
 
 msgid "Last Scanned"
-msgstr ""
+msgstr "Ultimi scansionati"
 
 msgid "Loading bouquets..."
-msgstr ""
+msgstr "Carico i bouquet..."
 
 msgid "Move down"
-msgstr ""
+msgstr "Sposta giù"
 
 msgid "Move up"
-msgstr ""
+msgstr "Sposta su"
 
 msgid "Network connection error"
-msgstr ""
+msgstr "Errore di connessione"
 
 #, python-format
 msgid ""
 "Network connection error: \n"
 "%s"
 msgstr ""
+"Errore di connessione:\n"
+"%s"
 
 msgid "No NIMs found for "
-msgstr ""
+msgstr "Nessun tuner trovato per "
 
 msgid "No area found"
-msgstr ""
+msgstr "Nessun’area trovata"
 
 msgid "No providers are configured."
-msgstr ""
+msgstr "Nessun provider è configurato."
 
 msgid "No providers configured."
-msgstr ""
+msgstr "Nessun provider configurato."
 
 msgid "No valid NIM found for "
-msgstr ""
+msgstr "Nessun tuner valido trovato per "
 
-msgid "None"
-msgstr ""
+msgid "none"
+msgstr "nessuno"
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "Place bouquets at"
-msgstr ""
+msgstr "Metti i bouquet in posizione"
 
 msgid "Please first setup, in configuration"
-msgstr ""
+msgstr "Si prega prima di creare una configurazione"
 
 msgid "Please wait..."
-msgstr ""
+msgstr "Si prega di attendere..."
 
 msgid "Providers"
-msgstr ""
+msgstr "Provider"
 
 msgid "Providers order"
-msgstr ""
+msgstr "Ordine dei provider"
 
 msgid "Radio Channels"
-msgstr ""
+msgstr "Canali radio"
 
 #, python-format
 msgid "Reading %s..."
-msgstr ""
+msgstr "Leggo %s..."
 
 msgid "Really close without saving settings?"
-msgstr ""
+msgstr "Vuoi davvero chiudere senza salvare?"
 
 msgid "Repeat how often"
-msgstr ""
+msgstr "Intervallo di ripetizione"
 
 #, python-format
 msgid "Retrieved config file for %s"
-msgstr ""
+msgstr "Recuperato il file di configurazione per %s"
 
 #, python-format
 msgid "Retrieved config file for %s does not parse."
-msgstr ""
+msgstr "Il file di configurazione recuperato per %s non esegue l’analisi."
 
 #, python-format
 msgid "Retrieved config file for %s is faulty or incomplete."
-msgstr ""
+msgstr "Il file di configurazione recuperato per %s è errato o incompleto."
 
 #, python-format
 msgid "Retrieved provider file for %s"
-msgstr ""
+msgstr "Il file dei provider recuperato per %s"
 
 #, python-format
 msgid "Retrieving config file for %s"
-msgstr ""
+msgstr "Recupero il file di configurazione per %s"
 
 msgid "Save"
-msgstr ""
+msgstr "Salva"
 
 msgid "Save Log"
-msgstr ""
+msgstr "Salva il registro (log)"
 
 msgid "Scan"
-msgstr ""
+msgstr "Scansione"
 
 msgid "Schedule scan"
-msgstr ""
+msgstr "Programma la scansione"
 
 msgid "Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used."
-msgstr ""
+msgstr "Scegli il tuo bouquet dalla lista. Nota che, per esso, saranno usati solo i primi 100 canali."
 
 #, python-format
 msgid "Services: %d video - %d radio"
-msgstr ""
+msgstr "Servizi: %d video - %d radio"
 
 msgid "Services: 0 video - 0 radio"
-msgstr ""
+msgstr "Servizi: 0 video - 0 radio"
 
 msgid "Set the repeat interval of the schedule."
-msgstr ""
+msgstr "Imposta l’intervallo di ripetizione del programma."
 
 msgid "Set the time of day to perform the scan."
-msgstr ""
+msgstr "Imposta l’orario in cui effettuare la scansione."
 
 msgid "Setup mode"
-msgstr ""
+msgstr "Modalità impostazioni"
 
 msgid "Show in extensions"
-msgstr ""
+msgstr "Mostra fra le estensioni (plugin)"
 
 msgid "Show log"
-msgstr ""
+msgstr "Mostra il registro errori (log)"
 
 msgid "Skip services on not configured sats"
-msgstr ""
+msgstr "Tralascia i canali dei satelliti non configurati"
 
 msgid "Start scan"
-msgstr ""
+msgstr "Avvia la scansione"
 
 msgid "Starting scanner"
-msgstr ""
+msgstr "Avvio la scansione..."
 
 msgid "Starting update..."
-msgstr ""
+msgstr "Avvio l’aggiornamento..."
 
 msgid "Style of bouquet marker"
-msgstr ""
+msgstr "Stile dei separatori dei bouquet"
 
 msgid "Style of provider marker"
-msgstr ""
+msgstr "Stile dei separatori dei provider"
 
 msgid "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones."
-msgstr ""
+msgstr "Questo ha effetto su tutti i bouquet: scegli ‘NO’ per la scansione di tutti i canali; ‘SI’ per ignorare quelli criptati."
 
 msgid "This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode."
 msgstr ""
+"Questa funzione è solo per sviluppi futuri. Richiede che sia abilitato il registro errori\n"
+"o che il sistema sia avviato in modalità “console”."
 
 msgid "This option allows you to choose what region of the country you live in, so it populates the correct channels for your region."
-msgstr ""
+msgstr "Quest’opzione vi permette di scegliere in quale regione vivete così da popolare la lista canali con quelli appropriati per voi."
 
 msgid "This option enables the current selected provider."
-msgstr ""
+msgstr "Quest’opzione abilita il provider correntemente scelto."
 
 msgid "This option has several choices \"Yes\", (create a bouquet with all the channels in it), \"Yes HD only\", (will group all HD channels into this bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do not use a main bouquet)"
-msgstr ""
+msgstr "Quest’opzione ha diverse scelte: “SÌ” (crea un bouquet con tutti i canali) - “Sì, solo HD” (include tutti i canali HD in questo bouquet) - “Personalizzato” (permette di scegliere il vostro proprio bouquet) - “NO” (non usa un bouquet principale)"
 
 msgid "This option places markers in the bouquet index to group all bouquets of each provider."
 msgstr ""
+"Quest’opzione pone dei separatori nell’indice dei bouquet\n"
+"per raggruppare tutti quelli di ogni provider."
 
 msgid "This option will allow you choose where to place the created bouquets."
 msgstr ""
+"Quest’opzione vi permette di scegliere dove mettere i bouquet creati,\n"
+"se IN CIMA all’elenco dei bouquet oppure IN FONDO."
 
 msgid "This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet."
-msgstr ""
+msgstr "Quest’opzione creerà il bouquet FTA HD, con tutti canali HD non criptati."
 
 msgid "This option will create a FreeToAir bouquet, it will group all free channels into this bouquet."
-msgstr ""
+msgstr "Quest’opzione creerà il bouquet FTA, con tutti canali non criptati (FTA)."
 
 msgid "This option will create a High Definition bouquet, it will group all HD channels into this bouquet."
-msgstr ""
+msgstr "Quest’opzione creerà il bouquet HD, con tutti canali HD."
 
 msgid "This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary."
-msgstr ""
+msgstr "Quest’opzione creerà un bouquet per ogni tipo di canale; ad es.: Film, Documentari, Intrattenimento..."
 
 msgid "This option will prepend the provider name to bouquet name."
-msgstr ""
+msgstr "Quest’opzione anteporrà il nome del provider al nome del bouquet."
 
 msgid "This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)"
-msgstr ""
+msgstr "Quest’opzione scambierà le versioni SD dei canali con le corrispondenti HD. Es: (Rai1 con Rai1 HD, Canale5 con Canale5 HD)"
 
 msgid "Time of scan to start"
-msgstr ""
+msgstr "Orario di avvio della scansione"
 
 #, python-format
 msgid ""
@@ -440,88 +520,100 @@ msgid ""
 "The tuner is correctly configured.\n"
 "You can receive the specified frequency."
 msgstr ""
+"Tempo esaurito sintonizzando %s sul tuner %s.\n"
+"\n"
+"Controlla quanto segue:\n"
+"-Che il tuner sia correttamente configurato;\n"
+"-che puoi ricevere quella specifica frequenza."
 
-msgid "Top"
-msgstr ""
+msgid "top"
+msgstr "in cima"
+
+msgid "bottom"
+msgstr "in fondo"
 
 #, python-format
 msgid "Tuning %s..."
-msgstr ""
+msgstr "Sintonizzo %s..."
 
 #, python-format
 msgid "Unable to download config file for %s"
-msgstr ""
+msgstr "Non riesco a scaricare il file di configurazione per %s"
 
 msgid "Update config files"
-msgstr ""
+msgstr "Aggiorno i file di configurazione"
 
 msgid "UpdateProviders"
-msgstr ""
+msgstr "Aggiorno i provider"
 
 msgid "Weekly"
-msgstr ""
+msgstr "Settimanale"
 
 msgid "When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included."
 msgstr ""
+"Quando la ricerca trova altri canali che non hanno un numero di canale assegnato,\n"
+"“SÌ” li aggiungerà alla fine della lista canali, “NO” non li aggiungerà."
 
 msgid "When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets."
-msgstr ""
+msgstr "Se disabilitata, quest’opzione abiliterà “Mantieni i bouquet” nel menu principale, permettendovi di nascondere qualche bouquet esistente."
 
 msgid "When enabled, allows you start a scan from the extensions list."
-msgstr ""
+msgstr "Se abilitata, quest’opzione lancia la scansione a partire dalla lista delle estensioni."
 
 msgid ""
 "Your bouquets are about to be updated,\n"
 "Do you want to allow this?"
 msgstr ""
+"Sto per aggiornare i tuoi bouquet:\n"
+"vuoi che proceda?"
 
 msgid "area"
-msgstr ""
+msgstr "regione"
 
 msgid "custom bouquet for main"
-msgstr ""
+msgstr "bouquet personale come principale"
 
 msgid "expert"
-msgstr ""
+msgstr "esperto"
 
 msgid "generate FTA HD bouquet"
-msgstr ""
+msgstr "genero un bouquet FTA HD"
 
 msgid "generate FTA bouquet"
-msgstr ""
+msgstr "genero un bouquet FTA"
 
 msgid "generate HD bouquet"
-msgstr ""
+msgstr "genero un bouquet HD"
 
 msgid "generate main bouquet"
-msgstr ""
+msgstr "genero un bouquet principale"
 
 msgid "generate sections bouquets"
-msgstr ""
+msgstr "genero bouquet di sezioni"
 
 msgid "indent + text"
-msgstr ""
+msgstr "indentatura + testo"
 
 msgid "no"
-msgstr ""
+msgstr "no"
 
 msgid "simple"
-msgstr ""
+msgstr "semplice"
 
 msgid "swap channels"
-msgstr ""
+msgstr "scambia i canali"
 
 msgid "yes"
-msgstr ""
+msgstr "sì"
 
 msgid "yes (all channels)"
-msgstr ""
+msgstr "sì (tutti i canali)"
 
 msgid "yes (custom)"
-msgstr ""
+msgstr "sì (personalizzato)"
 
 msgid "yes (only FTA HD)"
-msgstr ""
+msgstr "sì (solo FTA HD)"
 
 msgid "yes (only HD)"
-msgstr ""
+msgstr "sì (solo HD)"
