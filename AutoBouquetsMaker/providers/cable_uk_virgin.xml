@@ -162,10 +162,13 @@ except:
 	#Channel names have quotes, channel numbers do not. Example: ['ITV HD', 250, 500]
 	blacklist = [
 				204, #Netflix
+				278, #Dummy 1209
 				'ABN TV',
+				'Box Upfront',
 				'BT Events HD',
 				'BT Sport Ultimate WSL',
 				'BT Sport Ultimate',
+				'Challenge +1',
 				'Channel Closed',
 				'Channel Moved',
 				'Channel Update',
@@ -177,6 +180,7 @@ except:
 				'ITVEvents HD',
 				'L Pack Tier 4',
 				'Lifetime +1',
+				'Lifestyle Slate',
 				'Living Foodz HD',
 				'M Pack Tier 1',
 				'M+ Pack Tier 3',
@@ -188,6 +192,9 @@ except:
 				'PIN Protection Help',
 				'Pop Power',
 				'Prime Video',
+				'Sky Documentaries HD',
+				'Sky Nature HD',
+				'Sony Crime Channel',
 				'Vevo',
 				'Virgin TV Ultra HD',
 				'Worldbox',
@@ -195,7 +202,8 @@ except:
 				'YouTube',
 				'Your TV',
 				'\x03Channel Update',
-				'Zing'
+				'Zing',
+				'ZooMoo HD'
 
 				]
 
@@ -218,7 +226,7 @@ except:
 
 	# Remove some services unless in netID whitelist
 	# Channel names have quotes, channel numbers do not. Example: ['ITV HD', 250, 500]
-	selective_blacklist = [501, 502, 504, 505, 506, 507, 508, 511, 512, 513, 514, 515, 516, 517, 518, 527, 528, 529, 530]
+	selective_blacklist = [501, 502, 503, 504, 505, 506, 507, 508, 511, 512, 513, 514, 515, 516, 517, 518, 527, 528, 529, 530]
 
 if (service["service_name"] in selective_blacklist or service["number"]  in selective_blacklist) and netID not in netID_whitelist:
 	skip = True
