@@ -1,7 +1,26 @@
 language: python
+dist: bionic
+os: linux
 
-sudo: required
-dist: trusty
+python:
+  - "2.7"
+  - "3.8"
+
+compiler:
+  - gcc
+
+cache:
+  apt: true
+
+git:
+  depth: 10
+
+branches:
+  only:
+  - master
+
+install:
+  - pip install flake8
 
 addons:
   apt:
@@ -14,13 +33,17 @@ addons:
     - gettext
     - swig
 
-python:
-  - "2.7"
-
-git:
-  depth: 1
-
 script:
-- echo compiling AutoBouquetsMaker enigma2 plugin
-- python -m compileall .
-- echo done!
+  - flake8 --version
+  - echo compiling AutoBouquetsMaker enigma2 plugin
+  - python -m compileall .
+  - find . -type f -name "*.po" -exec msgfmt {} -o {}.mo \;
+  - flake8 --ignore=W191,E128,E501,E722 . --exit-zero
+  - echo done.
+
+# PEP8 :- IGNORE CODES
+# W191 : indentation contains tabs
+# E128 : continuation line under-indented for visual indent
+# E501 : line too long (> 79 characters)
+# E722 : do not use bare 'except'
+
