@@ -278,16 +278,13 @@
 		<channel number="165" with="839"/> <!-- Nat Geo Wild HD -->
 		<channel number="173" with="889"/> <!-- Smithsonian HD -->
 		<channel number="301" with="842"/> <!-- SkyPremiereHD -->
-		<channel number="302" with="843"/> <!-- Sky Hits HD -->
-		<channel number="303" with="844"/> <!-- Sky Greats HD -->
-		<channel number="304" with="845"/> <!-- Sky Disney HD -->
-		<channel number="305" with="846"/> <!-- Sky Family HD -->
-		<channel number="306" with="847"/> <!-- Sky Action HD -->
-		<channel number="307" with="848"/> <!-- Sky Comedy HD -->
-		<channel number="308" with="849"/> <!-- Sky Thriller HD -->
-		<channel number="309" with="850"/> <!-- Sky Drama HD -->
-		<channel number="310" with="851"/> <!-- Sky Drama HD -->
-		<channel number="311" with="852"/> <!-- Sky ScFi/HorHD -->
+		<channel number="304" with="845"/> <!-- Sky Greats HD -->
+		<channel number="306" with="846"/> <!-- Sky Family HD -->
+		<channel number="307" with="847"/> <!-- Sky Disney HD -->
+		<channel number="308" with="848"/> <!-- Sky Action HD -->
+		<channel number="309" with="849"/> <!-- Sky Comedy Cinema HD -->
+		<channel number="310" with="850"/> <!-- Sky Thriller HD -->
+		<channel number="311" with="851"/> <!-- Sky Drama HD -->
 		<channel number="313" with="853"/> <!-- Film4 HD -->
 		<channel number="401" with="855"/> <!-- SkySpMainEvHD HD -->
 		<channel number="402" with="856"/> <!-- SkySp PL HD -->
