@@ -118,7 +118,6 @@
 		<channel number="423" with="872"/> <!-- BTSpt ESPN HD -->
 		<channel number="426" with="874"/> <!-- Racing UK HD -->
 		<channel number="501" with="875"/> <!-- Sky News HD -->
-		<channel number="502" with="876" conditional="'Bloomberg HD' in service_hd['service_name']"/> <!-- Bloomberg HD -->
 		<channel number="503" with="877"/> <!-- BBC News HD -->
 		<channel number="505" with="890"/> <!-- CNBC HD -->
 		<channel number="506" with="878"/> <!-- CNN HD -->
