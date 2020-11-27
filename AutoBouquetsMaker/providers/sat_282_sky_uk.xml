@@ -279,6 +279,7 @@
 		<channel number="164" with="838"/> <!-- Lifetime HD -->
 		<channel number="165" with="839"/> <!-- Nat Geo Wild HD -->
 		<channel number="171" with="889"/> <!-- Smithsonian HD -->
+		<channel number="194" with="876" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="301" with="842"/> <!-- SkyPremiereHD -->
 		<channel number="304" with="845"/> <!-- Sky Greats HD -->
 		<channel number="306" with="846"/> <!-- Sky Family HD -->
@@ -308,9 +309,7 @@
 		<channel number="421" with="873"/> <!-- eir sport 1 HD -->
 		<channel number="423" with="872"/> <!-- BTSpt ESPN HD -->
 		<channel number="426" with="874"/> <!-- Racing UK HD -->
-		<channel number="457" with="876" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="501" with="875"/> <!-- Sky News HD -->
-		<channel number="502" with="876"/> <!-- Bloomberg HD -->
 		<channel number="503" with="877"/> <!-- BBC News HD -->
 		<channel number="505" with="890"/> <!-- CNBC HD -->
 		<channel number="506" with="878"/> <!-- CNN HD -->
