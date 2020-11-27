@@ -335,7 +335,6 @@ except:
 		5036, # AMC from BT
 		1024, # 10002
 		1027, # 10001
-		2320, # Dave ja vu
 	]
 
 #Some channels are FTA, but they incorrectly have Encrypted flag.

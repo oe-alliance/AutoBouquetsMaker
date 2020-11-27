@@ -253,7 +253,7 @@ class DvbScanner():
 					print("[ABM-DvbScanner] raw section above is from NIT other table.")
 				network_id = section["header"]["network_id"]
 
-				if network_id in nit_other_section_version and nit_other_section_version[network_id] == section["header"]["version_number"] and all(completed == True for completed in nit_other_completed.itervalues()):
+				if network_id in nit_other_section_version and nit_other_section_version[network_id] == section["header"]["version_number"] and all(completed == True for completed in itervalues(nit_other_completed)):
 					all_nit_others_completed = True
 				else:
 
