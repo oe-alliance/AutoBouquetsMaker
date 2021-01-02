@@ -38,22 +38,32 @@
 		<channel number="008" with="108" />
 		<channel number="009" with="109" />
 		<channel number="010" with="110" />
+		<channel number="011" with="111" />
+		<channel number="012" with="112" />
 		<channel number="013" with="113" />
 		<channel number="014" with="114" />
 		<channel number="015" with="115" />
+		<channel number="016" with="116" />
+		<channel number="017" with="117" />
 		<channel number="019" with="119" />
 		<channel number="020" with="120" />
 		<channel number="021" with="121" />
 		<channel number="023" with="123" />
 		<channel number="024" with="124" />
+		<channel number="025" with="125" />
 		<channel number="027" with="127" />
 		<channel number="028" with="128" />
 		<channel number="031" with="131" />
 		<channel number="032" with="132" />
 		<channel number="033" with="133" />
+		<channel number="034" with="134" />
 		<channel number="036" with="136" />
+		<channel number="039" with="139" />
+		<channel number="040" with="140" />
+		<channel number="041" with="141" />
 		<channel number="042" with="142" />
 		<channel number="043" with="143" />
+		<channel number="060" with="160" />
 		<channel number="071" with="171" />
 		<channel number="087" with="187" />
 	</swapchannels>
