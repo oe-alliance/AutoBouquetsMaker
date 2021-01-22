@@ -18,7 +18,12 @@
 		onid="319"
 	/>
 	<sections>
-		<section number="1">Chaînes</section>
+		<section number="1">Chaînes PANORAMA Bis TV</section>
+		<section number="58">Chaînes Adultes (Offre Ultimum)</section>
+		<section number="60">Chaînes Information (en clair)</section>
+		<section number="67">Chaînes en arrêt de diffusion</section>
+		<section number="70">Chaînes Suisses (SSR/SRG)</section>
+		<section number="80">Autres Chaînes en Clair Hotbird</section>
 	</sections>
 	<dvbsconfigs>
 		<configuration key="hd_00306" bouquet="0x0132" region="0x83">BIS TV (13.0°E)</configuration>
