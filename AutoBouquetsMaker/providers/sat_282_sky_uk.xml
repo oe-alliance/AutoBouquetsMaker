@@ -324,6 +324,7 @@
 		<channel number="607" with="643"/> <!-- CBBC HD -->
 		<channel number="608" with="644"/> <!-- CBeebies HD -->
 		<channel number="615" with="648"/> <!-- Nick Jr. HD -->
+		<channel number="662" with="896"/> <!-- TJC HD -->
 		<channel number="703" with="882"/> <!-- SONY TV HD -->
 		<channel number="705" with="883"/> <!-- Star Plus HD -->
 		<channel number="706" with="884"/> <!-- Colors HD -->
