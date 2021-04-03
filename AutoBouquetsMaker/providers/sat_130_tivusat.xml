@@ -48,9 +48,11 @@
 		<channel number="019" with="119" />
 		<channel number="020" with="120" />
 		<channel number="021" with="121" />
+<channel number="022" with="122" />
 		<channel number="023" with="123" />
 		<channel number="024" with="124" />
 		<channel number="025" with="125" />
+<channel number="026" with="126" />
 		<channel number="027" with="127" />
 		<channel number="028" with="128" />
 		<channel number="031" with="131" />
@@ -65,6 +67,7 @@
 		<channel number="043" with="143" />
 		<channel number="060" with="160" />
 		<channel number="071" with="171" />
+<channel number="077" with="177" />
 		<channel number="087" with="187" />
 	</swapchannels>
 
