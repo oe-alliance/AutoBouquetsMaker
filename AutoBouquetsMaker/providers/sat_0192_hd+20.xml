@@ -22,8 +22,16 @@
 	</sections>
 	<servicehacks>
 <![CDATA[
-# Skip Demo & Test channels
-if "SES UHD Demo" in service["service_name"] or "." in service["service_name"]:
+# Skip test services, interactive services, and chat line spam.
+blacklist = (
+			"SES UHD Demo Channel 02",
+			"SES UHD Demo Channel 03",
+			"SES UHD Demo Channel 04",
+			"SES UHD Demo Channel 05",
+			"SES UHD Demo Channel 06",
+			)
+
+if service["service_name"] in blacklist or "." in service["service_name"]:
 	skip = True
 ]]>
 	</servicehacks>
