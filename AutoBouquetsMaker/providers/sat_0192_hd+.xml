@@ -29,8 +29,7 @@
 		<section number="128">Religion</section>
 		<section number="134">Österreich</section>
 		<section number="201">SD-Versionen</section>
-		<section number="300">Andere</section>
-	</sections>
+		</sections>
 	<servicehacks>
 <![CDATA[
 # Skip test service and non-HD+ encrypted services.
