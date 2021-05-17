@@ -18,17 +18,18 @@
 	/>
 	<sections>
 		<section number="1">Vollprogramme</section>
-		<section number="10">Kinder</section>
-		<section number="16">Unterhaltung</section>
-		<section number="29">Doku</section>
-		<section number="39">Nachrichten</section>
-		<section number="45">Sport</section>
-		<section number="48">Musik</section>
-		<section number="58">Regionales</section>
-		<section number="106">Einkaufen</section>
-		<section number="129">Religion</section>
-		<section number="135">Österreich</section>
-		<section number="201">SD-Versionen</section>
+		<section number="15">Kinder</section>
+		<section number="25">Unterhaltung</section>
+		<section number="45">Doku</section>
+		<section number="60">Nachrichten</section>
+		<section number="70">Sport</section>
+		<section number="80">Musik</section>
+		<section number="90">Regionales</section>
+		<section number="160">Einkaufen</section>
+		<section number="190">Religion</section>
+		<section number="200">Österreich</section>
+		<section number="221">SD-Versionen</section>
+		<section number="401">UHD</section>
 		</sections>
 	<servicehacks>
 <![CDATA[
