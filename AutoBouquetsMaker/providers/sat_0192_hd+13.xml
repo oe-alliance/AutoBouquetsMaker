@@ -50,7 +50,8 @@ blacklist = (
 			"Mobile Sex",
 			"multithek (Internet)",
 			"SEX-Kontakte",
-			"Traumfrauen TV"
+			"Traumfrauen TV",
+			"Schlager Radio"
             )
 
 if service["service_name"] in blacklist or "Test" in service["service_name"]:
