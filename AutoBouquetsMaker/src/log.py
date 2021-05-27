@@ -16,7 +16,7 @@ mutex = threading.Lock()
 def write(data):
 	mutex.acquire()
 	try:
-		if logfile.tell() > 8000:
+		if logfile.tell() > 18000:
 			# Do a sort of 8k round robin
 			logfile.seek(0)
 		logfile.write(data)
