@@ -258,12 +258,12 @@
 		<channel number="119" with="817"/> <!-- ITV3 HD -->
 		<channel number="120" with="818"/> <!-- ITV4 HD -->
 		<channel number="121" with="819"/> <!-- Sky Crime HD -->
-		<channel number="122" with="820"/> <!-- Sky Arts HD -->
 		<channel number="123" with="821"/> <!-- Sky History HD -->
 		<channel number="124" with="822"/> <!-- Sky Nature HD -->
 		<channel number="125" with="823"/> <!-- Discovery HD -->
 		<channel number="126" with="824"/> <!-- MTV HD -->
 		<channel number="129" with="825"/> <!-- Nat Geo HD -->
+		<channel number="130" with="826"/> <!-- Sky Arts HD -->
 		<channel number="132" with="827"/> <!-- Alibi HD -->
 		<channel number="133" with="828"/> <!-- TLC HD -->
 		<channel number="134" with="829"/> <!-- S4C HD -->
