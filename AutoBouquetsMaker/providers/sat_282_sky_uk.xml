@@ -325,6 +325,7 @@
 		<channel number="706" with="894"/> <!-- Colors HD -->
 		<channel number="715" with="895"/> <!-- SONY MAX HD -->
 		<channel number="717" with="896"/> <!-- Utsav GOLD HD -->
+		<channel number="791" with="897"/> <!-- PCNE Chinese HD -->
 	</swapchannels>
 	<servicehacks>
 <![CDATA[
