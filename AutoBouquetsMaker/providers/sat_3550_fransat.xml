@@ -23,7 +23,7 @@
 		<section number="40">Thématique</section>
 		<section number="49">Séries</section>
 		<section number="50">Cinéma</section>
-	    <section number="51">Information</section>
+	        <section number="51">Information</section>
 		<section number="56">Généraliste</section>
 		<section number="61">Religion</section>
 		<section number="62">Jeunesse</section>
@@ -33,6 +33,7 @@
 		<section number="200">TV Autres</section>
 		<section number="300">Regionales</section>
 		<section number="400">Adultes</section>
+		<section number="444">UHD 4K</section>
 		<section number="480">Test</section>
 	</sections>
 	<dvbsconfigs>
