@@ -21,9 +21,8 @@
 		<section number="1">Chaînes PANORAMA Bis TV</section>
 		<section number="58">Chaînes Adultes (Offre Ultimum)</section>
 		<section number="60">Chaînes Information (en clair)</section>
-		<section number="67">Chaînes en arrêt de diffusion</section>
-		<section number="70">Chaînes Suisses (SSR/SRG)</section>
-		<section number="80">Autres Chaînes en Clair Hotbird</section>
+		<section number="70">Chaînes Suisses (Offre SSR/SRG)</section>
+		<section number="77">Autres Chaînes en Clair Hotbird</section>
 	</sections>
 	<dvbsconfigs>
 		<configuration key="hd_00306" bouquet="0x0132" region="0x83">BIS TV (13.0°E)</configuration>
@@ -32,10 +31,10 @@
 <![CDATA[
 # Some HD services are not properly identified as such by service_type or by name.
 hd_services = (
-	'RTL9',
+	'RTL 9',
 	'TREK',
-	'Science et Vie',
-	'AB MOTEURS',
+	'SCIENCE ET VIE',
+	'AUTOMOTO la chaine',
 	'ACTION',
 )
 
