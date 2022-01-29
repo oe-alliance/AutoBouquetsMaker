@@ -352,7 +352,7 @@ except:
 	########################################################################
 
 	channels_to_add = {
-		"London Live": 117 #This is only added if you do not have an official local 117 service
+		"London Live": 173 #This is only added when it's not already at 117 (BBC Three will be at 173 then)
 	}
 
 	channels_to_add_by_id = {
