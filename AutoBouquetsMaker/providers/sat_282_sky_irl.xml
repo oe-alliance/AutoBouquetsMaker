@@ -331,6 +331,7 @@ except:
 
 #Some channels are FTA, but they incorrectly have Encrypted flag.
 	fta_by_id = [
+		1758, # 4Music
 		1865, # DMAX +1
 		3358, # Sony Crime
 		3216, # Sony Crime+1
