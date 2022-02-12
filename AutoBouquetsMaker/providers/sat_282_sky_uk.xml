@@ -351,7 +351,7 @@ except:
 	#
 	########################################################################
 
-	channels_to_add = {
+	channels_to_add_by_name = {
 		"London Live": 117 #This is only added if you do not have an official local 117 service
 	}
 
@@ -539,10 +539,10 @@ if custom and service["service_type"] != 2 and service["transport_stream_id"] in
 	skip.skip = True
 
 # Add channels by name
-if custom and service["service_name"] in channels_to_add and service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and channels_to_add[service["service_name"]] not in LCNs_in_use:
-	LCNs_in_use.append(channels_to_add[service["service_name"]])
-	service["number"] = channels_to_add[service["service_name"]]
-	service["numbers"] = [channels_to_add[service["service_name"]]]
+if custom and service["service_name"] in channels_to_add_by_name and service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and channels_to_add_by_name[service["service_name"]] not in LCNs_in_use:
+	LCNs_in_use.append(channels_to_add_by_name[service["service_name"]])
+	service["number"] = channels_to_add_by_name[service["service_name"]]
+	service["numbers"] = [channels_to_add_by_name[service["service_name"]]]
 
 # Add channels by ID
 if custom and service["channel_id"] in channels_to_add_by_id and service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and channels_to_add_by_id[service["channel_id"]] not in LCNs_in_use:
