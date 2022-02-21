@@ -282,12 +282,12 @@
 		<channel number="173" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
 		<channel number="194" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="301" with="848"/> <!-- SkyPremiereHD -->
-		<channel number="303" with="854"/> <!-- Sky Drama HD -->
 		<channel number="304" with="849"/> <!-- Sky Greats HD -->
 		<channel number="306" with="850"/> <!-- Sky Family HD -->
 		<channel number="307" with="851"/> <!-- Sky Action HD -->
 		<channel number="308" with="852"/> <!-- Sky Comedy Cinema HD -->
 		<channel number="309" with="853"/> <!-- Sky Thriller HD -->
+		<channel number="310" with="854"/> <!-- Sky Drama HD -->
 		<channel number="313" with="855"/> <!-- Film4 HD -->
 		<channel number="401" with="859"/> <!-- SkySpMainEvHD HD -->
 		<channel number="402" with="860"/> <!-- SkySp PL HD -->
