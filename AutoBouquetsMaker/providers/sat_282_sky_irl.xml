@@ -298,7 +298,7 @@ except:
 	rename_by_sid = {
 		53710: "NBC News NOW HD",
 		22305: "QVC HD",
-		22306: "QVC Beauty HD",
+		22306: "QVC Style HD",
 		53595: "The Craft Store HD",
 	} 
 
