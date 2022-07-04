@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-31 12:15+0200\n"
-"PO-Revision-Date: 2021-12-19 10:27+0200\n"
+"PO-Revision-Date: 2022-07-04 12:22+0300\n"
 "Last-Translator: Orlandox\n"
 "Language-Team: Kojo, Orlandox\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
@@ -69,7 +69,7 @@ msgid "All channels"
 msgstr "Kaikki kanavat"
 
 msgid "Allows you to set a schedule to perform a scan "
-msgstr "Asettaa ajastetun haun"
+msgstr "Asettaa ajastetun haun "
 
 msgid "Are you sure you want to remove all bouquets created by ABM?"
 msgstr "Oletko varma että haluat poistaa kaikki ABM:n luomat kanavalistat?"
@@ -274,7 +274,7 @@ msgstr ""
 "%s"
 
 msgid "No NIMs found for "
-msgstr "NIM:ä ei löytynyt"
+msgstr "NIM:ä ei löytynyt "
 
 msgid "No area found"
 msgstr "Aluetta ei löytynyt"
@@ -283,10 +283,10 @@ msgid "No providers are configured."
 msgstr "Palveluntarjoajia ei ole määritelty."
 
 msgid "No providers configured."
-msgstr "Palveluntarjoajia ei ole määritelty"
+msgstr "Palveluntarjoajia ei ole määritelty."
 
 msgid "No valid NIM found for "
-msgstr "Toimivaa NIM:ä ei löytynyt"
+msgstr "Toimivaa NIM:ä ei löytynyt "
 
 msgid "None"
 msgstr "Ei yhtään"
@@ -328,7 +328,7 @@ msgstr "%s asetustiedot noudettu"
 
 #, python-format
 msgid "Retrieved config file for %s does not parse."
-msgstr "Asetustiedostot eivät parsiudu %s :lle"
+msgstr "Asetustiedostot eivät parsiudu %s :lle."
 
 #, python-format
 msgid "Retrieved config file for %s is faulty or incomplete."
@@ -365,10 +365,10 @@ msgid "Services: 0 video - 0 radio"
 msgstr "Palvelut: 0 video - 0 radio"
 
 msgid "Set the repeat interval of the schedule."
-msgstr "Valitse toistojen väli"
+msgstr "Valitse toistojen väli."
 
 msgid "Set the time of day to perform the scan."
-msgstr "Valitse haun aika"
+msgstr "Valitse haun käynnistyksen aika."
 
 msgid "Setup mode"
 msgstr "Asetustila"
@@ -398,16 +398,16 @@ msgid "Style of provider marker"
 msgstr "Palveluntarjoajan tuntomerkin tyyli"
 
 msgid "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones."
-msgstr "Tämä vaikuttaa kaikkiin kanavalistauksiin. Valitse EI hakeaksesi kaikista palveluista. Valitessasi KYLLÄ, haku ei ota huomioon salattuja kanavia. "
+msgstr "Tämä vaikuttaa kaikkiin kanavalistauksiin. Valitse EI hakeaksesi kaikista palveluista. Valitessasi KYLLÄ, haku ei ota huomioon salattuja kanavia."
 
 msgid "This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode."
-msgstr "Tämä ominaisuus on tarkoitettu vain kehittäjille. Vaatii että debug-loki on päällä, tai Enigma2 on käynnistety komentoriville. "
+msgstr "Tämä ominaisuus on tarkoitettu vain kehittäjille. Vaatii että debug-loki on päällä, tai Enigma2 on käynnistety komentoriville."
 
 msgid "This option allows you to choose what region of the country you live in, so it populates the correct channels for your region."
-msgstr "Valitse maakunta jotta oikeat alueohjelmat tulee valituksi"
+msgstr "Valitse maakunta jotta oikeat alueohjelmat tulee valituksi."
 
 msgid "This option enables the current selected provider."
-msgstr "Valitse nykyinen palveluntarjoaja"
+msgstr "Valitse nykyinen palveluntarjoaja."
 
 msgid "This option has several choices \"Yes\", (create a bouquet with all the channels in it), \"Yes HD only\", (will group all HD channels into this bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do not use a main bouquet)"
 msgstr "Tässä on useita valintoja: \"kyllä\" luo listan jossa on kanavat, \"kyllä vain HD:t\" luo lista jossa on vain HD-kanavat, \"kyllä (asetuksin)\" luo valitsemasi tyylisen listan, \"ei\" ei luo päälistaa"
@@ -425,13 +425,13 @@ msgid "This option will create a FreeToAir bouquet, it will group all free chann
 msgstr "Tämä valinta luo FreeToAir -kanavalistan. Se ryhmittelee kaikki ilmaiskanavat tälle listalle."
 
 msgid "This option will create a High Definition bouquet, it will group all HD channels into this bouquet."
-msgstr "Tämä luo suosikkilistan jossa on vain HD-kanavat"
+msgstr "Tämä luo suosikkilistan jossa on vain HD-kanavat."
 
 msgid "This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary."
-msgstr "Tämä luo jaotellut suosikkilistat kanavien ohjelmatyypin mukaan"
+msgstr "Tämä luo jaotellut suosikkilistat kanavien ohjelmatyypin mukaan."
 
 msgid "This option will prepend the provider name to bouquet name."
-msgstr "Tämä lisää palveluntarjoajan nimen suosikkilistan nimeen"
+msgstr "Tämä lisää palveluntarjoajan nimen suosikkilistan nimeen."
 
 msgid "This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)"
 msgstr "Tämä valinta vaihtaa kanavien SD-versiot HD-versioihin. (Esim. Yle1 vaihtuu Yle1 HD)"
@@ -477,7 +477,7 @@ msgid "When a search finds extra channels that do not have an allocated channel 
 msgstr "Kun haku löytää kanavia, joilla ei ole määrättyä kanavanumeroa, 'Kyllä' lisää nämä kanavalistan loppuun, ja 'Ei' tarkoittaa että näitä kanavia ei lisätä listalle."
 
 msgid "When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets."
-msgstr "Kun ei ole valittuna sallii pitää ja piilottaa suosikkilistoja päävalikossa"
+msgstr "Kun ei ole valittuna sallii pitää ja piilottaa suosikkilistoja päävalikossa."
 
 msgid "When enabled, allows you start a scan from the extensions list."
 msgstr "Kun päällä, voit aloittaa haun laajennus-listasta."
@@ -544,7 +544,7 @@ msgid "Add provider name to bouquets"
 msgstr "Lisää palveluntuottajan nimi suosikkilistoihin"
 
 msgid "This option will add the provider's name to bouquet names."
-msgstr "Tämä valinta lisää palveluntuottajan nimen suosikkilistojen nimiin"
+msgstr "Tämä valinta lisää palveluntuottajan nimen suosikkilistojen nimiin."
 
 msgid "Show DVB-T frequency finder"
 msgstr "Näytä DVB-T taajuuden etsin"
@@ -560,3 +560,51 @@ msgstr "Poista automaattiset suosikkilistat"
 
 msgid "Update provider files"
 msgstr "Päivitä palveluntarjoajan tiedostot"
+
+msgid "Schedule time of day"
+msgstr "Ajastetun haun kellonaika"
+
+msgid "Set the time of day to perform a scan."
+msgstr "Aseta kellonaika, jolloin haku tehdään."
+
+msgid "Schedule days of the week"
+msgstr "Ajastetun haun viikonpäivät"
+
+msgid "Press OK to select which days to perform a scan."
+msgstr "Paina OK valitaksesi minä päivinä haku tehdään."
+
+msgid "Schedule wake from deep standby"
+msgstr "Vastaanottimen herääminen virransäästötilasta"
+
+msgid "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan."
+msgstr "'Virransäästötilassa' oleva vastaanotin herätetään, kun on ajastetun haun aika."
+
+msgid "Schedule return to deep standby"
+msgstr "Vastaanottimen paluu virransäästötilaan"
+
+msgid "If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed."
+msgstr "Palautetaan vastaanotin 'virransäästötilaan' ajastetun haun valmistuttua, jos vastaanotin herätettiin 'virransäästötilasta' ja se on 'valmiustilassa' eikä tallennuksia ole käynnissä."
+
+msgid "Press OK"
+msgstr "Paina OK"
+
+msgid "Monday"
+msgstr "Maanantai"
+
+msgid "Tuesday"
+msgstr "Tiistai"
+
+msgid "Wednesday"
+msgstr "Keskiviikko"
+
+msgid "Thursday"
+msgstr "Torstai"
+
+msgid "Friday"
+msgstr "Perjantai"
+
+msgid "Saturday"
+msgstr "Lauantai"
+
+msgid "Sunday"
+msgstr "Sunnuntai"
