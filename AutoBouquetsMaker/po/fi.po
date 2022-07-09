@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-31 12:15+0200\n"
-"PO-Revision-Date: 2022-07-04 12:22+0300\n"
+"PO-Revision-Date: 2022-07-09 19:35+0300\n"
 "Last-Translator: Orlandox\n"
 "Language-Team: Kojo, Orlandox\n"
 "Language: fi\n"
@@ -295,7 +295,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "Place bouquets at"
-msgstr "Sijoita suosikkilista"
+msgstr "Sijoita suosikkilistat"
 
 msgid "Please first setup, in configuration"
 msgstr "Aseta ensin palvelluntarjoajat"
@@ -416,7 +416,7 @@ msgid "This option places markers in the bouquet index to group all bouquets of 
 msgstr "Tämä valinta asettaa tuntomerkin kanavalistoille, jolla saadaan ryhmiteltyä ne palveluntarjoajien mukaan."
 
 msgid "This option will allow you choose where to place the created bouquets."
-msgstr "Tämä antaa valita minne luodot kanavalistat laitetaan."
+msgstr "Tämä antaa valita minne luodut kanavalistat laitetaan."
 
 msgid "This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet."
 msgstr "Tämä valinta luo FreeToAir High Definition-kanavalistan. Se ryhmittelee kaikki FTA HD -kanavat tälle listalle."
@@ -608,3 +608,12 @@ msgstr "Lauantai"
 
 msgid "Sunday"
 msgstr "Sunnuntai"
+
+msgid "none"
+msgstr "ei mitään"
+
+msgid "top"
+msgstr "ylimmäisiksi"
+
+msgid "bottom"
+msgstr "alimmaisiksi"
