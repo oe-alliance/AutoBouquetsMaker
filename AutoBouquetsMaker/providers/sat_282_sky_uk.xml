@@ -251,7 +251,7 @@
 		<channel number="112" with="812"/> <!-- Comedy Central HD -->
 		<channel number="113" with="813"/> <!-- Sky Max HD -->
 		<channel number="114" with="814"/> <!-- Sky Comedy HD -->
-		<channel number="115" with="876" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
+		<channel number="115" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="116" with="815"/> <!-- BBC Four HD -->
 		<channel number="117" with="138" conditional="'Channel 4' in service_sd['service_name'] and 'Channel 4' in service_hd['service_name']"/> <!-- Channel 4 HD -->
 		<channel number="117" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
@@ -281,7 +281,7 @@
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
 		<channel number="171" with="843"/> <!-- Smithsonian HD -->
 		<channel number="173" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
-		<channel number="194" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
+		<channel number="187" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="301" with="848"/> <!-- SkyPremiereHD -->
 		<channel number="304" with="849"/> <!-- Sky Greats HD -->
 		<channel number="306" with="850"/> <!-- Sky Family HD -->

@@ -85,7 +85,7 @@
 		<channel number="163" with="840"/> <!-- Sky History 2 HD -->
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
 		<channel number="171" with="843"/> <!-- Smithsonian HD -->
-		<channel number="194" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
+		<channel number="187" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="301" with="848"/> <!-- SkyPremiereHD -->
 		<channel number="304" with="849"/> <!-- Sky Greats HD -->
 		<channel number="306" with="850"/> <!-- Sky Family HD -->
