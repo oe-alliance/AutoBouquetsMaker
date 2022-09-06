@@ -803,6 +803,29 @@ PyObject *ss_parse_nit(unsigned char *data, int length) {
 					Py_DECREF(item);
 				}
 			}
+			else if (descriptor_tag == 0x82)	// LCN descriptor 0x82
+			{
+				int offset3 = offset2 + 2;
+				while (offset3 < (offset2 + descriptor_length + 2))
+				{
+					int service_id = (data[offset3] << 8) | data[offset3 + 1];
+					int logical_channel_number = (data[offset3 + 2] << 8) | data[offset3 + 3];
+
+					offset3 += 4;
+					if (logical_channel_number > 0)
+					{
+						PyObject *item = Py_BuildValue("{s:i,s:i,s:i,s:i,s:i}",
+								"transport_stream_id", transport_stream_id,
+								"original_network_id", original_network_id,
+								"service_id", service_id,
+								"logical_channel_number", logical_channel_number,
+								"descriptor_tag", descriptor_tag);
+
+						PyList_Append(list, item);
+						Py_DECREF(item);
+					}
+				}
+			}
 			else if (descriptor_tag == 0x83)	// LCN descriptor
 			{
 				int offset3 = offset2 + 2;

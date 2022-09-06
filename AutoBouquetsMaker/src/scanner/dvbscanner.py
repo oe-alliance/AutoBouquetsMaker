@@ -304,7 +304,7 @@ class DvbScanner():
 				key = "%x:%x:%x" % (transponder["transport_stream_id"], transponder["original_network_id"], transponder["service_id"])
 				service_dict_tmp[key] = transponder
 				continue
-			if "descriptor_tag" in transponder and transponder["descriptor_tag"] == 0x83: # lcn
+			if "descriptor_tag" in transponder and transponder["descriptor_tag"] in {0x82, 0x83}: # lcn
 				key = "%x:%x:%x" % (transponder["transport_stream_id"], transponder["original_network_id"], transponder["service_id"])
 				logical_channel_number_dict_tmp[key] = transponder
 				continue
