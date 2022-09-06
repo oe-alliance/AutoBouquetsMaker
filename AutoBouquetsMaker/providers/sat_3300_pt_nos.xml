@@ -1,7 +1,7 @@
 <provider>
 	<name>NOS</name>
 	<streamtype>dvbs</streamtype>
-	<protocol>nolcn</protocol>
+	<protocol>lcn</protocol>
 	<transponder
 		orbital_position="3300"
 		frequency="12360000"
