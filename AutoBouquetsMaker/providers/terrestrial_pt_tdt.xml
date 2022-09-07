@@ -266,22 +266,22 @@
 		<configuration key="evora_centro" frequency="546000000">Évora Centro</configuration>
 		<configuration key="obidos" frequency="586000000">Óbidos</configuration>
 		<!-- TDT by channel number (deprecated) -->
-		<configuration key="canal_28" frequency="530000000">Canal 28</configuration>
-		<configuration key="canal_30" frequency="546000000">Canal 30</configuration>
-		<configuration key="canal_33" frequency="570000000">Canal 33</configuration>
-		<configuration key="canal_34" frequency="578000000">Canal 34</configuration>
-		<configuration key="canal_35" frequency="586000000">Canal 35</configuration>
-		<configuration key="canal_36" frequency="594000000">Canal 36</configuration>
-		<configuration key="canal_37" frequency="602000000">Canal 37</configuration>
-		<configuration key="canal_40" frequency="626000000">Canal 40</configuration>
-		<configuration key="canal_41" frequency="634000000">Canal 41</configuration>
-		<configuration key="canal_42" frequency="642000000">Canal 42</configuration>
-		<configuration key="canal_43" frequency="650000000">Canal 43</configuration>
-		<configuration key="canal_44" frequency="658000000">Canal 44</configuration>
-		<configuration key="canal_45" frequency="666000000">Canal 45</configuration>
-		<configuration key="canal_46" frequency="674000000">Canal 46</configuration>
-		<configuration key="canal_47" frequency="682000000">Canal 47</configuration>
-		<configuration key="canal_48" frequency="690000000">Canal 48</configuration>
+		<configuration key="canal_28" frequency="530000000">[ Canal 28 ]</configuration>
+		<configuration key="canal_30" frequency="546000000">[ Canal 30 ]</configuration>
+		<configuration key="canal_33" frequency="570000000">[ Canal 33 ]</configuration>
+		<configuration key="canal_34" frequency="578000000">[ Canal 34 ]</configuration>
+		<configuration key="canal_35" frequency="586000000">[ Canal 35 ]</configuration>
+		<configuration key="canal_36" frequency="594000000">[ Canal 36 ]</configuration>
+		<configuration key="canal_37" frequency="602000000">[ Canal 37 ]</configuration>
+		<configuration key="canal_40" frequency="626000000">[ Canal 40 ]</configuration>
+		<configuration key="canal_41" frequency="634000000">[ Canal 41 ]</configuration>
+		<configuration key="canal_42" frequency="642000000">[ Canal 42 ]</configuration>
+		<configuration key="canal_43" frequency="650000000">[ Canal 43 ]</configuration>
+		<configuration key="canal_44" frequency="658000000">[ Canal 44 ]</configuration>
+		<configuration key="canal_45" frequency="666000000">[ Canal 45 ]</configuration>
+		<configuration key="canal_46" frequency="674000000">[ Canal 46 ]</configuration>
+		<configuration key="canal_47" frequency="682000000">[ Canal 47 ]</configuration>
+		<configuration key="canal_48" frequency="690000000">[ Canal 48 ]</configuration>
 	</dvbtconfigs>
 
 	<!-- Custom transponders are ONLY needed for HD muxes and for areas where tuning issues occur after running ABM -->
