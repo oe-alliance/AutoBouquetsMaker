@@ -22,9 +22,6 @@
 	<servicehacks>
 <![CDATA[
 blacklist = (
-			"Playboy TV",
-			"Venus",
-			"HOT",
 			"MEO"
             )
 
