@@ -28,6 +28,7 @@ blacklist = (
 			"NG_Zapper_Intek",
 			"NG_Zapper_5.14",
 			"NG_DVR_5.15",
+			"Canal NOS"
             )
 
 if service["service_name"] in blacklist or "Test" in service["service_name"]:

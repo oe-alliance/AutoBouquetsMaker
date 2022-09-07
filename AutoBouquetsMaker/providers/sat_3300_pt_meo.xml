@@ -24,7 +24,8 @@
 blacklist = (
 			"Playboy TV",
 			"Venus",
-			"HOT"
+			"HOT",
+			"MEO"
             )
 
 if service["service_name"] in blacklist or "Test" in service["service_name"]:
