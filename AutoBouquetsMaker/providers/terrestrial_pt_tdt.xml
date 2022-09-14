@@ -5,10 +5,12 @@
 	<dvbtconfigs>
 		<!-- https://tdt.telecom.pt/emissores (last list update: 31-05-2022) -->
 		<configuration key="abrantes" frequency="586000000">Abrantes</configuration>
+		<configuration key="agueda" frequency="658000000">Águeda</configuration>
+		<configuration key="agueda_industrial" frequency="658000000">Águeda Industrial</configuration>
 		<configuration key="albufeira" frequency="650000000">Albufeira</configuration>
+		<configuration key="alcacer_do_sal" frequency="602000000">Alcácer do Sal</configuration>
 		<configuration key="alcobaca" frequency="586000000">Alcobaça</configuration>
 		<configuration key="alcoutim" frequency="682000000">Alcoutim</configuration>
-		<configuration key="alcacer_do_sal" frequency="602000000">Alcácer do Sal</configuration>
 		<configuration key="aldeia_de_juso" frequency="586000000">Aldeia de Juso</configuration>
 		<configuration key="alenquer" frequency="586000000">Alenquer</configuration>
 		<configuration key="algueirao" frequency="586000000">Algueirão</configuration>
@@ -45,8 +47,8 @@
 		<configuration key="bonfim" frequency="594000000">Bonfim</configuration>
 		<configuration key="borba" frequency="546000000">Borba</configuration>
 		<configuration key="bornes" frequency="674000000">Bornes</configuration>
-		<configuration key="braga_santa_marta" frequency="570000000">Braga - Santa Marta</configuration>
 		<configuration key="braga_centro" frequency="570000000">Braga Centro</configuration>
+		<configuration key="braga_santa_marta" frequency="570000000">Braga - Santa Marta</configuration>
 		<configuration key="braganca" frequency="674000000">Bragança</configuration>
 		<configuration key="braganca_sao_bartolomeu" frequency="674000000">Bragança - São Bartolomeu</configuration>
 		<configuration key="bufao" frequency="650000000">Bufão</configuration>
@@ -84,14 +86,16 @@
 		<configuration key="estoril" frequency="586000000">Estoril</configuration>
 		<configuration key="estremoz" frequency="650000000">Estremoz</configuration>
 		<configuration key="estremoz_quinta_da_esperanca" frequency="650000000">Estremoz - Quinta da Esperança</configuration>
+		<configuration key="evora_centro" frequency="546000000">Évora Centro</configuration>
+		<configuration key="evora_entrevinhas" frequency="546000000">Évora - Entrevinhas</configuration>
 		<configuration key="faro" frequency="682000000">Faro</configuration>
+		<configuration key="fatima" frequency="586000000">Fátima</configuration>
 		<configuration key="ferreira_do_alentejo" frequency="546000000">Ferreira do Alentejo</configuration>
+		<configuration key="foia_1" frequency="650000000">Fóia 1</configuration>
+		<configuration key="foia_2" frequency="530000000">Fóia 2</configuration>
 		<configuration key="fornos_de_algodres" frequency="634000000">Fornos de Algodres</configuration>
 		<configuration key="foz" frequency="594000000">Foz</configuration>
 		<configuration key="funchal_madeira" frequency="682000000">Funchal, Madeira</configuration>
-		<configuration key="fatima" frequency="586000000">Fátima</configuration>
-		<configuration key="foia_1" frequency="650000000">Fóia 1</configuration>
-		<configuration key="foia_2" frequency="530000000">Fóia 2</configuration>
 		<configuration key="gaia" frequency="594000000">Gaia</configuration>
 		<configuration key="gaia_centro" frequency="594000000">Gaia Centro</configuration>
 		<configuration key="gardunha" frequency="578000000">Gardunha</configuration>
@@ -107,9 +111,9 @@
 		<configuration key="lagos_centro" frequency="650000000">Lagos Centro</configuration>
 		<configuration key="lagos_norte" frequency="650000000">Lagos Norte</configuration>
 		<configuration key="lamego" frequency="594000000">Lamego</configuration>
+		<configuration key="leca" frequency="594000000">Leça</configuration>
 		<configuration key="leiranco" frequency="570000000">Leiranco</configuration>
 		<configuration key="leiria" frequency="658000000">Leiria</configuration>
-		<configuration key="leca" frequency="594000000">Leça</configuration>
 		<configuration key="lisboa_castelo" frequency="586000000">Lisboa - Castelo</configuration>
 		<configuration key="lisboa_estrela" frequency="586000000">Lisboa - Estrela</configuration>
 		<configuration key="lisboa_restelo" frequency="586000000">Lisboa - Restelo</configuration>
@@ -118,18 +122,19 @@
 		<configuration key="logo_de_deus_coimbra" frequency="658000000">Logo de Deus - Coimbra</configuration>
 		<configuration key="loule" frequency="682000000">Loulé</configuration>
 		<configuration key="lourosa" frequency="594000000">Lourosa</configuration>
-		<configuration key="lousa_torre_de_moncorvo" frequency="674000000">Lousa - Torre de Moncorvo</configuration>
 		<configuration key="lousa" frequency="674000000">Lousã</configuration>
+		<configuration key="lousa_torre_de_moncorvo" frequency="674000000">Lousa - Torre de Moncorvo</configuration>
+		<configuration key="macao" frequency="650000000">Mação</configuration>
 		<configuration key="machialinho" frequency="658000000">Machialinho</configuration>
 		<configuration key="malveira" frequency="586000000">Malveira</configuration>
 		<configuration key="mangualde" frequency="594000000">Mangualde</configuration>
 		<configuration key="manteigas" frequency="634000000">Manteigas</configuration>
 		<configuration key="marofa" frequency="690000000">Marofa</configuration>
 		<configuration key="marvao" frequency="650000000">Marvão</configuration>
-		<configuration key="macao" frequency="650000000">Mação</configuration>
 		<configuration key="mealhada" frequency="658000000">Mealhada</configuration>
 		<configuration key="melides" frequency="602000000">Melides</configuration>
 		<configuration key="mendro" frequency="626000000">Mendro</configuration>
+		<configuration key="mertola" frequency="682000000">Mértola</configuration>
 		<configuration key="mira_de_aire" frequency="586000000">Mira de Aire</configuration>
 		<configuration key="mirandela" frequency="674000000">Mirandela</configuration>
 		<configuration key="mogadouro" frequency="674000000">Mogadouro</configuration>
@@ -137,10 +142,10 @@
 		<configuration key="monchique" frequency="650000000">Monchique</configuration>
 		<configuration key="monsanto_lisboa" frequency="586000000">Monsanto, Lisboa</configuration>
 		<configuration key="montalegre" frequency="570000000">Montalegre</configuration>
-		<configuration key="monte_franqueira_barcelos" frequency="594000000">Monte Franqueira, Barcelos</configuration>
-		<configuration key="monte_gois" frequency="570000000">Monte Gois</configuration>
 		<configuration key="monte_da_virgem_porto" frequency="642000000">Monte da Virgem, Porto</configuration>
 		<configuration key="monte_do_facho" frequency="658000000">Monte do Facho</configuration>
+		<configuration key="monte_franqueira_barcelos" frequency="594000000">Monte Franqueira, Barcelos</configuration>
+		<configuration key="monte_gois" frequency="570000000">Monte Gois</configuration>
 		<configuration key="montedor" frequency="570000000">Montedor</configuration>
 		<configuration key="montejunto" frequency="690000000">Montejunto</configuration>
 		<configuration key="montemor_o_novo" frequency="546000000">Montemor-o-Novo</configuration>
@@ -148,71 +153,77 @@
 		<configuration key="mortagua" frequency="658000000">Mortágua</configuration>
 		<configuration key="mosteiro" frequency="634000000">Mosteiro</configuration>
 		<configuration key="moura" frequency="546000000">Moura</configuration>
-		<configuration key="mertola" frequency="682000000">Mértola</configuration>
 		<configuration key="nazare_centro" frequency="586000000">Nazaré Centro</configuration>
 		<configuration key="nisa" frequency="650000000">Nisa</configuration>
+		<configuration key="obidos" frequency="586000000">Óbidos</configuration>
 		<configuration key="odemira" frequency="650000000">Odemira</configuration>
 		<configuration key="odivelas" frequency="586000000">Odivelas</configuration>
 		<configuration key="odivelas_centro" frequency="586000000">Odivelas Centro</configuration>
 		<configuration key="oleiros" frequency="578000000">Oleiros</configuration>
 		<configuration key="olivais" frequency="586000000">Olivais</configuration>
-		<configuration key="ourique" frequency="650000000">Ourique</configuration>
 		<configuration key="ourem" frequency="586000000">Ourém</configuration>
+		<configuration key="ourique" frequency="650000000">Ourique</configuration>
 		<configuration key="padrela" frequency="674000000">Padrela</configuration>
 		<configuration key="palmeira_de_faro" frequency="594000000">Palmeira de Faro</configuration>
 		<configuration key="palmela" frequency="602000000">Palmela</configuration>
 		<configuration key="pampilhosa_da_serra" frequency="658000000">Pampilhosa da Serra</configuration>
 		<configuration key="paredes_de_coura" frequency="570000000">Paredes de Coura</configuration>
-		<configuration key="pedra_mole" frequency="682000000">Pedra Mole</configuration>
 		<configuration key="pedra_do_vento" frequency="634000000">Pedra do Vento</configuration>
+		<configuration key="pedra_mole" frequency="682000000">Pedra Mole</configuration>
 		<configuration key="penacova" frequency="658000000">Penacova</configuration>
 		<configuration key="penafiel" frequency="594000000">Penafiel</configuration>
 		<configuration key="penamacor" frequency="578000000">Penamacor</configuration>
-		<configuration key="penedo_gordo" frequency="650000000">Penedo Gordo</configuration>
 		<configuration key="penedo_da_saudade_coimbra" frequency="658000000">Penedo da Saudade, Coimbra</configuration>
+		<configuration key="penedo_gordo" frequency="650000000">Penedo Gordo</configuration>
 		<configuration key="peniche" frequency="586000000">Peniche</configuration>
 		<configuration key="penouta" frequency="570000000">Penouta</configuration>
 		<configuration key="pico_alto_acores" frequency="674000000">Pico Alto, Açores</configuration>
 		<configuration key="pico_arco_da_calheta_madeira" frequency="682000000">Pico Arco da Calheta - Madeira</configuration>
 		<configuration key="pico_arco_de_sao_jorge_madeira" frequency="682000000">Pico Arco de São Jorge - Madeira</configuration>
 		<configuration key="pico_bartolomeu" frequency="658000000">Pico Bartolomeu</configuration>
-		<configuration key="pico_geraldo_pico" frequency="690000000">Pico Geraldo, Pico</configuration>
-		<configuration key="pico_jardim_acores" frequency="674000000">Pico Jardim - Açores</configuration>
-		<configuration key="pico_verde" frequency="690000000">Pico Verde</configuration>
 		<configuration key="pico_da_cruz_madeira" frequency="682000000">Pico da Cruz - Madeira</configuration>
 		<configuration key="pico_do_facho_madeira" frequency="682000000">Pico do Facho - Madeira</configuration>
 		<configuration key="pico_do_galo_madeira" frequency="682000000">Pico do Galo, Madeira</configuration>
-		<configuration key="pico_do_silva_madeira_" frequency="682000000">Pico do Silva (Madeira)</configuration>
+		<configuration key="pico_do_silva_madeira" frequency="682000000">Pico do Silva (Madeira)</configuration>
+		<configuration key="pico_geraldo_pico" frequency="690000000">Pico Geraldo, Pico</configuration>
+		<configuration key="pico_jardim_acores" frequency="674000000">Pico Jardim - Açores</configuration>
+		<configuration key="pico_verde" frequency="690000000">Pico Verde</configuration>
 		<configuration key="picota" frequency="682000000">Picota</configuration>
-		<configuration key="pirocao" frequency="674000000">Pirocão</configuration>
 		<configuration key="piodao" frequency="658000000">Piódão</configuration>
+		<configuration key="pirocao" frequency="674000000">Pirocão</configuration>
 		<configuration key="podame" frequency="570000000">Podame</configuration>
 		<configuration key="pombal" frequency="658000000">Pombal</configuration>
 		<configuration key="ponta_delgada_madeira" frequency="682000000">Ponta Delgada, Madeira</configuration>
 		<configuration key="ponte_de_lima" frequency="570000000">Ponte de Lima</configuration>
 		<configuration key="portalegre" frequency="650000000">Portalegre</configuration>
 		<configuration key="porto_av_brasil" frequency="594000000">Porto - Av. Brasil</configuration>
+		<configuration key="porto_de_mos" frequency="586000000">Porto de Mós</configuration>
 		<configuration key="porto_fernao_lopes" frequency="594000000">Porto - Fernão Lopes</configuration>
 		<configuration key="porto_pedro_escobar" frequency="594000000">Porto - Pedro Escobar</configuration>
-		<configuration key="porto_santo_madeira_" frequency="674000000">Porto Santo (Madeira)</configuration>
-		<configuration key="porto_de_mos" frequency="586000000">Porto de Mós</configuration>
-		<configuration key="povoa_santo_adriao" frequency="586000000">Póvoa Santo Adrião</configuration>
+		<configuration key="porto_santo_madeira" frequency="674000000">Porto Santo (Madeira)</configuration>
 		<configuration key="povoa_de_lanhoso" frequency="570000000">Póvoa de Lanhoso</configuration>
+		<configuration key="povoa_santo_adriao" frequency="586000000">Póvoa Santo Adrião</configuration>
 		<configuration key="redondo" frequency="546000000">Redondo</configuration>
 		<configuration key="reguengos_de_monsaraz" frequency="546000000">Reguengos de Monsaraz</configuration>
 		<configuration key="reitoria_covilha" frequency="578000000">Reitoria - Covilhã</configuration>
 		<configuration key="resende" frequency="594000000">Resende</configuration>
-		<configuration key="ribeira_grande" frequency="658000000">Ribeira Grande</configuration>
 		<configuration key="ribeira_de_pena" frequency="570000000">Ribeira de Pena</configuration>
+		<configuration key="ribeira_grande" frequency="658000000">Ribeira Grande</configuration>
 		<configuration key="rio_arda" frequency="594000000">Rio Arda</configuration>
 		<configuration key="rio_maior" frequency="586000000">Rio Maior</configuration>
-		<configuration key="santa_barbara_acores_" frequency="666000000">Santa Bárbara (Açores)</configuration>
+		<configuration key="santa_barbara_acores" frequency="666000000">Santa Bárbara (Açores)</configuration>
 		<configuration key="santa_luzia" frequency="682000000">Santa Luzia</configuration>
 		<configuration key="santa_marta_de_penaguiao" frequency="594000000">Santa Marta de Penaguião</configuration>
 		<configuration key="santarem" frequency="586000000">Santarém</configuration>
 		<configuration key="santiago_do_cacem" frequency="602000000">Santiago do Cacém</configuration>
 		<configuration key="santo_tirso" frequency="594000000">Santo Tirso</configuration>
+		<configuration key="sao_bernardo" frequency="594000000">São Bernardo</configuration>
+		<configuration key="sao_domingos" frequency="594000000">São Domingos</configuration>
+		<configuration key="sao_joao_de_ver_santa_maria_da_feira" frequency="642000000">São João de Ver, Santa Maria da Feira</configuration>
+		<configuration key="sao_mamede" frequency="682000000">São Mamede</configuration>
+		<configuration key="sao_miguel_faro" frequency="682000000">São Miguel, Faro</configuration>
 		<configuration key="sapiaos_boticas" frequency="570000000">Sapiãos, Boticas</configuration>
+		<configuration key="satao" frequency="594000000">Sátão</configuration>
 		<configuration key="seixo_alvo" frequency="594000000">Seixo Alvo</configuration>
 		<configuration key="serpa" frequency="546000000">Serpa</configuration>
 		<configuration key="serra_do_alvao" frequency="594000000">Serra do Alvão</configuration>
@@ -223,23 +234,17 @@
 		<configuration key="silves_centro" frequency="650000000">Silves Centro</configuration>
 		<configuration key="sines" frequency="650000000">Sines</configuration>
 		<configuration key="sintra" frequency="586000000">Sintra</configuration>
+		<configuration key="sitio_da_nazare" frequency="586000000">Sítio da Nazaré</configuration>
 		<configuration key="sousel" frequency="650000000">Sousel</configuration>
 		<configuration key="surrinha" frequency="634000000">Surrinha</configuration>
-		<configuration key="satao" frequency="594000000">Sátão</configuration>
-		<configuration key="sao_bernardo" frequency="594000000">São Bernardo</configuration>
-		<configuration key="sao_domingos" frequency="594000000">São Domingos</configuration>
-		<configuration key="sao_joao_de_ver_santa_maria_da_feira" frequency="642000000">São João de Ver, Santa Maria da Feira</configuration>
-		<configuration key="sao_mamede" frequency="682000000">São Mamede</configuration>
-		<configuration key="sao_miguel_faro" frequency="682000000">São Miguel, Faro</configuration>
-		<configuration key="sitio_da_nazare" frequency="586000000">Sítio da Nazaré</configuration>
 		<configuration key="tavira" frequency="682000000">Tavira</configuration>
 		<configuration key="termas_monfortinho" frequency="578000000">Termas Monfortinho</configuration>
 		<configuration key="terras_de_bouro" frequency="570000000">Terras de Bouro</configuration>
 		<configuration key="tocha" frequency="658000000">Tocha</configuration>
 		<configuration key="tomar" frequency="586000000">Tomar</configuration>
 		<configuration key="torres_vedras" frequency="586000000">Torres Vedras</configuration>
-		<configuration key="trancoso" frequency="634000000">Trancoso</configuration>
 		<configuration key="trancao_torres_novas" frequency="586000000">Trancão - Torres Novas</configuration>
+		<configuration key="trancoso" frequency="634000000">Trancoso</configuration>
 		<configuration key="vale_de_cambra" frequency="594000000">Vale de Cambra</configuration>
 		<configuration key="vale_de_mira" frequency="674000000">Vale de Mira</configuration>
 		<configuration key="valenca" frequency="570000000">Valença</configuration>
@@ -247,24 +252,19 @@
 		<configuration key="velas" frequency="658000000">Velas</configuration>
 		<configuration key="viana_do_castelo" frequency="570000000">Viana do Castelo</configuration>
 		<configuration key="vieira_do_minho" frequency="570000000">Vieira do Minho</configuration>
+		<configuration key="vila_da_ponte_sernancelhe" frequency="690000000">Vila da Ponte, Sernancelhe</configuration>
+		<configuration key="vila_de_rei" frequency="658000000">Vila de Rei</configuration>
 		<configuration key="vila_franca_de_xira" frequency="586000000">Vila Franca de Xira</configuration>
 		<configuration key="vila_franca_de_xira_montegordo" frequency="586000000">Vila Franca de Xira - Montegordo</configuration>
 		<configuration key="vila_nova_de_sao_bento" frequency="546000000">Vila Nova de São Bento</configuration>
 		<configuration key="vila_praia_de_ancora" frequency="570000000">Vila Praia de Âncora</configuration>
 		<configuration key="vila_vicosa" frequency="546000000">Vila Viçosa</configuration>
-		<configuration key="vila_da_ponte_sernancelhe" frequency="690000000">Vila da Ponte, Sernancelhe</configuration>
-		<configuration key="vila_de_rei" frequency="658000000">Vila de Rei</configuration>
 		<configuration key="vilar_formoso" frequency="634000000">Vilar Formoso</configuration>
 		<configuration key="vinhais" frequency="674000000">Vinhais</configuration>
 		<configuration key="viseu_centro" frequency="594000000">Viseu Centro</configuration>
 		<configuration key="viseu_sul" frequency="594000000">Viseu Sul</configuration>
 		<configuration key="volta_da_pedra_palmela" frequency="602000000">Volta da Pedra, Palmela</configuration>
 		<configuration key="vouzela" frequency="594000000">Vouzela</configuration>
-		<configuration key="agueda" frequency="658000000">Águeda</configuration>
-		<configuration key="agueda_industrial" frequency="658000000">Águeda Industrial</configuration>
-		<configuration key="evora_entrevinhas" frequency="546000000">Évora - Entrevinhas</configuration>
-		<configuration key="evora_centro" frequency="546000000">Évora Centro</configuration>
-		<configuration key="obidos" frequency="586000000">Óbidos</configuration>
 		<!-- TDT by channel number (deprecated) -->
 		<configuration key="canal_28" frequency="530000000">[ Canal 28 ]</configuration>
 		<configuration key="canal_30" frequency="546000000">[ Canal 30 ]</configuration>
@@ -286,6 +286,7 @@
 
 	<!-- Custom transponders are ONLY needed for HD muxes and for areas where tuning issues occur after running ABM -->
 	<customtransponders>
+		<customtransponder key="penafiel" frequency="594000000" transport_stream_id="44d" system="0" />
 	</customtransponders>
 
 	<sections>
