@@ -163,7 +163,7 @@ class DvbScanner():
 
 		return passed_test
 
-	def updateTransponders(self, transponders, read_other_section=False, customtransponders=None, netid=None, bouquettype=None, bouquet_id=-1):
+	def updateTransponders(self, transponders, read_other_section=False, customtransponders=None, netid=None, bouquettype=None, bouquet_id=-1, tune_freq=0):
 		print("[ABM-DvbScanner] Reading transponders...", file=log)
 
 		if customtransponders is None:
@@ -395,13 +395,13 @@ class DvbScanner():
 						transponder["orbital_position"] += 2
 				transponder["namespace"] = self.buildNamespace(transponder)
 
-			key = "%x:%x:%x" % (transponder["namespace"],
+			transponder_key = "%x:%x:%x" % (transponder["namespace"],
 				transponder["transport_stream_id"],
 				transponder["original_network_id"])
 
-			if key in transponders:
-				transponder["services"] = transponders[key]["services"]
-			transponders[key] = transponder
+			if transponder_key in transponders:
+				transponder["services"] = transponders[transponder_key]["services"]
+			transponders[transponder_key] = transponder
 			transponders_count += 1
 
 			namespace_key = "%x:%x" % (transponder["transport_stream_id"], transponder["original_network_id"])
@@ -410,6 +410,11 @@ class DvbScanner():
 
 			if self.extra_debug:
 				print("[ABM-DvbScanner] transponder", transponder)
+
+		# Fix DVB-T frequency when 1 transponder found and the frequency is different from tune frequency
+		if transponders_count == 1 and tune_freq > 0 and transponders[transponder_key]["frequency"] != tune_freq:
+			print("[ABM-DvbScanner] Fix transponder frequency from NIT frequency %d to %d" % (transponders[transponder_key]["frequency"], tune_freq), file=log)
+			transponders[transponder_key]["frequency"] = tune_freq
 
 		if read_other_section and len(nit_other_completed):
 			print("[ABM-DvbScanner] Added/Updated %d transponders with network_id = 0x%x and other network_ids = %s" % (transponders_count, nit_current_section_network_id, ','.join(list(map(hex, list(nit_other_completed.keys()))))), file=log)

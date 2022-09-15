@@ -219,6 +219,9 @@ class Manager():
 					if providers[provider_key]["streamtype"] == 'dvbc':
 						bouquet = providers[provider_key]["bouquets"][bouquet_key]
 						tmp = scanner.updateTransponders(self.transponders, True, customtransponders, bouquet["netid"], bouquet["bouquettype"])
+					elif providers[provider_key]["streamtype"] == 'dvbt':
+						tune_freq = providers[provider_key]["bouquets"][bouquet_key]["frequency"]
+						tmp = scanner.updateTransponders(self.transponders, True, customtransponders, bouquet_id=bouquet_id, tune_freq=tune_freq)
 					else:
 						tmp = scanner.updateTransponders(self.transponders, True, customtransponders, bouquet_id=bouquet_id)
 					if providers[provider_key]["protocol"] in ("lcnbat", "lcnbat2"):
