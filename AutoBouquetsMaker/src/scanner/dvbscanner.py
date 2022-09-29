@@ -411,7 +411,7 @@ class DvbScanner():
 			if self.extra_debug:
 				print("[ABM-DvbScanner] transponder", transponder)
 
-		# Fix DVB-T frequency when 1 transponder found and the frequency is different from tune frequency
+		# Fix DVB-T frequency when 1 transponder found at the NIT table and the frequency is different from tune frequency
 		if transponders_count == 1 and tune_freq > 0 and transponders[transponder_key]["frequency"] != tune_freq:
 			print("[ABM-DvbScanner] Fix transponder frequency from NIT frequency %d to %d" % (transponders[transponder_key]["frequency"], tune_freq), file=log)
 			transponders[transponder_key]["frequency"] = tune_freq
