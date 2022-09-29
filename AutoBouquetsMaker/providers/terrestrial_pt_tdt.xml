@@ -286,7 +286,6 @@
 
 	<!-- Custom transponders are ONLY needed for HD muxes and for areas where tuning issues occur after running ABM -->
 	<customtransponders>
-		<customtransponder key="penafiel" frequency="594000000" transport_stream_id="44d" system="0" />
 	</customtransponders>
 
 	<sections>
