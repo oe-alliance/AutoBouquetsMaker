@@ -617,7 +617,7 @@ class BouquetsWriter():
 		if provider_config.isMakeNormalMain():
 			bouquet_current = open(path + "/%s%s.main.tv" % (self.ABM_BOUQUET_PREFIX, section_identifier), "w")
 			current_bouquet_list = []
-			current_bouquet_list.append("#NAME %s%s%s\n" % (section_prefix, section_sep, _('All channels')))
+			current_bouquet_list.append("#NAME %s%s\n" % (section_prefix, "" if config.autobouquetsmaker.addprefix and len(section_prefix) > 0 else section_sep + _('All channels')))
 
 			# Clear unused sections
 			sections_c = sections.copy()
