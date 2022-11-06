@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-29 20:53+0100\n"
-"PO-Revision-Date: 2022-10-29 09:44+0200\n"
+"PO-Revision-Date: 2022-11-05 14:41+0100\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <>\n"
 "Language: it\n"
@@ -183,12 +183,20 @@ msgid "Checking version compatibility..."
 msgstr "Verifica compatibilità versione..."
 
 #: ../src/setup.py:505
-msgid "Choose the style of markers that separate one provider from another in bouquet indexes."
-msgstr "Scegli lo stile dei marcatori che separano un provider da un altro nell'indice dei bouquet."
+msgid ""
+"Choose the style of markers that separate one provider from another in "
+"bouquet indexes."
+msgstr ""
+"Scegli lo stile dei marcatori che separano un provider da un altro "
+"nell'indice dei bouquet."
 
 #: ../src/setup.py:506
-msgid "Choose the style of the markers that separate channels into groups in the channel lists."
-msgstr "Scegli lo stile dei marcatori che separano i canali in gruppi negli elenchi dei canali."
+msgid ""
+"Choose the style of the markers that separate channels into groups in the "
+"channel lists."
+msgstr ""
+"Scegli lo stile dei marcatori che separano i canali in gruppi negli elenchi "
+"dei canali."
 
 #: ../src/about.py:36 ../src/menu.py:241 ../src/updateproviders.py:287
 msgid "Close"
@@ -253,7 +261,7 @@ msgstr "Ricerca frequenza DVB-T"
 
 #: ../src/menu.py:86
 msgid "Delete ABM bouquets"
-msgstr "Cancella i bouquet ABM"
+msgstr "Elimina i bouquet ABM"
 
 #: ../src/scanner/main.py:508
 msgid "Done"
@@ -290,12 +298,12 @@ msgstr "Solo FTA"
 #: ../src/updateproviders.py:194
 #, python-format
 msgid "Failed to retrieve file for %s. Error: %s %s"
-msgstr "Non riesco a recuperare il file per %s. Errore %s %s"
+msgstr "Non riesco a recuperare il file per %s. Errore: %s %s"
 
 #: ../src/updateproviders.py:141
 #, python-format
 msgid "Failed to retrieve version file. Error: %s %s"
-msgstr "Non riesco a recuperare la versione del file. Errore %s %s"
+msgstr "Non riesco a recuperare la versione del file. Errore: %s %s"
 
 #: ../src/updateproviders.py:195
 msgid "Failed..."
@@ -309,8 +317,8 @@ msgstr "Trovo i provider configurati..."
 #, python-format
 msgid "Found %d unique transponder"
 msgid_plural "Found %d unique transponders"
-msgstr[0] "Trovato %d transponder unico"
-msgstr[1] "Trovati %d transponder unici"
+msgstr[0] "Trovato %d unico transponder"
+msgstr[1] "Trovati %d unici transponder"
 
 #: ../src/scanner/frequencyfinder.py:79
 msgid "FrequencyFinder"
@@ -329,20 +337,37 @@ msgid "Hide sections"
 msgstr "Nascondi sezioni"
 
 #: ../src/setup.py:508
-msgid "If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible."
-msgstr "Se un servizio è su un satellite non configurato, 'sì' significa che il canale non apparirà nell'elenco dei canali, 'no' significa che il canale verrà visualizzato nell'elenco dei canali ma sarà disattivato e non sarà accessibile."
+msgid ""
+"If a service is carried on a satellite that is not configured, 'yes' means "
+"the channel will not appear in the channel list, 'no' means the channel will "
+"show in the channel list but be greyed out and not be accessible."
+msgstr ""
+"Se un servizio è su un satellite non configurato, 'sì' significa che il "
+"canale non apparirà nell'elenco dei canali, 'no' significa che il canale "
+"verrà visualizzato nell'elenco dei canali ma sarà disattivato e non sarà "
+"accessibile."
 
 #: ../src/setup.py:497
-msgid "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan."
-msgstr "Se il ricevitore è spento al momento della scansione pianificata, con quest'opzione decidi se accenderlo per effettuarla."
+msgid ""
+"If the receiver is in 'Deep Standby' when the schedule is due, wake it up to "
+"perform a scan."
+msgstr ""
+"Se il ricevitore è spento al momento della scansione pianificata, con questa "
+"opzione decidi se accenderlo per effettuarla."
 
 #: ../src/setup.py:499
-msgid "If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed."
-msgstr "Se il ricevitore era stato riacceso per la scansione ed è al momento in Standby (e non c'è nessuna registrazione in corso), puoi decidere se si deve di nuovo spegnere."
+msgid ""
+"If the receiver was woken from 'Deep Standby' and is currently in 'Standby' "
+"and no recordings are in progress return it to 'Deep Standby' once the scan "
+"has completed."
+msgstr ""
+"Se il ricevitore era stato acceso per la scansione ed è al momento in' "
+"Standby' (e non c'è nessuna registrazione in corso), puoi decidere se si "
+"deve di nuovo spegnere."
 
 #: ../src/setup.py:509
 msgid "Include 'not indexed' channels"
-msgstr "Includi canali \"non indicizzati\""
+msgstr "Includi canali 'non indicizzati'"
 
 #: ../src/updateproviders.py:161
 #, python-format
@@ -425,8 +450,11 @@ msgid "No valid NIM found for terrestrial."
 msgstr "Nessun NIM valido trovato per terrestre."
 
 #: ../src/scanner/frequencyfinder.py:213
-msgid "Only DVB-T2 multiplexes found. Insufficient data to create a provider file."
-msgstr "Sono stati trovati solo multiplex DVB-T2. Dati insufficienti per creare un file del provider."
+msgid ""
+"Only DVB-T2 multiplexes found. Insufficient data to create a provider file."
+msgstr ""
+"Sono stati trovati solo multiplex DVB-T2. Dati insufficienti per creare un "
+"file del provider."
 
 #: ../src/setup.py:507
 msgid "Place bouquets at"
@@ -524,7 +552,7 @@ msgstr "Salva log"
 
 #: ../src/scanner/frequencyfinder.py:200
 msgid "Saving data"
-msgstr "Salvataggio dei dati"
+msgstr "Salvataggio dati"
 
 #: ../src/menu.py:69
 msgid "Scan"
@@ -555,16 +583,27 @@ msgid "Schedule wake from deep standby"
 msgstr "Pianifica riattivazione dallo stato di spegnimento"
 
 #: ../src/setup.py:511
-msgid "Select \"yes\" to show the \"DVB-T frequency finder\" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc."
-msgstr "Seleziona \"sì\" per visualizzare lo strumento \"Ricerca frequenza DVB-T\" nel menu principale. Questo strumento viene utilizzato per creare un file del provider funzionante per le aree difficili del Regno Unito, ad es. aree coperte da ripetitori, ecc."
+msgid ""
+"Select \"yes\" to show the \"DVB-T frequency finder\" tool in the main menu. "
+"This tool is used to create a working provider file for difficult areas of "
+"the UK, e.g. areas covered by repeaters, etc."
+msgstr ""
+"Seleziona \"sì\" per visualizzare lo strumento \"Ricerca frequenza DVB-T\" "
+"nel menu principale. Questo strumento viene utilizzato per creare un file "
+"del provider funzionante per le aree difficili del Regno Unito, ad es. aree "
+"coperte da ripetitori, ecc."
 
 #: ../src/setup.py:574 ../src/setup.py:596
 msgid "Select days"
-msgstr "Seleziona i giorni"
+msgstr "Seleziona giorni"
 
 #: ../src/setup.py:308
-msgid "Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used."
-msgstr "Seleziona il tuo bouquet dall'elenco, tieni presente che verranno utilizzati solo i primi 100 canali per questo bouquet."
+msgid ""
+"Select your own bouquet from the list, please note that the only the first "
+"100 channels for this bouquet will be used."
+msgstr ""
+"Seleziona il tuo bouquet dall'elenco, tieni presente che verranno utilizzati "
+"solo i primi 100 canali per questo bouquet."
 
 #: ../src/scanner/frequencyfinder.py:252
 msgid "Selected tuner is not configured."
@@ -633,28 +672,52 @@ msgid "Swap channels"
 msgstr "Scambia canali"
 
 #: ../src/setup.py:302
-msgid "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones."
-msgstr "Questo riguarda tutti i bouquet. Seleziona \"no\" per eseguire la scansione in tutti i servizi. Seleziona \"sì\" per saltare quelli crittografati."
+msgid ""
+"This affects all bouquets. Select 'no' to scan in all services. Select 'yes' "
+"to skip encrypted ones."
+msgstr ""
+"Questo riguarda tutti i bouquet. Seleziona 'no' per eseguire la scansione in "
+"tutti i servizi. Seleziona 'sì' per saltare quelli crittografati."
 
 #: ../src/setup.py:510
-msgid "This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode."
-msgstr "Questa funzione è solo per lo sviluppo. Richiede che sia abilitato il debug log o che enigma2 sia avviato in modalità console."
+msgid ""
+"This feature is for development only. Requires debug logs to be enabled or "
+"enigma2 to be started in console mode."
+msgstr ""
+"Questa funzione è solo per lo sviluppo. Richiede che sia abilitato il debug "
+"log o che enigma2 sia avviato in modalità console."
 
 #: ../src/setup.py:297
-msgid "This option allows you to choose what region of the country you live in, so it populates the correct channels for your region."
-msgstr "Questa opzione ti consente di scegliere la regione del paese in cui vivi, quindi popola i canali corretti per la tua regione."
+msgid ""
+"This option allows you to choose what region of the country you live in, so "
+"it populates the correct channels for your region."
+msgstr ""
+"Questa opzione ti consente di scegliere la regione del paese in cui vivi, "
+"quindi popola i canali corretti per la tua regione."
 
 #: ../src/setup.py:294
 msgid "This option enables the current selected provider."
 msgstr "Questa opzione abilita il provider correntemente selezionato."
 
 #: ../src/setup.py:305
-msgid "This option has several choices \"Yes\", (create a bouquet with all the channels in it), \"Yes HD only\", (will group all HD channels into this bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do not use a main bouquet)"
-msgstr "Questa opzione ha diverse scelte: \"Sì\" crea un bouquet con tutti i canali al suo interno, \"Sì solo HD\" raggrupperà tutti i canali HD in questo bouquet, \"Personalizzato\" ti consente di selezionare il tuo bouquet, \"No\", (non utilizzare un bouquet principale)"
+msgid ""
+"This option has several choices \"Yes\", (create a bouquet with all the "
+"channels in it), \"Yes HD only\", (will group all HD channels into this "
+"bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do "
+"not use a main bouquet)"
+msgstr ""
+"Questa opzione ha diverse scelte: \"Sì\" crea un bouquet con tutti i canali "
+"al suo interno, \"Sì solo HD\" raggrupperà tutti i canali HD in questo "
+"bouquet, \"Personalizzato\" ti consente di selezionare il tuo bouquet, \"No"
+"\", (non utilizzare un bouquet principale)"
 
 #: ../src/setup.py:503
-msgid "This option places markers in the bouquet index to group all bouquets of each provider."
-msgstr "Questa opzione inserisce i marcatori nell'indice del bouquet per raggruppare tutti i bouquet di ciascun provider."
+msgid ""
+"This option places markers in the bouquet index to group all bouquets of "
+"each provider."
+msgstr ""
+"Questa opzione inserisce i marcatori nell'indice del bouquet per raggruppare "
+"tutti i bouquet di ciascun provider."
 
 #: ../src/setup.py:502
 msgid "This option will add the provider's name to bouquet names."
@@ -662,27 +725,48 @@ msgstr "Questa opzione aggiungerà il nome del provider ai nomi dei bouquet."
 
 #: ../src/setup.py:507
 msgid "This option will allow you choose where to place the created bouquets."
-msgstr "Questa opzione ti permetterà di scegliere dove posizionare i bouquet creati."
+msgstr ""
+"Questa opzione ti permetterà di scegliere dove posizionare i bouquet creati."
 
 #: ../src/setup.py:320
-msgid "This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet."
-msgstr "Questa opzione creerà un bouquet FreeToAir ad alta definizione, raggruppando insieme tutti i canali FTA HD."
+msgid ""
+"This option will create a FreeToAir High Definition bouquet, it will group "
+"all FTA HD channels into this bouquet."
+msgstr ""
+"Questa opzione creerà un bouquet FreeToAir ad alta definizione, raggruppando "
+"insieme tutti i canali FTA HD."
 
 #: ../src/setup.py:317
-msgid "This option will create a FreeToAir bouquet, it will group all free channels into this bouquet."
-msgstr "Questa opzione creerà un bouquet FreeToAir, raggruppando insieme tutti i canali gratuiti."
+msgid ""
+"This option will create a FreeToAir bouquet, it will group all free channels "
+"into this bouquet."
+msgstr ""
+"Questa opzione creerà un bouquet FreeToAir, raggruppando insieme tutti i "
+"canali gratuiti."
 
 #: ../src/setup.py:314
-msgid "This option will create a High Definition bouquet, it will group all HD channels into this bouquet."
-msgstr "Questa opzione creerà un bouquet ad alta definizione, raggruppando insieme tutti i canali HD."
+msgid ""
+"This option will create a High Definition bouquet, it will group all HD "
+"channels into this bouquet."
+msgstr ""
+"Questa opzione creerà un bouquet ad alta definizione, raggruppando insieme "
+"tutti i canali HD."
 
 #: ../src/setup.py:311
-msgid "This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary."
-msgstr "Questa opzione creerà bouquet per ogni tipo di canale, ad es. Intrattenimento, Film, Documentari."
+msgid ""
+"This option will create bouquets for each type of channel, ie Entertainment, "
+"Movies, Documentary."
+msgstr ""
+"Questa opzione creerà bouquet per ogni tipo di canale, ad es. "
+"Intrattenimento, Film, Documentari."
 
 #: ../src/setup.py:323
-msgid "This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)"
-msgstr "Questa opzione scambierà le versioni SD dei canali con le corrispondenti HD (es. Rai1 con Rai1 HD, Canale5 con Canale5 HD)."
+msgid ""
+"This option will swap SD versions of channels with HD versions. (eg BBC One "
+"SD with BBC One HD, Channel Four SD with with Channel Four HD)"
+msgstr ""
+"Questa opzione scambierà le versioni SD dei canali con le corrispondenti HD "
+"(es. Rai 1 con Rai 1 HD, Canale5 con Canale5 HD)."
 
 #: ../src/setup.py:578
 msgid "Thursday"
@@ -777,16 +861,27 @@ msgid "Wednesday"
 msgstr "Mercoledì"
 
 #: ../src/setup.py:509
-msgid "When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included."
-msgstr "Quando una ricerca trova canali aggiuntivi a cui non è stato assegnato un numero di canale, \"sì\" li aggiungerà alla fine dell'elenco dei canali e \"no\" significa che non saranno inclusi."
+msgid ""
+"When a search finds extra channels that do not have an allocated channel "
+"number, 'yes' will add these at the end of the channel list, and 'no' means "
+"these will not be included."
+msgstr ""
+"Quando una ricerca trova canali aggiuntivi a cui non è stato assegnato un "
+"numero di canale, 'sì' li aggiungerà alla fine dell'elenco dei canali e 'no' "
+"significa che non saranno inclusi."
 
 #: ../src/setup.py:501
-msgid "When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets."
-msgstr "Se disabilitato, abiliterà l'opzione \"Mantieni bouquet\" nel menu principale, consentendoti di nascondere alcuni bouquet \"esistenti\"."
+msgid ""
+"When disabled this will enable the 'Keep bouquets' option in the main menu, "
+"allowing you to hide some 'existing' bouquets."
+msgstr ""
+"Se disabilitato, abiliterà l'opzione 'Mantieni bouquet' nel menu principale, "
+"consentendoti di nascondere alcuni bouquet 'esistenti'."
 
 #: ../src/setup.py:512
 msgid "When enabled, allows you start a scan from the extensions list."
-msgstr "Se abilitato, consente di avviare una scansione dall'elenco delle estensioni."
+msgstr ""
+"Se abilitato, consente di avviare una scansione dall'elenco delle estensioni."
 
 #: ../src/plugin.py:71
 msgid "bottom"
