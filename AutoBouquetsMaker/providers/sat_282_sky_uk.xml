@@ -315,10 +315,7 @@
 		<channel number="503" with="882"/> <!-- BBC News HD -->
 		<channel number="505" with="883"/> <!-- CNBC HD -->
 		<channel number="506" with="884"/> <!-- CNN HD -->
-		<channel number="509" with="891"/> <!-- CGTN HD -->
-		<channel number="511" with="885"/> <!-- RT HD -->
-		<channel number="513" with="880"/> <!-- Al Jazeera HD -->
-		<channel number="516" with="886"/> <!-- TRT World HD -->
+		<channel number="513" with="886"/> <!-- TRT World HD -->
 		<channel number="601" with="640"/> <!-- Cartoon Network HD -->
 		<channel number="603" with="641"/> <!-- Boomerang HD -->
 		<channel number="604" with="642"/> <!-- Nickelodeon HD -->
