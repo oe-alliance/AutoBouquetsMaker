@@ -232,7 +232,6 @@
 
 	<!-- swapchannels affects main and sections bouquets. "number" is the SD channel. "with" is the HD channel. Swap will not occur if target is not HD -->
 	<swapchannels>
-		<channel number="101" with="115" conditional="'BBC One' in service_hd['service_name']"/> <!-- BBC One HD -->
 		<channel number="101" with="801" conditional="'BBC One' in service_hd['service_name']"/> <!-- BBC One HD -->
 		<channel number="102" with="115" conditional="'BBC Two' in service_hd['service_name']"/> <!-- BBC Two HD -->
 		<channel number="102" with="802" conditional="'BBC Two' in service_hd['service_name']"/> <!-- BBC Two HD -->
