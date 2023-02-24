@@ -117,6 +117,7 @@
 		<channel number="426" with="877"/> <!-- Racing TV HD -->
 		<channel number="501" with="881"/> <!-- Sky News HD -->
 		<channel number="503" with="882"/> <!-- BBC News HD -->
+		<channel number="504" with="887"/> <!-- BBC Parliament HD -->
 		<channel number="505" with="883"/> <!-- CNBC HD -->
 		<channel number="506" with="884"/> <!-- CNN HD -->
 		<channel number="513" with="886"/> <!-- TRT World HD -->
