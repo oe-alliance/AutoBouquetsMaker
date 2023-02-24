@@ -86,6 +86,7 @@
 		<channel number="159" with="835"/> <!-- E! HD -->
 		<channel number="163" with="840"/> <!-- Sky History 2 HD -->
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
+		<channel number="169" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
 		<channel number="171" with="843"/> <!-- Smithsonian HD -->
 		<channel number="187" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="301" with="848"/> <!-- SkyPremiereHD -->
