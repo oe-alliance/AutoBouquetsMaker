@@ -78,7 +78,7 @@
 		<section number="500">Music</section>
 		<section number="600">Children</section>
 		<section number="650">Special Interest</section>
-		<section number="700">Radio</section>		
+		<section number="700">Radio</section>
 		<section number="800">Shopping</section>
 		<section number="949">Regional</section>
 		<section number="980">BBC Red Button</section>
@@ -157,8 +157,10 @@ except:
 	}
 
 	rename_by_sid = {
-		52575: "Freesports HD",
+		51118: "WildEarth HD",
 	}
+
+	skiplist = ["Channel moved",]
 
 	servicehack_variable_cache["add_audio_channels_to_video_bouquet"] = True
 
@@ -195,6 +197,9 @@ elif service["number"] > 999 or service["number"] < 101:
 #radio channels
 if service["number"] >= 700 and service["number"] < 800:
 	service["service_type"] = 2
+
+if (service["number"] in skiplist or service["service_name"] in skiplist):
+	skip.skip = True
 
 ]]>
 	</servicehacks>

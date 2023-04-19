@@ -2,12 +2,12 @@
 # Copyright (C) 2014 THE enigma2-oe-alliance-plugins'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the enigma2-oe-alliance-plugins package.
 # Automatically generated, 2014.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-31 12:15+0200\n"
+"POT-Creation-Date: 2022-10-29 20:53+0100\n"
 "PO-Revision-Date: 2022-07-09 19:35+0300\n"
 "Last-Translator: Orlandox\n"
 "Language-Team: Kojo, Orlandox\n"
@@ -20,251 +20,379 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
+#: ../src/scanner/main.py:761
 msgid "%a %e %b  %-H:%M"
 msgstr "%a %e %b  %-H:%M"
 
+#: ../src/scanner/main.py:709
+#, python-format
+msgid "%s scheduled update"
+msgstr ""
+
+#: ../src/scanner/main.py:707
+#, fuzzy, python-format
+msgid ""
+"%s update is about to start.\n"
+"Do you want to allow this?"
+msgstr ""
+"Suosikkilistasi päivitetään, \n"
+"sallitko päivityksen?"
+
+#: ../src/plugin.py:51 ../src/plugin.py:67
 msgid "---- ABM - 'text' ----"
 msgstr "---- ABM - 'text' ----"
 
+#: ../src/plugin.py:49 ../src/plugin.py:65
 msgid "-------- text --------"
 msgstr "-------- text --------"
 
-msgid "30 Days"
-msgstr "30 päivää"
-
+#: ../src/plugin.py:44 ../src/plugin.py:60
 msgid "< - - text - - >"
 msgstr "< - - text - - >"
 
+#: ../src/plugin.py:43 ../src/plugin.py:59
 msgid "<-- text -->"
 msgstr "<-- text -->"
 
+#: ../src/plugin.py:48 ../src/plugin.py:64
 msgid "= = = text = = ="
 msgstr "= = = text = = ="
 
+#: ../src/plugin.py:46 ../src/plugin.py:62
 msgid "= = text = ="
 msgstr "= = text = ="
 
+#: ../src/plugin.py:50 ../src/plugin.py:66
 msgid "== ABM - 'text' =="
 msgstr "== ABM - 'text' =="
 
+#: ../src/plugin.py:45 ../src/plugin.py:61
 msgid "== text =="
 msgstr "== text =="
 
+#: ../src/plugin.py:47 ../src/plugin.py:63
 msgid "=== text ==="
 msgstr "=== text ==="
 
+#: ../src/scanner/frequencyfinder.py:142 ../src/scanner/frequencyfinder.py:147
+#, fuzzy
+msgid "ABM frequency finder"
+msgstr "DVB-T taajuuden etsin"
+
+#: ../src/menu.py:247
 msgid "ABM log file has been saved to the tmp directory"
 msgstr "ABM lokitiedosto on tallennettu tmp-hakemistoon"
 
+#: ../src/about.py:24 ../src/menu.py:91
 msgid "About"
 msgstr "Tietoja"
 
+#: ../src/setup.py:503
 msgid "Add provider markers"
 msgstr "Lisää palveluntarjoajien tuntomerkin tyyli"
 
-msgid "Add provider prefix to bouquets"
-msgstr "Lisää palveluntarjoajan nimi suosikkilistoihin"
+#: ../src/setup.py:502
+msgid "Add provider name to bouquets"
+msgstr "Lisää palveluntuottajan nimi suosikkilistoihin"
 
+#: ../src/scanner/bouquetswriter.py:621
 msgid "All channels"
 msgstr "Kaikki kanavat"
 
+#: ../src/setup.py:493
 msgid "Allows you to set a schedule to perform a scan "
 msgstr "Asettaa ajastetun haun "
 
+#: ../src/deletebouquets.py:38
 msgid "Are you sure you want to remove all bouquets created by ABM?"
 msgstr "Oletko varma että haluat poistaa kaikki ABM:n luomat kanavalistat?"
 
+#: ../src/setup.py:595
+msgid "At least one day of the week must be selected"
+msgstr ""
+
+#: ../src/about.py:24 ../src/menu.py:44 ../src/plugin.py:96
+#: ../src/plugin.py:110 ../src/scanner/main.py:44 ../src/scanner/main.py:104
+#: ../src/setup.py:574
 msgid "AutoBouquetsMaker"
 msgstr "Automaattiset suosikkilistat"
 
+#: ../src/setup.py:446
 msgid "AutoBouquetsMaker Configure"
 msgstr "Asetukset"
 
+#: ../src/hidesections.py:26
 msgid "AutoBouquetsMaker Hide sections"
 msgstr "Piilota osiot"
 
+#: ../src/keepbouquets.py:27
 msgid "AutoBouquetsMaker Keep bouquets"
 msgstr "Pidä suosikkilistat"
 
+#: ../src/menu.py:228
 msgid "AutoBouquetsMaker Log"
 msgstr "Loki"
 
+#: ../src/setup.py:49
 msgid "AutoBouquetsMaker Providers"
 msgstr "Palveluntarjoajat"
 
+#: ../src/plugin.py:112
 msgid "AutoBouquetsMaker Scanner"
 msgstr "Haku"
 
-msgid "Bottom"
-msgstr "Alimmainen"
-
+#: ../src/scanner/main.py:191
 msgid "Bouquets generation..."
 msgstr "Suosikkilistat tekeillä..."
 
-msgid "Bouquets order"
-msgstr "Listojen järjestys"
-
+#: ../src/hidesections.py:31 ../src/keepbouquets.py:32 ../src/ordering.py:36
+#: ../src/setup.py:68 ../src/setup.py:465 ../src/setup.py:582
 msgid "Cancel"
 msgstr "Peruuta"
 
-msgid "Cannot allocate the demuxer"
+#: ../src/scanner/frequencyfinder.py:347 ../src/scanner/main.py:363
+#, fuzzy
+msgid "Cannot allocate the demuxer."
 msgstr "Muxia ei pysty allokoimaan"
 
+#: ../src/scanner/frequencyfinder.py:322 ../src/scanner/main.py:334
 msgid "Cannot free NIM because a recording is in progress"
 msgstr "NIM:ä ei pysty vapauttamaan koska tallennus on käynnissä"
 
+#: ../src/scanner/frequencyfinder.py:336 ../src/scanner/main.py:357
 msgid "Cannot get frontend"
 msgstr "Ei pysty hakemaan frontend:ä"
 
+#: ../src/scanner/frequencyfinder.py:326 ../src/scanner/main.py:338
 msgid "Cannot get the NIM"
 msgstr "EI pysty hakemaan NIM:ä"
 
+#: ../src/scanner/main.py:489
 msgid "Cannot read data"
 msgstr "Dataa ei pysty lukemaan"
 
+#: ../src/updateproviders.py:167
 msgid "Cannot read version"
 msgstr "Versiota ei pysty lukemaan"
 
+#: ../src/scanner/frequencyfinder.py:263 ../src/scanner/main.py:279
 msgid "Cannot retrieve Resource Manager instance"
 msgstr "Ei pysty hakemaan resurssihallinta-instanssia"
 
+#: ../src/updateproviders.py:118
 msgid "Checking version compatibility..."
 msgstr "Tarkistetaan version yhteensopivuus..."
 
+#: ../src/setup.py:505
 msgid "Choose the style of markers that separate one provider from another in bouquet indexes."
 msgstr "Valitse tuntomerkkien tyyli, jolla erotat palveluntarjoajan toisesta kanavalistauksessa."
 
+#: ../src/setup.py:506
 msgid "Choose the style of the markers that separate channels into groups in the channel lists."
 msgstr "Valitse tuntomerkkien tyyli, jolla erotat kanavat ryhmittäin kanavalistauksessa."
 
-msgid "Choose which level of settings to display. 'Expert'-level shows all items, this also adds more options in the providers menu."
-msgstr "Valitse asetusten taso. Expert-taso näyttää kaikki tiedot, ja antaa lisävalikoita palveluntarjoaja-valikkoon."
-
+#: ../src/about.py:36 ../src/menu.py:241 ../src/updateproviders.py:287
 msgid "Close"
 msgstr "Sulje"
 
+#: ../src/updateproviders.py:230
 #, python-format
 msgid "Config file for %s didn't need updating."
 msgstr "%s ei tarvinnut päivitystä asetuksiin."
 
-#, python-format
-msgid "Config file for %s does not need updating"
+#: ../src/updateproviders.py:228
+#, fuzzy, python-format
+msgid "Config file for %s does not need updating."
 msgstr "%s ei tarvitse päivitystä asetuksiin"
 
-#, python-format
-msgid "Config file for %s does not parse"
+#: ../src/updateproviders.py:249
+#, fuzzy, python-format
+msgid "Config file for %s does not parse."
 msgstr "%s asetustiedostoa ei pysty parsimaan"
 
-#, python-format
-msgid "Config file for %s has been updated"
-msgstr "%s asetustiedostot päivitetty"
-
+#: ../src/updateproviders.py:240 ../src/updateproviders.py:242
 #, python-format
 msgid "Config file for %s has been updated."
 msgstr "%s asetustiedostot päivitetty."
 
-#, python-format
-msgid "Config file for %s is faulty"
+#: ../src/updateproviders.py:259
+#, fuzzy, python-format
+msgid "Config file for %s is faulty."
 msgstr "%s asetustiedostot ovat vialliset"
 
+#: ../src/menu.py:77
 msgid "Configure"
 msgstr "Asetukset"
 
-msgid "Daily"
-msgstr "Päivittäin"
+#: ../src/setup.py:320
+#, fuzzy
+msgid "Create FTA HD bouquet"
+msgstr "luo vapaat HD:t-lista"
 
-msgid "Delete bouquets"
-msgstr "Poista suosikkilistat"
+#: ../src/setup.py:317
+#, fuzzy
+msgid "Create FTA bouquet"
+msgstr "luo vapaat-lista"
 
+#: ../src/setup.py:314
+#, fuzzy
+msgid "Create HD bouquet"
+msgstr "luo HD:t-lista"
+
+#: ../src/setup.py:305
+#, fuzzy
+msgid "Create main bouquet"
+msgstr "luo päälistat"
+
+#: ../src/setup.py:311
+#, fuzzy
+msgid "Create sections bouquets"
+msgstr "luo jaotellut listat"
+
+#: ../src/setup.py:308
+#, fuzzy
+msgid "Custom bouquet for main"
+msgstr "muokatut päälistat"
+
+#: ../src/menu.py:89
+msgid "DVB-T frequency finder"
+msgstr "DVB-T taajuuden etsin"
+
+#: ../src/menu.py:86
+msgid "Delete ABM bouquets"
+msgstr "Poista automaattiset suosikkilistat"
+
+#: ../src/scanner/main.py:508
 msgid "Done"
 msgstr "Valmis"
 
+#: ../src/updateproviders.py:179
 msgid "Downloading latest file from Github..."
 msgstr "Ladataan viimeisisn versio GIT:stä..."
 
+#: ../src/scanner/main.py:726
 msgid "Enough Retries, delaying till next schedule."
 msgstr "Tarpeeksi uudelleenyrityksiä!! Yritetään seuraavassa ajastuksessa uudestaan."
 
+#: ../src/menu.py:68
 msgid "Exit"
 msgstr "Sulje"
 
+#: ../src/setup.py:510
 msgid "Extra debug"
 msgstr "Tarkempi debuggeri"
 
+#: ../src/scanner/bouquetswriter.py:885
 msgid "FTA Channels"
 msgstr "FTA Kanavat"
 
+#: ../src/scanner/bouquetswriter.py:669 ../src/scanner/bouquetswriter.py:842
 msgid "FTA HD Channels"
 msgstr "FTA HD-Kanavat"
 
+#: ../src/setup.py:302
 msgid "FTA only"
 msgstr "Vain FTA"
 
+#: ../src/updateproviders.py:194
 #, python-format
 msgid "Failed to retrieve file for %s. Error: %s %s"
 msgstr "%s ei pystytty hakemaan tiedostoa. Virhe: %s %s"
 
+#: ../src/updateproviders.py:141
 #, python-format
 msgid "Failed to retrieve version file. Error: %s %s"
 msgstr "Ei pystytty hakemaan versio-tiedostoa. Virhe: %s %s"
 
-#, python-format
-msgid ""
-"Failed to tune %s on tuner %s.\n"
-"\n"
-"Please check the following:\n"
-"The tuner is correctly configured.\n"
-"You can receive the specified frequency."
-msgstr ""
-"%s:n viritys epäonnistui virittimellä %s.\n"
-"\n"
-"Tarkista seuraavat:\n"
-"Viritin on määritelty oikein.\n"
-"Voit vastaanottaa määritetyn taajuuden."
-
+#: ../src/updateproviders.py:195
 msgid "Failed..."
 msgstr "Epäonnistui..."
 
+#: ../src/updateproviders.py:52
 msgid "Finding configured providers..."
 msgstr "Etsitään määriteltyjä palveluntarjoajia..."
 
+#: ../src/scanner/frequencyfinder.py:186
+#, python-format
+msgid "Found %d unique transponder"
+msgid_plural "Found %d unique transponders"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/scanner/frequencyfinder.py:79
+#, fuzzy
+msgid "FrequencyFinder"
+msgstr "DVB-T taajuuden etsin"
+
+#: ../src/setup.py:578
+msgid "Friday"
+msgstr "Perjantai"
+
+#: ../src/scanner/bouquetswriter.py:666 ../src/scanner/bouquetswriter.py:799
 msgid "HD Channels"
 msgstr "HD-Kanavat"
 
+#: ../src/menu.py:82
 msgid "Hide sections"
 msgstr "Piilota osiot"
 
+#: ../src/setup.py:508
 msgid "If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible."
 msgstr "Jos palvelu on satelliitissa jota ei ole määritelty \"kyllä\" tarkoittaa että kanava ei näy kanavalistassa,\"ei\" tarkoittaa että kanava näkyy kanavalistassa mutta harmaana (ei käytettävissä)"
 
+#: ../src/setup.py:497
+msgid "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan."
+msgstr "'Virransäästötilassa' oleva vastaanotin herätetään, kun on ajastetun haun aika."
+
+#: ../src/setup.py:499
+msgid "If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed."
+msgstr "Palautetaan vastaanotin 'virransäästötilaan' ajastetun haun valmistuttua, jos vastaanotin herätettiin 'virransäästötilasta' ja se on 'valmiustilassa' eikä tallennuksia ole käynnissä."
+
+#: ../src/setup.py:509
 msgid "Include 'not indexed' channels"
 msgstr "Sisällytä kanavat joita ei ole indeksoitu"
 
+#: ../src/updateproviders.py:161
 #, python-format
 msgid "Incompatible versions: %s > %s"
 msgstr "Yhteensopimattomat versiot: %s > %s"
 
+#: ../src/setup.py:501
 msgid "Keep all non-ABM bouquets"
 msgstr "Säilytä kaikki alkuperäiset suosikkilistat"
 
+#: ../src/menu.py:84
 msgid "Keep bouquets"
 msgstr "Säilytä kaikki aikaisemmin haetut suosikkilistat"
 
+#: ../src/scanner/bouquetswriter.py:542
 msgid "Last Scanned"
 msgstr "Viimeeksi skannatut"
 
+#: ../src/scanner/main.py:90
 msgid "Loading bouquets..."
 msgstr "Ladataan kanavalistoja..."
 
+#: ../src/setup.py:578
+msgid "Monday"
+msgstr "Maanantai"
+
+#: ../src/ordering.py:73 ../src/ordering.py:79 ../src/ordering.py:108
+#: ../src/ordering.py:114
 msgid "Move down"
 msgstr "Siirä alas"
 
+#: ../src/ordering.py:75 ../src/ordering.py:78 ../src/ordering.py:110
+#: ../src/ordering.py:113
 msgid "Move up"
 msgstr "Siirrä ylös"
 
-msgid "Network connection error"
+#: ../src/updateproviders.py:148 ../src/updateproviders.py:206
+#, fuzzy
+msgid "Network connection error."
 msgstr "Verkkoyhteydessä virhe"
 
+#: ../src/updateproviders.py:145 ../src/updateproviders.py:203
 #, python-format
 msgid ""
 "Network connection error: \n"
@@ -273,347 +401,431 @@ msgstr ""
 "Verkkovirhe: \n"
 "%s"
 
+#: ../src/scanner/main.py:273
 msgid "No NIMs found for "
 msgstr "NIM:ä ei löytynyt "
 
+#: ../src/scanner/main.py:230
 msgid "No area found"
 msgstr "Aluetta ei löytynyt"
 
+#: ../src/scanner/frequencyfinder.py:172
+msgid "No frequencies to search"
+msgstr ""
+
+#: ../src/updateproviders.py:131
 msgid "No providers are configured."
 msgstr "Palveluntarjoajia ei ole määritelty."
 
+#: ../src/updateproviders.py:97
 msgid "No providers configured."
 msgstr "Palveluntarjoajia ei ole määritelty."
 
-msgid "No valid NIM found for "
+#: ../src/scanner/frequencyfinder.py:216
+msgid "No terrestrial multiplexes found."
+msgstr ""
+
+#: ../src/scanner/frequencyfinder.py:239 ../src/scanner/frequencyfinder.py:257
+#, fuzzy
+msgid "No terrestrial tuner found."
+msgstr "Aluetta ei löytynyt"
+
+#: ../src/scanner/frequencyfinder.py:304
+#, fuzzy
+msgid "No valid NIM found for terrestrial."
 msgstr "Toimivaa NIM:ä ei löytynyt "
 
-msgid "None"
-msgstr "Ei yhtään"
+#: ../src/scanner/frequencyfinder.py:213
+msgid "Only DVB-T2 multiplexes found. Insufficient data to create a provider file."
+msgstr ""
 
-msgid "OK"
-msgstr "OK"
-
+#: ../src/setup.py:507
 msgid "Place bouquets at"
 msgstr "Sijoita suosikkilistat"
 
+#: ../src/scanner/main.py:96
 msgid "Please first setup, in configuration"
 msgstr "Aseta ensin palvelluntarjoajat"
 
+#: ../src/ordering.py:59 ../src/setup.py:77 ../src/setup.py:474
 msgid "Please wait..."
 msgstr "Odota..."
 
+#: ../src/plugin.py:28
+msgid "Press OK"
+msgstr "Paina OK"
+
+#: ../src/setup.py:496
+msgid "Press OK to select which days to perform a scan."
+msgstr "Paina OK valitaksesi minä päivinä haku tehdään."
+
+#: ../src/menu.py:78
 msgid "Providers"
 msgstr "Palveluntarjoajat"
 
+#: ../src/menu.py:80 ../src/ordering.py:25
 msgid "Providers order"
 msgstr "Palveluntarjoajien järjestys"
 
+#: ../src/scanner/bouquetswriter.py:929 ../src/scanner/bouquetswriter.py:930
 msgid "Radio Channels"
 msgstr "Radiokanavat"
 
+#: ../src/setup.py:596
+msgid "Radio Times Emulator"
+msgstr ""
+
+#: ../src/scanner/frequencyfinder.py:365
+#, python-format
+msgid "Reading %s MHz (ch %s)"
+msgstr ""
+
+#: ../src/scanner/main.py:446
 #, python-format
 msgid "Reading %s..."
 msgstr "Luetaan %s..."
 
+#: ../src/hidesections.py:104 ../src/keepbouquets.py:104 ../src/ordering.py:153
+#: ../src/setup.py:435 ../src/setup.py:565 ../src/setup.py:604
 msgid "Really close without saving settings?"
 msgstr "Haluatko poistua tallentamatta asetuksia?"
 
-msgid "Repeat how often"
-msgstr "Kuinka usein toistetaan"
+#: ../src/setup.py:297
+msgid "Region"
+msgstr ""
 
+#: ../src/updateproviders.py:227 ../src/updateproviders.py:239
+#: ../src/updateproviders.py:248
 #, python-format
 msgid "Retrieved config file for %s"
 msgstr "%s asetustiedot noudettu"
 
+#: ../src/updateproviders.py:251
 #, python-format
 msgid "Retrieved config file for %s does not parse."
 msgstr "Asetustiedostot eivät parsiudu %s :lle."
 
+#: ../src/updateproviders.py:261
 #, python-format
 msgid "Retrieved config file for %s is faulty or incomplete."
 msgstr "Noudetut asetustiedot ovat virheelliset tai vajaat %s:lle."
 
+#: ../src/updateproviders.py:258
 #, python-format
 msgid "Retrieved provider file for %s"
 msgstr "Noudettu palveluntarjoaja-tiedosto %s: lle"
 
+#: ../src/updateproviders.py:178
 #, python-format
 msgid "Retrieving config file for %s"
 msgstr "Noudetaan asetustiedostoa %s: lle"
 
+#: ../src/setup.py:578
+msgid "Saturday"
+msgstr "Lauantai"
+
+#: ../src/hidesections.py:32 ../src/setup.py:69 ../src/setup.py:466
+#: ../src/setup.py:583
 msgid "Save"
 msgstr "Tallenna"
 
+#: ../src/menu.py:240
 msgid "Save Log"
 msgstr "Tallenna loki"
 
+#: ../src/scanner/frequencyfinder.py:200
+#, fuzzy
+msgid "Saving data"
+msgstr "Päivitys alkaa..."
+
+#: ../src/menu.py:69
 msgid "Scan"
 msgstr "Skannaa"
 
+#: ../src/scanner/frequencyfinder.py:161
+msgid "Scanning for active transponders"
+msgstr ""
+
+#: ../src/setup.py:496
+msgid "Schedule days of the week"
+msgstr "Ajastetun haun viikonpäivät"
+
+#: ../src/setup.py:499
+msgid "Schedule return to deep standby"
+msgstr "Vastaanottimen paluu virransäästötilaan"
+
+#: ../src/setup.py:493
 msgid "Schedule scan"
 msgstr "Ajastettu haku"
 
+#: ../src/setup.py:495
+msgid "Schedule time of day"
+msgstr "Ajastetun haun kellonaika"
+
+#: ../src/setup.py:497
+msgid "Schedule wake from deep standby"
+msgstr "Vastaanottimen herääminen virransäästötilasta"
+
+#: ../src/setup.py:511
+msgid "Select \"yes\" to show the \"DVB-T frequency finder\" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc."
+msgstr "Valitse \"kyllä'\"nähdäksesi \"DVB-T taajuuden etsimen\" päävalikossa. Tätä työkalua käytetään luomaan toimiva palveluntuottajan lista vaikeille alueille UK:ssa, esim. toistinten kattamille alueille, jne."
+
+#: ../src/setup.py:574 ../src/setup.py:596
+msgid "Select days"
+msgstr ""
+
+#: ../src/setup.py:308
 msgid "Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used."
 msgstr "Valitse oma kanavalistasi. Huom. vain ensimmäiset 100 kanavaa käytetään."
 
+#: ../src/scanner/frequencyfinder.py:252
+#, fuzzy
+msgid "Selected tuner is not configured."
+msgstr "Ohita palvelut näkymättömissä satelliiteissa"
+
+#: ../src/scanner/main.py:192 ../src/scanner/main.py:207
+#: ../src/scanner/main.py:447 ../src/scanner/main.py:509
 #, python-format
 msgid "Services: %d video - %d radio"
 msgstr "Palvelut: %d video - %d radio"
 
+#: ../src/scanner/main.py:91
 msgid "Services: 0 video - 0 radio"
 msgstr "Palvelut: 0 video - 0 radio"
 
-msgid "Set the repeat interval of the schedule."
-msgstr "Valitse toistojen väli."
+#: ../src/setup.py:495
+msgid "Set the time of day to perform a scan."
+msgstr "Aseta kellonaika, jolloin haku tehdään."
 
-msgid "Set the time of day to perform the scan."
-msgstr "Valitse haun käynnistyksen aika."
+#: ../src/setup.py:511
+msgid "Show DVB-T frequency finder"
+msgstr "Näytä DVB-T taajuuden etsin"
 
-msgid "Setup mode"
-msgstr "Asetustila"
-
+#: ../src/setup.py:512
 msgid "Show in extensions"
 msgstr "Näytä laajennuksissa"
 
+#: ../src/menu.py:90
 msgid "Show log"
 msgstr "Näytä loki"
 
+#: ../src/setup.py:508
 msgid "Skip services on not configured sats"
 msgstr "Ohita palvelut näkymättömissä satelliiteissa"
 
+#: ../src/menu.py:85
 msgid "Start scan"
 msgstr "Aloita haku"
 
+#: ../src/scanner/frequencyfinder.py:86 ../src/scanner/main.py:58
 msgid "Starting scanner"
 msgstr "Käynnistetään skanneri"
 
+#: ../src/scanner/frequencyfinder.py:160
+#, fuzzy
+msgid "Starting search..."
+msgstr "Päivitys alkaa..."
+
+#: ../src/updateproviders.py:117
 msgid "Starting update..."
 msgstr "Päivitys alkaa..."
 
+#: ../src/setup.py:506
 msgid "Style of bouquet marker"
 msgstr "Suosikkilistan tuntomerkin tyyli"
 
+#: ../src/setup.py:505
 msgid "Style of provider marker"
 msgstr "Palveluntarjoajan tuntomerkin tyyli"
 
+#: ../src/setup.py:578
+msgid "Sunday"
+msgstr "Sunnuntai"
+
+#: ../src/setup.py:323
+#, fuzzy
+msgid "Swap channels"
+msgstr "vaihda kanavia"
+
+#: ../src/setup.py:302
 msgid "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones."
 msgstr "Tämä vaikuttaa kaikkiin kanavalistauksiin. Valitse EI hakeaksesi kaikista palveluista. Valitessasi KYLLÄ, haku ei ota huomioon salattuja kanavia."
 
+#: ../src/setup.py:510
 msgid "This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode."
 msgstr "Tämä ominaisuus on tarkoitettu vain kehittäjille. Vaatii että debug-loki on päällä, tai Enigma2 on käynnistety komentoriville."
 
+#: ../src/setup.py:297
 msgid "This option allows you to choose what region of the country you live in, so it populates the correct channels for your region."
 msgstr "Valitse maakunta jotta oikeat alueohjelmat tulee valituksi."
 
+#: ../src/setup.py:294
 msgid "This option enables the current selected provider."
 msgstr "Valitse nykyinen palveluntarjoaja."
 
+#: ../src/setup.py:305
 msgid "This option has several choices \"Yes\", (create a bouquet with all the channels in it), \"Yes HD only\", (will group all HD channels into this bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do not use a main bouquet)"
 msgstr "Tässä on useita valintoja: \"kyllä\" luo listan jossa on kanavat, \"kyllä vain HD:t\" luo lista jossa on vain HD-kanavat, \"kyllä (asetuksin)\" luo valitsemasi tyylisen listan, \"ei\" ei luo päälistaa"
 
+#: ../src/setup.py:503
 msgid "This option places markers in the bouquet index to group all bouquets of each provider."
 msgstr "Tämä valinta asettaa tuntomerkin kanavalistoille, jolla saadaan ryhmiteltyä ne palveluntarjoajien mukaan."
 
+#: ../src/setup.py:502
+msgid "This option will add the provider's name to bouquet names."
+msgstr "Tämä valinta lisää palveluntuottajan nimen suosikkilistojen nimiin."
+
+#: ../src/setup.py:507
 msgid "This option will allow you choose where to place the created bouquets."
 msgstr "Tämä antaa valita minne luodut kanavalistat laitetaan."
 
+#: ../src/setup.py:320
 msgid "This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet."
 msgstr "Tämä valinta luo FreeToAir High Definition-kanavalistan. Se ryhmittelee kaikki FTA HD -kanavat tälle listalle."
 
+#: ../src/setup.py:317
 msgid "This option will create a FreeToAir bouquet, it will group all free channels into this bouquet."
 msgstr "Tämä valinta luo FreeToAir -kanavalistan. Se ryhmittelee kaikki ilmaiskanavat tälle listalle."
 
+#: ../src/setup.py:314
 msgid "This option will create a High Definition bouquet, it will group all HD channels into this bouquet."
 msgstr "Tämä luo suosikkilistan jossa on vain HD-kanavat."
 
+#: ../src/setup.py:311
 msgid "This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary."
 msgstr "Tämä luo jaotellut suosikkilistat kanavien ohjelmatyypin mukaan."
 
-msgid "This option will prepend the provider name to bouquet name."
-msgstr "Tämä lisää palveluntarjoajan nimen suosikkilistan nimeen."
-
+#: ../src/setup.py:323
 msgid "This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)"
 msgstr "Tämä valinta vaihtaa kanavien SD-versiot HD-versioihin. (Esim. Yle1 vaihtuu Yle1 HD)"
 
-msgid "Time of scan to start"
-msgstr "Haun aloitusaika"
+#: ../src/setup.py:578
+msgid "Thursday"
+msgstr "Torstai"
 
+#: ../src/setup.py:578
+msgid "Tuesday"
+msgstr "Tiistai"
+
+#: ../src/scanner/frequencyfinder.py:185
 #, python-format
-msgid ""
-"Timed out tuning %s on tuner %s.\n"
-"\n"
-"Please check the following:\n"
-"The tuner is correctly configured.\n"
-"You can receive the specified frequency."
+msgid "Tuning %s MHz (ch %s)"
 msgstr ""
-"%s:n viritys aikakatkaistiin virittimellä %s.\n"
-"\n"
-"Tarkista seuraavat:\n"
-"Viritin on määritelty oikein.\n"
-"Voit vastaanottaa määritetyn taajuuden."
 
-msgid "Top"
-msgstr "Ylin"
-
+#: ../src/scanner/main.py:206
 #, python-format
 msgid "Tuning %s..."
 msgstr "Viritetään %s..."
 
+#: ../src/scanner/main.py:456
+#, python-format
+msgid ""
+"Tuning failed!\n"
+"\n"
+"Provider: %s\n"
+"Tuner: %s\n"
+"Frequency: %d MHz\n"
+"\n"
+"Please check affected tuner for:\n"
+"\n"
+"Tuner configuration errors,\n"
+"Signal cabling issues,\n"
+"Any other reception issues."
+msgstr ""
+
+#: ../src/scanner/main.py:462
+#, python-format
+msgid ""
+"Tuning lock timed out!\n"
+"\n"
+"Provider: %s\n"
+"Tuner: %s\n"
+"Frequency: %d MHz\n"
+"\n"
+"Please check affected tuner for:\n"
+"\n"
+"Tuner configuration errors,\n"
+"Signal cabling issues,\n"
+"Any other reception issues."
+msgstr ""
+
+#: ../src/updateproviders.py:196
 #, python-format
 msgid "Unable to download config file for %s"
 msgstr "%s:lle ei pystynyt lataamaan asetustiedostoa"
 
-msgid "Update config files"
-msgstr "Päivitä asetustiedostot"
-
-msgid "UpdateProviders"
-msgstr "Päivitä palveluntarjoajat"
-
-msgid "Weekly"
-msgstr "Viikottain"
-
-msgid "When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included."
-msgstr "Kun haku löytää kanavia, joilla ei ole määrättyä kanavanumeroa, 'Kyllä' lisää nämä kanavalistan loppuun, ja 'Ei' tarkoittaa että näitä kanavia ei lisätä listalle."
-
-msgid "When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets."
-msgstr "Kun ei ole valittuna sallii pitää ja piilottaa suosikkilistoja päävalikossa."
-
-msgid "When enabled, allows you start a scan from the extensions list."
-msgstr "Kun päällä, voit aloittaa haun laajennus-listasta."
-
-msgid ""
-"Your bouquets are about to be updated,\n"
-"Do you want to allow this?"
-msgstr ""
-"Suosikkilistasi päivitetään, \n"
-"sallitko päivityksen?"
-
-msgid "area"
-msgstr "alue"
-
-msgid "custom bouquet for main"
-msgstr "muokatut päälistat"
-
-msgid "expert"
-msgstr "Laaja"
-
-msgid "generate FTA HD bouquet"
-msgstr "luo vapaat HD:t-lista"
-
-msgid "generate FTA bouquet"
-msgstr "luo vapaat-lista"
-
-msgid "generate HD bouquet"
-msgstr "luo HD:t-lista"
-
-msgid "generate main bouquet"
-msgstr "luo päälistat"
-
-msgid "generate sections bouquets"
-msgstr "luo jaotellut listat"
-
-msgid "indent + text"
-msgstr "sisennys + teksti"
-
-msgid "no"
-msgstr "Ei"
-
-msgid "simple"
-msgstr "yksinkertainen"
-
-msgid "swap channels"
-msgstr "vaihda kanavia"
-
-msgid "yes"
-msgstr "kyllä"
-
-msgid "yes (all channels)"
-msgstr "Kyllä (Kaikki kanavat)"
-
-msgid "yes (custom)"
-msgstr "kyllä (asetuksin)"
-
-msgid "yes (only FTA HD)"
-msgstr "kyllä (vain vapaat HD:t)"
-
-msgid "yes (only HD)"
-msgstr "kyllä (vain HD:t)"
-
-msgid "Add provider name to bouquets"
-msgstr "Lisää palveluntuottajan nimi suosikkilistoihin"
-
-msgid "This option will add the provider's name to bouquet names."
-msgstr "Tämä valinta lisää palveluntuottajan nimen suosikkilistojen nimiin."
-
-msgid "Show DVB-T frequency finder"
-msgstr "Näytä DVB-T taajuuden etsin"
-
-msgid "Select \"yes\" to show the \"DVB-T frequency finder\" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc."
-msgstr "Valitse \"kyllä'\"nähdäksesi \"DVB-T taajuuden etsimen\" päävalikossa. Tätä työkalua käytetään luomaan toimiva palveluntuottajan lista vaikeille alueille UK:ssa, esim. toistinten kattamille alueille, jne."
-
-msgid "DVB-T frequency finder"
-msgstr "DVB-T taajuuden etsin"
-
-msgid "Delete ABM bouquets"
-msgstr "Poista automaattiset suosikkilistat"
-
+#: ../src/menu.py:87
 msgid "Update provider files"
 msgstr "Päivitä palveluntarjoajan tiedostot"
 
-msgid "Schedule time of day"
-msgstr "Ajastetun haun kellonaika"
+#: ../src/updateproviders.py:285
+msgid "Update summary"
+msgstr ""
 
-msgid "Set the time of day to perform a scan."
-msgstr "Aseta kellonaika, jolloin haku tehdään."
+#: ../src/updateproviders.py:49 ../src/updateproviders.py:89
+msgid "UpdateProviders"
+msgstr "Päivitä palveluntarjoajat"
 
-msgid "Schedule days of the week"
-msgstr "Ajastetun haun viikonpäivät"
-
-msgid "Press OK to select which days to perform a scan."
-msgstr "Paina OK valitaksesi minä päivinä haku tehdään."
-
-msgid "Schedule wake from deep standby"
-msgstr "Vastaanottimen herääminen virransäästötilasta"
-
-msgid "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan."
-msgstr "'Virransäästötilassa' oleva vastaanotin herätetään, kun on ajastetun haun aika."
-
-msgid "Schedule return to deep standby"
-msgstr "Vastaanottimen paluu virransäästötilaan"
-
-msgid "If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed."
-msgstr "Palautetaan vastaanotin 'virransäästötilaan' ajastetun haun valmistuttua, jos vastaanotin herätettiin 'virransäästötilasta' ja se on 'valmiustilassa' eikä tallennuksia ole käynnissä."
-
-msgid "Press OK"
-msgstr "Paina OK"
-
-msgid "Monday"
-msgstr "Maanantai"
-
-msgid "Tuesday"
-msgstr "Tiistai"
-
+#: ../src/setup.py:578
 msgid "Wednesday"
 msgstr "Keskiviikko"
 
-msgid "Thursday"
-msgstr "Torstai"
+#: ../src/setup.py:509
+msgid "When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included."
+msgstr "Kun haku löytää kanavia, joilla ei ole määrättyä kanavanumeroa, 'Kyllä' lisää nämä kanavalistan loppuun, ja 'Ei' tarkoittaa että näitä kanavia ei lisätä listalle."
 
-msgid "Friday"
-msgstr "Perjantai"
+#: ../src/setup.py:501
+msgid "When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets."
+msgstr "Kun ei ole valittuna sallii pitää ja piilottaa suosikkilistoja päävalikossa."
 
-msgid "Saturday"
-msgstr "Lauantai"
+#: ../src/setup.py:512
+msgid "When enabled, allows you start a scan from the extensions list."
+msgstr "Kun päällä, voit aloittaa haun laajennus-listasta."
 
-msgid "Sunday"
-msgstr "Sunnuntai"
+#: ../src/plugin.py:71
+msgid "bottom"
+msgstr "alimmaisiksi"
 
+#: ../src/plugin.py:17
+msgid "expert"
+msgstr "Laaja"
+
+#: ../src/plugin.py:42 ../src/plugin.py:58
+msgid "indent + text"
+msgstr "sisennys + teksti"
+
+#: ../src/setup.py:235 ../src/setup.py:244
+msgid "no"
+msgstr "Ei"
+
+#: ../src/plugin.py:41 ../src/plugin.py:57
 msgid "none"
 msgstr "ei mitään"
 
+#: ../src/plugin.py:17
+msgid "simple"
+msgstr "yksinkertainen"
+
+#: ../src/plugin.py:71
 msgid "top"
 msgstr "ylimmäisiksi"
 
-msgid "bottom"
-msgstr "alimmaisiksi"
+#: ../src/setup.py:244
+msgid "yes"
+msgstr "kyllä"
+
+#: ../src/setup.py:200
+msgid "yes (all channels)"
+msgstr "Kyllä (Kaikki kanavat)"
+
+#: ../src/setup.py:222
+msgid "yes (custom)"
+msgstr "kyllä (asetuksin)"
+
+#: ../src/setup.py:203
+msgid "yes (only FTA HD)"
+msgstr "kyllä (vain vapaat HD:t)"
+
+#: ../src/setup.py:202
+msgid "yes (only HD)"
+msgstr "kyllä (vain HD:t)"

@@ -616,9 +616,11 @@ dxNoDVB=4,  // dont use PMT for this service ( use cached pids )
 dxHoldName=8, // don't change service name if label differs in the SDT
 dxNewFound=64, // show in last scanned bouquet ( until next restart )
 dxIsDedicated3D=128, // 3D channel
+dxIsParentalProtected=256, // service with parental protection
 dxHideVBI=512, // Hide VBI line (dotted line along top of screen on some channels )
-dxIsScrambledPMT=1024, // Hmm ( something to do with 27.5W ??? )
+dxIsScrambledPMT=1024, // identical to dxNoDVB when used in pmt.cpp and in servicedvbstream.cpp used to record cached pids
 dxCenterDVBSubs=2048, // Centre DVB subtitles
+dxNoEIT=4096, // disable EIT event parsing when using EPG_IMPORT
 
 ----------------------------------------------------------------------------------------------
 

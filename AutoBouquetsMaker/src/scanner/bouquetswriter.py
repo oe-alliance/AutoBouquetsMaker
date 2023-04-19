@@ -643,9 +643,10 @@ class BouquetsWriter():
 			for number in preferred_order_tmp:
 				if section_number in sections_c and section_number not in bouquets_to_hide and section_number != first_section:
 					current_bouquet_list.append(self.styledBouquetMarker("%s%s%s" % (section_prefix, section_sep, sections_c[section_number])))
+				orig_number = number # Workaround to allow swapped channels to show when their section is hidden. i.e. test the real position in the bouquet (by channel number), not the source of the swap.
 				if provider_config.isSwapChannels() and number in swapDict:
 					number = swapDict[number]
-				if number in services["video"] and number not in bouquets_to_hide:
+				if number in services["video"] and orig_number not in bouquets_to_hide: # "bouquets_to_hide" is a complete list of all numbers in each hidden section, whether a channel occupies that number or not.
 					current_bouquet_list.append(self.bouquetServiceLine(services["video"][number]))
 				else:
 					current_bouquet_list.append(self.spacer())

@@ -593,7 +593,7 @@ class AutoBouquetsMakerDaysScreen(ConfigListScreen, Screen):
 	def keySave(self):
 		if not any([self.config.days[i].value for i in self.config.days]):
 			info = self.session.open(MessageBox, _("At least one day of the week must be selected"), MessageBox.TYPE_ERROR, timeout=30)
-			info.setTitle(_('Radio Times Emulator') + " - " + _("Select days"))
+			info.setTitle(_('AutoBouquetsMaker') + " - " + _("Select days"))
 			return
 		for x in self["config"].list:
 			x[1].save()

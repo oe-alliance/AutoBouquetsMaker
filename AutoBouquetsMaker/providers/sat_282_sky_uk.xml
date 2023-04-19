@@ -232,7 +232,6 @@
 
 	<!-- swapchannels affects main and sections bouquets. "number" is the SD channel. "with" is the HD channel. Swap will not occur if target is not HD -->
 	<swapchannels>
-		<channel number="101" with="115" conditional="'BBC One' in service_hd['service_name']"/> <!-- BBC One HD -->
 		<channel number="101" with="801" conditional="'BBC One' in service_hd['service_name']"/> <!-- BBC One HD -->
 		<channel number="102" with="115" conditional="'BBC Two' in service_hd['service_name']"/> <!-- BBC Two HD -->
 		<channel number="102" with="802" conditional="'BBC Two' in service_hd['service_name']"/> <!-- BBC Two HD -->
@@ -251,10 +250,12 @@
 		<channel number="112" with="812"/> <!-- Comedy Central HD -->
 		<channel number="113" with="813"/> <!-- Sky Max HD -->
 		<channel number="114" with="814"/> <!-- Sky Comedy HD -->
+		<channel number="115" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
 		<channel number="115" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="116" with="815"/> <!-- BBC Four HD -->
 		<channel number="117" with="138" conditional="'Channel 4' in service_sd['service_name'] and 'Channel 4' in service_hd['service_name']"/> <!-- Channel 4 HD -->
 		<channel number="117" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
+		<channel number="117" with="847" conditional="'BBC ALBA' in service_sd['service_name']"/> <!-- BBC ALBA HD -->
 		<channel number="118" with="816"/> <!-- ITV2 HD -->
 		<channel number="119" with="817"/> <!-- ITV3 HD -->
 		<channel number="120" with="818"/> <!-- ITV4 HD -->
@@ -281,8 +282,9 @@
 		<channel number="159" with="835"/> <!-- E! HD -->
 		<channel number="163" with="840"/> <!-- Sky History 2 HD -->
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
+		<channel number="169" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
+		<channel number="169" with="847" conditional="'BBC ALBA' in service_sd['service_name']"/> <!-- BBC ALBA HD -->
 		<channel number="171" with="843"/> <!-- Smithsonian HD -->
-		<channel number="173" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
 		<channel number="187" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="301" with="848"/> <!-- SkyPremiereHD -->
 		<channel number="304" with="849"/> <!-- Sky Greats HD -->
@@ -313,18 +315,16 @@
 		<channel number="426" with="877"/> <!-- Racing TV HD -->
 		<channel number="501" with="881"/> <!-- Sky News HD -->
 		<channel number="503" with="882"/> <!-- BBC News HD -->
+		<channel number="504" with="887"/> <!-- BBC Parliament HD -->
 		<channel number="505" with="883"/> <!-- CNBC HD -->
 		<channel number="506" with="884"/> <!-- CNN HD -->
-		<channel number="509" with="891"/> <!-- CGTN HD -->
-		<channel number="511" with="885"/> <!-- RT HD -->
-		<channel number="513" with="880"/> <!-- Al Jazeera HD -->
-		<channel number="516" with="886"/> <!-- TRT World HD -->
+		<channel number="513" with="886"/> <!-- TRT World HD -->
 		<channel number="601" with="640"/> <!-- Cartoon Network HD -->
 		<channel number="603" with="641"/> <!-- Boomerang HD -->
 		<channel number="604" with="642"/> <!-- Nickelodeon HD -->
+		<channel number="606" with="645"/> <!-- Nick Jr HD -->
 		<channel number="607" with="643"/> <!-- CBBC HD -->
 		<channel number="608" with="644"/> <!-- CBeebies HD -->
-		<channel number="615" with="648"/> <!-- Nick Jr. HD -->
 		<channel number="662" with="890"/> <!-- TJC HD -->
 		<channel number="703" with="892"/> <!-- SONY TV HD -->
 		<channel number="705" with="893"/> <!-- Utsav Plus HD -->
@@ -381,7 +381,7 @@ except:
 		6000: "ITV London",
 #		6010: "ITV Central South",
 #		6015: "ITV Central SW",
-		6020: "ITV Wales",
+#		6020: "ITV Wales",	#This is correct on stream, no need for rename.
 #		6110: "ITV Border",
 		6130: "ITV Granada",
 		6142: "ITV Meridian East",
@@ -424,7 +424,7 @@ except:
 		1217: "ITV Anglia West HD",
 		1219: "ITV Central East HD",
 		4055: "STV Scotland West HD",
-		6501: "ITV Wales HD",
+#		6501: "ITV Wales HD",	#This is correct on stream, no need for rename.
 		6502: "ITV Meridian East HD",
 		6503: "ITV Central West HD",
 		6504: "ITV London HD",
@@ -447,7 +447,7 @@ except:
 	}
 
 	rename_by_sid = {
-		53710: "NBC News NOW HD",
+		51118: "WildEarth HD",
 	}
 
 	whitelist = ['ITV HD',752,]

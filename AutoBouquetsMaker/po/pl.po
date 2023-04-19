@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-22 17:37+0000\n"
+"POT-Creation-Date: 2022-10-29 20:53+0100\n"
 "PO-Revision-Date: 2021-12-17 21:16+0100\n"
 "Last-Translator: HIUMAN\n"
 "Language-Team: HIUMAN\n"
@@ -15,12 +15,17 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
+#: ../src/scanner/main.py:761
 msgid "%a %e %b  %-H:%M"
 msgstr "%a %e %b  %-H:%M"
 
+#: ../src/scanner/main.py:709
+#, python-format
 msgid "%s scheduled update"
 msgstr "%s zaplanowana aktualizacja"
 
+#: ../src/scanner/main.py:707
+#, python-format
 msgid ""
 "%s update is about to start.\n"
 "Do you want to allow this?"
@@ -28,273 +33,353 @@ msgstr ""
 "Aktualizacja %s zaraz się rozpocznie.\n"
 "Czy chcesz na to pozwolić?"
 
+#: ../src/plugin.py:51 ../src/plugin.py:67
 msgid "---- ABM - 'text' ----"
 msgstr "---- ABM - 'tekst' ----"
 
+#: ../src/plugin.py:49 ../src/plugin.py:65
 msgid "-------- text --------"
 msgstr "-------- tekst --------"
 
+#: ../src/plugin.py:44 ../src/plugin.py:60
 msgid "< - - text - - >"
 msgstr "< - - tekst - - >"
 
+#: ../src/plugin.py:43 ../src/plugin.py:59
 msgid "<-- text -->"
 msgstr "<-- tekst -->"
 
+#: ../src/plugin.py:48 ../src/plugin.py:64
 msgid "= = = text = = ="
 msgstr "= = = tekst = = ="
 
+#: ../src/plugin.py:46 ../src/plugin.py:62
 msgid "= = text = ="
 msgstr "= = tekst = ="
 
+#: ../src/plugin.py:50 ../src/plugin.py:66
 msgid "== ABM - 'text' =="
 msgstr "== ABM - 'tekst' =="
 
+#: ../src/plugin.py:45 ../src/plugin.py:61
 msgid "== text =="
 msgstr "== tekst =="
 
+#: ../src/plugin.py:47 ../src/plugin.py:63
 msgid "=== text ==="
 msgstr "=== tekst ==="
 
+#: ../src/scanner/frequencyfinder.py:142 ../src/scanner/frequencyfinder.py:147
 msgid "ABM frequency finder"
 msgstr "Wyszukiwarka częstotliwości ABM"
 
+#: ../src/menu.py:247
 msgid "ABM log file has been saved to the tmp directory"
 msgstr "Plik dziennika ABM został zapisany w katalogu tmp"
 
+#: ../src/about.py:24 ../src/menu.py:91
 msgid "About"
 msgstr "O"
 
+#: ../src/setup.py:503
 msgid "Add provider markers"
 msgstr "Dodaj znaczniki dostawcy"
 
+#: ../src/setup.py:502
 msgid "Add provider name to bouquets"
 msgstr "Dodaj nazwę dostawcy do bukietów"
 
+#: ../src/scanner/bouquetswriter.py:621
 msgid "All channels"
 msgstr "Wszystkie kanały"
 
+#: ../src/setup.py:493
 msgid "Allows you to set a schedule to perform a scan "
 msgstr "Pozwala ustawić harmonogram wykonywania skanowania "
 
+#: ../src/deletebouquets.py:38
 msgid "Are you sure you want to remove all bouquets created by ABM?"
 msgstr "Czy na pewno chcesz usunąć wszystkie bukiety utworzone przez ABM?"
 
+#: ../src/setup.py:595
 msgid "At least one day of the week must be selected"
 msgstr "Należy wybrać co najmniej jeden dzień tygodnia"
 
+#: ../src/about.py:24 ../src/menu.py:44 ../src/plugin.py:96
+#: ../src/plugin.py:110 ../src/scanner/main.py:44 ../src/scanner/main.py:104
+#: ../src/setup.py:574
 msgid "AutoBouquetsMaker"
 msgstr "AutoBouquetsMaker"
 
+#: ../src/setup.py:446
 msgid "AutoBouquetsMaker Configure"
 msgstr "Konfiguruj AutoBouquetsMaker"
 
+#: ../src/hidesections.py:26
 msgid "AutoBouquetsMaker Hide sections"
 msgstr "AutoBouquetsMaker Ukryj sekcje"
 
+#: ../src/keepbouquets.py:27
 msgid "AutoBouquetsMaker Keep bouquets"
 msgstr "AutoBouquetsMaker Zachowaj bukiety"
 
+#: ../src/menu.py:228
 msgid "AutoBouquetsMaker Log"
 msgstr "AutoBouquetsMaker log"
 
+#: ../src/setup.py:49
 msgid "AutoBouquetsMaker Providers"
 msgstr "AutoBouquetsMaker Dostawcy"
 
+#: ../src/plugin.py:112
 msgid "AutoBouquetsMaker Scanner"
 msgstr "Autobouquetsmaker Skaner"
 
+#: ../src/scanner/main.py:191
 msgid "Bouquets generation..."
 msgstr "Generowanie bukietów..."
 
+#: ../src/hidesections.py:31 ../src/keepbouquets.py:32 ../src/ordering.py:36
+#: ../src/setup.py:68 ../src/setup.py:465 ../src/setup.py:582
 msgid "Cancel"
 msgstr "Anuluj"
 
+#: ../src/scanner/frequencyfinder.py:347 ../src/scanner/main.py:363
 msgid "Cannot allocate the demuxer."
 msgstr "Nie można przydzielić demuxera."
 
+#: ../src/scanner/frequencyfinder.py:322 ../src/scanner/main.py:334
 msgid "Cannot free NIM because a recording is in progress"
 msgstr "Nie można zwolnić NIM, ponieważ trwa nagrywanie"
 
+#: ../src/scanner/frequencyfinder.py:336 ../src/scanner/main.py:357
 msgid "Cannot get frontend"
 msgstr "Nie można go załadować przez tuner"
 
+#: ../src/scanner/frequencyfinder.py:326 ../src/scanner/main.py:338
 msgid "Cannot get the NIM"
 msgstr "Nie można uzyskać NIM"
 
+#: ../src/scanner/main.py:489
 msgid "Cannot read data"
 msgstr "Nie można odczytać danych"
 
+#: ../src/updateproviders.py:167
 msgid "Cannot read version"
 msgstr "Nie można odczytać wersji"
 
+#: ../src/scanner/frequencyfinder.py:263 ../src/scanner/main.py:279
 msgid "Cannot retrieve Resource Manager instance"
 msgstr "Nie można pobrać instancji Menedżera zasobów"
 
+#: ../src/updateproviders.py:118
 msgid "Checking version compatibility..."
 msgstr "Sprawdzanie zgodności wersji..."
 
-msgid ""
-"Choose the style of markers that separate one provider from another in "
-"bouquet indexes."
-msgstr ""
-"Wybierz styl znaczników, które oddzielają jednego dostawcę od drugiego w "
-"indeksy bukietów."
+#: ../src/setup.py:505
+msgid "Choose the style of markers that separate one provider from another in bouquet indexes."
+msgstr "Wybierz styl znaczników, które oddzielają jednego dostawcę od drugiego w indeksy bukietów."
 
-msgid ""
-"Choose the style of the markers that separate channels into groups in the "
-"channel lists."
+#: ../src/setup.py:506
+msgid "Choose the style of the markers that separate channels into groups in the channel lists."
 msgstr "Wybierz styl znaczników, które dzielą kanały na grupy w listy kanałów."
 
+#: ../src/about.py:36 ../src/menu.py:241 ../src/updateproviders.py:287
 msgid "Close"
 msgstr "Zamknij"
 
+#: ../src/updateproviders.py:230
+#, python-format
 msgid "Config file for %s didn't need updating."
 msgstr "Plik konfiguracyjny %s nie wymagał aktualizacji."
 
+#: ../src/updateproviders.py:228
+#, python-format
 msgid "Config file for %s does not need updating."
 msgstr "Plik konfiguracyjny %s nie wymaga aktualizacji."
 
+#: ../src/updateproviders.py:249
+#, python-format
 msgid "Config file for %s does not parse."
 msgstr "Plik konfiguracyjny %s nie jest analizowany."
 
+#: ../src/updateproviders.py:240 ../src/updateproviders.py:242
+#, python-format
 msgid "Config file for %s has been updated."
 msgstr "Plik konfiguracyjny %s został zaktualizowany."
 
+#: ../src/updateproviders.py:259
+#, python-format
 msgid "Config file for %s is faulty."
 msgstr "Plik konfiguracyjny %s jest uszkodzony."
 
+#: ../src/menu.py:77
 msgid "Configure"
 msgstr "Konfiguruj"
 
+#: ../src/setup.py:320
 msgid "Create FTA HD bouquet"
 msgstr "Utwórz bukiet FTA HD"
 
+#: ../src/setup.py:317
 msgid "Create FTA bouquet"
 msgstr "Utwórz bukiet FTA"
 
+#: ../src/setup.py:314
 msgid "Create HD bouquet"
 msgstr "Książka Creëer HD"
 
+#: ../src/setup.py:305
 msgid "Create main bouquet"
 msgstr "Utwórz bukiet główny"
 
+#: ../src/setup.py:311
 msgid "Create sections bouquets"
 msgstr "Utwórz bukiety sekcji"
 
+#: ../src/setup.py:308
 msgid "Custom bouquet for main"
 msgstr "Niestandardowy bukiet dla głównego"
 
+#: ../src/menu.py:89
 msgid "DVB-T frequency finder"
 msgstr "Wyszukiwarka częstotliwości DVB-T"
 
+#: ../src/menu.py:86
+#, fuzzy
+msgid "Delete ABM bouquets"
+msgstr "Utwórz bukiet FTA"
+
+#: ../src/scanner/main.py:508
 msgid "Done"
 msgstr "Gotowe"
 
+#: ../src/updateproviders.py:179
 msgid "Downloading latest file from Github..."
 msgstr "Pobieranie najnowszego pliku z Github..."
 
+#: ../src/scanner/main.py:726
 msgid "Enough Retries, delaying till next schedule."
 msgstr "Wystarczająco wiele prób, opóźnienie do następnego harmonogramu."
 
+#: ../src/menu.py:68
 msgid "Exit"
 msgstr "Wyjdź"
 
+#: ../src/setup.py:510
 msgid "Extra debug"
 msgstr "Dodatkowy debug"
 
+#: ../src/scanner/bouquetswriter.py:885
 msgid "FTA Channels"
 msgstr "Kanały FTA"
 
+#: ../src/scanner/bouquetswriter.py:669 ../src/scanner/bouquetswriter.py:842
 msgid "FTA HD Channels"
 msgstr "Kanały FTA HD"
 
+#: ../src/setup.py:302
 msgid "FTA only"
 msgstr "Tylko FTA"
 
+#: ../src/updateproviders.py:194
+#, python-format
 msgid "Failed to retrieve file for %s. Error: %s %s"
 msgstr "Nie udało się pobrać pliku dla %s. Błąd: %s %s"
 
+#: ../src/updateproviders.py:141
+#, python-format
 msgid "Failed to retrieve version file. Error: %s %s"
 msgstr "Nie udało się pobrać pliku wersji. Błąd: %s %s"
 
+#: ../src/updateproviders.py:195
 msgid "Failed..."
 msgstr "Niepowodzenie..."
 
+#: ../src/updateproviders.py:52
 msgid "Finding configured providers..."
 msgstr "Znajdowanie skonfigurowanych dostawców..."
 
+#: ../src/scanner/frequencyfinder.py:186
+#, python-format
 msgid "Found %d unique transponder"
 msgid_plural "Found %d unique transponders"
 msgstr[0] "Znaleziono %d unikalnych transponderów"
 msgstr[1] "Znaleziono %d unikalnych transponderów"
 
+#: ../src/scanner/frequencyfinder.py:79
 msgid "FrequencyFinder"
 msgstr "Wyszukiwarka częstotliwości"
 
+#: ../src/setup.py:578
 msgid "Friday"
 msgstr "Piątek"
 
+#: ../src/scanner/bouquetswriter.py:666 ../src/scanner/bouquetswriter.py:799
 msgid "HD Channels"
 msgstr "Kanały HD"
 
+#: ../src/menu.py:82
 msgid "Hide sections"
 msgstr "Ukryj sekcje"
 
-msgid ""
-"If a service is carried on a satellite that is not configured, 'yes' means "
-"the channel will not appear in the channel list, 'no' means the channel will "
-"show in the channel list but be greyed out and not be accessible."
-msgstr ""
-"Jeśli usługa jest świadczona na satelicie, który nie jest skonfigurowany, "
-"'tak' oznacza kanał nie pojawi się na liście kanałów, 'nie' oznacza, że ​​"
-"kanał będziepokaż na liście kanałów, ale będzie wyszarzony i niedostępny."
+#: ../src/setup.py:508
+msgid "If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible."
+msgstr "Jeśli usługa jest świadczona na satelicie, który nie jest skonfigurowany, 'tak' oznacza kanał nie pojawi się na liście kanałów, 'nie' oznacza, że ​​kanał będziepokaż na liście kanałów, ale będzie wyszarzony i niedostępny."
 
-msgid ""
-"If the receiver is in 'Deep Standby' when the schedule is due, wake it up to "
-"perform a scan."
-msgstr ""
-"Jeżeli odbiornik znajduje się w 'Głębokim czuwaniu' przed terminem, wybudź "
-"go do wykonaj skanowanie."
+#: ../src/setup.py:497
+msgid "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan."
+msgstr "Jeżeli odbiornik znajduje się w 'Głębokim czuwaniu' przed terminem, wybudź go do wykonaj skanowanie."
 
-msgid ""
-"If the receiver was woken from 'Deep Standby' and is currently in 'Standby' "
-"and no recordings are in progress return it to 'Deep Standby' once the scan "
-"has completed."
-msgstr ""
-"Jeśli odbiornik został wybudzony z 'Głębokiego czuwania' i jest obecnie w "
-"'Czuwanie'i żadne nagrania nie są w toku, przywróć je do 'Głębokiego "
-"czuwania' po skanowaniuzakończono."
+#: ../src/setup.py:499
+msgid "If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed."
+msgstr "Jeśli odbiornik został wybudzony z 'Głębokiego czuwania' i jest obecnie w 'Czuwanie'i żadne nagrania nie są w toku, przywróć je do 'Głębokiego czuwania' po skanowaniuzakończono."
 
+#: ../src/setup.py:509
 msgid "Include 'not indexed' channels"
 msgstr "Uwzględnij 'nieindeksowane' kanały"
 
+#: ../src/updateproviders.py:161
+#, python-format
 msgid "Incompatible versions: %s > %s"
 msgstr "Niekompatybilne wersje: %s > %s"
 
+#: ../src/setup.py:501
 msgid "Keep all non-ABM bouquets"
 msgstr "Zachowaj wszystkie bukiety spoza ABM"
 
+#: ../src/menu.py:84
 msgid "Keep bouquets"
 msgstr "Zachowaj bukiety"
 
+#: ../src/scanner/bouquetswriter.py:542
 msgid "Last Scanned"
 msgstr "Ostatnie zeskanowane"
 
+#: ../src/scanner/main.py:90
 msgid "Loading bouquets..."
 msgstr "Wczytywanie bukietów..."
 
+#: ../src/setup.py:578
 msgid "Monday"
 msgstr "Poniedziałek"
 
+#: ../src/ordering.py:73 ../src/ordering.py:79 ../src/ordering.py:108
+#: ../src/ordering.py:114
 msgid "Move down"
 msgstr "Przesuń w dół"
 
+#: ../src/ordering.py:75 ../src/ordering.py:78 ../src/ordering.py:110
+#: ../src/ordering.py:113
 msgid "Move up"
 msgstr "Przenieś w górę"
 
+#: ../src/updateproviders.py:148 ../src/updateproviders.py:206
 msgid "Network connection error."
 msgstr "Błąd połączenia sieciowego."
 
+#: ../src/updateproviders.py:145 ../src/updateproviders.py:203
+#, python-format
 msgid ""
 "Network connection error: \n"
 "%s"
@@ -302,279 +387,319 @@ msgstr ""
 "Błąd połączenia sieciowego: \n"
 "%s"
 
+#: ../src/scanner/main.py:273
 msgid "No NIMs found for "
 msgstr "Nie znaleziono NIM-ów dla "
 
+#: ../src/scanner/main.py:230
 msgid "No area found"
 msgstr "Nie znaleziono obszaru"
 
+#: ../src/scanner/frequencyfinder.py:172
 msgid "No frequencies to search"
 msgstr "Brak częstotliwości do wyszukania"
 
+#: ../src/updateproviders.py:131
 msgid "No providers are configured."
 msgstr "Nie skonfigurowano dostawców."
 
+#: ../src/updateproviders.py:97
 msgid "No providers configured."
 msgstr "Nie skonfigurowano dostawców."
 
+#: ../src/scanner/frequencyfinder.py:216
 msgid "No terrestrial multiplexes found."
 msgstr "Nie znaleziono multipleksów naziemnych."
 
+#: ../src/scanner/frequencyfinder.py:239 ../src/scanner/frequencyfinder.py:257
 msgid "No terrestrial tuner found."
 msgstr "Nie znaleziono tunera naziemnego."
 
+#: ../src/scanner/frequencyfinder.py:304
 msgid "No valid NIM found for terrestrial."
 msgstr "Nie znaleziono poprawnego NIM dla naziemnego."
 
-msgid ""
-"Only DVB-T2 multiplexes found. Insufficient data to create a provider file."
-msgstr ""
-"Znaleziono tylko multipleksy DVB-T2. Za mało danych do utworzenia pliku "
-"dostawcy."
+#: ../src/scanner/frequencyfinder.py:213
+msgid "Only DVB-T2 multiplexes found. Insufficient data to create a provider file."
+msgstr "Znaleziono tylko multipleksy DVB-T2. Za mało danych do utworzenia pliku dostawcy."
 
+#: ../src/setup.py:507
 msgid "Place bouquets at"
 msgstr "Umieść bukiety w"
 
+#: ../src/scanner/main.py:96
 msgid "Please first setup, in configuration"
 msgstr "Proszę najpierw skonfigurować, w konfiguracji"
 
+#: ../src/ordering.py:59 ../src/setup.py:77 ../src/setup.py:474
 msgid "Please wait..."
 msgstr "Proszę czekać..."
 
+#: ../src/plugin.py:28
 msgid "Press OK"
 msgstr "Naciśnij OK"
 
+#: ../src/setup.py:496
 msgid "Press OK to select which days to perform a scan."
 msgstr "Naciśnij OK, aby wybrać dni do wykonania skanowania."
 
+#: ../src/menu.py:78
 msgid "Providers"
 msgstr "Dostawcy"
 
+#: ../src/menu.py:80 ../src/ordering.py:25
 msgid "Providers order"
 msgstr "Zamówienie dostawcy"
 
+#: ../src/scanner/bouquetswriter.py:929 ../src/scanner/bouquetswriter.py:930
 msgid "Radio Channels"
 msgstr "Kanały radiowe"
 
+#: ../src/setup.py:596
 msgid "Radio Times Emulator"
 msgstr "Emulator czasu radia"
 
+#: ../src/scanner/frequencyfinder.py:365
+#, python-format
 msgid "Reading %s MHz (ch %s)"
 msgstr "Odczyt %s MHz (ch %s)"
 
+#: ../src/scanner/main.py:446
+#, python-format
 msgid "Reading %s..."
 msgstr "Odczyt %s..."
 
+#: ../src/hidesections.py:104 ../src/keepbouquets.py:104 ../src/ordering.py:153
+#: ../src/setup.py:435 ../src/setup.py:565 ../src/setup.py:604
 msgid "Really close without saving settings?"
 msgstr "Naprawdę zamknąć bez zapisywania ustawień?"
 
+#: ../src/setup.py:297
 msgid "Region"
 msgstr "Region"
 
+#: ../src/updateproviders.py:227 ../src/updateproviders.py:239
+#: ../src/updateproviders.py:248
+#, python-format
 msgid "Retrieved config file for %s"
 msgstr "Pobrano plik konfiguracyjny dla %s"
 
+#: ../src/updateproviders.py:251
+#, python-format
 msgid "Retrieved config file for %s does not parse."
 msgstr "Pobrany plik konfiguracyjny dla %s nie jest analizowany."
 
+#: ../src/updateproviders.py:261
+#, python-format
 msgid "Retrieved config file for %s is faulty or incomplete."
 msgstr "Pobrany plik konfiguracyjny dla %s jest uszkodzony lub niekompletny."
 
+#: ../src/updateproviders.py:258
+#, python-format
 msgid "Retrieved provider file for %s"
 msgstr "Pobrano plik dostawcy dla %s"
 
+#: ../src/updateproviders.py:178
+#, python-format
 msgid "Retrieving config file for %s"
 msgstr "Pobieranie pliku konfiguracyjnego dla %s"
 
+#: ../src/setup.py:578
 msgid "Saturday"
 msgstr "Sobota"
 
+#: ../src/hidesections.py:32 ../src/setup.py:69 ../src/setup.py:466
+#: ../src/setup.py:583
 msgid "Save"
 msgstr "Zapisz"
 
+#: ../src/menu.py:240
 msgid "Save Log"
 msgstr "Zapisz log"
 
+#: ../src/scanner/frequencyfinder.py:200
 msgid "Saving data"
 msgstr "Zapisywanie danych"
 
+#: ../src/menu.py:69
 msgid "Scan"
 msgstr "Skanuj"
 
+#: ../src/scanner/frequencyfinder.py:161
 msgid "Scanning for active transponders"
 msgstr "Skanowanie aktywnych transponderów"
 
+#: ../src/setup.py:496
 msgid "Schedule days of the week"
 msgstr "Zaplanuj dni tygodnia"
 
+#: ../src/setup.py:499
 msgid "Schedule return to deep standby"
 msgstr "Zaplanuj powrót do głębokiego czuwania"
 
+#: ../src/setup.py:493
 msgid "Schedule scan"
 msgstr "Zaplanuj skanowanie"
 
+#: ../src/setup.py:495
 msgid "Schedule time of day"
 msgstr "Zaplanuj porę dnia"
 
+#: ../src/setup.py:497
 msgid "Schedule wake from deep standby"
 msgstr "Zaplanuj wybudzanie z głębokiego czuwania"
 
-msgid ""
-"Select \"yes\" to show the \"DVB-T frequency finder\" tool in the main menu. "
-"This tool is used to create a working provider file for difficult areas of "
-"the UK, e.g. areas covered by repeaters, etc."
-msgstr ""
-"Wybierz \"tak\", aby wyświetlić narzędzie \"wyszukiwarka częstotliwości DVB-T"
-"\" w menu głównym. To narzędzie służy do tworzenia działającego pliku "
-"dostawcy dla trudnych obszarów Wielka Brytania, np. obszary objęte "
-"wzmacniakami itp."
+#: ../src/setup.py:511
+msgid "Select \"yes\" to show the \"DVB-T frequency finder\" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc."
+msgstr "Wybierz \"tak\", aby wyświetlić narzędzie \"wyszukiwarka częstotliwości DVB-T\" w menu głównym. To narzędzie służy do tworzenia działającego pliku dostawcy dla trudnych obszarów Wielka Brytania, np. obszary objęte wzmacniakami itp."
 
+#: ../src/setup.py:574 ../src/setup.py:596
 msgid "Select days"
 msgstr "Wybierz dni"
 
-msgid ""
-"Select your own bouquet from the list, please note that the only the first "
-"100 channels for this bouquet will be used."
-msgstr ""
-"Wybierz własny bukiet z listy, pamiętaj, że tylko pierwszyZostanie użytych "
-"100 kanałów dla tego bukietu."
+#: ../src/setup.py:308
+msgid "Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used."
+msgstr "Wybierz własny bukiet z listy, pamiętaj, że tylko pierwszyZostanie użytych 100 kanałów dla tego bukietu."
 
+#: ../src/scanner/frequencyfinder.py:252
 msgid "Selected tuner is not configured."
 msgstr "Wybrany tuner nie jest skonfigurowany."
 
+#: ../src/scanner/main.py:192 ../src/scanner/main.py:207
+#: ../src/scanner/main.py:447 ../src/scanner/main.py:509
+#, python-format
 msgid "Services: %d video - %d radio"
 msgstr "Usługi: %d wideo - %d radio"
 
+#: ../src/scanner/main.py:91
 msgid "Services: 0 video - 0 radio"
 msgstr "Usługi: 0 wideo - 0 radia"
 
+#: ../src/setup.py:495
 msgid "Set the time of day to perform a scan."
 msgstr "Ustaw porę dnia na wykonanie skanowania."
 
+#: ../src/setup.py:511
 msgid "Show DVB-T frequency finder"
 msgstr "Pokaż wyszukiwarkę częstotliwości DVB-T"
 
+#: ../src/setup.py:512
 msgid "Show in extensions"
 msgstr "Pokaż w rozszerzeniach"
 
+#: ../src/menu.py:90
 msgid "Show log"
 msgstr "Pokaż log"
 
+#: ../src/setup.py:508
 msgid "Skip services on not configured sats"
 msgstr "Pomiń usługi na nieskonfigurowanych satelitach"
 
+#: ../src/menu.py:85
 msgid "Start scan"
 msgstr "Rozpocznij skanowanie"
 
+#: ../src/scanner/frequencyfinder.py:86 ../src/scanner/main.py:58
 msgid "Starting scanner"
 msgstr "Uruchamianie skanera"
 
+#: ../src/scanner/frequencyfinder.py:160
 msgid "Starting search..."
 msgstr "Uruchamianie wyszukiwania..."
 
+#: ../src/updateproviders.py:117
 msgid "Starting update..."
 msgstr "Rozpoczynanie aktualizacji..."
 
+#: ../src/setup.py:506
 msgid "Style of bouquet marker"
 msgstr "Styl znacznika bukietu"
 
+#: ../src/setup.py:505
 msgid "Style of provider marker"
 msgstr "Styl znacznika dostawcy"
 
+#: ../src/setup.py:578
 msgid "Sunday"
 msgstr "Niedziela"
 
+#: ../src/setup.py:323
 msgid "Swap channels"
 msgstr "Zamień kanały"
 
-msgid ""
-"This affects all bouquets. Select 'no' to scan in all services. Select 'yes' "
-"to skip encrypted ones."
-msgstr ""
-"Dotyczy to wszystkich bukietów. Wybierz 'nie', aby skanować we wszystkich "
-"usługach. Wybierz 'tak' aby pominąć zaszyfrowane."
+#: ../src/setup.py:302
+msgid "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones."
+msgstr "Dotyczy to wszystkich bukietów. Wybierz 'nie', aby skanować we wszystkich usługach. Wybierz 'tak' aby pominąć zaszyfrowane."
 
-msgid ""
-"This feature is for development only. Requires debug logs to be enabled or "
-"enigma2 to be started in console mode."
-msgstr ""
-"Ta funkcja jest przeznaczona tylko do programowania. Wymaga włączenia "
-"dzienników debugowania lubenigma2 do uruchomienia w trybie konsoli."
+#: ../src/setup.py:510
+msgid "This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode."
+msgstr "Ta funkcja jest przeznaczona tylko do programowania. Wymaga włączenia dzienników debugowania lubenigma2 do uruchomienia w trybie konsoli."
 
-msgid ""
-"This option allows you to choose what region of the country you live in, so "
-"it populates the correct channels for your region."
-msgstr ""
-"Ta opcja pozwala wybrać region kraju, w którym mieszkasz, więc zapełnia "
-"prawidłowe kanały dla twojego regionu."
+#: ../src/setup.py:297
+msgid "This option allows you to choose what region of the country you live in, so it populates the correct channels for your region."
+msgstr "Ta opcja pozwala wybrać region kraju, w którym mieszkasz, więc zapełnia prawidłowe kanały dla twojego regionu."
 
+#: ../src/setup.py:294
 msgid "This option enables the current selected provider."
 msgstr "Ta opcja włącza aktualnie wybranego dostawcę."
 
-msgid ""
-"This option has several choices \"Yes\", (create a bouquet with all the "
-"channels in it), \"Yes HD only\", (will group all HD channels into this "
-"bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do "
-"not use a main bouquet)"
-msgstr ""
-"Ta opcja ma kilka opcji \"Tak\" (utwórz bukiet ze wszystkimi kanały w nim), "
-"\"Tak tylko HD\", (pogrupuje wszystkie kanały HD w tym bukiet\", "
-"\"Niestandardowy\", (pozwala wybrać własny bukiet), \"Nie\", (zrób nie "
-"używaj głównego bukietu)"
+#: ../src/setup.py:305
+msgid "This option has several choices \"Yes\", (create a bouquet with all the channels in it), \"Yes HD only\", (will group all HD channels into this bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do not use a main bouquet)"
+msgstr "Ta opcja ma kilka opcji \"Tak\" (utwórz bukiet ze wszystkimi kanały w nim), \"Tak tylko HD\", (pogrupuje wszystkie kanały HD w tym bukiet\", \"Niestandardowy\", (pozwala wybrać własny bukiet), \"Nie\", (zrób nie używaj głównego bukietu)"
 
-msgid ""
-"This option places markers in the bouquet index to group all bouquets of "
-"each provider."
-msgstr ""
-"Ta opcja umieszcza znaczniki w indeksie bukietów, aby zgrupować wszystkie "
-"bukiety każdy dostawca."
+#: ../src/setup.py:503
+msgid "This option places markers in the bouquet index to group all bouquets of each provider."
+msgstr "Ta opcja umieszcza znaczniki w indeksie bukietów, aby zgrupować wszystkie bukiety każdy dostawca."
 
+#: ../src/setup.py:502
 msgid "This option will add the provider's name to bouquet names."
 msgstr "Ta opcja doda nazwę dostawcy do nazw bukietów."
 
+#: ../src/setup.py:507
 msgid "This option will allow you choose where to place the created bouquets."
 msgstr "Ta opcja pozwoli Ci wybrać, gdzie umieścić utworzone bukiety."
 
-msgid ""
-"This option will create a FreeToAir High Definition bouquet, it will group "
-"all FTA HD channels into this bouquet."
-msgstr ""
-"Ta opcja utworzy bukiet FreeToAir High Definition, zgrupuje wszystkie kanały "
-"FTA HD do tego bukietu."
+#: ../src/setup.py:320
+msgid "This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet."
+msgstr "Ta opcja utworzy bukiet FreeToAir High Definition, zgrupuje wszystkie kanały FTA HD do tego bukietu."
 
-msgid ""
-"This option will create a FreeToAir bouquet, it will group all free channels "
-"into this bouquet."
-msgstr ""
-"Ta opcja stworzy bukiet FreeToAir, zgrupuje wszystkie darmowe kanałydo tego "
-"bukietu."
+#: ../src/setup.py:317
+msgid "This option will create a FreeToAir bouquet, it will group all free channels into this bouquet."
+msgstr "Ta opcja stworzy bukiet FreeToAir, zgrupuje wszystkie darmowe kanałydo tego bukietu."
 
-msgid ""
-"This option will create a High Definition bouquet, it will group all HD "
-"channels into this bouquet."
-msgstr ""
-"Ta opcja utworzy bukiet High Definition, zgrupuje wszystkie HDkanały do ​​tego "
-"bukietu."
+#: ../src/setup.py:314
+msgid "This option will create a High Definition bouquet, it will group all HD channels into this bouquet."
+msgstr "Ta opcja utworzy bukiet High Definition, zgrupuje wszystkie HDkanały do ​​tego bukietu."
 
-msgid ""
-"This option will swap SD versions of channels with HD versions. (eg BBC One "
-"SD with BBC One HD, Channel Four SD with with Channel Four HD)"
-msgstr ""
-"Ta opcja spowoduje zamianę wersji SD kanałów na wersje HD. (np. BBC One SD z "
-"BBC One HD, kanał czwarty SD z kanałem czwartym HD)"
+#: ../src/setup.py:311
+#, fuzzy
+msgid "This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary."
+msgstr "Ta opcja stworzy bukiet FreeToAir, zgrupuje wszystkie darmowe kanałydo tego bukietu."
 
+#: ../src/setup.py:323
+msgid "This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)"
+msgstr "Ta opcja spowoduje zamianę wersji SD kanałów na wersje HD. (np. BBC One SD z BBC One HD, kanał czwarty SD z kanałem czwartym HD)"
+
+#: ../src/setup.py:578
 msgid "Thursday"
 msgstr "Czwartek"
 
+#: ../src/setup.py:578
 msgid "Tuesday"
 msgstr "Wtorek"
 
+#: ../src/scanner/frequencyfinder.py:185
+#, python-format
 msgid "Tuning %s MHz (ch %s)"
 msgstr "Dostrajanie %s MHz (ch %s)"
 
+#: ../src/scanner/main.py:206
+#, python-format
 msgid "Tuning %s..."
 msgstr "Dostrajanie %s..."
 
+#: ../src/scanner/main.py:456
+#, python-format
 msgid ""
 "Tuning failed!\n"
 "\n"
@@ -600,69 +725,110 @@ msgstr ""
 "Problemy z okablowaniem sygnałowym,\n"
 "Wszelkie inne problemy z odbiorem."
 
+#: ../src/scanner/main.py:462
+#, fuzzy, python-format
+msgid ""
+"Tuning lock timed out!\n"
+"\n"
+"Provider: %s\n"
+"Tuner: %s\n"
+"Frequency: %d MHz\n"
+"\n"
+"Please check affected tuner for:\n"
+"\n"
+"Tuner configuration errors,\n"
+"Signal cabling issues,\n"
+"Any other reception issues."
+msgstr ""
+"Strojenie nie powiodło się!\n"
+"\n"
+"Dostawca: %s\n"
+"Tuner: %s\n"
+"Częstotliwość: %d MHz\n"
+"\n"
+"Sprawdź, czy tuner, którego dotyczy problem, pod kątem:\n"
+"\n"
+"Błędy konfiguracji tunera,\n"
+"Problemy z okablowaniem sygnałowym,\n"
+"Wszelkie inne problemy z odbiorem."
+
+#: ../src/updateproviders.py:196
+#, python-format
 msgid "Unable to download config file for %s"
 msgstr "Nie można pobrać pliku konfiguracyjnego dla %s"
 
+#: ../src/menu.py:87
 msgid "Update provider files"
 msgstr "Aktualizuj pliki dostawcy"
 
+#: ../src/updateproviders.py:285
+msgid "Update summary"
+msgstr ""
+
+#: ../src/updateproviders.py:49 ../src/updateproviders.py:89
 msgid "UpdateProviders"
 msgstr "Dostawcy aktualizacji"
 
+#: ../src/setup.py:578
 msgid "Wednesday"
 msgstr "Środa"
 
-msgid ""
-"When a search finds extra channels that do not have an allocated channel "
-"number, 'yes' will add these at the end of the channel list, and 'no' means "
-"these will not be included."
-msgstr ""
-"Gdy wyszukiwanie znajdzie dodatkowe kanały, które nie mają przydzielonego "
-"kanałuliczba, 'tak' doda je na końcu listy kanałów, a 'nie' oznacza nie "
-"zostaną uwzględnione."
+#: ../src/setup.py:509
+msgid "When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included."
+msgstr "Gdy wyszukiwanie znajdzie dodatkowe kanały, które nie mają przydzielonego kanałuliczba, 'tak' doda je na końcu listy kanałów, a 'nie' oznacza nie zostaną uwzględnione."
 
-msgid ""
-"When disabled this will enable the 'Keep bouquets' option in the main menu, "
-"allowing you to hide some 'existing' bouquets."
-msgstr ""
-"Po wyłączeniu spowoduje to włączenie opcji 'Zachowaj bukiety' w menu "
-"głównym, pozwalając ci ukryć niektóre 'istniejące' bukiety."
+#: ../src/setup.py:501
+msgid "When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets."
+msgstr "Po wyłączeniu spowoduje to włączenie opcji 'Zachowaj bukiety' w menu głównym, pozwalając ci ukryć niektóre 'istniejące' bukiety."
 
+#: ../src/setup.py:512
 msgid "When enabled, allows you start a scan from the extensions list."
 msgstr "Po włączeniu umożliwia rozpoczęcie skanowania z listy rozszerzeń."
 
+#: ../src/plugin.py:71
 msgid "bottom"
 msgstr "na dole"
 
+#: ../src/plugin.py:17
 msgid "expert"
 msgstr "ekspert"
 
+#: ../src/plugin.py:42 ../src/plugin.py:58
 msgid "indent + text"
 msgstr "wcięcie + tekst"
 
+#: ../src/setup.py:235 ../src/setup.py:244
 msgid "no"
 msgstr "nie"
 
+#: ../src/plugin.py:41 ../src/plugin.py:57
 msgid "none"
 msgstr "brak"
 
+#: ../src/plugin.py:17
 msgid "simple"
 msgstr "prosty"
 
+#: ../src/plugin.py:71
 msgid "top"
 msgstr "góra"
 
+#: ../src/setup.py:244
 msgid "yes"
 msgstr "tak"
 
+#: ../src/setup.py:200
 msgid "yes (all channels)"
 msgstr "tak (wszystkie kanały)"
 
+#: ../src/setup.py:222
 msgid "yes (custom)"
 msgstr "tak (niestandardowe)"
 
+#: ../src/setup.py:203
 msgid "yes (only FTA HD)"
 msgstr "tak (tylko FTA HD)"
 
+#: ../src/setup.py:202
 msgid "yes (only HD)"
 msgstr "tak (tylko HD)"

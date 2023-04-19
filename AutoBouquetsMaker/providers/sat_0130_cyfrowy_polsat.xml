@@ -1,0 +1,26 @@
+<provider>
+	<name>Cyfrowy Polsat</name>
+	<streamtype>dvbs</streamtype>
+	<protocol>lcn2</protocol>
+	<transponder
+		orbital_position="130"
+		frequency="12188000"
+		symbol_rate="27500000"
+		polarization="1"
+		fec_inner="0"
+		inversion="2"
+		system="1"
+		modulation="2"
+		roll_off="0"
+		pilot="2"
+		tsid="7400"
+		onid="113"
+	/>
+	<sections>
+		<section number="1">Cyfrowy Polsat</section>
+	</sections>
+	<servicehacks>
+<![CDATA[
+]]>
+	</servicehacks>
+</provider>
