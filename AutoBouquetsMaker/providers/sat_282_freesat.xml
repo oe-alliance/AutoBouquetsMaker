@@ -133,11 +133,11 @@ except:
 		42775: "ITV1 Granada HD",
 		42779: "ITV1 Meridian East HD",
 		42780: "ITV1 Central West HD",
-#		42781: "ITV1 Wales HD",
+#		42781: "ITV1 Wales HD",	#This is correct on stream, no need for rename.
 		42784: "ITV1 Border England HD",
 		42785: "ITV1 West Country West HD",
 		42786: "ITV1 West Country SW HD",
-		52777: "STV West HD",	#This is correct on stream, no need for rename.
+		52777: "STV West HD",
 	}
 
 	rename = { # channel_id: service_name,
