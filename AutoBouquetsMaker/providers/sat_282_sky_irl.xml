@@ -146,6 +146,7 @@ except:
 	custom = True if "custom" in bouquet_key else False
 
 	dxNoSDT = 0x1 # details of lamedb flags are in README.txt
+	dxDontshow = 0x2 # details of lamedb flags are in README.txt
 	dxHoldName = 0x8 # details of lamedb flags are in README.txt
 
 	# slot some extra channels into vacant slots in the provider list if "custom" == True
@@ -416,10 +417,14 @@ elif custom and service["service_type"] in DvbScanner.HD_ALLOWED_TYPES and servi
 elif custom and ("channel_id" in service and service["channel_id"] in blacklist_by_id):
 	skip.skip = True
 
+hidden_sections = config.autobouquetsmaker.hidesections.value.split("|")
+
 new_numbers = []
 for number in service["numbers"]:
 	if number >= 3000 and number <= 3999: # radio
 		new_numbers.append(number - 3000)
+	elif number >= 900 and number < 950 and "sat_282_sky_irl:900" in hidden_sections:
+		service["service_flags"] = dxDontshow
 	elif number >= 1050 and number <= max(LCNs_in_use): # not indexed channels
 		new_numbers.append(number)
 	elif number > 999 or number < 101:
