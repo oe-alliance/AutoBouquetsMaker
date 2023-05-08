@@ -136,6 +136,7 @@
 		<channel number="715" with="895"/> <!-- SONY MAX HD -->
 		<channel number="717" with="896"/> <!-- Utsav GOLD HD -->
 		<channel number="791" with="897"/> <!-- PCNE Chinese HD -->
+		<channel number="970" with="971" conditional="'BBC RB 1' in service_sd['service_name'] and 'BBC RB 1' in service_hd['service_name']"/> <!-- BBC RB 1 HD -->
 	</swapchannels>
 	<servicehacks>
 <![CDATA[
