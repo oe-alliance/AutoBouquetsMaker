@@ -20,7 +20,8 @@ from .scanner.providerconfig import ProviderConfig
 from . import log
 import itertools
 import six
-if six.PY3: import unicodedata
+if six.PY3:
+	import unicodedata
 
 
 class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
