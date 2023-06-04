@@ -453,7 +453,7 @@ class AutoBouquetsMaker(Screen):
 			print("[ABM-main][checkTunerLock] LOSTLOCK", file=log)
 		elif tuner_state == "FAILED":
 			print("[ABM-main][checkTunerLock] TUNING FAILED FATAL", file=log)
-			self.showError(_('Tuning failed!\n\nProvider: %s\nTuner: %s\nFrequency: %d MHz\n\nPlease check affected tuner for:\n\nTuner configuration errors,\nSignal cabling issues,\nAny other reception issues.') % (str(self.providers[self.currentAction]["name"]), chr(ord('A') + self.current_slotid), self.transponder["frequency"] // int(1e06 if self.providers[self.currentAction]["streamtype"] == "dvbt" else 1e03))) 
+			self.showError(_('Tuning failed!\n\nProvider: %s\nTuner: %s\nFrequency: %d MHz\n\nPlease check affected tuner for:\n\nTuner configuration errors,\nSignal cabling issues,\nAny other reception issues.') % (str(self.providers[self.currentAction]["name"]), chr(ord('A') + self.current_slotid), self.transponder["frequency"] // int(1e06 if self.providers[self.currentAction]["streamtype"] == "dvbt" else 1e03)))
 			return
 
 		self.lockcounter += 1
