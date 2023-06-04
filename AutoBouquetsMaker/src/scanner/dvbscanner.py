@@ -1486,6 +1486,7 @@ class DvbScanner():
 			return cat_f_dict[cat_f]
 		return "Unknown"
 
+
 class skipper():
 	def __init__(self):
 		self.x = False
