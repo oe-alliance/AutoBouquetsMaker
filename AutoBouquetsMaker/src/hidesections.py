@@ -58,7 +58,7 @@ class AutoBouquetsMaker_HideSections(Screen):
 	def buildListEntry(self, enabled, name, type):
 		pixmap = LoadPixmap(cached=True, path=resolveFilename(SCOPE_CURRENT_SKIN, "icons/lock_%s.png" % ("on" if enabled else "off")))
 
-		return((pixmap, str(name), str(type)))
+		return ((pixmap, str(name), str(type)))
 
 	def refresh(self):
 		self.providers_selected = config.autobouquetsmaker.hidesections.value.split("|")

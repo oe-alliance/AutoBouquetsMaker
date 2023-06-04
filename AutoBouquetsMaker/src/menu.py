@@ -109,7 +109,7 @@ class AutoBouquetsMaker_Menu(Screen):
 		pixmap = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "autobouquetsmaker/" + image))
 		if pixmap == None:
 			pixmap = LoadPixmap(cached=True, path="%s/images/%s" % (os.path.dirname(sys.modules[__name__].__file__), image))
-		return((pixmap, description))
+		return ((pixmap, description))
 
 	def openSetup(self):
 		self.session.open(AutoBouquetsMaker_Setup)

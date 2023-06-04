@@ -196,7 +196,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 			if len({k: v for k, v in list(self.transponders_unique.items()) if v["system"] == eDVBFrontendParametersTerrestrial.System_DVB_T}) > 0: # check DVB-T transponders exist
 				if self.frontend:
 					self.frontend = None
-					del(self.rawchannel)
+					del (self.rawchannel)
 				self["action"].setText(_("Saving data"))
 				if self.session.postScanService:
 					self.session.nav.playService(self.session.postScanService)
@@ -284,7 +284,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 
 		current_slotid = -1
 		if self.rawchannel:
-			del(self.rawchannel)
+			del (self.rawchannel)
 
 		self.frontend = None
 		self.rawchannel = None
@@ -636,7 +636,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 	def __onClose(self):
 		if self.frontend:
 			self.frontend = None
-			del(self.rawchannel)
+			del (self.rawchannel)
 
 		if self.session.postScanService:
 			self.session.nav.playService(self.session.postScanService)

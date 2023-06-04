@@ -137,7 +137,7 @@ class BouquetsReader():
 						transponder["pls_code"] = int(second_row[12])
 						transponder["pls_mode"] = int(second_row[13])
 						if len(second_row) > 15: # T2MI
-							if not(second_row[14] and second_row[15]): # temporary workaround for some broken settings with empty fields (skip the service)
+							if not (second_row[14] and second_row[15]): # temporary workaround for some broken settings with empty fields (skip the service)
 								continue
 							transponder["t2mi_plp_id"] = int(second_row[14])
 							transponder["t2mi_pid"] = int(second_row[15])
@@ -260,7 +260,7 @@ class BouquetsReader():
 								transponder["pls_code"] = int(part[8:].split(":")[1])
 								transponder["pls_mode"] = int(part[8:].split(":")[2])
 							elif part.startswith("T2MI:") and len(part[5:].split(":")) == 2:
-								if not(part[5:].split(":")[0] and part[5:].split(":")[1]): # temporary workaround for some broken settings with empty fields (skip the service)
+								if not (part[5:].split(":")[0] and part[5:].split(":")[1]): # temporary workaround for some broken settings with empty fields (skip the service)
 									continue
 								transponder["t2mi_plp_id"] = int(part[5:].split(":")[0])
 								transponder["t2mi_pid"] = int(part[5:].split(":")[1])

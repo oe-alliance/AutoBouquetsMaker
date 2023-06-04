@@ -586,7 +586,7 @@ class BouquetsWriter():
 			if number >= first_section_number:
 				break
 
-			del(services["video"][number])
+			del (services["video"][number])
 
 		print("[ABM-BouquetsWriter] Writing %s bouquet..." % section_identifier, file=log)
 

@@ -197,7 +197,7 @@ class AutoBouquetsMaker(Screen):
 			return
 
 		self.currentAction = self.actionsList[0]
-		del(self.actionsList[0])
+		del (self.actionsList[0])
 
 		self.progresscurrent += 1
 		if not inStandby:
