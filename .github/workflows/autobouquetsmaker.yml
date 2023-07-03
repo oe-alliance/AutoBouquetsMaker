@@ -42,7 +42,7 @@ jobs:
           autoreconf -i
           ./configure
           make
-          python -m compileall -l .
+          python -m compileall .
 
       - name: Check format PEP8
         run: |
