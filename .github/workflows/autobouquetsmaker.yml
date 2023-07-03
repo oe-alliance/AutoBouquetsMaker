@@ -1,0 +1,59 @@
+name: AutoBouquetsMaker
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build AutoBouquetsMaker
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        gcc: [12]
+        python: ['3.11']
+    steps:
+      - name: Install prerequisites
+        run: |
+          sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+          sudo apt-get -q update
+          sudo apt-get install -y g++-${{ matrix.gcc }} automake build-essential gettext python${{ matrix.python }}-dev
+
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Install python packages
+        run: |
+          pip3 install six flake8
+
+      - name: Build AutoBouquetsMaker, gcc-${{ matrix.gcc }}, python ${{ matrix.python }}
+        env:
+          CC: "gcc-${{ matrix.gcc }}"
+          CXX: "g++-${{ matrix.gcc }}"
+          CXXFLAGS: "-g -Wall"
+        run: |
+          autoreconf -i
+          ./configure
+          make
+          python -m compileall -l .
+
+      - name: Check format PEP8
+        run: |
+          echo "Checking locale format..."
+          find . -type f -name "*.po" -exec msgfmt {} -o {}.mo \;
+          echo "Checking PEP8 validation..."
+          flake8 --ignore=W191,E128,E501,E722 . --exit-zero
+          echo "Check format PEP8 completed!"
+
+# PEP8 :- IGNORE CODES
+# W191 : indentation contains tabs
+# E128 : continuation line under-indented for visual indent
+# E501 : line too long (> 79 characters)
+# E722 : do not use bare 'except'
