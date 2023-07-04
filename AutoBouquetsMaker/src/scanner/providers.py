@@ -46,7 +46,7 @@ class Providers():
 			if filename[-4:] != ".xml":
 				continue
 			paths_dict[filename] = self.PROVIDERS_DIR + "/" + filename
-		for filename in os.listdir(user_providers_dir): # user files take priority
+		for filename in os.listdir(user_providers_dir):  # user files take priority
 			if filename[-4:] != ".xml":
 				continue
 			paths_dict[filename] = user_providers_dir + "/" + filename
@@ -116,8 +116,8 @@ class Providers():
 						transponder["sdt_other_table_id"] = 0x46
 						transponder["bat_pid"] = 0x11
 						transponder["bat_table_id"] = 0x4a
-						transponder["fastscan_pid"] = 0x00			# no default value
-						transponder["fastscan_table_id"] = 0x00		# no default value
+						transponder["fastscan_pid"] = 0x00  # no default value
+						transponder["fastscan_table_id"] = 0x00  # no default value
 						transponder["system"] = eDVBFrontendParametersSatellite.System_DVB_S
 						transponder["polarization"] = eDVBFrontendParametersSatellite.Polarisation_Horizontal
 						transponder["fec_inner"] = eDVBFrontendParametersSatellite.FEC_Auto
@@ -148,18 +148,18 @@ class Providers():
 								transponder["roll_off"] = int(node.attributes.item(i).value)
 							elif node.attributes.item(i).name == "pilot":
 								transponder["pilot"] = int(node.attributes.item(i).value)
-#							elif node.attributes.item(i).name == "bandwidth":
-#								transponder["bandwidth"] = int(node.attributes.item(i).value)
-#							elif node.attributes.item(i).name == "code_rate_hp":
-#								transponder["code_rate_hp"] = int(node.attributes.item(i).value)
-#							elif node.attributes.item(i).name == "code_rate_lp":
-#								transponder["code_rate_lp"] = int(node.attributes.item(i).value)
-#							elif node.attributes.item(i).name == "transmission_mode":
-#								transponder["transmission_mode"] = int(node.attributes.item(i).value)
-#							elif node.attributes.item(i).name == "guard_interval":
-#								transponder["guard_interval"] = int(node.attributes.item(i).value)
-#							elif node.attributes.item(i).name == "hierarchy":
-#								transponder["hierarchy"] = int(node.attributes.item(i).value)
+# 							elif node.attributes.item(i).name == "bandwidth":
+# 								transponder["bandwidth"] = int(node.attributes.item(i).value)
+# 							elif node.attributes.item(i).name == "code_rate_hp":
+# 								transponder["code_rate_hp"] = int(node.attributes.item(i).value)
+# 							elif node.attributes.item(i).name == "code_rate_lp":
+# 								transponder["code_rate_lp"] = int(node.attributes.item(i).value)
+# 							elif node.attributes.item(i).name == "transmission_mode":
+# 								transponder["transmission_mode"] = int(node.attributes.item(i).value)
+# 							elif node.attributes.item(i).name == "guard_interval":
+# 								transponder["guard_interval"] = int(node.attributes.item(i).value)
+# 							elif node.attributes.item(i).name == "hierarchy":
+# 								transponder["hierarchy"] = int(node.attributes.item(i).value)
 							elif node.attributes.item(i).name == "nit_pid":
 								transponder["nit_pid"] = int(node.attributes.item(i).value, 16)
 							elif node.attributes.item(i).name == "nit_current_table_id":
@@ -366,7 +366,7 @@ class Providers():
 										channel_number = int(node2.attributes.item(i).value)
 									elif node2.attributes.item(i).name == "with":
 										channel_with = int(node2.attributes.item(i).value)
-									elif node2.attributes.item(i).name == "conditional": # allows adding an evalable condition on a channel by channel basis
+									elif node2.attributes.item(i).name == "conditional":  # allows adding an evalable condition on a channel by channel basis
 										channel_conditional = self.encodeNODE(node2.attributes.item(i).value)
 
 								if channel_number != -1 and channel_with != -1:

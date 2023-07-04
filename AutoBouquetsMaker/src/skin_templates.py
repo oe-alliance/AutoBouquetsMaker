@@ -19,16 +19,16 @@ extraDebug = False
 # values common to all templates
 fontSize = 22
 menuFontSize = fontSize + 2
-descriptionsFontSize = fontSize - 2 # hints texts
-windowWidth = 600 # button bar needs a minimum of 600
-marginTop = 2 # for config lists
-marginTopTexts = 10 # for text windows
+descriptionsFontSize = fontSize - 2  # hints texts
+windowWidth = 600  # button bar needs a minimum of 600
+marginTop = 2  # for config lists
+marginTopTexts = 10  # for text windows
 marginLeft = 8
-buttonWidth = 140 # this is the real width of the buttons graphics
-buttonHeight = 40 # this is the real height of the buttons graphics
+buttonWidth = 140  # this is the real width of the buttons graphics
+buttonHeight = 40  # this is the real height of the buttons graphics
 buttonMargin = 8
 buttonMarginBottom = 4
-configListLength = 15 # minimum 15. changing this should force the window height change in all screens without breaking anything.
+configListLength = 15  # minimum 15. changing this should force the window height change in all screens without breaking anything.
 configItemHeight = 30
 configItemHeightMainMenu = 40
 
@@ -71,7 +71,7 @@ def buttonBar():
 
 def templateOne():
 	# templateOne is for hidesections and keepbouquets
-	templateOneHeight = configItemHeight * configListLength # make the template 15 lines high
+	templateOneHeight = configItemHeight * configListLength  # make the template 15 lines high
 	templateOneXML = """
 	<widget source="list" render="Listbox" position="%d,%d" size="%d,%d" scrollbarMode="showOnDemand">
 		<convert type="TemplatedMultiContent">
@@ -86,10 +86,10 @@ def templateOne():
 		</convert>
 	</widget>"""
 	templateOneValues = [
-		marginLeft, marginTop, widgetWidth, templateOneHeight, # templateOneXML line 1
-		2, 1, 25, 24, # templateOneXML line 4
-		35, 2, 300, configItemHeight - 2, # templateOneXML line 5
-		350, 2, 210, configItemHeight - 2, # templateOneXML line 6
+		marginLeft, marginTop, widgetWidth, templateOneHeight,  # templateOneXML line 1
+		2, 1, 25, 24,  # templateOneXML line 4
+		35, 2, 300, configItemHeight - 2,  # templateOneXML line 5
+		350, 2, 210, configItemHeight - 2,  # templateOneXML line 6
 		fontSize,
 		configItemHeight
 	]
@@ -98,7 +98,7 @@ def templateOne():
 
 def templateTwo():
 	# template two is for the main menu
-	templateTwoWidgetHeight = configItemHeightMainMenu * 11 # make the template 11 lines high. Currently there are 9 menu items.
+	templateTwoWidgetHeight = configItemHeightMainMenu * 11  # make the template 11 lines high. Currently there are 9 menu items.
 	templateTwoXML = """
 	<widget source="list" render="Listbox" position="%d,%d" size="%d,%d" scrollbarMode="showOnDemand">
 		<convert type="TemplatedMultiContent">
@@ -112,9 +112,9 @@ def templateTwo():
 		</convert>
 	</widget>"""
 	templateTwoValues = [
-		marginLeft, marginTop, widgetWidth, templateTwoWidgetHeight, # templateTwoXML line 1
-		2, 4, 32, 32, # templateTwoXML line 4
-		44, 4, 530, configItemHeightMainMenu - 4, # templateTwoXML line 5
+		marginLeft, marginTop, widgetWidth, templateTwoWidgetHeight,  # templateTwoXML line 1
+		2, 4, 32, 32,  # templateTwoXML line 4
+		44, 4, 530, configItemHeightMainMenu - 4,  # templateTwoXML line 5
 		menuFontSize,
 		configItemHeightMainMenu
 	]
@@ -129,15 +129,15 @@ def templateThree():
 	<widget name="about" conditional="about" position="%d,%d" size="%d,%d" font="Regular;%d" transparent="1"/>
 	<widget name="oealogo" conditional="oealogo" position="e-%d-176,e-%d-142" size="176,142" zPosition="-1" transparent="1" alphatest="blend"/>"""
 	templateThreeValues = [
-		marginLeft, marginTopTexts, widgetWidth, configItemHeight * configListLength, fontSize, # templateThreeXML line 1
-		buttonMargin, buttonMarginBottom # templateThreeXML line 2
+		marginLeft, marginTopTexts, widgetWidth, configItemHeight * configListLength, fontSize,  # templateThreeXML line 1
+		buttonMargin, buttonMarginBottom  # templateThreeXML line 2
 	]
 	return insertValues(templateThreeXML, templateThreeValues)
 
 
 def templateFour():
 	# template four is for ordering
-	templateFourHeight = configItemHeight * configListLength # make the template 15 lines high
+	templateFourHeight = configItemHeight * configListLength  # make the template 15 lines high
 	templateFourXML = """
 	<widget source="list" render="Listbox" position="%d,%d" size="%d,%d" scrollbarMode="showOnDemand">
 		<convert type="TemplatedMultiContent">
@@ -151,11 +151,11 @@ def templateFour():
 	</widget>
 	<widget name="pleasewait" position="%d,%d" size="%d,%d" font="Regular;%d" halign="center" valign="center" transparent="0" zPosition="+1"/>"""
 	templateFourValues = [
-		marginLeft, marginTop, widgetWidth, templateFourHeight, # templateFourXML line 1
-		2, 2, widgetWidth - 4, configItemHeight - 2, # templateFourXML line 4
+		marginLeft, marginTop, widgetWidth, templateFourHeight,  # templateFourXML line 1
+		2, 2, widgetWidth - 4, configItemHeight - 2,  # templateFourXML line 4
 		fontSize,
 		configItemHeight,
-		0, templateFourHeight // 2, widgetWidth, configItemHeight, fontSize # templateFourXML line 11
+		0, templateFourHeight // 2, widgetWidth, configItemHeight, fontSize  # templateFourXML line 11
 	]
 	return insertValues(templateFourXML, templateFourValues)
 
@@ -164,23 +164,23 @@ def templateFive():
 	# template five is for log
 	templateFiveXML = '\n\t<widget name="list" position="%d,%d" size="%d,%d" itemHeight="%d" font="Regular;%d" scrollbarMode="showOnDemand"/>'
 	templateFiveValues = [
-		marginLeft, marginTop, widgetWidth, configItemHeight * configListLength, configItemHeight, fontSize # templateFiveXML line 1
+		marginLeft, marginTop, widgetWidth, configItemHeight * configListLength, configItemHeight, fontSize  # templateFiveXML line 1
 	]
 	return insertValues(templateFiveXML, templateFiveValues)
 
 
 def templateSix():
 	# template six is for setup
-	templateSixHeight = configItemHeight * (configListLength - 5) # leave 5 lines for description widget
-	templateSixDescHeight = configItemHeight * 4 # make the description 4 lines high
+	templateSixHeight = configItemHeight * (configListLength - 5)  # leave 5 lines for description widget
+	templateSixDescHeight = configItemHeight * 4  # make the description 4 lines high
 	templateSixXML = """
 	<widget name="config" position="%d,%d" size="%d,%d" itemHeight="%d" font="Regular;%d" scrollbarMode="showOnDemand"/>
 	<widget name="description" position="%d,%d" size="%d,%d" font="Regular;%d" halign="center" valign="top" transparent="0"/>
 	<widget name="pleasewait" position="%d,%d" size="%d,%d" font="Regular;%d" halign="center" valign="center" transparent="0" zPosition="+1"/>"""
 	templateSixValues = [
-		marginLeft, marginTop, widgetWidth, templateSixHeight, configItemHeight, fontSize, # templateSixXML line 1
-		marginLeft, templateSixHeight + configItemHeight, widgetWidth, templateSixDescHeight, descriptionsFontSize, # templateSixXML line 3
-		0, templateSixHeight // 2, widgetWidth, configItemHeight, fontSize # templateSixXML line 3
+		marginLeft, marginTop, widgetWidth, templateSixHeight, configItemHeight, fontSize,  # templateSixXML line 1
+		marginLeft, templateSixHeight + configItemHeight, widgetWidth, templateSixDescHeight, descriptionsFontSize,  # templateSixXML line 3
+		0, templateSixHeight // 2, widgetWidth, configItemHeight, fontSize  # templateSixXML line 3
 	]
 	return insertValues(templateSixXML, templateSixValues)
 
@@ -201,7 +201,7 @@ def downloadBar():
 	tunerLetterLeftAlign = 955
 	tunerLetterWidth = fontSize
 	snrBoxLeftAlign = 980
-	snrBoxWidth = 87 # up to 7 chars, e.g. "16.2 dB"
+	snrBoxWidth = 87  # up to 7 chars, e.g. "16.2 dB"
 	progressTextBoxLeftAlign = 1080
 	progressTextBoxWidth = 87
 	progressPercentLeftAlign = 1187
@@ -230,15 +230,15 @@ def downloadBar():
 		</widget>
 	</screen>"""
 	downloadBarValues = [
-		getDesktop(0).size().width(), downloadBarHeight, # downloadBarXML line 1, "screen" element
-		actionBoxLeftAlign, textBoxTopMargin, actionBoxWidth, textBoxHeight, fontSize, # downloadBarXML line 2, "action" widget
-		statusBoxLeftAlign, textBoxTopMargin, statusBoxWidth, textBoxHeight, fontSize, # downloadBarXML line 3, "status" widget
-		lockImageLeftAlign, lockImageTopMargin, lockImageWidth, lockImageHeight, # downloadBarXML, "lock_on" widget
-		lockImageLeftAlign, lockImageTopMargin, lockImageWidth, lockImageHeight, # downloadBarXML, "lock_off" widget
-		tunerLetterLeftAlign, textBoxTopMargin, tunerLetterWidth, textBoxHeight, fontSize, # downloadBarXML, "tuner letter" widget
-		snrBoxLeftAlign, textBoxTopMargin, snrBoxWidth, textBoxHeight, fontSize, # downloadBarXML, "SNR" widget
-		progressTextBoxLeftAlign, textBoxTopMargin, progressTextBoxWidth, textBoxHeight, fontSize, # downloadBarXML, "progress text" widget
-		progressPercentLeftAlign, textBoxTopMargin, progressPercentBoxWidth, textBoxHeight, fontSize, # downloadBarXML, "progress percent" widget
+		getDesktop(0).size().width(), downloadBarHeight,  # downloadBarXML line 1, "screen" element
+		actionBoxLeftAlign, textBoxTopMargin, actionBoxWidth, textBoxHeight, fontSize,  # downloadBarXML line 2, "action" widget
+		statusBoxLeftAlign, textBoxTopMargin, statusBoxWidth, textBoxHeight, fontSize,  # downloadBarXML line 3, "status" widget
+		lockImageLeftAlign, lockImageTopMargin, lockImageWidth, lockImageHeight,  # downloadBarXML, "lock_on" widget
+		lockImageLeftAlign, lockImageTopMargin, lockImageWidth, lockImageHeight,  # downloadBarXML, "lock_off" widget
+		tunerLetterLeftAlign, textBoxTopMargin, tunerLetterWidth, textBoxHeight, fontSize,  # downloadBarXML, "tuner letter" widget
+		snrBoxLeftAlign, textBoxTopMargin, snrBoxWidth, textBoxHeight, fontSize,  # downloadBarXML, "SNR" widget
+		progressTextBoxLeftAlign, textBoxTopMargin, progressTextBoxWidth, textBoxHeight, fontSize,  # downloadBarXML, "progress text" widget
+		progressPercentLeftAlign, textBoxTopMargin, progressPercentBoxWidth, textBoxHeight, fontSize,  # downloadBarXML, "progress percent" widget
 	]
 	return insertValues(downloadBarXML, downloadBarValues)
 

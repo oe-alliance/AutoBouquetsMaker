@@ -97,7 +97,7 @@ class BouquetsReader():
 			transponder["transport_stream_id"] = int(first_row[1], 16)
 			transponder["original_network_id"] = int(first_row[2], 16)
 
-			#print>>log, "%x:%x:%x" % (namespace, transport_stream_id, original_network_id)
+			# print>>log, "%x:%x:%x" % (namespace, transport_stream_id, original_network_id)
 			second_row = rows[1].strip()
 			transponder["dvb_type"] = 'dvb' + second_row[0]
 			if transponder["dvb_type"] not in ["dvbs", "dvbt", "dvbc"]:
@@ -125,19 +125,19 @@ class BouquetsReader():
 
 				transponder["inversion"] = int(second_row[5])
 				transponder["flags"] = int(second_row[6])
-				if len(second_row) == 7: # DVB-S
+				if len(second_row) == 7:  # DVB-S
 					transponder["system"] = 0
-				else: # DVB-S2
+				else:  # DVB-S2
 					transponder["system"] = int(second_row[7])
 					transponder["modulation"] = int(second_row[8])
 					transponder["roll_off"] = int(second_row[9])
 					transponder["pilot"] = int(second_row[10])
-					if len(second_row) > 13: # Multistream
+					if len(second_row) > 13:  # Multistream
 						transponder["is_id"] = int(second_row[11])
 						transponder["pls_code"] = int(second_row[12])
 						transponder["pls_mode"] = int(second_row[13])
-						if len(second_row) > 15: # T2MI
-							if not (second_row[14] and second_row[15]): # temporary workaround for some broken settings with empty fields (skip the service)
+						if len(second_row) > 15:  # T2MI
+							if not (second_row[14] and second_row[15]):  # temporary workaround for some broken settings with empty fields (skip the service)
 								continue
 							transponder["t2mi_plp_id"] = int(second_row[14])
 							transponder["t2mi_pid"] = int(second_row[15])
@@ -247,20 +247,20 @@ class BouquetsReader():
 
 					transponder["inversion"] = int(second_part[5])
 					transponder["flags"] = int(second_part[6])
-					if len(second_part) == 7: # DVB-S
+					if len(second_part) == 7:  # DVB-S
 						transponder["system"] = 0
-					else: # DVB-S2
+					else:  # DVB-S2
 						transponder["system"] = int(second_part[7])
 						transponder["modulation"] = int(second_part[8])
 						transponder["roll_off"] = int(second_part[9])
 						transponder["pilot"] = int(second_part[10])
-						for part in line.strip().split(",")[2:]: # Multistream/T2MI
+						for part in line.strip().split(",")[2:]:  # Multistream/T2MI
 							if part.startswith("MIS/PLS:") and len(part[8:].split(":")) == 3:
 								transponder["is_id"] = int(part[8:].split(":")[0])
 								transponder["pls_code"] = int(part[8:].split(":")[1])
 								transponder["pls_mode"] = int(part[8:].split(":")[2])
 							elif part.startswith("T2MI:") and len(part[5:].split(":")) == 2:
-								if not (part[5:].split(":")[0] and part[5:].split(":")[1]): # temporary workaround for some broken settings with empty fields (skip the service)
+								if not (part[5:].split(":")[0] and part[5:].split(":")[1]):  # temporary workaround for some broken settings with empty fields (skip the service)
 									continue
 								transponder["t2mi_plp_id"] = int(part[5:].split(":")[0])
 								transponder["t2mi_pid"] = int(part[5:].split(":")[1])

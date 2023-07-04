@@ -8,9 +8,9 @@ import dvbreader
 import datetime
 import time
 
-#from operator import itemgetter
+# from operator import itemgetter
 
-bat_pid = 0xbba # This is the correct PID on Freesat home transponder. On other transponders use 0xf01.
+bat_pid = 0xbba  # This is the correct PID on Freesat home transponder. On other transponders use 0xf01.
 bat_table = 0x4a
 mask = 0xff
 frontend = 0
@@ -42,7 +42,7 @@ def readBouquet(bouquet_id):
 
 		section = dvbreader.read_bat(fd, bat_table)
 		if section is None:
-			time.sleep(0.1)	# no data.. so we wait a bit
+			time.sleep(0.1)  # no data.. so we wait a bit
 			continue
 
 		if section["header"]["table_id"] == bat_table:
@@ -97,11 +97,11 @@ def getSortKey(elem):
 		return "G2 " + elem["name"]
 
 
-#for bouquet_id in [0x100, 0x101]:
+# for bouquet_id in [0x100, 0x101]:
 for bouquet_id in [0x100, 0x101, 0x102, 0x103, 0x110, 0x111, 0x112, 0x113, 0x118, 0x119, 0x11a, 0x11b]:
 	readBouquet(bouquet_id)
 
-#bouquets_list = sorted(bouquets_list, key=itemgetter('name'))
+# bouquets_list = sorted(bouquets_list, key=itemgetter('name'))
 bouquets_list = sorted(bouquets_list, key=getSortKey)
 for bouquet in bouquets_list:
 	key = "freesat_%x_%x" % (bouquet["bouquet"], bouquet["region"])

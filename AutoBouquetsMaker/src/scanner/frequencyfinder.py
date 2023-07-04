@@ -15,7 +15,7 @@ from Components.NimManager import nimmanager
 from enigma import eDVBFrontendParameters, eDVBFrontendParametersTerrestrial, eDVBResourceManager, eTimer, iFrontendInformation
 
 import dvbreader
-#from scanner.main import AutoBouquetsMaker
+# from scanner.main import AutoBouquetsMaker
 from Plugins.SystemPlugins.AutoBouquetsMaker.skin_templates import skin_downloadBar
 
 import os
@@ -29,7 +29,7 @@ import time
 from Tools.Directories import resolveFilename, fileExists, SCOPE_CURRENT_SKIN
 
 
-def setParams(frequency, system, bandwidth=8): # freq is nine digits (474000000)
+def setParams(frequency, system, bandwidth=8):  # freq is nine digits (474000000)
 	params = eDVBFrontendParametersTerrestrial()
 	params.frequency = frequency
 	params.bandwidth = bandwidth * 1000000
@@ -50,19 +50,19 @@ def setParamsFe(params):
 	return params_fe
 
 
-def channel2freq(channel, bandwidth=8): # Europe channels
-	if 4 < channel < 13: # Band III
+def channel2freq(channel, bandwidth=8):  # Europe channels
+	if 4 < channel < 13:  # Band III
 		return (((177 + (bandwidth * (channel - 5))) * 1000000) + 500000)
-	elif 20 < channel < 70: # Bands IV,V
-		return ((474 + (bandwidth * (channel - 21))) * 1000000) # returns nine digits
+	elif 20 < channel < 70:  # Bands IV,V
+		return ((474 + (bandwidth * (channel - 21))) * 1000000)  # returns nine digits
 
 
 def getChannelNumber(frequency):
 	f = (frequency + 50000) // 100000 / 10.
-	if 174 < f < 230: 	# III
+	if 174 < f < 230:  # III
 		d = (f + 1) % 7
 		return str(int(f - 174) // 7 + 5) + (d < 3 and "-" or d > 4 and "+" or "")
-	elif 470 <= f < 863: 	# IV,V
+	elif 470 <= f < 863:  # IV,V
 		d = (f + 2) % 8
 		return str(int(f - 470) // 8 + 21) + (d < 3.5 and "-" or d > 4.5 and "+" or "")
 	return ""
@@ -94,11 +94,11 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 			"cancel": self.keyCancel,
 		}, -2)
 
-		self.selectedNIM = -1 # -1 is automatic selection
+		self.selectedNIM = -1  # -1 is automatic selection
 		self.uhf_vhf = "uhf"
-		self.networkid = 0 # this is an onid, not a regional network id
+		self.networkid = 0  # this is an onid, not a regional network id
 		self.restrict_to_networkid = False
-		if args: # These can be added in ABM config at some time in the future
+		if args:  # These can be added in ABM config at some time in the future
 			if "feid" in args:
 				self.selectedNIM = args["feid"]
 			if "uhf_vhf" in args:
@@ -107,30 +107,30 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 				self.networkid = args["networkid"]
 			if "restrict_to_networkid" in args:
 				self.restrict_to_networkid = args["restrict_to_networkid"]
-		self.isT2tuner = False # unlikely any modern internal terrestrial tuner can't play T2, but some USB tuners can't
+		self.isT2tuner = False  # unlikely any modern internal terrestrial tuner can't play T2, but some USB tuners can't
 		self.session.postScanService = None
 		self.index = 0
 		self.frequency = 0
 		self.system = eDVBFrontendParametersTerrestrial.System_DVB_T
-		self.lockTimeout = 50 	# 100ms for tick - 5 sec
-		self.snrTimeout = 100 	# 100ms for tick - 10 sec
-		#self.bandwidth = 8 # MHz
+		self.lockTimeout = 50  # 100ms for tick - 5 sec
+		self.snrTimeout = 100  # 100ms for tick - 10 sec
+		# self.bandwidth = 8 # MHz
 		self.scanTransponders = []
 		if self.uhf_vhf == "uhf_vhf":
 			bandwidth = 7
-			for a in list(range(5, 13)): # channel
-				for b in (eDVBFrontendParametersTerrestrial.System_DVB_T, eDVBFrontendParametersTerrestrial.System_DVB_T2): # system
+			for a in list(range(5, 13)):  # channel
+				for b in (eDVBFrontendParametersTerrestrial.System_DVB_T, eDVBFrontendParametersTerrestrial.System_DVB_T2):  # system
 					self.scanTransponders.append({"frequency": channel2freq(a, bandwidth), "system": b, "bandwidth": bandwidth})
 		if self.uhf_vhf in ("uhf", "uhf_vhf"):
 			bandwidth = 8
-			for a in list(range(21, 70)): # channel
-				for b in (eDVBFrontendParametersTerrestrial.System_DVB_T, eDVBFrontendParametersTerrestrial.System_DVB_T2): # system
+			for a in list(range(21, 70)):  # channel
+				for b in (eDVBFrontendParametersTerrestrial.System_DVB_T, eDVBFrontendParametersTerrestrial.System_DVB_T2):  # system
 					self.scanTransponders.append({"frequency": channel2freq(a, bandwidth), "system": b, "bandwidth": bandwidth})
 		self.transponders_found = []
 		self.transponders_unique = {}
-#		self.custom_dir = os.path.dirname(__file__) + "/../custom"
-#		self.customfile = self.custom_dir + "/CustomTranspondersOverride.xml"
-#		self.removeFileIfExists(self.customfile)
+# 		self.custom_dir = os.path.dirname(__file__) + "/../custom"
+# 		self.customfile = self.custom_dir + "/CustomTranspondersOverride.xml"
+# 		self.removeFileIfExists(self.customfile)
 		self.providers_dir = os.path.dirname(__file__) + "/../providers"
 		self.providersfile = self.providers_dir + "/terrestrial_finder.xml"
 		self.network_name = None
@@ -193,7 +193,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 			self.searchtimer.callback.append(self.getFrontend)
 			self.searchtimer.start(100, 1)
 		else:
-			if len({k: v for k, v in list(self.transponders_unique.items()) if v["system"] == eDVBFrontendParametersTerrestrial.System_DVB_T}) > 0: # check DVB-T transponders exist
+			if len({k: v for k, v in list(self.transponders_unique.items()) if v["system"] == eDVBFrontendParametersTerrestrial.System_DVB_T}) > 0:  # check DVB-T transponders exist
 				if self.frontend:
 					self.frontend = None
 					del (self.rawchannel)
@@ -201,10 +201,10 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 				if self.session.postScanService:
 					self.session.nav.playService(self.session.postScanService)
 					self.session.postScanService = None
-#				self.saveTransponderList()
-#				message = "Transponder frequencies updated.\nDo you want to continue with a scan for services."
-#				question = self.session.openWithCallback(self.scanMessageCallback, MessageBox, message, type=MessageBox.TYPE_YESNO, default=True)
-#				question.setTitle(_("ABM frequency finder"))
+# 				self.saveTransponderList()
+# 				message = "Transponder frequencies updated.\nDo you want to continue with a scan for services."
+# 				question = self.session.openWithCallback(self.scanMessageCallback, MessageBox, message, type=MessageBox.TYPE_YESNO, default=True)
+# 				question.setTitle(_("ABM frequency finder"))
 				self.saveProviderFile()
 				message = 'New provider created called "%s terrestrial".\n Disable the existing ABM terrestrial provider and perform an ABM scan with the new one.' % self.strongestTransponder["network_name"]
 				self.showAdvice(message)
@@ -215,7 +215,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 				print("[ABM-FrequencyFinder][Search] No terrestrial multiplexes found.")
 				self.showError(_('No terrestrial multiplexes found.'))
 
-	def config_mode(self, nim): # Workaround for OpenATV > 5.3
+	def config_mode(self, nim):  # Workaround for OpenATV > 5.3
 		try:
 			return nim.config_mode
 		except AttributeError:
@@ -224,7 +224,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 	def getFrontend(self):
 		print("[ABM-FrequencyFinder][getFrontend] searching for available tuner")
 		nimList = []
-		if self.selectedNIM < 0: # automatic tuner selection
+		if self.selectedNIM < 0:  # automatic tuner selection
 			for nim in nimmanager.nim_slots:
 				if self.config_mode(nim) not in ("nothing",) and (nim.isCompatible("DVB-T2") or (nim.isCompatible("DVB-S") and nim.canBeCompatible("DVB-T2"))):
 					nimList.append(nim.slot)
@@ -238,7 +238,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 				print("[ABM-FrequencyFinder][getFrontend] No terrestrial tuner found.")
 				self.showError(_('No terrestrial tuner found.'))
 				return
-		else: # manual tuner selection, and subsequent iterations
+		else:  # manual tuner selection, and subsequent iterations
 			nim = nimmanager.nim_slots[self.selectedNIM]
 			if self.config_mode(nim) not in ("nothing",) and (nim.isCompatible("DVB-T2") or (nim.isCompatible("DVB-S") and nim.canBeCompatible("DVB-T2"))):
 				nimList.append(nim.slot)
@@ -263,7 +263,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 			self.showError(_('Cannot retrieve Resource Manager instance'))
 			return
 
-		if self.selectedNIM < 0: # automatic tuner selection
+		if self.selectedNIM < 0:  # automatic tuner selection
 			print("[ABM-FrequencyFinder][getFrontend] Choosing NIM")
 
 		# stop pip if running
@@ -289,9 +289,9 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 		self.frontend = None
 		self.rawchannel = None
 
-		nimList.reverse() # start from the last
+		nimList.reverse()  # start from the last
 		for slotid in nimList:
-			if current_slotid == -1:	# mark the first valid slotid in case of no other one is free
+			if current_slotid == -1:  # mark the first valid slotid in case of no other one is free
 				current_slotid = slotid
 			self.rawchannel = resmanager.allocateRawChannel(slotid)
 			if self.rawchannel:
@@ -328,7 +328,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 
 		print("[ABM-FrequencyFinder][getFrontend] Will wait up to %i seconds for tuner lock." % (self.lockTimeout // 10))
 
-		self.selectedNIM = current_slotid # Remember for next iteration
+		self.selectedNIM = current_slotid  # Remember for next iteration
 
 		self.frontend = self.rawchannel.getFrontend()
 		if not self.frontend:
@@ -358,7 +358,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 		self.dict = {}
 		self.frontend.getFrontendStatus(self.dict)
 		if self.dict["tuner_state"] == "TUNING":
-			if self.lockcounter < 1: # only show this once in the log per retune event
+			if self.lockcounter < 1:  # only show this once in the log per retune event
 				print("[ABM-FrequencyFinder][checkTunerLock] TUNING")
 		elif self.dict["tuner_state"] == "LOCKED":
 			print("[ABM-FrequencyFinder][checkTunerLock] LOCKED")
@@ -391,7 +391,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 		return
 
 	def signalQualityWait(self):
-		self.readNIT() # by the time this is completed SNR should be stable
+		self.readNIT()  # by the time this is completed SNR should be stable
 		signalQuality = self.frontend.readFrontendData(iFrontendInformation.signalQuality)
 		if signalQuality > 0:
 			found = {"frequency": self.frequency, "tsid": self.tsid, "onid": self.onid, "system": self.system, "bandwidth": self.bandwidth, "signalQuality": signalQuality, "network_name": self.network_name, "custom_transponder_needed": self.custom_transponder_needed}
@@ -409,12 +409,12 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 	def getCurrentTsidOnid(self, from_retune=False):
 		adapter = 0
 		demuxer_device = "/dev/dvb/adapter%d/demux%d" % (adapter, self.demuxer_id)
-		start = time.time() # for debug info
+		start = time.time()  # for debug info
 
 		sdt_pid = 0x11
 		sdt_current_table_id = 0x42
 		mask = 0xff
-		tsidOnidTimeout = 5 # maximum time allowed to read the service descriptor table (seconds)
+		tsidOnidTimeout = 5  # maximum time allowed to read the service descriptor table (seconds)
 		self.tsid = None
 		self.onid = None
 
@@ -433,7 +433,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 
 			section = dvbreader.read_sdt(fd, sdt_current_table_id, 0x00)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if section["header"]["table_id"] == sdt_current_table_id:
@@ -447,11 +447,11 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 	def readNIT(self):
 		adapter = 0
 		demuxer_device = "/dev/dvb/adapter%d/demux%d" % (adapter, self.demuxer_id)
-		start = time.time() # for debug info
+		start = time.time()  # for debug info
 
 		nit_current_pid = 0x10
 		nit_current_table_id = 0x40
-		nit_other_table_id = 0x00 # don't read other table
+		nit_other_table_id = 0x00  # don't read other table
 
 		self.network_name = None
 		self.custom_transponder_needed = True
@@ -460,7 +460,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 			mask = 0xff
 		else:
 			mask = nit_current_table_id ^ nit_other_table_id ^ 0xff
-		nit_current_timeout = 20 # maximum time allowed to read the network information table (seconds)
+		nit_current_timeout = 20  # maximum time allowed to read the network information table (seconds)
 
 		nit_current_version_number = -1
 		nit_current_sections_read = []
@@ -483,7 +483,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 
 			section = dvbreader.read_nit(fd, nit_current_table_id, nit_other_table_id)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if section["header"]["table_id"] == nit_current_table_id and not nit_current_completed:
@@ -515,13 +515,13 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 		print("[ABM-FrequencyFinder][readNIT] NIT read time %.1f seconds." % (time.time() - start))
 
 		# descriptor_tag 0x5A is DVB-T, descriptor_tag 0x7f is DVB-T
-		transponders = [t for t in nit_current_content if "descriptor_tag" in t and t["descriptor_tag"] in (0x5A, 0x7f) and t["original_network_id"] == self.onid and t["transport_stream_id"] == self.tsid] # this should only ever have a length of one transponder
+		transponders = [t for t in nit_current_content if "descriptor_tag" in t and t["descriptor_tag"] in (0x5A, 0x7f) and t["original_network_id"] == self.onid and t["transport_stream_id"] == self.tsid]  # this should only ever have a length of one transponder
 		print("[ABM-FrequencyFinder][readNIT] transponders", transponders)
 		if transponders:
 
-			if transponders[0]["descriptor_tag"] == 0x5A: # DVB-T
+			if transponders[0]["descriptor_tag"] == 0x5A:  # DVB-T
 				self.system = eDVBFrontendParametersTerrestrial.System_DVB_T
-			else: # must be DVB-T2
+			else:  # must be DVB-T2
 				self.system = eDVBFrontendParametersTerrestrial.System_DVB_T2
 
 			if "frequency" in transponders[0] and abs((transponders[0]["frequency"] * 10) - self.frequency) < 1000000:
@@ -530,32 +530,32 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 					print("[ABM-FrequencyFinder][readNIT] updating transponder frequency from %.03f MHz to %.03f MHz" % (self.frequency // 1000000, transponders[0]["frequency"] // 100000))
 					self.frequency = transponders[0]["frequency"] * 10
 
-#	def saveTransponderList(self):
-#		# make custom transponders file content
-#		customTransponderList = []
-#		customTransponderList.append('<provider>\n')
-#		customTransponderList.append('\t<customtransponders>\n')
-#		for tsidOnidKey in self.iterateUniqueTranspondersByFrequency():
-#			transponder = self.transponders_unique[tsidOnidKey]
-#			customTransponderList.append('\t\t<customtransponder key="_OVERRIDE_" frequency="%d" transport_stream_id="%04x" system="%d"/><!-- original_network_id="%04x" signalQuality="%05d" -->\n' % (transponder["frequency"], transponder["tsid"], transponder["system"], transponder["onid"], transponder["signalQuality"]))
-#		customTransponderList.append('\t</customtransponders>\n')
-#		customTransponderList.append('</provider>\n')
-#
-#		# save to ABM custom folder
-#		outFile = open(self.customfile, "w")
-#		outFile.write(''.join(customTransponderList))
-#		outFile.close()
-#		print("[ABM-FrequencyFinder][saveTransponderList] Custom transponders file saved."
+# 	def saveTransponderList(self):
+# 		# make custom transponders file content
+# 		customTransponderList = []
+# 		customTransponderList.append('<provider>\n')
+# 		customTransponderList.append('\t<customtransponders>\n')
+# 		for tsidOnidKey in self.iterateUniqueTranspondersByFrequency():
+# 			transponder = self.transponders_unique[tsidOnidKey]
+# 			customTransponderList.append('\t\t<customtransponder key="_OVERRIDE_" frequency="%d" transport_stream_id="%04x" system="%d"/><!-- original_network_id="%04x" signalQuality="%05d" -->\n' % (transponder["frequency"], transponder["tsid"], transponder["system"], transponder["onid"], transponder["signalQuality"]))
+# 		customTransponderList.append('\t</customtransponders>\n')
+# 		customTransponderList.append('</provider>\n')
+
+# 		# save to ABM custom folder
+# 		outFile = open(self.customfile, "w")
+# 		outFile.write(''.join(customTransponderList))
+# 		outFile.close()
+# 		print("[ABM-FrequencyFinder][saveTransponderList] Custom transponders file saved."
 
 	def saveProviderFile(self):
 		customProviderList = []
 		self.strongestTransponder = self.transponders_unique[self.iterateUniqueTranspondersBySignalQuality()[-1]]
-		for tsidOnidKey in self.iterateUniqueTranspondersBySignalQuality()[::-1]: # iterate in reverse order and select the first system 0 transponder
+		for tsidOnidKey in self.iterateUniqueTranspondersBySignalQuality()[::-1]:  # iterate in reverse order and select the first system 0 transponder
 			transponder = self.transponders_unique[tsidOnidKey]
 			if transponder["system"] == 0:
 				self.strongestTransponder = transponder
 				break
-		network_name = re.sub(r'&(?![A-Za-z]+[0-9]*;|#[0-9]+;|#x[0-9a-fA-F]+;)', r'&amp;', self.strongestTransponder["network_name"]) # regex to avoid unencoded ampersands that are not entities
+		network_name = re.sub(r'&(?![A-Za-z]+[0-9]*;|#[0-9]+;|#x[0-9a-fA-F]+;)', r'&amp;', self.strongestTransponder["network_name"])  # regex to avoid unencoded ampersands that are not entities
 		customProviderList.append('<provider>\n')
 		customProviderList.append('\t<name>%s terrestrial</name>\n' % network_name)
 		customProviderList.append('\t<streamtype>dvbt</streamtype>\n')
@@ -621,17 +621,17 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 		sort_list = [(x[0], x[1]["signalQuality"]) for x in list(self.transponders_unique.items())]
 		return [x[0] for x in sorted(sort_list, key=lambda listItem: listItem[1])]
 
-#	def scanMessageCallback(self, answer):
-#		if answer:
-#			self.session.open(AutoBouquetsMaker)
-#		self.close()
+# 	def scanMessageCallback(self, answer):
+# 		if answer:
+# 			self.session.open(AutoBouquetsMaker)
+# 		self.close()
 
-#	def removeFileIfExists(self, filename):
-#		try:
-#			os.remove(filename)
-#		except OSError as e:
-#			if e.errno != errno.ENOENT: # errno.ENOENT = no such file or directory
-#				raise # re-raise exception if a different error occurred
+# 	def removeFileIfExists(self, filename):
+# 		try:
+# 			os.remove(filename)
+# 		except OSError as e:
+# 			if e.errno != errno.ENOENT: # errno.ENOENT = no such file or directory
+# 				raise # re-raise exception if a different error occurred
 
 	def __onClose(self):
 		if self.frontend:

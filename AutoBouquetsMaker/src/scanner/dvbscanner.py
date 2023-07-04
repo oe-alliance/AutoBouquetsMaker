@@ -37,9 +37,9 @@ class DvbScanner():
 		self.fastscan_table_id = 0x00
 		self.ignore_visible_service_flag = 0
 		self.extra_debug = config.autobouquetsmaker.level.value == "expert" and config.autobouquetsmaker.extra_debug.value
-		self.namespace_complete = not (config.usage.subnetwork.value if hasattr(config.usage, "subnetwork") else True) # config.usage.subnetwork not available in all images
-		self.namespace_complete_cable = not (config.usage.subnetwork_cable.value if hasattr(config.usage, "subnetwork_cable") else True) # config.usage.subnetwork not available in all images
-		self.namespace_complete_terrestrial = not (config.usage.subnetwork_terrestrial.value if hasattr(config.usage, "subnetwork_terrestrial") else True) # config.usage.subnetwork not available in all images
+		self.namespace_complete = not (config.usage.subnetwork.value if hasattr(config.usage, "subnetwork") else True)  # config.usage.subnetwork not available in all images
+		self.namespace_complete_cable = not (config.usage.subnetwork_cable.value if hasattr(config.usage, "subnetwork_cable") else True)  # config.usage.subnetwork not available in all images
+		self.namespace_complete_terrestrial = not (config.usage.subnetwork_terrestrial.value if hasattr(config.usage, "subnetwork_terrestrial") else True)  # config.usage.subnetwork not available in all images
 
 	def isValidOnidTsid(self, orbital_position, onid, tsid):
 		if onid == 0 or onid == 1 and tsid < 2 or onid >= 0xff00:
@@ -150,7 +150,7 @@ class DvbScanner():
 
 			section = dvbreader.read_sdt(fd, sdt_current_table_id, 0x00)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if section["header"]["table_id"] == sdt_current_table_id:
@@ -209,7 +209,7 @@ class DvbScanner():
 
 			section = dvbreader.read_nit(fd, self.nit_current_table_id, self.nit_other_table_id)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if self.extra_debug:
@@ -300,30 +300,30 @@ class DvbScanner():
 		for transponder in nit_content:
 			if self.extra_debug:
 				print("[ABM-DvbScanner] NIT content", transponder)
-			if "descriptor_tag" in transponder and transponder["descriptor_tag"] == 0x41: # service
+			if "descriptor_tag" in transponder and transponder["descriptor_tag"] == 0x41:  # service
 				key = "%x:%x:%x" % (transponder["transport_stream_id"], transponder["original_network_id"], transponder["service_id"])
 				service_dict_tmp[key] = transponder
 				continue
-			if "descriptor_tag" in transponder and transponder["descriptor_tag"] in {0x82, 0x83}: # lcn
+			if "descriptor_tag" in transponder and transponder["descriptor_tag"] in {0x82, 0x83}:  # lcn
 				key = "%x:%x:%x" % (transponder["transport_stream_id"], transponder["original_network_id"], transponder["service_id"])
 				logical_channel_number_dict_tmp[key] = transponder
 				continue
-			if "descriptor_tag" in transponder and transponder["descriptor_tag"] == 0x87: # LCN V2
+			if "descriptor_tag" in transponder and transponder["descriptor_tag"] == 0x87:  # LCN V2
 				if transponder["channel_list_id"] == bouquet_id:
 					key = "%x:%x:%x" % (transponder["transport_stream_id"], transponder["original_network_id"], transponder["service_id"])
 					logical_channel_number_dict_tmp[key] = transponder
 				continue
-			if "descriptor_tag" in transponder and transponder["descriptor_tag"] == 0x88: # HD lcn
+			if "descriptor_tag" in transponder and transponder["descriptor_tag"] == 0x88:  # HD lcn
 				key = "%x:%x:%x" % (transponder["transport_stream_id"], transponder["original_network_id"], transponder["service_id"])
 				hd_logical_channel_number_dict_tmp[key] = transponder
 				continue
 			customtransponder = {}
-			if len(customtransponders) > 0 and self.dvbtype == 'dvbt': # Only for DVB-T/T2 transponder override.
+			if len(customtransponders) > 0 and self.dvbtype == 'dvbt':  # Only for DVB-T/T2 transponder override.
 				for key in list(range(0, len(customtransponders))):
 					if customtransponders[key]["transport_stream_id"] == transponder["transport_stream_id"]:
 						customtransponder = customtransponders[key]
 						break
-			if "descriptor_tag" in transponder and transponder["descriptor_tag"] == 0x7f and len(customtransponder) == 0: #DVB-T2
+			if "descriptor_tag" in transponder and transponder["descriptor_tag"] == 0x7f and len(customtransponder) == 0:  # DVB-T2
 				# if no custom transponer information is available look in lamedb just in case it is already there
 				key = "%x:%x:%x" % (0xEEEE0000, transponder["transport_stream_id"], transponder["original_network_id"])
 				if key not in transponders:
@@ -333,7 +333,7 @@ class DvbScanner():
 			transponder["dvb_type"] = self.dvbtype
 			transponder["bouquet_type"] = bouquettype
 
-			if transponder["dvb_type"] == 'dvbc': # DVB-C
+			if transponder["dvb_type"] == 'dvbc':  # DVB-C
 				transponder["symbol_rate"] = transponder["symbol_rate"] * 100
 				transponder["flags"] = 0
 				if transponder["fec_inner"] != 15 and transponder["fec_inner"] > 9:
@@ -342,8 +342,8 @@ class DvbScanner():
 				transponder["namespace"] = self.buildNamespace(transponder)
 				transponder["inversion"] = transponder["fec_outer"]
 				transponder["system"] = 0
-			elif transponder["dvb_type"] == 'dvbt': # DVB-T
-				if len(customtransponder) == 0: #no override or DVB-T2 transponder
+			elif transponder["dvb_type"] == 'dvbt':  # DVB-T
+				if len(customtransponder) == 0:  # no override or DVB-T2 transponder
 					transponder["frequency"] = transponder["frequency"] * 10
 					transponder["namespace"] = self.buildNamespace(transponder)
 					transponder["inversion"] = 0
@@ -364,8 +364,8 @@ class DvbScanner():
 					transponder["flags"] = customtransponder["flags"]
 					transponder["system"] = customtransponder["system"]
 					transponder["plpid"] = customtransponder["plpid"]
-			elif transponder["dvb_type"] == 'dvbs': # DVB-S
-				if transponder["descriptor_tag"] != 0x43: # Confirm DVB SI data is DVB-S
+			elif transponder["dvb_type"] == 'dvbs':  # DVB-S
+				if transponder["descriptor_tag"] != 0x43:  # Confirm DVB SI data is DVB-S
 					continue
 				transponder["symbol_rate"] = transponder["symbol_rate"] * 100
 				transponder["flags"] = 0
@@ -379,7 +379,7 @@ class DvbScanner():
 				# shift Ka-band transponders to correspond with Ka positions in satellites.xml
 				if transponder["frequency"] > 12999000:
 					orbital_position += 2
-				if orbital_position != 0 and transponder["west_east_flag"] == 0: # 0 == west, 1 == east
+				if orbital_position != 0 and transponder["west_east_flag"] == 0:  # 0 == west, 1 == east
 					orbital_position = 3600 - orbital_position
 				transponder["orbital_position"] = orbital_position
 				transponder["pilot"] = 2
@@ -478,7 +478,7 @@ class DvbScanner():
 
 			section = dvbreader.read_bat(fd, self.bat_table_id)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if self.extra_debug:
@@ -581,7 +581,7 @@ class DvbScanner():
 
 			section = dvbreader.read_sdt(fd, self.sdt_current_table_id, self.sdt_other_table_id)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if self.extra_debug:
@@ -748,7 +748,7 @@ class DvbScanner():
 
 			section = dvbreader.read_fastscan(fd, self.fastscan_table_id)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if self.extra_debug:
@@ -899,7 +899,7 @@ class DvbScanner():
 
 			section = dvbreader.read_bat(fd, self.bat_table_id)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if self.extra_debug:
@@ -956,7 +956,7 @@ class DvbScanner():
 				continue
 
 			if service["service_type"] == 0x05:
-				service["service_type"] = 0x01		# enigma2 doesn't like 0x05 VOD
+				service["service_type"] = 0x01  # enigma2 doesn't like 0x05 VOD
 
 			service["free_ca"] = 1
 			service["service_name"] = "Unknown"
@@ -1006,7 +1006,7 @@ class DvbScanner():
 
 			section = dvbreader.read_sdt(fd, self.sdt_current_table_id, self.sdt_other_table_id)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if self.extra_debug:
@@ -1017,7 +1017,7 @@ class DvbScanner():
 				transport_stream_id = section["header"]["transport_stream_id"]
 
 				if section["header"]["transport_stream_id"] not in transport_stream_id_list:
-					if extraservices: # this is only needed for extra services (channels without LCN) to collect their TSIDs from SDT if not in BAT.
+					if extraservices:  # this is only needed for extra services (channels without LCN) to collect their TSIDs from SDT if not in BAT.
 						sdt_secions_status[transport_stream_id] = {}
 						sdt_secions_status[transport_stream_id]["section_version"] = -1
 						sdt_secions_status[transport_stream_id]["sections_read"] = []
@@ -1067,7 +1067,7 @@ class DvbScanner():
 				service["service_name"] = section["service_name"]
 				service["provider_name"] = section["provider_name"]
 				service["category_name"] = self.skyCategoryName(section["category_id"])
-				service["bouquet_id"] = bouquet_id # in Sky UK this is the nation id
+				service["bouquet_id"] = bouquet_id  # in Sky UK this is the nation id
 				service["bouquet_key"] = bouquet_key
 
 		video_services = {}
@@ -1140,7 +1140,7 @@ class DvbScanner():
 
 			section = dvbreader.read_bat(fd, self.bat_table_id)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if self.extra_debug:
@@ -1205,13 +1205,13 @@ class DvbScanner():
 				continue
 			service["namespace"] = self.namespace_dict[namespace_key]
 			service["flags"] = 0
-			service["service_info"] = categories[service["channel_id"] & 0x0fff] # add category info from descriptors 0xd5 and 0xd8
+			service["service_info"] = categories[service["channel_id"] & 0x0fff]  # add category info from descriptors 0xd5 and 0xd8
 
 			key = "%x:%x:%x" % (service["transport_stream_id"], service["original_network_id"], service["service_id"])
 			if key in tmp_services_dict:
 				tmp_services_dict[key]["numbers"].append(service["number"])
 				if service["region_id"] == region_id:
-					tmp_services_dict[key]["region_id"] = service["region_id"] # Overwrite the region if this is not the generic region. Makes the table order irrelevant.
+					tmp_services_dict[key]["region_id"] = service["region_id"]  # Overwrite the region if this is not the generic region. Makes the table order irrelevant.
 			else:
 				service["numbers"] = [service["number"]]
 				tmp_services_dict[key] = service
@@ -1226,7 +1226,7 @@ class DvbScanner():
 				continue
 
 			if service["service_type"] == 0x05:
-				service["service_type"] = 0x01		# enigma2 doesn't like 0x05 VOD
+				service["service_type"] = 0x01  # enigma2 doesn't like 0x05 VOD
 
 			key = "%x:%x:%x" % (service["transport_stream_id"], service["original_network_id"], service["service_id"])
 			if key in tmp_services_dict:
@@ -1236,7 +1236,7 @@ class DvbScanner():
 
 		print("[ABM-DvbScanner] Reading services extra info...", file=log)
 
-		#Clear double LCN values
+		# Clear double LCN values
 		tmp_numbers = []
 		tmp_double_numbers = []
 		for key in tmp_services_dict:
@@ -1249,7 +1249,7 @@ class DvbScanner():
 		for key in tmp_services_dict:
 			if tmp_double_numbers and len(tmp_services_dict[key]["numbers"]) > 1:
 				for n in tmp_services_dict[key]["numbers"]:
-					if n in tmp_double_numbers and tmp_services_dict[key]["region_id"] != region_id: # only delete duplicate if this is not the user defined region.
+					if n in tmp_double_numbers and tmp_services_dict[key]["region_id"] != region_id:  # only delete duplicate if this is not the user defined region.
 						print("[ABM-DvbScanner] Deleted double LCN: %d" % (tmp_services_dict[key]["numbers"][0]), file=log)
 						tmp_services_dict[key]["numbers"].remove(n)
 						tmp_double_numbers.remove(n)
@@ -1281,7 +1281,7 @@ class DvbScanner():
 
 			section = dvbreader.read_sdt(fd, self.sdt_current_table_id, self.sdt_other_table_id)
 			if section is None:
-				time.sleep(0.1)	# no data.. so we wait a bit
+				time.sleep(0.1)  # no data.. so we wait a bit
 				continue
 
 			if self.extra_debug:

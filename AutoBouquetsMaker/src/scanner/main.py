@@ -33,8 +33,8 @@ from Tools.Directories import resolveFilename, fileExists, SCOPE_CURRENT_SKIN
 class AutoBouquetsMaker(Screen):
 	skin = skin_downloadBar()
 
-	LOCK_TIMEOUT_FIXED = 100 	# 100ms for tick - 10 sec
-	LOCK_TIMEOUT_ROTOR = 1200 	# 100ms for tick - 120 sec
+	LOCK_TIMEOUT_FIXED = 100  # 100ms for tick - 10 sec
+	LOCK_TIMEOUT_ROTOR = 1200  # 100ms for tick - 120 sec
 	ABM_BOUQUET_PREFIX = "userbouquet.abm."
 
 	def __init__(self, session, args=0):
@@ -54,7 +54,7 @@ class AutoBouquetsMaker(Screen):
 			"red": self.keyCancel,
 		}, -2)
 
-#		self["background"] = Pixmap()
+		# self["background"] = Pixmap()
 		self["action"] = Label(_("Starting scanner"))
 		self["status"] = Label("")
 		self["progress"] = ProgressBar()
@@ -79,11 +79,11 @@ class AutoBouquetsMaker(Screen):
 
 	def firstExec(self, postScanService=None):
 		from Screens.Standby import inStandby
-#		if not inStandby:
-#			png = resolveFilename(SCOPE_CURRENT_SKIN, "autobouquetsmaker/background.png")
-#			if not png or not fileExists(png):
-#				png = "%s/../images/background.png" % os.path.dirname(sys.modules[__name__].__file__)
-#			self["background"].instance.setPixmapFromFile(png)
+# 		if not inStandby:
+# 			png = resolveFilename(SCOPE_CURRENT_SKIN, "autobouquetsmaker/background.png")
+# 			if not png or not fileExists(png):
+# 				png = "%s/../images/background.png" % os.path.dirname(sys.modules[__name__].__file__)
+# 			self["background"].instance.setPixmapFromFile(png)
 
 		if len(self.abm_settings_str) > 0:
 			if not inStandby:
@@ -184,7 +184,7 @@ class AutoBouquetsMaker(Screen):
 		from Screens.Standby import inStandby
 		if len(self.actionsList) == 0:
 			self.progresscurrent += 1
-			self["actions"].setEnabled(False) # disable action map here so we can't abort half way through writing result to settings files
+			self["actions"].setEnabled(False)  # disable action map here so we can't abort half way through writing result to settings files
 			if not inStandby:
 				self["progress_text"].value = self.progresscurrent
 				self["progress"].setValue(self.progresscurrent)
@@ -235,15 +235,15 @@ class AutoBouquetsMaker(Screen):
 		self.transponder = transponder
 
 		nimList = []
-		tunerSelectionAlgorithm = "UNKNOWN" # for debug
+		tunerSelectionAlgorithm = "UNKNOWN"  # for debug
 		for nim in nimmanager.nim_slots:
 			if self.providers[self.currentAction]["streamtype"] == "dvbs" and nim.isCompatible("DVB-S"):
 				try:
 					if nim.isFBCLink():
-						continue # do not load FBC links, only root tuners
+						continue  # do not load FBC links, only root tuners
 				except:
 					pass
-			try: # OpenPLi Hot Switch compatible image
+			try:  # OpenPLi Hot Switch compatible image
 				if (nim.config_mode not in ("loopthrough", "satposdepends", "nothing")) and \
 					{"dvbs": "DVB-S", "dvbc": "DVB-C", "dvbt": "DVB-T"}.get(self.providers[self.currentAction]["streamtype"], "UNKNOWN") in [x[:5] for x in nim.getTunerTypesEnabled()]:
 					if self.validNIM(nim.slot):
@@ -258,7 +258,7 @@ class AutoBouquetsMaker(Screen):
 						if self.validNIM(nim.slot):
 							nimList.append(nim.slot)
 						tunerSelectionAlgorithm = "Conventional"
-				except AttributeError: # OpenATV > 5.3
+				except AttributeError:  # OpenATV > 5.3
 					if (self.providers[self.currentAction]["streamtype"] == "dvbs" and nim.canBeCompatible("DVB-S") and nim.config_mode_dvbs not in ("loopthrough", "satposdepends", "nothing")) or \
 						(self.providers[self.currentAction]["streamtype"] == "dvbc" and nim.canBeCompatible("DVB-C") and nim.config_mode_dvbc != "nothing") or \
 						(self.providers[self.currentAction]["streamtype"] == "dvbt" and nim.canBeCompatible("DVB-T") and nim.config_mode_dvbt != "nothing"):
@@ -279,7 +279,7 @@ class AutoBouquetsMaker(Screen):
 			self.showError(_('Cannot retrieve Resource Manager instance'))
 			return
 
-		if self.providers[self.currentAction]["streamtype"] == "dvbs": # If we have a choice of dishes sort the nimList so "fixed" dishes have a higher priority than "motorised".
+		if self.providers[self.currentAction]["streamtype"] == "dvbs":  # If we have a choice of dishes sort the nimList so "fixed" dishes have a higher priority than "motorised".
 			nimList = [slot for slot in nimList if not self.isRotorSat(slot, transponder["orbital_position"])] + [slot for slot in nimList if self.isRotorSat(slot, transponder["orbital_position"])]
 
 		# stop pip if running
@@ -299,7 +299,7 @@ class AutoBouquetsMaker(Screen):
 			if self.providers[self.currentAction]["streamtype"] == "dvbs" and currentlyPlayingNIM is not None and nimmanager.nim_slots[currentlyPlayingNIM].isCompatible("DVB-S"):
 				try:
 					nimConfigMode = nimmanager.nim_slots[currentlyPlayingNIM].config_mode
-				except AttributeError: # OpenATV > 5.3
+				except AttributeError:  # OpenATV > 5.3
 					nimConfigMode = nimmanager.nim_slots[currentlyPlayingNIM].config_mode_dvbs
 				if nimConfigMode in ("loopthrough", "satposdepends"):
 					self.postScanService = self.session.nav.getCurrentlyPlayingServiceReference()
@@ -420,7 +420,7 @@ class AutoBouquetsMaker(Screen):
 			self.rawchannel.requestTsidOnid(self.gotTsidOnid)
 
 		self.frontend.tune(params_fe)
-		self.manager.setAdapter(0)	# FIX: use the correct device
+		self.manager.setAdapter(0)  # FIX: use the correct device
 		self.manager.setDemuxer(demuxer_id)
 		self.manager.setFrontend(current_slotid)
 
@@ -640,7 +640,7 @@ class AutoScheduleTimer:
 		now = int(time())
 		if self.config.schedule.value:
 			print("[%s][AutoScheduleTimer] Schedule Enabled at " % self.schedulename, strftime("%c", localtime(now)), file=log)
-			if now > 1546300800: # Tuesday, January 1, 2019 12:00:00 AM
+			if now > 1546300800:  # Tuesday, January 1, 2019 12:00:00 AM
 				self.scheduledate()
 			else:
 				print("[%s][AutoScheduleTimer] STB clock not yet set." % self.schedulename, file=log)
@@ -742,9 +742,9 @@ class AutoScheduleTimer:
 		if wasScheduleTimerWakeup and inStandby and self.config.scheduleshutdown.value and not self.session.nav.getRecordings() and not inTryQuitMainloop:
 			print("[%s] Returning to deep standby after scheduled wakeup" % self.schedulename, file=log)
 			self.session.open(TryQuitMainloop, 1)
-		wasScheduleTimerWakeup = False # clear this as any subsequent run will not be from wake up from deep
+		wasScheduleTimerWakeup = False  # clear this as any subsequent run will not be from wake up from deep
 
-	def doneConfiguring(self): # called from plugin on save
+	def doneConfiguring(self):  # called from plugin on save
 		now = int(time())
 		if self.config.schedule.value:
 			if autoScheduleTimer is not None:

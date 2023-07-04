@@ -3,4 +3,4 @@ sys.path += __path__
 
 
 def init(cont):
-	pass # Hook for the BGE
+	pass  # Hook for the BGE

@@ -140,21 +140,21 @@ class AutoBouquetsMaker_Menu(Screen):
 			self.session.openWithCallback(self.refresh, AutoBouquetsMaker_ProvidersSetup)
 			return
 
-		if len(config.autobouquetsmaker.providers.getValue().split('|')) < 2:	# menu "ordering" not shown
+		if len(config.autobouquetsmaker.providers.getValue().split('|')) < 2:  # menu "ordering" not shown
 			index += 1
 
 		if index == 2:
 			self.session.open(AutoBouquetsMaker_Ordering)
 			return
 
-		if len(config.autobouquetsmaker.providers.getValue().split('|')) < 1:	# menu "hide sections" not shown
+		if len(config.autobouquetsmaker.providers.getValue().split('|')) < 1:  # menu "hide sections" not shown
 			index += 1
 
 		if index == 3:
 			self.session.open(AutoBouquetsMaker_HideSections)
 			return
 
-		if config.autobouquetsmaker.keepallbouquets.value:	# menu "keep bouquets" not shown
+		if config.autobouquetsmaker.keepallbouquets.value:  # menu "keep bouquets" not shown
 			index += 1
 
 		if index == 4:

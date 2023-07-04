@@ -65,7 +65,7 @@ class Manager():
 		print("[ABM-Manager][load] Settings loaded", file=log)
 
 	def save(self, providers, dependent_providers={}):
-		#merge dependent providers
+		# merge dependent providers
 		for provider_key in dependent_providers:
 			if provider_key in self.services:
 				for dependent_key in dependent_providers[provider_key]:
@@ -96,16 +96,16 @@ class Manager():
 		print("[ABM-Manager][save] Bouquets to hide:", self.bouquetsToHide, file=log)
 		print("[ABM-Manager][save] TV bouquets to keep:", self.bouquetsToKeep["tv"], file=log)
 		print("[ABM-Manager][save] Radio bouquets to keep:", self.bouquetsToKeep["radio"], file=log)
-		#print("[ABM-Manager][save] Generate main bouquet:", str(self.makemain), file=log)
-		#print("[ABM-Manager][save] Generate sections bouquets:", str(self.makesections), file=log)
-		#print("[ABM-Manager][save] Generate HD bouquet:", str(self.makehd), file=log)
-		#print("[ABM-Manager][save] Generate FTA bouquet:", str(self.makefta), file=log)
+		# print("[ABM-Manager][save] Generate main bouquet:", str(self.makemain), file=log)
+		# print("[ABM-Manager][save] Generate sections bouquets:", str(self.makesections), file=log)
+		# print("[ABM-Manager][save] Generate HD bouquet:", str(self.makehd), file=log)
+		# print("[ABM-Manager][save] Generate FTA bouquet:", str(self.makefta), file=log)
 		print("[ABM-Manager][save] Add provider prefix to bouqets:", str(self.addprefix), file=log)
 
 		writer = BouquetsWriter()
 		writer.writeLamedb(self.path, self.transponders)
 		writer.writeLamedb5(self.path, self.transponders)
-		#providers = Providers().read()
+		# providers = Providers().read()
 		bouquetsToHide = []
 
 		for provider_key in self.bouquetsOrder:
@@ -129,7 +129,7 @@ class Manager():
 					sections = sorted(list(providers[provider_key]["sections"].keys()))
 					for bouquetToHide in self.bouquetsToHide[provider_key]:
 						try:
-							#get closest section, just in case section numbers in the provider file have been updated
+							# get closest section, just in case section numbers in the provider file have been updated
 							bouquetToHide = min(sections, key=lambda x: abs(x - bouquetToHide))
 							index = sections.index(bouquetToHide)
 						except:
@@ -186,12 +186,12 @@ class Manager():
 
 		# read custom transponder
 		customtransponders = []
-		if provider_key in providers and providers[provider_key]["streamtype"] == 'dvbt' and bouquet_key is not None and len(bouquet_key) > 0: # custom transponder is only for dvbt
+		if provider_key in providers and providers[provider_key]["streamtype"] == 'dvbt' and bouquet_key is not None and len(bouquet_key) > 0:  # custom transponder is only for dvbt
 			customtransponders = Tools().customtransponder(provider_key, bouquet_key)
 
 		self.providerConfigs[provider_key] = provider_config
 
-		#providers = Providers().read()
+		# providers = Providers().read()
 		if provider_key in providers:
 			if bouquet_key in providers[provider_key]["bouquets"] or providers[provider_key]["protocol"] != "sky":
 				scanner = DvbScanner()
@@ -292,7 +292,7 @@ class Manager():
 					ret = False
 
 				if provider_key not in self.bouquetsOrder:
-					if provider_key in config.autobouquetsmaker.providers.value: # not a descendent provider
+					if provider_key in config.autobouquetsmaker.providers.value:  # not a descendent provider
 						self.bouquetsOrder.append(provider_key)
 
 		print("[ABM-Manager][read] %s, Done" % provider_key, file=log)
@@ -304,7 +304,7 @@ class Manager():
 	def getProviders(self):
 		return Providers().read()
 
-#manager = Manager()
+# manager = Manager()
 # #print manager.getBouquetsList()
 # #providers = manager.getProviders()
 # #print providers
@@ -316,7 +316,7 @@ class Manager():
 # #
 # #	print provider_key, current_arealist
 #
-#manager.setPath("/tmp/settings")
+# manager.setPath("/tmp/settings")
 # #manager.checkTransponderInLamedb(["skyit", "skyuk"])
 # #if manager.checkTransponderInLamedb(["skyit"]):
 # 	# ok.. if checkTransponderInLamedb return True the plugin must reload the lamedb. Otherwise the tune fail!!
@@ -324,12 +324,12 @@ class Manager():
 #
 # manager.setBouquetsToKeep(["userbouquet.dbe55.tv", "userbouquet.dbe26.tv"], ["userbouquet.dbe03.radio"])
 # manager.setBouquetsToHide({ "skyit": [ 200, 700 ] })
-#from providerconfig import ProviderConfig
+# from providerconfig import ProviderConfig
 #
-#config = ProviderConfig()
-#config.setProvider("skyit")
-#config.setArea("sky_italy_hd")
-#manager.load()
-#manager.read(config)
-#manager.save()
+# config = ProviderConfig()
+# config.setProvider("skyit")
+# config.setArea("sky_italy_hd")
+# manager.load()
+# manager.read(config)
+# manager.save()
 #

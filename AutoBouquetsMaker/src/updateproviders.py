@@ -215,7 +215,7 @@ class AutoBouquetsMaker_UpdateProviders(Screen):
 		if '<provider>' in providerxml:
 
 			try:
-				dom = parseString(providerxml) # This is to check the downloaded xml file parses
+				dom = parseString(providerxml)  # This is to check the downloaded xml file parses
 			except:
 				dom = None
 			if dom is not None:

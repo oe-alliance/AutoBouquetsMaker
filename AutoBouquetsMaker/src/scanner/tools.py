@@ -26,7 +26,7 @@ class Tools():
 		try:
 			tool = open(filename, "r")
 		except Exception as e:
-			#print("[ABM-Tools][parseXML] Cannot open %s: %s" % (filename, e), file=log)
+			# print("[ABM-Tools][parseXML] Cannot open %s: %s" % (filename, e), file=log)
 			return None
 
 		try:
@@ -80,7 +80,7 @@ class Tools():
 			elif dom.documentElement.nodeType == dom.documentElement.ELEMENT_NODE and dom.documentElement.tagName == "custom":
 				print("[ABM-Tools][customLCN] Reading custom " + type + " LCN file for " + section_identifier + ".", file=log)
 				customlcndict = {}
-				sort_order = [] # to process this file top down
+				sort_order = []  # to process this file top down
 				for node in dom.documentElement.childNodes:
 					if node.nodeType != node.ELEMENT_NODE:
 						continue
@@ -122,11 +122,11 @@ class Tools():
 				# add services not in CustomLCN file to correct lcn positions if slots are vacant
 				if is_sorted:
 					for number in list(extra_services.keys()):
-						if number not in temp_services: # CustomLCN has priority
+						if number not in temp_services:  # CustomLCN has priority
 							temp_services[number] = extra_services[number]
 							del extra_services[number]
 
-				#add any remaining services to the end of list
+				# add any remaining services to the end of list
 				if is_sorted or skipextrachannels == 0:
 					lastlcn = len(temp_services) and max(list(temp_services.keys()))
 					newservices = []
@@ -197,17 +197,17 @@ class Tools():
 									name = self.encodeNODE(node2.attributes.item(i).value)
 								elif node2.attributes.item(i).name == "url":
 									url = self.encodeNODE(node2.attributes.item(i).value)
-									if "%" not in url[:10]: # url not encoded
-										url = quote(url) # single encode url
+									if "%" not in url[:10]:  # url not encoded
+										url = quote(url)  # single encode url
 								elif node2.attributes.item(i).name == "target":
 									target = int(node2.attributes.item(i).value)
 								elif node2.attributes.item(i).name == "servicereftype":
 									servicereftype = int(node2.attributes.item(i).value)
-							if url and target and target in customised["video"]: # must be a current service
+							if url and target and target in customised["video"]:  # must be a current service
 								customised["video"][target]["stream"] = url
-							elif name and url and target and target not in customised["video"]: # non existing service
+							elif name and url and target and target not in customised["video"]:  # non existing service
 								customised["video"][target] = {'service_id': 0, 'transport_stream_id': 0, 'original_network_id': 0, 'namespace': 0, 'service_name': name, 'number': target, 'numbers': [target], 'free_ca': 0, 'service_type': 1, 'stream': url}
-							if servicereftype and servicereftype in self.SERVICEREF_ALLOWED_TYPES and target and target in customised["video"] and "stream" in customised["video"][target]: # if a stream was added above, a custom servicereftype may also be added
+							if servicereftype and servicereftype in self.SERVICEREF_ALLOWED_TYPES and target and target in customised["video"] and "stream" in customised["video"][target]:  # if a stream was added above, a custom servicereftype may also be added
 								customised["video"][target]["servicereftype"] = servicereftype
 				elif node.tagName == "deletes":
 					for node2 in node.childNodes:

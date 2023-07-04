@@ -30,7 +30,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 
 	ABM_BOUQUET_PREFIX = "userbouquet.abm."
 
-	try: # Work-around to get OpenSPA working
+	try:  # Work-around to get OpenSPA working
 		from boxbranding import getImageDistro
 		if getImageDistro() == 'openspa':
 			def keyLeft(self):
@@ -104,7 +104,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 
 		self.dvbc_nims = []
 		self.dvbt_nims = []
-		try: # OpenPLi Hot Switch compatible image
+		try:  # OpenPLi Hot Switch compatible image
 			for nim in nimmanager.nim_slots:
 				if nim.config_mode != "nothing":
 					if "DVB-C" in [x[:5] for x in nim.getTunerTypesEnabled()]:
@@ -119,7 +119,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 							self.dvbc_nims.append(nim.slot)
 						if nim.isCompatible("DVB-T") or (nim.isCompatible("DVB-S") and nim.canBeCompatible("DVB-T")):
 							self.dvbt_nims.append(nim.slot)
-			except AttributeError: # OpenATV > 5.3
+			except AttributeError:  # OpenATV > 5.3
 				for nim in nimmanager.nim_slots:
 					if nim.canBeCompatible("DVB-C") and nim.config_mode_dvbc != "nothing":
 						self.dvbc_nims.append(nim.slot)
@@ -176,14 +176,14 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 			self.providers_makefta[provider] = None
 			self.providers_makeftahd[provider] = None
 
-			if len(list(self.providers[provider]["sections"].keys())) > 1:	# only if there's more than one section
+			if len(list(self.providers[provider]["sections"].keys())) > 1:  # only if there's more than one section
 				sections_default = True
 				if provider in providers_tmp_configs:
 					sections_default = providers_tmp_configs[provider].isMakeSections()
 				self.providers_makesections[provider] = ConfigYesNo(default=sections_default)
 				custom_bouquets_exists = True
 
-			if self.providers[provider]["protocol"] != "fastscan":	# fastscan doesn't have enough information to make HD and/or FTA bouquets
+			if self.providers[provider]["protocol"] != "fastscan":  # fastscan doesn't have enough information to make HD and/or FTA bouquets
 				hd_default = True
 				fta_default = True
 				ftahd_default = True
@@ -204,11 +204,11 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 					makemain_list.append(("ftahd", _("yes (only FTA HD)")))
 
 				if provider not in providers_tmp_configs and self.providers[provider]["protocol"] == "sky":
-					makemain_default = "ftahd"	# First bouquet option starts as "FTA HD"
+					makemain_default = "ftahd"  # First bouquet option starts as "FTA HD"
 				elif provider not in providers_tmp_configs and self.providers[provider]["protocol"] in ("vmuk", "vmuk2"):
-					makemain_default = "hd"	# First bouquet option starts as "HD"
+					makemain_default = "hd"  # First bouquet option starts as "HD"
 				elif provider not in providers_tmp_configs:
-					makemain_default = "yes"	# First bouquet option starts as "All channels"
+					makemain_default = "yes"  # First bouquet option starts as "All channels"
 
 				if provider in providers_tmp_configs and providers_tmp_configs[provider].isMakeNormalMain():
 					makemain_default = "yes"
@@ -249,7 +249,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 			for bouquet in list(bouquets.keys()):
 				arealist.append((bouquet, self.providers[provider]["bouquets"][bouquet]["name"]))
 			arealist.sort(key=lambda x: unicodedata.normalize('NFKD', x[1].upper()).encode('ascii', 'ignore').decode('utf-8') if six.PY3 else x[1])
-			if len(self.providers[provider]["bouquets"]) > 0: # provider has area list
+			if len(self.providers[provider]["bouquets"]) > 0:  # provider has area list
 				default_area = None
 				if provider in providers_tmp_configs:
 					default_area = providers_tmp_configs[provider].getArea()
@@ -490,7 +490,7 @@ class AutoBouquetsMaker_Setup(ConfigListScreen, Screen):
 		self.list = []
 		indent = '-  '
 
-#		self.list.append(getConfigListEntry(_("Setup mode"), config.autobouquetsmaker.level, _("Choose which level of settings to display. 'Expert'-level shows all items, this also adds more options in the providers menu.")))
+		# self.list.append(getConfigListEntry(_("Setup mode"), config.autobouquetsmaker.level, _("Choose which level of settings to display. 'Expert'-level shows all items, this also adds more options in the providers menu.")))
 		self.list.append(getConfigListEntry(_("Schedule scan"), config.autobouquetsmaker.schedule, _("Allows you to set a schedule to perform a scan ")))
 		if config.autobouquetsmaker.schedule.getValue():
 			self.list.append(getConfigListEntry(indent + _("Schedule time of day"), config.autobouquetsmaker.scheduletime, _("Set the time of day to perform a scan.")))
