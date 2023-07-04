@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 try:
-    import builtins
+	import builtins
 except ImportError:
-    import __builtin__ as builtins
+	import __builtin__ as builtins
 
 import sys
 import os
