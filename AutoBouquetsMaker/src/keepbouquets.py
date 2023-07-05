@@ -32,12 +32,12 @@ class AutoBouquetsMaker_KeepBouquets(Screen):
 		self["key_red"] = Button(_("Cancel"))
 		self["key_green"] = Button("Save")
 		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
-				{
-					"red": self.keyCancel,
-					"green": self.keySave,
-					"ok": self.ok,
-					"cancel": self.keyCancel,
-				}, -2)
+		{
+			"red": self.keyCancel,
+			"green": self.keySave,
+			"ok": self.ok,
+			"cancel": self.keyCancel,
+		}, -2)
 
 		self.refresh()
 

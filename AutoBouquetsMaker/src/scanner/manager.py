@@ -155,13 +155,13 @@ class Manager():
 				services, providers[provider_key]["sections"] = Tools().customMix(self.services, provider_key, providers, self.providerConfigs[provider_key])
 
 				writer.buildBouquets(self.path,
-						self.providerConfigs[provider_key],
-						services,
-						providers[provider_key]["sections"],
-						provider_key,
-						providers[provider_key]["swapchannels"],
-						bouquetsToHide,
-						prefix)
+					self.providerConfigs[provider_key],
+					services,
+					providers[provider_key]["sections"],
+					provider_key,
+					providers[provider_key]["swapchannels"],
+					bouquetsToHide,
+					prefix)
 
 		# add a custom favourites list
 		self.services, providers, self.providerConfigs, self.bouquetsOrder = Tools().favourites(self.path, self.services, providers, self.providerConfigs, self.bouquetsOrder)
@@ -169,8 +169,8 @@ class Manager():
 		writer.buildLastScannedBouquet(self.path, self.services)
 
 		writer.buildBouquetsIndex(self.path, self.bouquetsOrder, providers,
-				self.bouquetsToKeep, currentBouquets, self.bouquetsToHide,
-				self.providerConfigs)
+			self.bouquetsToKeep, currentBouquets, self.bouquetsToHide,
+			self.providerConfigs)
 
 		print("[ABM-Manager][save] write bouquets, Done", file=log)
 
@@ -243,8 +243,8 @@ class Manager():
 
 					tmp = scanner.updateTransponders(self.transponders, True)
 					self.services[provider_key] = scanner.updateAndReadServicesFastscan(
-							self.transponders, providers[provider_key]["servicehacks"],
-							tmp["logical_channel_number_dict"])
+						self.transponders, providers[provider_key]["servicehacks"],
+						tmp["logical_channel_number_dict"])
 
 					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
 
@@ -261,8 +261,8 @@ class Manager():
 					scanner.updateTransponders(self.transponders, False)
 					bouquet = providers[provider_key]["bouquets"][bouquet_key]
 					self.services[provider_key] = scanner.updateAndReadServicesSKY(bouquet["bouquet"],
-							bouquet["region"], bouquet["key"], self.transponders,
-							providers[provider_key]["servicehacks"])
+						bouquet["region"], bouquet["key"], self.transponders,
+						providers[provider_key]["servicehacks"])
 
 					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
 
@@ -279,8 +279,8 @@ class Manager():
 					scanner.updateTransponders(self.transponders, False)
 					bouquet = providers[provider_key]["bouquets"][bouquet_key]
 					self.services[provider_key] = scanner.updateAndReadServicesFreeSat(bouquet["bouquet"],
-							bouquet["region"], bouquet["key"], self.transponders,
-							providers[provider_key]["servicehacks"])
+						bouquet["region"], bouquet["key"], self.transponders,
+						providers[provider_key]["servicehacks"])
 
 					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
 

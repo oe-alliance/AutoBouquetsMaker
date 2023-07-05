@@ -25,7 +25,7 @@ if six.PY3:
 
 
 class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
-# Note to skinners: no need to skin this screen if you have skinned the screen 'AutoBouquetsMaker_Setup'.
+	# Note to skinners: no need to skin this screen if you have skinned the screen 'AutoBouquetsMaker_Setup'.
 	skin = skin_setup()
 
 	ABM_BOUQUET_PREFIX = "userbouquet.abm."

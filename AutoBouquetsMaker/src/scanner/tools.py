@@ -65,7 +65,7 @@ class Tools():
 					number,
 					number,
 					servicename.replace("&", "+")
-					))
+				))
 			xml_out_list.append("\t</lcnlist>\n</custom>\n")
 			xmlout = open(user_custom_dir + "/EXAMPLE_" + ("sd" if current_bouquet_key.startswith('sd') else "hd") + "_" + section_identifier + "_Custom" + ("radio" if type == "radio" else "") + "LCN.xml", "w")
 			xmlout.write(''.join(xml_out_list))

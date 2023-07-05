@@ -392,12 +392,12 @@ class Providers():
 								provider["ignore_visible_service_flag"] = 1
 
 			if not ("name" in provider
-					and "protocol" in provider
-					and "streamtype" in provider
-					and "bouquets" in provider
-					and "sections" in provider
-					and "transponder" in provider
-					and "servicehacks" in provider):
+				and "protocol" in provider
+				and "streamtype" in provider
+				and "bouquets" in provider
+				and "sections" in provider
+				and "transponder" in provider
+				and "servicehacks" in provider):
 
 				print("[ABM-Providers][read] Incomplete XML %s" % filename, file=log)
 				continue
