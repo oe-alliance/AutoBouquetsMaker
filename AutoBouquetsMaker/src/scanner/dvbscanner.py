@@ -20,6 +20,9 @@ class DvbScanner():
 	HD_ALLOWED_TYPES = [17, 25, 27, 135]
 	HEVC_ALLOWED_TYPES = [31]
 
+	CATCH_ALL_BAT_TYPE = 255
+	CATCH_ALL_BAT_VALID_TYPES = [130, 131]
+
 	def __init__(self):
 		self.adapter = 0
 		self.demuxer = 0
@@ -513,7 +516,10 @@ class DvbScanner():
 
 		for service in bat_content:
 			if service["descriptor_tag"] != descriptor_tag:
-				continue
+				if descriptor_tag != self.CATCH_ALL_BAT_TYPE:
+					continue
+				elif service["descriptor_tag"] not in self.CATCH_ALL_BAT_VALID_TYPES:
+					continue
 
 			key = "%x:%x:%x" % (service["transport_stream_id"], service["original_network_id"], service["service_id"])
 			TSID_ONID = "%x:%x" % (service["transport_stream_id"], service["original_network_id"])
