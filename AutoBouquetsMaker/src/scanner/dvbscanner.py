@@ -20,6 +20,10 @@ class DvbScanner():
 	HD_ALLOWED_TYPES = [17, 25, 27, 135]
 	HEVC_ALLOWED_TYPES = [31]
 
+	CATCH_ALL_BAT_TYPE = 255
+	# Valid regions in order of priority {region: priority}
+	CATCH_ALL_BAT_VALID_TYPES = {130: 130, 131: 131}
+
 	def __init__(self):
 		self.adapter = 0
 		self.demuxer = 0
@@ -510,15 +514,30 @@ class DvbScanner():
 		dvbreader.close(fd)
 
 		logical_channel_number_dict = {}
+		list_catch_all_bat_valid_types = []
+		for region in self.CATCH_ALL_BAT_VALID_TYPES.keys():
+			list_catch_all_bat_valid_types.append(region)
 
 		for service in bat_content:
 			if service["descriptor_tag"] != descriptor_tag:
-				continue
+				if descriptor_tag != self.CATCH_ALL_BAT_TYPE:
+					continue
+				elif service["descriptor_tag"] not in list_catch_all_bat_valid_types:
+					continue
 
 			key = "%x:%x:%x" % (service["transport_stream_id"], service["original_network_id"], service["service_id"])
 			TSID_ONID = "%x:%x" % (service["transport_stream_id"], service["original_network_id"])
 
-			logical_channel_number_dict[key] = service
+			if descriptor_tag != self.CATCH_ALL_BAT_TYPE:
+				logical_channel_number_dict[key] = service
+			else:
+				prio_new = self.CATCH_ALL_BAT_VALID_TYPES[(service["descriptor_tag"])]
+				try:
+					prio_old = self.CATCH_ALL_BAT_VALID_TYPES[((logical_channel_number_dict[key])["descriptor_tag"])]
+				except:
+					prio_old = 0
+				if prio_new > prio_old:
+					logical_channel_number_dict[key] = service
 			if TSID_ONID not in tmp_TSID_ONID_list:
 				tmp_TSID_ONID_list.append(TSID_ONID)
 

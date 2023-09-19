@@ -19,22 +19,42 @@
 		onid="1"
 	/>
 	<dvbsconfigs>
+		<configuration key="sd_1" bouquet="0x21" region="0x82">Movistar+ SD</configuration>
 		<configuration key="hd_1" bouquet="0x21" region="0x83">Movistar+ HD</configuration>
+		<configuration key="hd_2" bouquet="0x21" region="0xFF">Movistar+ HD+SD</configuration>
 	</dvbsconfigs>
 	<sections>
-		<section number="1">Entretenimiento</section>
-		<section number="31">Pelis</section>
-		<section number="46">Deportes</section>
-		<section number="70">Documentales</section>
-		<section number="94">Infantil</section>
-		<section number="119">Noticias</section>
-		<section number="167">Taquilla</section>
-		<section number="400">No HD</section>
-		<section number="470">Otros</section>
+		<section number="1">Generalistas</section>
+		<section number="12">Originales</section>
+		<section number="30">Cine y Series</section>
+		<section number="53">Deportes</section>
+		<section number="82">Documentales</section>
+		<section number="92">Estilo de Vida</section>
+		<section number="110">Infantiles</section>
+		<section number="120">Música</section>
+		<section number="127">Noticias</section>
+		<section number="151">Autonómicos</section>
+		<section number="162">Alquiler SD</section>
+		<section number="167">Multideporte</section>
+		<section number="198">Alquiler HD</section>
+		<section number="199">Portada</section>
+		<section number="300">Bares</section>
+		<section number="400">SD</section>
+		<section number="485">Otros</section>
 	</sections>
 	<visibleserviceflag ignore="1"/>
 	<servicehacks>
 <![CDATA[
+
+# Remove invalid channels
+blacklist = (
+			".",
+			"TEST TÉCNICO"
+            )
+
+if service["number"] > 500 or service["service_name"] in blacklist:
+	skip.skip = True
+
 ]]>
 	</servicehacks>
 </provider>
