@@ -55,13 +55,6 @@ blacklist = (
 if service["number"] > 500 or service["service_name"] in blacklist:
 	skip.skip = True
 
-# Remove duplicated SD services
-if service["service_type"] == 1 and service["number"] < 120:
-	for sid in tmp_services_dict:
-		if tmp_services_dict[sid]["number"] == service["number"] and tmp_services_dict[sid]["service_type"] == 25:
-			skip.skip = True
-			break
-
 ]]>
 	</servicehacks>
 </provider>
