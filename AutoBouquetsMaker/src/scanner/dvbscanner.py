@@ -1212,7 +1212,7 @@ class DvbScanner():
 			key = "%x:%x:%x" % (service["transport_stream_id"], service["original_network_id"], service["service_id"])
 			if key in tmp_services_dict:
 				tmp_services_dict[key]["numbers"].append(service["number"])
-				if service["region_id"] == region_id:
+				if service["region_id"] == region_id[0]:
 					tmp_services_dict[key]["region_id"] = service["region_id"]  # Overwrite the region if this is not the generic region. Makes the table order irrelevant.
 			else:
 				service["numbers"] = [service["number"]]
@@ -1251,7 +1251,7 @@ class DvbScanner():
 		for key in tmp_services_dict:
 			if tmp_double_numbers and len(tmp_services_dict[key]["numbers"]) > 1:
 				for n in tmp_services_dict[key]["numbers"]:
-					if n in tmp_double_numbers and tmp_services_dict[key]["region_id"] != region_id:  # only delete duplicate if this is not the user defined region.
+					if n in tmp_double_numbers and tmp_services_dict[key]["region_id"] != region_id[0]:  # only delete duplicate if this is not the user defined region.
 						print("[ABM-DvbScanner] Deleted double LCN: %d" % (tmp_services_dict[key]["numbers"][0]), file=log)
 						tmp_services_dict[key]["numbers"].remove(n)
 						tmp_double_numbers.remove(n)
