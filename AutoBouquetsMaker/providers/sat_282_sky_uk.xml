@@ -377,7 +377,10 @@ except:
 		5152: 460, # eir Sport 2 HD (also 5154)
 		5153: 412, # Premier HD
 		5311: 428, # Premier Sports
-		#slow death section
+		#slow death section IRL alternatves
+		3080: 827, # W HD
+		3077: 809, # Alibi HD
+		3078: 811, # Dave HD
 		3705: 112, # ComedyCentral
 		2709: 127, # ComedyXtra
 		2418: 154, # ID
@@ -459,6 +462,9 @@ except:
 		1047, # Insight HD
 		1163, # eir Sport 1 HD
 		1372,
+		3080, # W HD
+		3077, # albia HD
+		3078, # Dave HD
 		3812,
 		3831,
 		4039,

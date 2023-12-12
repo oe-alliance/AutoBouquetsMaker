@@ -301,6 +301,9 @@ except:
 		1047, # Insight HD
 		1163, # eir Sport 1 HD
 		1372,
+		3080, # W HD
+		3077, # albia HD
+		3078, # Dave HD
 		3812,
 		3831,
 		4039,
