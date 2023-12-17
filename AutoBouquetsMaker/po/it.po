@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the enigma2-oe-alliance-plugins package.
 #
 # Automatically generated, 2015.
-# Massimo Pissarello <mapi68@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2023 Massimo Pissarello <mapi68@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: enigma2-oe-alliance-plugins 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-29 20:53+0100\n"
-"PO-Revision-Date: 2022-11-05 14:41+0100\n"
+"PO-Revision-Date: 2023-12-17 01:18+0100\n"
 "Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <>\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../src/scanner/main.py:761
@@ -36,8 +36,7 @@ msgid ""
 "%s update is about to start.\n"
 "Do you want to allow this?"
 msgstr ""
-"L'aggiornamento di %s sta per iniziare.\n"
-"Vuoi consentire questo?"
+"L'aggiornamento di %s sta per iniziare.\nVuoi procedere con questa operazione?"
 
 #: ../src/plugin.py:51 ../src/plugin.py:67
 msgid "---- ABM - 'text' ----"
@@ -77,11 +76,11 @@ msgstr "=== testo ==="
 
 #: ../src/scanner/frequencyfinder.py:142 ../src/scanner/frequencyfinder.py:147
 msgid "ABM frequency finder"
-msgstr "Ricerca frequenza ABM"
+msgstr "Frequenza ricerca ABM"
 
 #: ../src/menu.py:247
 msgid "ABM log file has been saved to the tmp directory"
-msgstr "Il file di log ABM è stato salvato nella cartella tmp"
+msgstr "Il file di registro ABM è stato salvato nella cartella tmp"
 
 #: ../src/about.py:24 ../src/menu.py:91
 msgid "About"
@@ -89,11 +88,11 @@ msgstr "Informazioni su"
 
 #: ../src/setup.py:503
 msgid "Add provider markers"
-msgstr "Aggiungi marcatori provider"
+msgstr "Aggiungi marcatori fornitore"
 
 #: ../src/setup.py:502
 msgid "Add provider name to bouquets"
-msgstr "Aggiungi il nome del provider ai bouquet"
+msgstr "Aggiungi nome del fornitore ai bouquet"
 
 #: ../src/scanner/bouquetswriter.py:621
 msgid "All channels"
@@ -119,27 +118,27 @@ msgstr "AutoBouquetsMaker"
 
 #: ../src/setup.py:446
 msgid "AutoBouquetsMaker Configure"
-msgstr "Configurazione di ABM"
+msgstr "Configurazione di AutoBouquetsMaker"
 
 #: ../src/hidesections.py:26
 msgid "AutoBouquetsMaker Hide sections"
-msgstr "Nascondi sezioni ABM"
+msgstr "Nascondi sezioni AutoBouquetsMaker"
 
 #: ../src/keepbouquets.py:27
 msgid "AutoBouquetsMaker Keep bouquets"
-msgstr "Mantieni bouquet ABM"
+msgstr "Mantieni bouquet AutoBouquetsMaker"
 
 #: ../src/menu.py:228
 msgid "AutoBouquetsMaker Log"
-msgstr "Log ABM"
+msgstr "Registro AutoBouquetsMaker"
 
 #: ../src/setup.py:49
 msgid "AutoBouquetsMaker Providers"
-msgstr "Provider ABM"
+msgstr "Fornitore AutoBouquetsMaker"
 
 #: ../src/plugin.py:112
 msgid "AutoBouquetsMaker Scanner"
-msgstr "Scanner ABM"
+msgstr "Scanner AutoBouquetsMaker"
 
 #: ../src/scanner/main.py:191
 msgid "Bouquets generation..."
@@ -152,27 +151,27 @@ msgstr "Annulla"
 
 #: ../src/scanner/frequencyfinder.py:347 ../src/scanner/main.py:363
 msgid "Cannot allocate the demuxer."
-msgstr "Non posso allocare il demuxer."
+msgstr "Impossibile allocare il demuxer."
 
 #: ../src/scanner/frequencyfinder.py:322 ../src/scanner/main.py:334
 msgid "Cannot free NIM because a recording is in progress"
-msgstr "Non posso liberare il NIM perché è in corso una registrazione"
+msgstr "Impossibile liberare il NIM perché è in corso una registrazione"
 
 #: ../src/scanner/frequencyfinder.py:336 ../src/scanner/main.py:357
 msgid "Cannot get frontend"
-msgstr "Non posso ottenere l’accesso utente"
+msgstr "Impossibile accedere al frontend"
 
 #: ../src/scanner/frequencyfinder.py:326 ../src/scanner/main.py:338
 msgid "Cannot get the NIM"
-msgstr "Non posso accedere al NIM"
+msgstr "Impossibile accedere al NIM"
 
 #: ../src/scanner/main.py:489
 msgid "Cannot read data"
-msgstr "Non posso leggere i dati"
+msgstr "Impossibile leggere i dati"
 
 #: ../src/updateproviders.py:167
 msgid "Cannot read version"
-msgstr "Non posso leggere la versione"
+msgstr "Impossibile leggere la versione"
 
 #: ../src/scanner/frequencyfinder.py:263 ../src/scanner/main.py:279
 msgid "Cannot retrieve Resource Manager instance"
@@ -187,16 +186,16 @@ msgid ""
 "Choose the style of markers that separate one provider from another in "
 "bouquet indexes."
 msgstr ""
-"Scegli lo stile dei marcatori che separano un provider da un altro "
-"nell'indice dei bouquet."
+"Scegli lo stile dei marcatori che separano un fornitore da un altro"
+" nell'indice dei bouquet."
 
 #: ../src/setup.py:506
 msgid ""
 "Choose the style of the markers that separate channels into groups in the "
 "channel lists."
 msgstr ""
-"Scegli lo stile dei marcatori che separano i canali in gruppi negli elenchi "
-"dei canali."
+"Scegli lo stile dei marcatori che separano i canali in gruppi negli elenchi"
+" dei canali."
 
 #: ../src/about.py:36 ../src/menu.py:241 ../src/updateproviders.py:287
 msgid "Close"
@@ -261,7 +260,7 @@ msgstr "Ricerca frequenza DVB-T"
 
 #: ../src/menu.py:86
 msgid "Delete ABM bouquets"
-msgstr "Elimina i bouquet ABM"
+msgstr "Elimina bouquet ABM"
 
 #: ../src/scanner/main.py:508
 msgid "Done"
@@ -281,7 +280,7 @@ msgstr "Esci"
 
 #: ../src/setup.py:510
 msgid "Extra debug"
-msgstr "Debug aggiuntivi"
+msgstr "Debug aggiuntivo"
 
 #: ../src/scanner/bouquetswriter.py:885
 msgid "FTA Channels"
@@ -298,12 +297,12 @@ msgstr "Solo FTA"
 #: ../src/updateproviders.py:194
 #, python-format
 msgid "Failed to retrieve file for %s. Error: %s %s"
-msgstr "Non riesco a recuperare il file per %s. Errore: %s %s"
+msgstr "Impossibile recuperare il file per %s. Errore: %s %s"
 
 #: ../src/updateproviders.py:141
 #, python-format
 msgid "Failed to retrieve version file. Error: %s %s"
-msgstr "Non riesco a recuperare la versione del file. Errore: %s %s"
+msgstr "Impossibile recuperare la versione del file. Errore: %s %s"
 
 #: ../src/updateproviders.py:195
 msgid "Failed..."
@@ -311,14 +310,14 @@ msgstr "Non riuscito..."
 
 #: ../src/updateproviders.py:52
 msgid "Finding configured providers..."
-msgstr "Trovo i provider configurati..."
+msgstr "Ricerca dei fornitori configurati..."
 
 #: ../src/scanner/frequencyfinder.py:186
 #, python-format
 msgid "Found %d unique transponder"
 msgid_plural "Found %d unique transponders"
-msgstr[0] "Trovato %d unico transponder"
-msgstr[1] "Trovati %d unici transponder"
+msgstr[0] "Trovato %d transponder univoco"
+msgstr[1] "Trovati %d transponder univoci"
 
 #: ../src/scanner/frequencyfinder.py:79
 msgid "FrequencyFinder"
@@ -342,18 +341,18 @@ msgid ""
 "the channel will not appear in the channel list, 'no' means the channel will "
 "show in the channel list but be greyed out and not be accessible."
 msgstr ""
-"Se un servizio è su un satellite non configurato, 'sì' significa che il "
-"canale non apparirà nell'elenco dei canali, 'no' significa che il canale "
-"verrà visualizzato nell'elenco dei canali ma sarà disattivato e non sarà "
-"accessibile."
+"Se un servizio è su un satellite non configurato, 'sì' significa che il"
+" canale non apparirà nell'elenco dei canali, 'no' significa che il canale"
+" verrà visualizzato nell'elenco dei canali ma sarà disattivato e non sarà"
+" accessibile."
 
 #: ../src/setup.py:497
 msgid ""
 "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to "
 "perform a scan."
 msgstr ""
-"Se il ricevitore è spento al momento della scansione pianificata, con questa "
-"opzione decidi se accenderlo per effettuarla."
+"Se il ricevitore è spento al momento della scansione pianificata, con questa"
+" opzione decidi se accenderlo per effettuarla."
 
 #: ../src/setup.py:499
 msgid ""
@@ -361,9 +360,9 @@ msgid ""
 "and no recordings are in progress return it to 'Deep Standby' once the scan "
 "has completed."
 msgstr ""
-"Se il ricevitore era stato acceso per la scansione ed è al momento in' "
-"Standby' (e non c'è nessuna registrazione in corso), puoi decidere se si "
-"deve di nuovo spegnere."
+"Se il ricevitore era stato acceso per la scansione ed è al momento in"
+" 'Standby' (e non c'è nessuna registrazione in corso), puoi decidere se si"
+" deve di nuovo spegnere."
 
 #: ../src/setup.py:509
 msgid "Include 'not indexed' channels"
@@ -413,9 +412,7 @@ msgstr "Errore di connessione di rete."
 msgid ""
 "Network connection error: \n"
 "%s"
-msgstr ""
-"Errore di connessione di rete: \n"
-"%s"
+msgstr "Errore di connessione di rete: \n%s"
 
 #: ../src/scanner/main.py:273
 msgid "No NIMs found for "
@@ -431,11 +428,11 @@ msgstr "Nessuna frequenza da cercare"
 
 #: ../src/updateproviders.py:131
 msgid "No providers are configured."
-msgstr "Nessun provider è stato configurato."
+msgstr "Nessun fornitore è stato configurato."
 
 #: ../src/updateproviders.py:97
 msgid "No providers configured."
-msgstr "Nessun provider configurato."
+msgstr "Nessun fornitore configurato."
 
 #: ../src/scanner/frequencyfinder.py:216
 msgid "No terrestrial multiplexes found."
@@ -443,7 +440,7 @@ msgstr "Nessun multiplex terrestre trovato."
 
 #: ../src/scanner/frequencyfinder.py:239 ../src/scanner/frequencyfinder.py:257
 msgid "No terrestrial tuner found."
-msgstr "Nessun sintonizzatore terrestre trovato."
+msgstr "Nessun tuner terrestre trovato."
 
 #: ../src/scanner/frequencyfinder.py:304
 msgid "No valid NIM found for terrestrial."
@@ -453,8 +450,8 @@ msgstr "Nessun NIM valido trovato per terrestre."
 msgid ""
 "Only DVB-T2 multiplexes found. Insufficient data to create a provider file."
 msgstr ""
-"Sono stati trovati solo multiplex DVB-T2. Dati insufficienti per creare un "
-"file del provider."
+"Sono stati trovati solo multiplex DVB-T2. Dati insufficienti per creare un"
+" file del fornitore."
 
 #: ../src/setup.py:507
 msgid "Place bouquets at"
@@ -462,11 +459,11 @@ msgstr "Metti i bouquet in"
 
 #: ../src/scanner/main.py:96
 msgid "Please first setup, in configuration"
-msgstr "Si prega prima di creare una configurazione"
+msgstr "Completa prima la configurazione"
 
 #: ../src/ordering.py:59 ../src/setup.py:77 ../src/setup.py:474
 msgid "Please wait..."
-msgstr "Si prega di attendere..."
+msgstr "Attendere prego..."
 
 #: ../src/plugin.py:28
 msgid "Press OK"
@@ -474,15 +471,15 @@ msgstr "Premi OK"
 
 #: ../src/setup.py:496
 msgid "Press OK to select which days to perform a scan."
-msgstr "Premi OK per selezionare i giorni in cui eseguire una scansione."
+msgstr "Premi OK per selezionare in quali giorni eseguire la scansione."
 
 #: ../src/menu.py:78
 msgid "Providers"
-msgstr "Provider"
+msgstr "Fornitori"
 
 #: ../src/menu.py:80 ../src/ordering.py:25
 msgid "Providers order"
-msgstr "Ordine provider"
+msgstr "Ordine fornitori"
 
 #: ../src/scanner/bouquetswriter.py:929 ../src/scanner/bouquetswriter.py:930
 msgid "Radio Channels"
@@ -490,7 +487,7 @@ msgstr "Canali radio"
 
 #: ../src/setup.py:596
 msgid "Radio Times Emulator"
-msgstr "Emulatore radiofonico"
+msgstr "Radio Times Emulator"
 
 #: ../src/scanner/frequencyfinder.py:365
 #, python-format
@@ -530,7 +527,7 @@ msgstr "Il file di configurazione recuperato per %s è difettoso o incompleto."
 #: ../src/updateproviders.py:258
 #, python-format
 msgid "Retrieved provider file for %s"
-msgstr "File del provider recuperato per %s"
+msgstr "File del fornitore recuperato per %s"
 
 #: ../src/updateproviders.py:178
 #, python-format
@@ -548,7 +545,7 @@ msgstr "Salva"
 
 #: ../src/menu.py:240
 msgid "Save Log"
-msgstr "Salva log"
+msgstr "Salva registro"
 
 #: ../src/scanner/frequencyfinder.py:200
 msgid "Saving data"
@@ -560,7 +557,7 @@ msgstr "Scansione"
 
 #: ../src/scanner/frequencyfinder.py:161
 msgid "Scanning for active transponders"
-msgstr "Ricerca di transponder attivi"
+msgstr "Scansione per transponder attivi"
 
 #: ../src/setup.py:496
 msgid "Schedule days of the week"
@@ -589,9 +586,9 @@ msgid ""
 "the UK, e.g. areas covered by repeaters, etc."
 msgstr ""
 "Seleziona \"sì\" per visualizzare lo strumento \"Ricerca frequenza DVB-T\" "
-"nel menu principale. Questo strumento viene utilizzato per creare un file "
-"del provider funzionante per le aree difficili del Regno Unito, ad es. aree "
-"coperte da ripetitori, ecc."
+"nel menu principale. Questo strumento viene utilizzato per creare un file del"
+" fornitore funzionante per le aree difficili del Regno Unito, ad esempio aree"
+" coperte da ripetitori, ecc."
 
 #: ../src/setup.py:574 ../src/setup.py:596
 msgid "Select days"
@@ -602,12 +599,12 @@ msgid ""
 "Select your own bouquet from the list, please note that the only the first "
 "100 channels for this bouquet will be used."
 msgstr ""
-"Seleziona il tuo bouquet dall'elenco, tieni presente che verranno utilizzati "
-"solo i primi 100 canali per questo bouquet."
+"Seleziona il tuo bouquet dall'elenco, tieni presente che verranno utilizzati"
+" solo i primi 100 canali per questo bouquet."
 
 #: ../src/scanner/frequencyfinder.py:252
 msgid "Selected tuner is not configured."
-msgstr "Il sintonizzatore selezionato non è configurato."
+msgstr "Il tuner selezionato non è configurato."
 
 #: ../src/scanner/main.py:192 ../src/scanner/main.py:207
 #: ../src/scanner/main.py:447 ../src/scanner/main.py:509
@@ -633,7 +630,7 @@ msgstr "Mostra nelle estensioni"
 
 #: ../src/menu.py:90
 msgid "Show log"
-msgstr "Mostra log"
+msgstr "Mostra registro"
 
 #: ../src/setup.py:508
 msgid "Skip services on not configured sats"
@@ -661,7 +658,7 @@ msgstr "Stile marcatori dei bouquet"
 
 #: ../src/setup.py:505
 msgid "Style of provider marker"
-msgstr "Stile marcatori dei provider"
+msgstr "Stile marcatore del fornitore"
 
 #: ../src/setup.py:578
 msgid "Sunday"
@@ -676,16 +673,16 @@ msgid ""
 "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' "
 "to skip encrypted ones."
 msgstr ""
-"Questo riguarda tutti i bouquet. Seleziona 'no' per eseguire la scansione in "
-"tutti i servizi. Seleziona 'sì' per saltare quelli crittografati."
+"Questo riguarda tutti i bouquet. Seleziona 'no' per eseguire la scansione in"
+" tutti i servizi. Seleziona 'sì' per saltare quelli crittografati."
 
 #: ../src/setup.py:510
 msgid ""
 "This feature is for development only. Requires debug logs to be enabled or "
 "enigma2 to be started in console mode."
 msgstr ""
-"Questa funzione è solo per lo sviluppo. Richiede che sia abilitato il debug "
-"log o che enigma2 sia avviato in modalità console."
+"Questa funzione è solo per lo sviluppo. Richiede che sia abilitato il"
+" registro di debug o che Enigma2 sia avviato in modalità console."
 
 #: ../src/setup.py:297
 msgid ""
@@ -697,7 +694,7 @@ msgstr ""
 
 #: ../src/setup.py:294
 msgid "This option enables the current selected provider."
-msgstr "Questa opzione abilita il provider correntemente selezionato."
+msgstr "Questa opzione abilita il fornitore attualmente selezionato."
 
 #: ../src/setup.py:305
 msgid ""
@@ -706,22 +703,22 @@ msgid ""
 "bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do "
 "not use a main bouquet)"
 msgstr ""
-"Questa opzione ha diverse scelte: \"Sì\" crea un bouquet con tutti i canali "
-"al suo interno, \"Sì solo HD\" raggrupperà tutti i canali HD in questo "
-"bouquet, \"Personalizzato\" ti consente di selezionare il tuo bouquet, \"No"
-"\", (non utilizzare un bouquet principale)"
+"Questa opzione ha diverse scelte: \"Sì\" (crea un bouquet con tutti i canali"
+" al suo interno), \"Sì, solo HD\" (raggrupperà tutti i canali HD in questo"
+" bouquet), \"Personalizzato\" (ti consente di selezionare il tuo bouquet),"
+" \"No\" (non utilizzare un bouquet principale)."
 
 #: ../src/setup.py:503
 msgid ""
 "This option places markers in the bouquet index to group all bouquets of "
 "each provider."
 msgstr ""
-"Questa opzione inserisce i marcatori nell'indice del bouquet per raggruppare "
-"tutti i bouquet di ciascun provider."
+"Questa opzione inserisce i marcatori nell'indice del bouquet per raggruppare"
+" tutti i bouquet di ciascun fornitore."
 
 #: ../src/setup.py:502
 msgid "This option will add the provider's name to bouquet names."
-msgstr "Questa opzione aggiungerà il nome del provider ai nomi dei bouquet."
+msgstr "Questa opzione aggiungerà il nome del fornitore ai nomi dei bouquet."
 
 #: ../src/setup.py:507
 msgid "This option will allow you choose where to place the created bouquets."
@@ -733,40 +730,40 @@ msgid ""
 "This option will create a FreeToAir High Definition bouquet, it will group "
 "all FTA HD channels into this bouquet."
 msgstr ""
-"Questa opzione creerà un bouquet FreeToAir ad alta definizione, raggruppando "
-"insieme tutti i canali FTA HD."
+"Questa opzione creerà un bouquet FreeToAir ad alta definizione, raggruppando"
+" insieme tutti i canali FTA HD."
 
 #: ../src/setup.py:317
 msgid ""
 "This option will create a FreeToAir bouquet, it will group all free channels "
 "into this bouquet."
 msgstr ""
-"Questa opzione creerà un bouquet FreeToAir, raggruppando insieme tutti i "
-"canali gratuiti."
+"Questa opzione creerà un bouquet FreeToAir, raggruppando insieme tutti i"
+" canali gratuiti."
 
 #: ../src/setup.py:314
 msgid ""
 "This option will create a High Definition bouquet, it will group all HD "
 "channels into this bouquet."
 msgstr ""
-"Questa opzione creerà un bouquet ad alta definizione, raggruppando insieme "
-"tutti i canali HD."
+"Questa opzione creerà un bouquet ad alta definizione, raggruppando insieme"
+" tutti i canali HD."
 
 #: ../src/setup.py:311
 msgid ""
 "This option will create bouquets for each type of channel, ie Entertainment, "
 "Movies, Documentary."
 msgstr ""
-"Questa opzione creerà bouquet per ogni tipo di canale, ad es. "
-"Intrattenimento, Film, Documentari."
+"Questa opzione creerà bouquet per ogni tipo di canale, ad esempio"
+" Intrattenimento, Film, Documentari."
 
 #: ../src/setup.py:323
 msgid ""
 "This option will swap SD versions of channels with HD versions. (eg BBC One "
 "SD with BBC One HD, Channel Four SD with with Channel Four HD)"
 msgstr ""
-"Questa opzione scambierà le versioni SD dei canali con le corrispondenti HD "
-"(es. Rai 1 con Rai 1 HD, Canale5 con Canale5 HD)."
+"Questa opzione scambierà le versioni SD dei canali con le corrispondenti HD"
+" (Rai 1 con Rai 1 HD, Canale5 con Canale5 HD)."
 
 #: ../src/setup.py:578
 msgid "Thursday"
@@ -801,17 +798,10 @@ msgid ""
 "Signal cabling issues,\n"
 "Any other reception issues."
 msgstr ""
-"Sintonizzazione fallita!\n"
-"\n"
-"Provider: %s\n"
-"Sintonizzatore: %s\n"
-"Frequenza: %d MHz\n"
-"\n"
-"Controlla il sintonizzatore interessato:\n"
-"\n"
-"Errori di configurazione del sintonizzatore,\n"
-"problemi di cablaggio del segnale,\n"
-"eventuali altri problemi di ricezione."
+"Sintonizzazione fallita!\n\nFornitore: %s\nSintonizzatore: %s\nFrequenza: %d"
+" MHz\n\nControlla il sintonizzatore interessato:\n\nerrori di configurazione"
+" del sintonizzatore,\nproblemi di cablaggio del segnale,\neventuali altri"
+" problemi di ricezione."
 
 #: ../src/scanner/main.py:462
 #, python-format
@@ -828,33 +818,33 @@ msgid ""
 "Signal cabling issues,\n"
 "Any other reception issues."
 msgstr ""
-"Tempo scaduto per bloccare il sintonizzatore\n"
-"Provider: %s\n"
+"Tempo scaduto per bloccare il sintonizzatore!\n"
+"Fornitore: %s\n"
 "Sintonizzatore: %s\n"
 "Frequenza: %d MHz\n"
 "\n"
 "Controlla il sintonizzatore interessato:\n"
 "\n"
-"Errori di configurazione del sintonizzatore,\n"
+"errori di configurazione del sintonizzatore,\n"
 "problemi di cablaggio del segnale,\n"
 "eventuali altri problemi di ricezione."
 
 #: ../src/updateproviders.py:196
 #, python-format
 msgid "Unable to download config file for %s"
-msgstr "Non riesco a scaricare il file di configurazione per %s"
+msgstr "Impossibile scaricare il file di configurazione per %s"
 
 #: ../src/menu.py:87
 msgid "Update provider files"
-msgstr "Aggiorna i file dei provider"
+msgstr "Aggiorna file dei fornitori"
 
 #: ../src/updateproviders.py:285
 msgid "Update summary"
-msgstr ""
+msgstr "Riepilogo aggiornamento"
 
 #: ../src/updateproviders.py:49 ../src/updateproviders.py:89
 msgid "UpdateProviders"
-msgstr "Aggiorno i provider"
+msgstr "UpdateProviders"
 
 #: ../src/setup.py:578
 msgid "Wednesday"
@@ -866,17 +856,17 @@ msgid ""
 "number, 'yes' will add these at the end of the channel list, and 'no' means "
 "these will not be included."
 msgstr ""
-"Quando una ricerca trova canali aggiuntivi a cui non è stato assegnato un "
-"numero di canale, 'sì' li aggiungerà alla fine dell'elenco dei canali e 'no' "
-"significa che non saranno inclusi."
+"Quando una ricerca trova canali aggiuntivi a cui non è stato assegnato un"
+" numero di canale, 'sì' li aggiungerà alla fine dell'elenco dei canali e 'no'"
+" significa che non saranno inclusi."
 
 #: ../src/setup.py:501
 msgid ""
 "When disabled this will enable the 'Keep bouquets' option in the main menu, "
 "allowing you to hide some 'existing' bouquets."
 msgstr ""
-"Se disabilitato, abiliterà l'opzione 'Mantieni bouquet' nel menu principale, "
-"consentendoti di nascondere alcuni bouquet 'esistenti'."
+"Se disabilitato, abiliterà l'opzione 'Mantieni bouquet' nel menu principale,"
+" consentendoti di nascondere alcuni bouquet 'esistenti'."
 
 #: ../src/setup.py:512
 msgid "When enabled, allows you start a scan from the extensions list."
@@ -930,3 +920,5 @@ msgstr "sì (solo FTA HD)"
 #: ../src/setup.py:202
 msgid "yes (only HD)"
 msgstr "sì (solo HD)"
+
+
