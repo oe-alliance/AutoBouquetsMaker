@@ -1,0 +1,30 @@
+<provider>
+	  <name>Bulsatcom</name>
+	  <streamtype>dvbs</streamtype>
+	  <protocol>lcn</protocol>
+	  <transponder
+		    orbital_position="390"
+		    frequency="12271000"
+		    symbol_rate="30000000"
+		    polarization="0"
+		    fec_inner="5"
+		    inversion="2"
+		    system="0"
+		    modulation="1"
+		    roll_off="0"
+		    pilot="2"
+		    tsid="1"
+		    onid="1"
+	  />
+	  <dvbsconfigs>
+		    <configuration key="sd_90" bouquet="0x63" region="0xe2">Bouquet 1</configuration>
+	      <configuration key="sd_80" bouquet="0x62" region="0xe2">Bouquet 2</configuration>
+	  </dvbsconfigs>
+	  <sections>
+		    <section number="1">Bulsatcom</section>
+	  </sections>
+	  <servicehacks>
+<![CDATA[
+]]>
+	  </servicehacks>
+</provider>
