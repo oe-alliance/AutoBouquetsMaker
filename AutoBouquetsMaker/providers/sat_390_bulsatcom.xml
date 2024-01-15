@@ -1,0 +1,38 @@
+<provider>
+	<name>Bulsatcom</name>
+	<streamtype>dvbs</streamtype>
+	<protocol>lcnbat</protocol>
+	<transponder
+		orbital_position="390"
+		frequency="12271000"
+		symbol_rate="30000000"
+		polarization="0"
+		fec_inner="5"
+		inversion="2"
+		system="0"
+		modulation="1"
+		roll_off="0"
+		pilot="2"
+		tsid="1"
+		onid="1"
+	/>
+	<dvbsconfigs>
+		<configuration key="sd_99" bouquet="0x63" region="0x83">Bouquet 1</configuration>
+		<configuration key="sd_98" bouquet="0x62" region="0x83">Bouquet 2</configuration>
+	</dvbsconfigs>
+	<sections>
+		<section number="100">General</section>
+		<section number="200">Sport</section>
+		<section number="300">Documentaries</section>
+		<section number="400">Movies</section>
+		<section number="500">Music</section>
+		<section number="600">Kids</section>
+		<section number="700">News</section>
+		<section number="800">Adult</section>
+		<section number="940">Other</section>
+	</sections>
+	<servicehacks>
+<![CDATA[
+]]>
+	</servicehacks>
+</provider>
