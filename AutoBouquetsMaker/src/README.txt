@@ -359,6 +359,9 @@ Provider key: sat_90_austriasat
 Provider name: Bis TV 13E
 Provider key: sat_0130_bistv
 
+Provider name: Bulsat
+Provider key: sat_390_bulsatcom
+
 Provider name: Canal Digitaal HD
 Provider key: sat_192_canaldigitaal_hd
 
