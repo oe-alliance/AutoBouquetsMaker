@@ -89,7 +89,6 @@
 		<channel number="304" with="849"/> <!-- Sky Greats HD -->
 		<channel number="306" with="850"/> <!-- Sky Family HD -->
 		<channel number="307" with="851"/> <!-- Sky Action HD -->
-		<channel number="310" with="854"/> <!-- Sky Drama HD -->
 		<channel number="313" with="855"/> <!-- Film4 HD -->
 		<channel number="401" with="859"/> <!-- SkySpMainEvHD HD -->
 		<channel number="402" with="860"/> <!-- SkySp PL HD -->
@@ -97,18 +96,18 @@
 		<channel number="404" with="862"/> <!-- SkySpCricket HD -->
 		<channel number="405" with="863"/> <!-- SkySp Golf HD -->
 		<channel number="406" with="864"/> <!-- SkySp F1 HD -->
-		<channel number="407" with="865"/> <!-- SkySp Action HD -->
-		<channel number="408" with="866"/> <!-- SkySp Arena HD -->
-		<channel number="409" with="867"/> <!-- SkySp News HD -->
-		<channel number="410" with="868"/> <!-- Eurosport 1 HD -->
-		<channel number="411" with="869"/> <!-- Eurosport 2 HD -->
-		<channel number="413" with="870"/> <!-- TNT Sports1 HD -->
-		<channel number="414" with="871"/> <!-- TNT Sports2 HD -->
+		<channel number="408" with="865"/> <!-- SkySp Action HD -->
+		<channel number="409" with="866"/> <!-- SkySp News HD -->
+		<channel number="410" with="868"/> <!-- TNT Sports1 HD -->
+		<channel number="411" with="869"/> <!-- TNT Sports2 HD -->
+		<channel number="412" with="867"/> <!-- SkySp Arena HD -->
+		<channel number="413" with="870"/> <!-- Eurosport 1 HD -->
+		<channel number="414" with="871"/> <!-- Eurosport 2 HD -->
 		<channel number="415" with="872"/> <!-- Sky Sports Racing HD -->
 		<channel number="416" with="873"/> <!-- SkySp Mix HD -->
 		<channel number="417" with="874"/> <!-- TNT Sports3 HD -->
 		<channel number="418" with="875"/> <!-- MUTV HD -->
-		<channel number="423" with="876"/> <!-- TNT Sports4 HD -->
+		<channel number="421" with="876"/> <!-- TNT Sports4 HD -->
 		<channel number="424" with="877"/> <!-- Racing TV HD -->
 		<channel number="501" with="881"/> <!-- Sky News HD -->
 		<channel number="503" with="882"/> <!-- BBC News HD -->

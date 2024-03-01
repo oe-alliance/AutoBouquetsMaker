@@ -45,7 +45,7 @@
 		<configuration key="limavady___________" frequency="706000000">Limavady</configuration>
 		<configuration key="llanddona__________" frequency="762000000">Llanddona</configuration>
 		<configuration key="long_mountain______" frequency="785800000">Long Mountain</configuration>
-		<configuration key="mendip_____________" frequency="698000000">Mendip</configuration>
+		<configuration key="mendip_____________" frequency="562000000">Mendip</configuration>
 		<configuration key="midhurst___________" frequency="746000000">Midhurst</configuration>
 		<configuration key="moel_y_parc________" frequency="666000000">Moel y Parc</configuration>
 		<configuration key="nottingham_________" frequency="522000000">Nottingham</configuration>
@@ -180,8 +180,7 @@
 		<customtransponder key="lancaster__________" frequency="506000000" transport_stream_id="3006" system="0"/>
 		<customtransponder key="lancaster__________" frequency="522000000" transport_stream_id="1048" system="0"/>
 		<customtransponder key="lancaster__________" frequency="530000000" transport_stream_id="5040" system="0"/>
-		<customtransponder key="mendip_____________" frequency="770000000" transport_stream_id="4082" system="1"/>
-		<customtransponder key="mendip_____________" frequency="570000000" transport_stream_id="a000" system="1"/>
+		<customtransponder key="mendip_____________" frequency="586000000" transport_stream_id="4082" system="1"/>
 		<customtransponder key="oliversmount_______" frequency="698000000" transport_stream_id="6040" system="0"/>
 		<customtransponder key="oliversmount_______" frequency="730000000" transport_stream_id="4089" system="1"/>
 		<customtransponder key="oliversmount_______" frequency="738000000" transport_stream_id="3006" system="0"/>
