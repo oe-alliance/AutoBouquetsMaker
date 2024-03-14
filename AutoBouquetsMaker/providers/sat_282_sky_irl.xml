@@ -200,6 +200,7 @@ except:
 		1858: 361, # KISS
 		1877: 362, # Magic
 		1853: 363, # Kerrang!
+		1285: 407, # SkySp Tennis
 		2085: 503, # BBC News HD
 		3020: 504, # BBC Parliament HD
 		4075: 812, # Channel 4 HD
