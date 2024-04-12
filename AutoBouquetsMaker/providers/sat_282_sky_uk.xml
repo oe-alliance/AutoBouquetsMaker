@@ -232,9 +232,6 @@
 
 	<!-- swapchannels affects main and sections bouquets. "number" is the SD channel. "with" is the HD channel. Swap will not occur if target is not HD -->
 	<swapchannels>
-		<channel number="101" with="801" conditional="'BBC One' in service_hd['service_name']"/> <!-- BBC One HD -->
-		<channel number="102" with="115" conditional="'BBC Two' in service_hd['service_name']"/> <!-- BBC Two HD -->
-		<channel number="102" with="802" conditional="'BBC Two' in service_hd['service_name']"/> <!-- BBC Two HD -->
 		<channel number="103" with="803"/> <!-- ITV, STV and UTV HD -->
 		<channel number="103" with="176" conditional="'ITV' in service_hd['service_name']"/><!-- ITV HD -->
 		<channel number="104" with="138" conditional="'Channel 4' in service_sd['service_name'] and 'Channel 4' in service_hd['service_name']"/> <!-- Channel 4 HD -->
@@ -250,12 +247,7 @@
 		<channel number="112" with="812"/> <!-- Comedy Central HD -->
 		<channel number="113" with="813"/> <!-- Sky Max HD -->
 		<channel number="114" with="814"/> <!-- Sky Comedy HD -->
-		<channel number="115" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
-		<channel number="115" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
-		<channel number="116" with="815"/> <!-- BBC Four HD -->
 		<channel number="117" with="138" conditional="'Channel 4' in service_sd['service_name'] and 'Channel 4' in service_hd['service_name']"/> <!-- Channel 4 HD -->
-		<channel number="117" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
-		<channel number="117" with="847" conditional="'BBC ALBA' in service_sd['service_name']"/> <!-- BBC ALBA HD -->
 		<channel number="118" with="816"/> <!-- ITV2 HD -->
 		<channel number="121" with="819"/> <!-- SkyDocmntrsHD -->
 		<channel number="122" with="820"/> <!-- Sky Crime HD -->
@@ -271,7 +263,6 @@
 		<channel number="135" with="830"/> <!-- E4 HD -->
 		<channel number="136" with="831"/> <!-- More4 HD -->
 		<channel number="139" with="836"/> <!-- Sky Sci-Fi HD -->
-		<channel number="141" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
 		<channel number="144" with="834"/> <!-- Quest HD -->
 		<channel number="152" with="836"/> <!-- Sky Sci-Fi HD -->
 		<channel number="155" with="846"/> <!-- YESTERDAY HD -->
@@ -279,9 +270,6 @@
 		<channel number="159" with="835"/> <!-- E! HD -->
 		<channel number="163" with="840"/> <!-- Sky History 2 HD -->
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
-		<channel number="169" with="845" conditional="'BBC Three' in service_sd['service_name']"/> <!-- BBC Three HD -->
-		<channel number="169" with="847" conditional="'BBC ALBA' in service_sd['service_name']"/> <!-- BBC ALBA HD -->
-		<channel number="187" with="844" conditional="'BBC Scotland' in service_sd['service_name'] and 'BBCScotlandHD' in service_hd['service_name']"/> <!-- BBC Scotland HD -->
 		<channel number="301" with="848"/> <!-- SkyPremiereHD -->
 		<channel number="304" with="849"/> <!-- Sky Greats HD -->
 		<channel number="306" with="850"/> <!-- Sky Family HD -->
@@ -307,8 +295,6 @@
 		<channel number="421" with="876"/> <!-- TNT Sports4 HD -->
 		<channel number="424" with="877"/> <!-- Racing TV HD -->
 		<channel number="501" with="881"/> <!-- Sky News HD -->
-		<channel number="503" with="882"/> <!-- BBC News HD -->
-		<channel number="504" with="887"/> <!-- BBC Parliament HD -->
 		<channel number="505" with="883"/> <!-- CNBC HD -->
 		<channel number="506" with="884"/> <!-- CNN HD -->
 		<channel number="513" with="886"/> <!-- TRT World HD -->
@@ -316,8 +302,6 @@
 		<channel number="603" with="641"/> <!-- Boomerang HD -->
 		<channel number="604" with="642"/> <!-- Nickelodeon HD -->
 		<channel number="606" with="645"/> <!-- Nick Jr HD -->
-		<channel number="607" with="643"/> <!-- CBBC HD -->
-		<channel number="608" with="644"/> <!-- CBeebies HD -->
 		<channel number="662" with="890"/> <!-- TJC HD -->
 		<channel number="703" with="892"/> <!-- SONY TV HD -->
 		<channel number="705" with="893"/> <!-- Utsav Plus HD -->
@@ -325,7 +309,6 @@
 		<channel number="709" with="898"/> <!-- Zee TV HD -->
 		<channel number="715" with="895"/> <!-- SONY MAX HD -->
 		<channel number="717" with="896"/> <!-- Utsav GOLD HD -->
-		<channel number="970" with="971" conditional="'BBC RB 1' in service_sd['service_name'] and 'BBC RB 1' in service_hd['service_name']"/> <!-- BBC RB 1 HD -->
 	</swapchannels>
 	<servicehacks>
 <![CDATA[
@@ -369,6 +352,7 @@ except:
 	channels_to_add_by_id = {
 		1025: 296, # TV3+1
 		1163: 873, # eir Sport 1 HD
+		1285: 407, # SkySp Tennis
 		5122: 421, # eir Sport 1 (also 3601)
 		5123: 424, # eir Sport 2 (also 4551)
 		5152: 460, # eir Sport 2 HD (also 5154)
