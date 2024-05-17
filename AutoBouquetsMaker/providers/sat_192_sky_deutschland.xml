@@ -17,31 +17,30 @@
 		onid="133"
 	/>
 	<sections>
-		<section number="100">Unterhaltung</section>
-		<section number="201">Sport</section>
-		<section number="300">Spielfilm</section>
-		<section number="400">Doku</section>
-		<section number="520">Kinder</section>
+		<section number="100">Entertainment</section>
+		<section number="200">Sport</section>
+		<section number="300">Film</section>
+		<section number="500">Kids</section>
 		<section number="600">Musik</section>
-		<section number="700">News</section>
-		<section number="800">Teleshopping</section>
-		<section number="1000">LCN nicht bekannt</section>
+		<section number="700">News and International</section>
+		<section number="800">Regional</section>
+		<section number="900">Marktplatz </section>
 	</sections>
 	<servicehacks>
 <![CDATA[
 
 if service["service_type"] == 22:
 	service["service_type"] = 1
-	
+
 blacklist = ["."] # channel names have quotes. Channel numbers do not. Example: ['ITV HD', 250, 500]
 
 for number in service["numbers"]:
 	if number in blacklist:
-		skip.skip = True		
+		skip.skip = True
 
 if service["service_name"] in blacklist:
 	skip.skip = True
-	
+
 ]]>
 	</servicehacks>
 </provider>

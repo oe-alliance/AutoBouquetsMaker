@@ -17,6 +17,19 @@ import six
 
 from enigma import eDVBFrontendParametersSatellite
 
+charsets = {
+	0x01: "iso-8859-5",
+	0x02: "iso-8859-6",
+	0x03: "iso-8859-7",
+	0x04: "iso-8859-8",
+	0x05: "iso-8859-9",
+	0x06: "iso-8859-10",
+	0x07: "iso-8859-11",
+	0x09: "iso-8859-13",
+	0x0A: "iso-8859-14",
+	0x0B: "iso-8859-15",
+}
+
 
 class BouquetsWriter():
 
@@ -141,8 +154,12 @@ class BouquetsWriter():
 						service_name = control_char_re.sub('', service["service_name"]).decode('latin-1').encode("utf8")
 						provider_name = control_char_re.sub('', service["provider_name"]).decode('latin-1').encode("utf8")
 					else:
-						service_name = control_char_re.sub('', six.ensure_text(six.ensure_str(service["service_name"], encoding='latin-1'), encoding='utf-8', errors='ignore'))
-						provider_name = control_char_re.sub('', six.ensure_text(six.ensure_str(service["provider_name"], encoding='latin-1'), encoding='utf-8', errors='ignore'))
+						service_name = control_char_re.sub('', service["service_name"])
+						if "service_name_encoding" in service and service["service_name_encoding"] in charsets:
+							service_name = service_name.encode("iso-8859-1").decode(charsets[service["service_name_encoding"]])
+						provider_name = control_char_re.sub('', service["provider_name"])
+						if "provider_name_encoding" in service and service["provider_name_encoding"] in charsets:
+							provider_name = provider_name.encode("iso-8859-1").decode(charsets[service["provider_name_encoding"]])
 				else:
 					service_name = service["service_name"]
 
@@ -289,8 +306,12 @@ class BouquetsWriter():
 						service_name = control_char_re.sub('', service["service_name"]).decode('latin1').encode("utf8")
 						provider_name = control_char_re.sub('', service["provider_name"]).decode('latin1').encode("utf8")
 					else:
-						service_name = control_char_re.sub('', six.ensure_text(six.ensure_str(service["service_name"], encoding='latin1'), encoding='utf8', errors='ignore'))
-						provider_name = control_char_re.sub('', six.ensure_text(six.ensure_str(service["provider_name"], encoding='latin1'), encoding='utf8', errors='ignore'))
+						service_name = control_char_re.sub('', service["service_name"])
+						if "service_name_encoding" in service and service["service_name_encoding"] in charsets:
+							service_name = service_name.encode("iso-8859-1").decode(charsets[service["service_name_encoding"]])
+						provider_name = control_char_re.sub('', service["provider_name"])
+						if "provider_name_encoding" in service and service["provider_name_encoding"] in charsets:
+							provider_name = provider_name.encode("iso-8859-1").decode(charsets[service["provider_name_encoding"]])
 				else:
 					service_name = service["service_name"]
 
@@ -959,24 +980,21 @@ class BouquetsWriter():
 		return "#SERVICE 1:320:0:0:0:0:0:0:0:0:\n"
 
 	def utf8_convert(self, text):
-		for encoding in ["utf8", "latin1"]:
-			try:
-				if six.PY2:
-					text.decode(encoding=encoding)
-				else:
-					six.ensure_str(text, encoding=encoding)
-			except UnicodeDecodeError:
-				encoding = None
-			else:
-				break
-		if encoding == "utf8":
-			return text
-		if encoding is None:
-			encoding = "utf8"
 		if six.PY2:
-			return text.decode(encoding=encoding, errors="ignore").encode("utf8")
+			for encoding in ["utf8","latin-1"]:
+				try:
+					text.decode(encoding=encoding)
+				except UnicodeDecodeError:
+					encoding = None
+				else:
+					break
+			if encoding == "utf8":
+				return text
+			if encoding is None:
+				encoding = "utf8"
+			return text.decode(encoding, errors="ignore").encode("utf8")
 		else:
-			return six.ensure_text(six.ensure_str(text, encoding=encoding, errors='ignore'), encoding='utf8')
+			return six.ensure_str(text, encoding='utf-8', errors='strict')
 
 	def styledBouquetMarker(self, text, caller="bouquets"):
 		if caller == "index":

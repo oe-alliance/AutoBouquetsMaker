@@ -961,7 +961,9 @@ PyObject *ss_parse_sdt(unsigned char *data, int length) {
 		int free_ca = (data[offset + 3] >> 4) & 0x01;
 		int descriptors_loop_length = ((data[offset + 3] & 0x0f) << 8) | data[offset + 4];
 		char service_name[256];
+		int service_name_encoding = 0;
 		char provider_name[256];
+		int provider_name_encoding = 0;
 		int service_type = 0;
 		int region_code = 0;
 		int city_code = 0;
@@ -1027,19 +1029,27 @@ PyObject *ss_parse_sdt(unsigned char *data, int length) {
 			offset2 += (size + 2);
 		}
 
+		provider_name_encoding = 0;
 		char *provider_name_ptr = provider_name;
 		if (strlen(provider_name) == 0)
 			strcpy(provider_name, "Unknown");
-		else if (provider_name[0] == 0x05)
-				provider_name_ptr++;
+		else if (provider_name[0] < 0x20)
+		{
+			provider_name_encoding = provider_name[0];
+			provider_name_ptr++;
+		}
 
+		service_name_encoding = 0;
 		char *service_name_ptr = service_name;
 		if (strlen(service_name) == 0)
 			strcpy(service_name, "Unknown");
-		else if (service_name[0] == 0x05)
-				service_name_ptr++;
+		else if (service_name[0] < 0x20)
+		{
+			service_name_encoding = service_name[0];
+			service_name_ptr++;
+		}
 
-		PyObject *item = Py_BuildValue("{s:i,s:i,s:i,s:i,s:i,s:s,s:s,s:i,s:i,s:i,s:i,s:i,s:i}",
+		PyObject *item = Py_BuildValue("{s:i,s:i,s:i,s:i,s:i,s:s,s:s,s:i,s:i,s:i,s:i,s:i,s:i,s:i,s:i}",
 					"transport_stream_id", transport_stream_id,
 					"original_network_id", original_network_id,
 					"service_id", service_id,
@@ -1057,7 +1067,9 @@ PyObject *ss_parse_sdt(unsigned char *data, int length) {
 					"service_group_id", service_group_id,
 					"category_id", category_id,
 					"region_code", region_code,
-					"city_code", city_code);
+					"city_code", city_code,
+					"provider_name_encoding", provider_name_encoding,
+					"service_name_encoding", service_name_encoding);
 		PyList_Append(list, item);
 		Py_DECREF(item);
 	}
