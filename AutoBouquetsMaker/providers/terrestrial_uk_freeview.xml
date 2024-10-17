@@ -66,7 +66,7 @@
 		<configuration key="stockland_hill_____" frequency="514200000">Stockland Hill</configuration>
 		<configuration key="sudbury____________" frequency="658000000">Sudbury</configuration>
 		<configuration key="sutton_coldfield___" frequency="650000000">Sutton Coldfield</configuration>
-		<configuration key="tacolneston________" frequency="745800000">Tacolneston</configuration>
+		<configuration key="tacolneston________" frequency="626000000">Tacolneston</configuration>
 		<configuration key="the_wrekin_________" frequency="514000000">The Wrekin</configuration>
 		<configuration key="torosay____________" frequency="530000000">Torosay</configuration>
 		<configuration key="tunbridge_wells____" frequency="634000000">Tunbridge Wells</configuration>
@@ -209,8 +209,7 @@
 		<customtransponder key="rowridge___________" frequency="746000000" transport_stream_id="a000" system="1"/>
 		<customtransponder key="rowridge___________" frequency="602000000" transport_stream_id="b000" system="1"/>
 		<customtransponder key="salisbury__________" frequency="682000000" transport_stream_id="4083" system="1"/>
-		<customtransponder key="sandy_heath________" frequency="474000000" transport_stream_id="4083" system="1"/>
-		<customtransponder key="sandy_heath________" frequency="746000000" transport_stream_id="a000" system="1"/>
+		<customtransponder key="sandy_heath________" frequency="474000000" transport_stream_id="408d" system="1"/>
 		<customtransponder key="stockland_hill_____" frequency="538000000" transport_stream_id="4082" system="1"/>
 		<customtransponder key="stockland_hill_____" frequency="506000000" transport_stream_id="3006" system="0"/>
 		<customtransponder key="sudbury____________" frequency="634000000" transport_stream_id="2001" system="0"/>
@@ -270,9 +269,9 @@
 		<channel number="4" with="104"/>	<!-- Channel 4 HD -->
 		<channel number="5" with="105"/>	<!-- Channel 5 HD -->
 		<channel number="9" with="106"/>	<!-- BBC FOUR HD -->
+		<channel number="23" with="107"/>	<!-- BBC THREE HD -->
 		<channel number="201" with="204"/>	<!-- CBBC HD -->
 		<channel number="202" with="205"/>	<!-- CBeebies HD -->
-		<channel number="231" with="107"/>	<!-- BBC NEWS HD -->
 	</swapchannels>
 
 	<servicehacks>

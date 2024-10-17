@@ -1207,7 +1207,7 @@ class DvbScanner():
 				continue
 			service["namespace"] = self.namespace_dict[namespace_key]
 			service["flags"] = 0
-			service["service_info"] = categories[service["channel_id"] & 0x0fff]  # add category info from descriptors 0xd5 and 0xd8
+			service["service_info"] = (service["channel_id"] & 0x0fff) in categories and categories[service["channel_id"] & 0x0fff] or ""  # add category info from descriptors 0xd5 and 0xd8
 
 			key = "%x:%x:%x" % (service["transport_stream_id"], service["original_network_id"], service["service_id"])
 			if key in tmp_services_dict:

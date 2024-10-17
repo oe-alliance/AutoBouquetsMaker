@@ -270,28 +270,15 @@
 		<channel number="159" with="835"/> <!-- E! HD -->
 		<channel number="163" with="840"/> <!-- Sky History 2 HD -->
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
-		<channel number="301" with="848"/> <!-- SkyPremiereHD -->
-		<channel number="304" with="849"/> <!-- Sky Greats HD -->
-		<channel number="306" with="850"/> <!-- Sky Family HD -->
-		<channel number="307" with="851"/> <!-- Sky Action HD -->
 		<channel number="313" with="855"/> <!-- Film4 HD -->
-		<channel number="401" with="859"/> <!-- SkySpMainEvHD HD -->
-		<channel number="402" with="860"/> <!-- SkySp PL HD -->
-		<channel number="403" with="861"/> <!-- SkySp F'ball HD -->
-		<channel number="404" with="862"/> <!-- SkySpCricket HD -->
-		<channel number="405" with="863"/> <!-- SkySp Golf HD -->
-		<channel number="406" with="864"/> <!-- SkySp F1 HD -->
-		<channel number="408" with="865"/> <!-- SkySp Action HD -->
 		<channel number="409" with="866"/> <!-- SkySp News HD -->
 		<channel number="410" with="868"/> <!-- TNT Sports1 HD -->
 		<channel number="411" with="869"/> <!-- TNT Sports2 HD -->
-		<channel number="412" with="867"/> <!-- SkySp Arena HD -->
 		<channel number="413" with="870"/> <!-- Eurosport 1 HD -->
 		<channel number="414" with="871"/> <!-- Eurosport 2 HD -->
 		<channel number="415" with="872"/> <!-- Sky Sports Racing HD -->
 		<channel number="416" with="873"/> <!-- SkySp Mix HD -->
 		<channel number="417" with="874"/> <!-- TNT Sports3 HD -->
-		<channel number="418" with="875"/> <!-- MUTV HD -->
 		<channel number="421" with="876"/> <!-- TNT Sports4 HD -->
 		<channel number="424" with="877"/> <!-- Racing TV HD -->
 		<channel number="501" with="881"/> <!-- Sky News HD -->
@@ -350,24 +337,31 @@ except:
 	}
 
 	channels_to_add_by_id = {
-		1025: 296, # TV3+1
-		1163: 873, # eir Sport 1 HD
 		1285: 407, # SkySp Tennis
-		5122: 421, # eir Sport 1 (also 3601)
-		5123: 424, # eir Sport 2 (also 4551)
-		5152: 460, # eir Sport 2 HD (also 5154)
-		5153: 412, # Premier HD
-		5311: 428, # Premier Sports
 		#slow death section IRL alternatves
-		3080: 827, # W HD
-		3077: 809, # Alibi HD
-		3078: 811, # Dave HD
 		3705: 112, # ComedyCentral
 		2709: 127, # ComedyXtra
 		2418: 154, # ID
+		1409: 301, #
+		1815: 304, #
+		1808: 306, #
+		1001: 307, #
+		1341: 401, #
+		1326: 402, #
+		3848: 403, #
+		1302: 404, #
+		1324: 405, #
+		1306: 406, #
+		1285: 407, #
+		1333: 408, #
+		3839: 412, #
+		4091: 416, #
 		2517: 604, # Nicelodeon
 		5527: 606, # Nicktoons
 		3356: 615, # Nick Jr
+		3077: 809, # Alibi HD
+		3078: 811, # Dave HD
+		3080: 827, # W HD
 	}
 
 	itv_rename = {
@@ -439,9 +433,6 @@ except:
 
 	whitelist_by_id = [
 		1003, # MUTV HD
-		1015, # LaLigaTV HD
-		1047, # Insight HD
-		1163, # eir Sport 1 HD
 		1372,
 		3080, # W HD
 		3077, # Alibi HD
@@ -450,9 +441,6 @@ except:
 		3831,
 		4039,
 		4056,
-		5152, # eir Sport 2 HD
-		5153, # Premier HD
-		5154, # eir Sport 2 HD
 		5272, # Racing UK HD
 	]
 

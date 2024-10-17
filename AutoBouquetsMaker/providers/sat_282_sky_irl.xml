@@ -51,7 +51,6 @@
 		<channel number="101" with="801"/> <!-- RTE One HD -->
 		<channel number="102" with="802"/> <!-- RTE 2 HD -->
 		<channel number="103" with="803"/> <!-- TV3 HD -->
-		<channel number="104" with="804"/> <!-- TG4 HD -->
 		<channel number="106" with="806"/> <!-- Sky Sky Showcase HD -->
 		<channel number="107" with="807"/> <!-- Sky Witness -->
 		<channel number="108" with="808"/> <!-- Sky Atlantic HD -->
@@ -83,10 +82,6 @@
 		<channel number="159" with="835"/> <!-- E! HD -->
 		<channel number="163" with="840"/> <!-- Sky History 2 HD -->
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
-		<channel number="301" with="848"/> <!-- SkyPremiereHD -->
-		<channel number="304" with="849"/> <!-- Sky Greats HD -->
-		<channel number="306" with="850"/> <!-- Sky Family HD -->
-		<channel number="307" with="851"/> <!-- Sky Action HD -->
 		<channel number="313" with="855"/> <!-- Film4 HD -->
 		<channel number="401" with="859"/> <!-- SkySpMainEvHD HD -->
 		<channel number="402" with="860"/> <!-- SkySp PL HD -->
@@ -104,7 +99,6 @@
 		<channel number="415" with="872"/> <!-- Sky Sports Racing HD -->
 		<channel number="416" with="873"/> <!-- SkySp Mix HD -->
 		<channel number="417" with="874"/> <!-- TNT Sports3 HD -->
-		<channel number="418" with="875"/> <!-- MUTV HD -->
 		<channel number="421" with="876"/> <!-- TNT Sports4 HD -->
 		<channel number="424" with="877"/> <!-- Racing TV HD -->
 		<channel number="501" with="881"/> <!-- Sky News HD -->
@@ -187,6 +181,10 @@ except:
 		1076: 263, # 5Spike+1
 		1014: 269, # ITVBe +1
 		3024: 276, # 5STAR +1
+		1409: 301, #
+		1815: 304, #
+		1808: 306, #
+		1001: 307, #
 		3653: 358, # Box Upfront
 		1802: 359, # The Box
 		1350: 360, # Box Hits
@@ -276,20 +274,14 @@ except:
 
 	whitelist_by_id = [
 		1003, # MUTV HD
-		1015, # LaLigaTV HD
-		1047, # Insight HD
-		1163, # eir Sport 1 HD
 		1372,
 		3080, # W HD
-		3077, # albia HD
+		3077, # Alibi HD
 		3078, # Dave HD
 		3812,
 		3831,
 		4039,
 		4056,
-		5152, # eir Sport 2 HD
-		5153, # Premier HD
-		5154, # eir Sport 2 HD
 		5272, # Racing UK HD
 	]
 
