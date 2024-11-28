@@ -227,7 +227,7 @@ msgstr "Utwórz bukiet FTA"
 
 #: ../src/setup.py:313
 msgid "Create HD bouquet"
-msgstr "Książka Creëer HD"
+msgstr "Utwórz bukiet HD"
 
 #: ../src/setup.py:304
 msgid "Create main bouquet"
@@ -522,9 +522,8 @@ msgid "Scan"
 msgstr "Skanuj"
 
 #: ../src/plugin.py:110 ../src/plugin.py:112
-#, fuzzy
 msgid "Scan and create bouquets."
-msgstr "Książka Creëer HD"
+msgstr "Skanuj i twórz bukiety."
 
 #: ../src/scanner/frequencyfinder.py:161
 msgid "Scanning for active transponders"
