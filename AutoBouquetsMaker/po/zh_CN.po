@@ -345,7 +345,7 @@ msgid "Providers"
 msgstr "供应商"
 
 msgid "Providers order"
-msgstr "供应商订单"
+msgstr "供应商顺序"
 
 msgid "Radio Channels"
 msgstr "广播频道"
