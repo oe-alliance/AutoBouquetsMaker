@@ -75,7 +75,7 @@ msgid "Add provider markers"
 msgstr "Añadir marcadores de proveedores"
 
 msgid "Add provider name to bouquets"
-msgstr "Añadir el nombre del proveedor a la lista de favoritos"
+msgstr "Añadir el nombre del proveedor a los grupos"
 
 msgid "All channels"
 msgstr "Todos los canales"
@@ -144,7 +144,7 @@ msgid "Choose the style of markers that separate one provider from another in bo
 msgstr "Elija el estilo de marcadores que separan a un proveedor de otro en los índices del bouquet."
 
 msgid "Choose the style of the markers that separate channels into groups in the channel lists."
-msgstr "Elija el estilo de los marcadores que separan los canales en grupos en las listas de canales."
+msgstr "Elija el estilo de los marcadores que separan los canales en secciones en los grupos."
 
 msgid "Close"
 msgstr "Cerrar"
@@ -173,22 +173,22 @@ msgid "Configure"
 msgstr "Configurar"
 
 msgid "Create FTA HD bouquet"
-msgstr "Generar lista favoritos FTA HD"
+msgstr "Generar un grupo de favoritos FTA HD"
 
 msgid "Create FTA bouquet"
-msgstr "Generar lista favoritos FTA"
+msgstr "Generar un grupo de favoritos FTA"
 
 msgid "Create HD bouquet"
-msgstr "Generar lista favoritos HD"
+msgstr "Generar un grupo de favoritos HD"
 
 msgid "Create main bouquet"
-msgstr "Generar lista favoritos principal"
+msgstr "Generar un grupo con todas secciones"
 
 msgid "Create sections bouquets"
-msgstr "Generar una lista de cada sección"
+msgstr "Generar un grupo de cada sección"
 
 msgid "Custom bouquet for main"
-msgstr "Lista personalizada principal"
+msgstr "Grupo personalizada principal"
 
 msgid "DVB-T frequency finder"
 msgstr "Buscador de frecuencias DVB-T"
@@ -253,7 +253,7 @@ msgid "Hide sections"
 msgstr "Ocultar secciones"
 
 msgid "If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible."
-msgstr "Si un servicio se lleva a cabo en un satélite que no está configurado, 'sí' significaque el canal no aparecerá en la lista de canales, 'no' significa que el canalse mostrará en la lista de canales, pero estará en gris y no será accesible."
+msgstr "Si un canal se lleva a cabo en un satélite que no está configurado, 'sí' significaque el canal no aparecerá en ningún grupo, 'no' significa que el canal se mostrará en los grupos, pero estará en gris y no será accesible."
 
 msgid "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan."
 msgstr "Si el receptor está en 'Hibernación' cuando vence el cronograma, actívelo para realizar un escaneo."
@@ -269,7 +269,7 @@ msgid "Incompatible versions: %s > %s"
 msgstr "Versiones incompatibles: %s > %s"
 
 msgid "Keep all non-ABM bouquets"
-msgstr "Mantener todas las lista no-ABM"
+msgstr "Mantener todas los grupos no-ABM"
 
 msgid "Keep bouquets"
 msgstr "Mantener favoritos"
@@ -328,7 +328,7 @@ msgid "Only DVB-T2 multiplexes found. Insufficient data to create a provider fil
 msgstr "Solo se encontraron multiplexores DVB-T2. No hay suficientes datos para crear un archivo de proveedor."
 
 msgid "Place bouquets at"
-msgstr "Situar listas en"
+msgstr "Situar grupos"
 
 msgid "Please first setup, in configuration"
 msgstr "Por favor primer ajuste, en configuración"
@@ -401,7 +401,7 @@ msgid "Scan"
 msgstr "Escanear"
 
 msgid "Scan and create bouquets."
-msgstr "Escanear y generar lista favoritos HD"
+msgstr "Escanear y generar grupo de favoritos HD"
 
 msgid "Scanning for active transponders"
 msgstr "Búsqueda de transpondedores activos"
@@ -428,17 +428,17 @@ msgid "Select days"
 msgstr "Seleccionar días"
 
 msgid "Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used."
-msgstr "Selecciona tu propia lista de favoritos, ten en cuenta que solo podrán usarse los 100 primeros canales de esta lista."
+msgstr "Selecciona tu propia grupo de favoritos, ten en cuenta que solo podrán usarse los 100 primeros canales de este grupo."
 
 msgid "Selected tuner is not configured."
 msgstr "El sintonizador seleccionado no está configurado."
 
 #, python-format
 msgid "Services: %d video - %d radio"
-msgstr "Servicios: %d video - %d radio"
+msgstr "canales: %d video - %d radio"
 
 msgid "Services: 0 video - 0 radio"
-msgstr "Servicios: 0 video - 0 radio"
+msgstr "canales: 0 video - 0 radio"
 
 msgid "Set the time of day to perform a scan."
 msgstr "Establezca la hora del día para realizar un escaneo."
@@ -453,7 +453,7 @@ msgid "Show log"
 msgstr "Mostrar log"
 
 msgid "Skip services on not configured sats"
-msgstr "Saltar servicios de satélites no configurados"
+msgstr "Saltar canales de satélites no configurados"
 
 msgid "Start scan"
 msgstr "Empezar escaneo"
@@ -468,7 +468,7 @@ msgid "Starting update..."
 msgstr "Iniciando actualización..."
 
 msgid "Style of bouquet marker"
-msgstr "Estilo de marcador de lista de favoritos"
+msgstr "Estilo de marcador de sección"
 
 msgid "Style of provider marker"
 msgstr "Estilo de marcador de provedor"
@@ -480,10 +480,10 @@ msgid "Swap channels"
 msgstr "Intercambiar canales"
 
 msgid "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones."
-msgstr "Esto afecta a todos los favoritos. Selecciona 'no' para escanear en todos los servicios. Selecciones 'si' para saltar los codificados."
+msgstr "Esto afecta a todos los favoritos. Selecciona 'no' para escanear en todos los canales. Selecciones 'si' para saltar los codificados."
 
 msgid "This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode."
-msgstr "Esta característica es solo para el desarrollo. Requiere registros de depuración para ser habilitado o iniciar enigma2 en modo cónsola."
+msgstr "Esta característica es solo para el desarrollo. Requiere registros de depuración habilitados o iniciar enigma2 en modo de cónsola."
 
 msgid "This option allows you to choose what region of the country you live in, so it populates the correct channels for your region."
 msgstr "Esta opción te permite escoger la región del país donde vives, por tanto se rellenan los canales correctos para tu región."
@@ -492,28 +492,28 @@ msgid "This option enables the current selected provider."
 msgstr "Esta opción habilita el proveedor seleccionado."
 
 msgid "This option has several choices \"Yes\", (create a bouquet with all the channels in it), \"Yes HD only\", (will group all HD channels into this bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do not use a main bouquet)"
-msgstr "Esta opción tiene varias opciones: \"Sí\" (crea una lista de favoritos con todos los canales), \"Sí, solo HD\" (agrupará todos los canales HD en esta lista), \"Personalizado\" (le permite seleccionar su propia lista), \"No\" (no usar una lista principal)"
+msgstr "Esta opción tiene varias opciones: \"Sí\" (crea un grupo de favoritos con todos los canales), \"Sí, solo HD\" (agrupará todos los canales HD en este grupo), \"Personalizado\" (le permite seleccionar su propio grupo), \"No\" (no usar un grupo principal)"
 
 msgid "This option places markers in the bouquet index to group all bouquets of each provider."
-msgstr "Esta opción coloca marcadores en el índice de favoritos para agrupar todas las listas de favoritos de cada proveedor."
+msgstr "Esta opción coloca marcadores en el índice de favoritos para agrupar todos los grupos de favoritos de cada proveedor."
 
 msgid "This option will add the provider's name to bouquet names."
 msgstr "Esta opción añadirá el nombre del proveedor al nombre del favorito."
 
 msgid "This option will allow you choose where to place the created bouquets."
-msgstr "Esta opción permitirá escoger donde situar la lista creada."
+msgstr "Esta opción permitirá escoger donde situar los grupos creados."
 
 msgid "This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet."
-msgstr "Esta opción creará una lista FTA de Alta Definición, agrupará todos los canales libres en esta lista."
+msgstr "Esta opción creará un grupo FTA de Alta Definición, agrupará todos los canales libres en este grupo."
 
 msgid "This option will create a FreeToAir bouquet, it will group all free channels into this bouquet."
-msgstr "Esta opción creará una lista FTA, agrupará todos los canales libres en esta lista."
+msgstr "Esta opción creará un grupo FTA, agrupará todos los canales libres en este grupo.."
 
 msgid "This option will create a High Definition bouquet, it will group all HD channels into this bouquet."
-msgstr "Está opción creará una lista de Alta Definición, agrupará todos los canales HD en esta lista."
+msgstr "Está opción creará un grupo de Alta Definición, agrupará todos los canales HD en este grupo."
 
 msgid "This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary."
-msgstr "Esta opción creará listas de favoritos para cada tipo de canal, p.ej. Entretenimiento, Películas, Documentales."
+msgstr "Esta opción creará grupos de favoritos para cada tipo de canal, p.ej. Entretenimiento, Películas, Documentales."
 
 msgid "This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)"
 msgstr "Esta opción intercambiará las versiones SD de los canales con las versiones HD. (ej. BBC One SD con BBC One HD, Canal AXN SD con canal AXN HD)"
@@ -601,16 +601,16 @@ msgid "Wednesday"
 msgstr "Miercoles"
 
 msgid "When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included."
-msgstr "Cuando una búsqueda encuentra canales adicionales que no tienen un número de canal asignado, 'sí' agregará estos al final de la lista de canales, y 'no' significaque no serán incluidos."
+msgstr "Cuando una búsqueda encuentra canales adicionales que no tienen un número de canal asignado, 'sí' añadirá estos al final de la lista de grupos, y 'no' significaque no serán incluidos."
 
 msgid "When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets."
-msgstr "Cuando está deshabilitada, se habilitará la opción 'Mantener favoritos' en el menú principal, permitiendo esconder algunas listas existentes."
+msgstr "Cuando está deshabilitada, se habilitará la opción 'Mantener favoritos' en el menú principal, permitiendo esconder algunos grupos existentes."
 
 msgid "When enabled, allows you start a scan from the extensions list."
 msgstr "Cuando esté habilitado, permite iniciar un escaneo desde el menú extensiones."
 
 msgid "bottom"
-msgstr "final"
+msgstr "abajo"
 
 msgid "expert"
 msgstr "experto"
