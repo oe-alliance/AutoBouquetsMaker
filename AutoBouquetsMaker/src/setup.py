@@ -28,19 +28,6 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 
 	ABM_BOUQUET_PREFIX = "userbouquet.abm."
 
-	try:  # Work-around to get OpenSPA working
-		from boxbranding import getImageDistro
-		if getImageDistro() == 'openspa':
-			def keyLeft(self):
-				ConfigListScreen.keyLeft(self)
-				self.changedEntry()
-
-			def keyRight(self):
-				ConfigListScreen.keyRight(self)
-				self.changedEntry()
-	except:
-		pass
-
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		self.session = session
@@ -48,19 +35,16 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 		self.setup_title = _("AutoBouquetsMaker Providers")
 		Screen.setTitle(self, self.setup_title)
 
-		self.onChangedEntry = []
-		self.list = []
-		ConfigListScreen.__init__(self, self.list, session=self.session, on_change=self.changedEntry)
+		ConfigListScreen.__init__(self, [], session=self.session, on_change=self.changedEntry)
 
 		self.activityTimer = eTimer()
 		self.activityTimer.timeout.get().append(self.prepare)
 
-		self["actions"] = ActionMap(["SetupActions", 'ColorActions', 'VirtualKeyboardActions', "MenuActions"],
+		self["actions"] = ActionMap(["SetupActions", "MenuActions"],  # redundant code, should be handled by ConfigListScreen, but doing so may break some distros
 		{
-			"ok": self.keySave,
+			"ok": self.keySelect if hasattr(self, "keySelect") else self.keySave,  # all modern images should have keySelect, if not fall back to keySave
 			"cancel": self.keyCancel,
-			"red": self.keyCancel,
-			"green": self.keySave,
+			"save": self.keySave,
 			"menu": self.keyCancel,
 		}, -2)
 
@@ -272,9 +256,9 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 
 	def createSetup(self):
 		self.editListEntry = None
-		self.list = []
 		providers_enabled = []
 		providers_already_loaded = []
+		setupList = []
 		indent = '-  '
 		for provider in self.providerKeysInNameOrder(self.providers):
 			if provider in self.dependents_list:
@@ -290,36 +274,36 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 			else:
 				providers_already_loaded.append(self.providers[provider]["name"])
 
-			self.list.append(getConfigListEntry(self.providers[provider]["name"], self.providers_configs[provider], _("This option enables the current selected provider.")))
+			setupList.append(getConfigListEntry(self.providers[provider]["name"], self.providers_configs[provider], _("This option enables the current selected provider.")))
 			if self.providers_configs[provider].value:
 				if len(self.providers[provider]["bouquets"]) > 0:
-					self.list.append(getConfigListEntry(indent + _("Region"), self.providers_area[provider], _("This option allows you to choose what region of the country you live in, so it populates the correct channels for your region.")))
+					setupList.append(getConfigListEntry(indent + _("Region"), self.providers_area[provider], _("This option allows you to choose what region of the country you live in, so it populates the correct channels for your region.")))
 
 				if config.autobouquetsmaker.level.value == "expert":
 					# fta only
 					if self.providers[provider]["protocol"] != "fastscan":
-						self.list.append(getConfigListEntry(indent + _("FTA only"), self.providers_FTA_only[provider], _("This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones.")))
+						setupList.append(getConfigListEntry(indent + _("FTA only"), self.providers_FTA_only[provider], _("This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones.")))
 
 					if self.providers_makemain[provider]:
-						self.list.append(getConfigListEntry(indent + _("Create main bouquet"), self.providers_makemain[provider], _('This option has several choices "Yes", (create a bouquet with all the channels in it), "Yes HD only", (will group all HD channels into this bouquet), "Custom", (allows you to select your own bouquet), "No", (do not use a main bouquet)')))
+						setupList.append(getConfigListEntry(indent + _("Create main bouquet"), self.providers_makemain[provider], _('This option has several choices "Yes", (create a bouquet with all the channels in it), "Yes HD only", (will group all HD channels into this bouquet), "Custom", (allows you to select your own bouquet), "No", (do not use a main bouquet)')))
 
 					if self.providers_custommain[provider] and self.providers_makemain[provider] and self.providers_makemain[provider].value == "custom":
-						self.list.append(getConfigListEntry(indent + _("Custom bouquet for main"), self.providers_custommain[provider], _("Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used.")))
+						setupList.append(getConfigListEntry(indent + _("Custom bouquet for main"), self.providers_custommain[provider], _("Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used.")))
 
 					if self.providers_makesections[provider]:
-						self.list.append(getConfigListEntry(indent + _("Create sections bouquets"), self.providers_makesections[provider], _("This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary.")))
+						setupList.append(getConfigListEntry(indent + _("Create sections bouquets"), self.providers_makesections[provider], _("This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary.")))
 
 					if self.providers_makehd[provider] and (self.providers_makemain[provider] is None or self.providers_makemain[provider].value != "hd"):
-						self.list.append(getConfigListEntry(indent + _("Create HD bouquet"), self.providers_makehd[provider], _("This option will create a High Definition bouquet, it will group all HD channels into this bouquet.")))
+						setupList.append(getConfigListEntry(indent + _("Create HD bouquet"), self.providers_makehd[provider], _("This option will create a High Definition bouquet, it will group all HD channels into this bouquet.")))
 
 					if self.providers_makefta[provider] and not self.providers_FTA_only[provider].value:
-						self.list.append(getConfigListEntry(indent + _("Create FTA bouquet"), self.providers_makefta[provider], _("This option will create a FreeToAir bouquet, it will group all free channels into this bouquet.")))
+						setupList.append(getConfigListEntry(indent + _("Create FTA bouquet"), self.providers_makefta[provider], _("This option will create a FreeToAir bouquet, it will group all free channels into this bouquet.")))
 
 					if self.providers_makeftahd[provider] and (self.providers_makemain[provider] is None or self.providers_makemain[provider].value != "ftahd") and not self.providers_FTA_only[provider].value:
-						self.list.append(getConfigListEntry(indent + _("Create FTA HD bouquet"), self.providers_makeftahd[provider], _("This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet.")))
+						setupList.append(getConfigListEntry(indent + _("Create FTA HD bouquet"), self.providers_makeftahd[provider], _("This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet.")))
 
 					if ((self.providers_makemain[provider] and self.providers_makemain[provider].value == "yes") or (self.providers_makesections[provider] and self.providers_makesections[provider].value is True)) and len(self.providers[provider]["swapchannels"]) > 0:
-						self.list.append(getConfigListEntry(indent + _("Swap channels"), self.providers_swapchannels[provider], _("This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)")))
+						setupList.append(getConfigListEntry(indent + _("Swap channels"), self.providers_swapchannels[provider], _("This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)")))
 
 				providers_enabled.append(provider)
 
@@ -331,28 +315,13 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 			if provider not in providers_enabled:
 				self.providers_order.remove(provider)
 
-		self["config"].list = self.list
-		self["config"].setList(self.list)
+		self["config"].list = setupList
 
-	# for summary:
 	def changedEntry(self):
-		self.item = self["config"].getCurrent()
-		for x in self.onChangedEntry:
-			x()
-		try:
-			if isinstance(self["config"].getCurrent()[1], ConfigYesNo) or isinstance(self["config"].getCurrent()[1], ConfigSelection):
-				self.createSetup()
-		except:
-			pass
-
-	def getCurrentEntry(self):
-		return self["config"].getCurrent() and str(self["config"].getCurrent()[0]) or ""
-
-	def getCurrentValue(self):
-		return self["config"].getCurrent() and str(self["config"].getCurrent()[1].getText()) or ""
-
-	def getCurrentDescription(self):
-		return self["config"].getCurrent() and len(self["config"].getCurrent()) > 2 and self["config"].getCurrent()[2] or ""
+		current = self["config"].getCurrent()
+		if current and len(current) > 1 and isinstance(current[1], (ConfigYesNo, ConfigSelection)):
+			self.createSetup()
+		ConfigListScreen.changedEntry(self)  # force summary update immediately, not just on select/deselect
 
 	def createSummary(self):
 		return SetupSummary
@@ -416,24 +385,9 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 		config.autobouquetsmaker.providers.save()
 		configfile.save()
 
-	# keySave and keyCancel are just provided in case you need them.
-	# you have to call them by yourself.
-	def keySave(self):
+	def keySave(self):  # this is redundant
 		self.saveAll()
 		self.close()
-
-	def cancelConfirm(self, result):
-		if not result:
-			return
-		for x in self["config"].list:
-			x[1].cancel()
-		self.close()
-
-	def keyCancel(self):
-		if self["config"].isChanged():
-			self.session.openWithCallback(self.cancelConfirm, MessageBox, _("Really close without saving settings?"))
-		else:
-			self.close()
 
 
 class AutoBouquetsMaker_Setup(ConfigListScreen, Screen):
@@ -445,19 +399,16 @@ class AutoBouquetsMaker_Setup(ConfigListScreen, Screen):
 		self.setup_title = _("AutoBouquetsMaker Configure")
 		Screen.setTitle(self, self.setup_title)
 
-		self.onChangedEntry = []
-		self.list = []
-		ConfigListScreen.__init__(self, self.list, session=self.session, on_change=self.changedEntry)
+		ConfigListScreen.__init__(self, [], session=self.session, on_change=self.changedEntry)
 
 		self.activityTimer = eTimer()
 		self.activityTimer.timeout.get().append(self.prepare)
 
-		self["actions"] = ActionMap(["SetupActions", 'ColorActions', 'VirtualKeyboardActions', "MenuActions"],
+		self["actions"] = ActionMap(["SetupActions", "MenuActions"],  # redundant code, should be handled by ConfigListScreen, but doing so may break some distros
 		{
 			"ok": self.keyOk,
 			"cancel": self.keyCancel,
-			"red": self.keyCancel,
-			"green": self.keySave,
+			"save": self.keySave,
 			"menu": self.keyCancel,
 		}, -2)
 
@@ -481,53 +432,38 @@ class AutoBouquetsMaker_Setup(ConfigListScreen, Screen):
 
 	def createSetup(self):
 		self.editListEntry = None
-		self.list = []
+		setupList = []
 		indent = '-  '
 
-		# self.list.append(getConfigListEntry(_("Setup mode"), config.autobouquetsmaker.level, _("Choose which level of settings to display. 'Expert'-level shows all items, this also adds more options in the providers menu.")))
-		self.list.append(getConfigListEntry(_("Schedule scan"), config.autobouquetsmaker.schedule, _("Allows you to set a schedule to perform a scan ")))
+		# setupList.append(getConfigListEntry(_("Setup mode"), config.autobouquetsmaker.level, _("Choose which level of settings to display. 'Expert'-level shows all items, this also adds more options in the providers menu.")))
+		setupList.append(getConfigListEntry(_("Schedule scan"), config.autobouquetsmaker.schedule, _("Allows you to set a schedule to perform a scan ")))
 		if config.autobouquetsmaker.schedule.getValue():
-			self.list.append(getConfigListEntry(indent + _("Schedule time of day"), config.autobouquetsmaker.scheduletime, _("Set the time of day to perform a scan.")))
-			self.list.append(getConfigListEntry(indent + _("Schedule days of the week"), config.autobouquetsmaker.dayscreen, _("Press OK to select which days to perform a scan.")))
-			self.list.append(getConfigListEntry(indent + _("Schedule wake from deep standby"), config.autobouquetsmaker.schedulewakefromdeep, _("If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan.")))
+			setupList.append(getConfigListEntry(indent + _("Schedule time of day"), config.autobouquetsmaker.scheduletime, _("Set the time of day to perform a scan.")))
+			setupList.append(getConfigListEntry(indent + _("Schedule days of the week"), config.autobouquetsmaker.dayscreen, _("Press OK to select which days to perform a scan.")))
+			setupList.append(getConfigListEntry(indent + _("Schedule wake from deep standby"), config.autobouquetsmaker.schedulewakefromdeep, _("If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan.")))
 			if config.autobouquetsmaker.schedulewakefromdeep.getValue():
-				self.list.append(getConfigListEntry(indent + _("Schedule return to deep standby"), config.autobouquetsmaker.scheduleshutdown, _("If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed.")))
+				setupList.append(getConfigListEntry(indent + _("Schedule return to deep standby"), config.autobouquetsmaker.scheduleshutdown, _("If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed.")))
 		if config.autobouquetsmaker.level.value == "expert":
-			self.list.append(getConfigListEntry(_("Keep all non-ABM bouquets"), config.autobouquetsmaker.keepallbouquets, _("When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets.")))
-			self.list.append(getConfigListEntry(_("Add provider name to bouquets"), config.autobouquetsmaker.addprefix, _("This option will add the provider's name to bouquet names.")))
-			self.list.append(getConfigListEntry(_("Add provider markers"), config.autobouquetsmaker.markersinindex, _("This option places markers in the bouquet index to group all bouquets of each provider.")))
+			setupList.append(getConfigListEntry(_("Keep all non-ABM bouquets"), config.autobouquetsmaker.keepallbouquets, _("When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets.")))
+			setupList.append(getConfigListEntry(_("Add provider name to bouquets"), config.autobouquetsmaker.addprefix, _("This option will add the provider's name to bouquet names.")))
+			setupList.append(getConfigListEntry(_("Add provider markers"), config.autobouquetsmaker.markersinindex, _("This option places markers in the bouquet index to group all bouquets of each provider.")))
 			if config.autobouquetsmaker.markersinindex.getValue():
-				self.list.append(getConfigListEntry(indent + _("Style of provider marker"), config.autobouquetsmaker.indexmarkerstyle, _("Choose the style of markers that separate one provider from another in bouquet indexes.")))
-			self.list.append(getConfigListEntry(_("Style of bouquet marker"), config.autobouquetsmaker.bouquetmarkerstyle, _("Choose the style of the markers that separate channels into groups in the channel lists.")))
-			self.list.append(getConfigListEntry(_("Place bouquets at"), config.autobouquetsmaker.placement, _("This option will allow you choose where to place the created bouquets.")))
-			self.list.append(getConfigListEntry(_("Skip services on not configured sats"), config.autobouquetsmaker.skipservices, _("If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible.")))
-			self.list.append(getConfigListEntry(_("Include 'not indexed' channels"), config.autobouquetsmaker.showextraservices, _("When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included.")))
-			self.list.append(getConfigListEntry(_("Extra debug"), config.autobouquetsmaker.extra_debug, _("This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode.")))
-			self.list.append(getConfigListEntry(_("Show DVB-T frequency finder"), config.autobouquetsmaker.frequencyfinder, _('Select "yes" to show the "DVB-T frequency finder" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc.')))
-		self.list.append(getConfigListEntry(_("Show in extensions"), config.autobouquetsmaker.extensions, _("When enabled, allows you start a scan from the extensions list.")))
+				setupList.append(getConfigListEntry(indent + _("Style of provider marker"), config.autobouquetsmaker.indexmarkerstyle, _("Choose the style of markers that separate one provider from another in bouquet indexes.")))
+			setupList.append(getConfigListEntry(_("Style of bouquet marker"), config.autobouquetsmaker.bouquetmarkerstyle, _("Choose the style of the markers that separate channels into groups in the channel lists.")))
+			setupList.append(getConfigListEntry(_("Place bouquets at"), config.autobouquetsmaker.placement, _("This option will allow you choose where to place the created bouquets.")))
+			setupList.append(getConfigListEntry(_("Skip services on not configured sats"), config.autobouquetsmaker.skipservices, _("If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible.")))
+			setupList.append(getConfigListEntry(_("Include 'not indexed' channels"), config.autobouquetsmaker.showextraservices, _("When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included.")))
+			setupList.append(getConfigListEntry(_("Extra debug"), config.autobouquetsmaker.extra_debug, _("This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode.")))
+			setupList.append(getConfigListEntry(_("Show DVB-T frequency finder"), config.autobouquetsmaker.frequencyfinder, _('Select "yes" to show the "DVB-T frequency finder" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc.')))
+		setupList.append(getConfigListEntry(_("Show in extensions"), config.autobouquetsmaker.extensions, _("When enabled, allows you start a scan from the extensions list.")))
 
-		self["config"].list = self.list
-		self["config"].setList(self.list)
+		self["config"].list = setupList
 
-	# for summary:
 	def changedEntry(self):
-		self.item = self["config"].getCurrent()
-		for x in self.onChangedEntry:
-			x()
-		try:
-			if isinstance(self["config"].getCurrent()[1], ConfigYesNo) or isinstance(self["config"].getCurrent()[1], ConfigSelection):
-				self.createSetup()
-		except:
-			pass
-
-	def getCurrentEntry(self):
-		return self["config"].getCurrent() and str(self["config"].getCurrent()[0]) or ""
-
-	def getCurrentValue(self):
-		return self["config"].getCurrent() and str(self["config"].getCurrent()[1].getText()) or ""
-
-	def getCurrentDescription(self):
-		return self["config"].getCurrent() and len(self["config"].getCurrent()) > 2 and self["config"].getCurrent()[2] or ""
+		current = self["config"].getCurrent()
+		if current and len(current) > 1 and isinstance(current[1], (ConfigYesNo, ConfigSelection)):
+			self.createSetup()
+		ConfigListScreen.changedEntry(self)  # force summary update immediately, not just on select/deselect
 
 	def createSummary(self):
 		return SetupSummary
@@ -537,29 +473,15 @@ class AutoBouquetsMaker_Setup(ConfigListScreen, Screen):
 			x[1].save()
 
 	def keyOk(self):
-		if self["config"].getCurrent() and len(self["config"].getCurrent()) > 1 and self["config"].getCurrent()[1] == config.autobouquetsmaker.dayscreen:
+		current = self["config"].getCurrent()
+		if current and len(current) > 1 and current[1] == config.autobouquetsmaker.dayscreen:
 			self.session.open(AutoBouquetsMakerDaysScreen)
 		else:
-			self.keySave()
+			self.keySelect() if hasattr(self, "keySelect") else self.keySave(),  # all modern images should have keySelect, if not fall back to keySave
 
-	# keySave and keyCancel are just provided in case you need them.
-	# you have to call them by yourself.
 	def keySave(self):
 		self.saveAll()
 		self.close()
-
-	def cancelConfirm(self, result):
-		if not result:
-			return
-		for x in self["config"].list:
-			x[1].cancel()
-		self.close()
-
-	def keyCancel(self):
-		if self["config"].isChanged():
-			self.session.openWithCallback(self.cancelConfirm, MessageBox, _("Really close without saving settings?"))
-		else:
-			self.close()
 
 
 class AutoBouquetsMakerDaysScreen(ConfigListScreen, Screen):
@@ -569,20 +491,18 @@ class AutoBouquetsMakerDaysScreen(ConfigListScreen, Screen):
 		Screen.setTitle(self, _('AutoBouquetsMaker') + " - " + _("Select days"))
 		self.skinName = ["Setup"]
 		self.config = config.autobouquetsmaker
-		self.list = []
+		setupList = []
 		days = (_("Monday"), _("Tuesday"), _("Wednesday"), _("Thursday"), _("Friday"), _("Saturday"), _("Sunday"))
 		for i in sorted(list(self.config.days.keys())):
-			self.list.append(getConfigListEntry(days[i], self.config.days[i]))
-		ConfigListScreen.__init__(self, self.list)
+			setupList.append(getConfigListEntry(days[i], self.config.days[i]))
+		ConfigListScreen.__init__(self, setupList)
 		self["key_red"] = StaticText(_("Cancel"))
 		self["key_green"] = StaticText(_("Save"))
-		self["setupActions"] = ActionMap(["SetupActions", "ColorActions"],
+		self["setupActions"] = ActionMap(["SetupActions"],
 		{
-			"red": self.keyCancel,
-			"green": self.keySave,
 			"save": self.keySave,
 			"cancel": self.keyCancel,
-			"ok": self.keySave,
+			"ok": self.keySelect if hasattr(self, "keySelect") else self.keySave,  # all modern images should have keySelect, if not fall back to keySave
 		}, -2)
 
 	def keySave(self):
@@ -594,20 +514,8 @@ class AutoBouquetsMakerDaysScreen(ConfigListScreen, Screen):
 			x[1].save()
 		self.close()
 
-	def keyCancel(self):
-		if self["config"].isChanged():
-			self.session.openWithCallback(self.cancelCallback, MessageBox, _("Really close without saving settings?"))
-		else:
-			self.cancelCallback(True)
 
-	def cancelCallback(self, answer):
-		if answer:
-			for x in self["config"].list:
-				x[1].cancel()
-			self.close(False)
-
-
-class SetupSummary(Screen):
+class SetupSummary(Screen):  # why isn't this being imported from Screens.Setup
 	def __init__(self, session, parent):
 		Screen.__init__(self, session, parent=parent)
 		self["SetupTitle"] = StaticText(_(parent.setup_title))

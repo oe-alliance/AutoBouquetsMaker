@@ -101,17 +101,7 @@ except:
 #The Sky ones are sorted by Channel IDs, Freesat and Sky Channel IDs are different!
 	itv_rename = {
 		# ITV regions
-		1004: "ITV1 Border Scotland",
-		1011: "ITV1 London",
-#		1019: "ITV1 Wales",	#This is correct on stream, no need for rename.
-		1010: "ITV1 Granada",
-		1012: "ITV1 Meridian East",
-		1009: "ITV1 Channel Isles",
 		1023: "STV North",
-		1024: "STV West",
-#		1026: "UTV",	#This is correct on stream, no need for rename.
-		1008: "ITV1 Central West",
-		1108: "STV Tayside",
 		1025: "STV East",
 
 		# +1 Channels
@@ -134,12 +124,14 @@ except:
 		1042: "ITV1 Central East HD",
 		1048: "ITV1 Channel Isles HD",
 		1047: "ITV1 Border Scotland HD",
-#		20009: "STV West HD",	#This is correct on stream, no need for rename.
 #		10013: "ITV1 Wales HD",	#This is correct on stream, no need for rename.
 		10011: "ITV1 Meridian East HD",
 		10012: "ITV1 Central West HD",
 		10005: "ITV1 London HD",
 		10007: "ITV1 Granada HD",
+
+		20009: "STV West HD",
+
 #		1040: "UTV HD",	#This is correct on stream, no need for rename.
 	}
 

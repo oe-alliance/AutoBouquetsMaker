@@ -57,7 +57,6 @@
 		<channel number="109" with="809"/> <!-- Alibi HD -->
 		<channel number="110" with="810"/> <!-- GOLD HD -->
 		<channel number="111" with="811"/> <!-- Dave HD -->
-		<channel number="112" with="812"/> <!-- Comedy Central HD -->
 		<channel number="113" with="813"/> <!-- Sky Max HD -->
 		<channel number="114" with="814"/> <!-- Sky Comedy HD -->
 		<channel number="118" with="816"/> <!-- ITV2 HD -->
@@ -152,7 +151,7 @@ except:
 	########################################################################
 
 	channels_to_add_by_name = {
-		"London Live": 173 #This is only added if you do not have an official local 173 service
+		"London Live": 199 #This is only added if you do not have an official local 199 service
 	}
 
 	channels_to_add_by_id = {
@@ -168,7 +167,7 @@ except:
 		3022: 150, # 5 USA
 		4058: 153, # Channel 5 HD
 		3026: 169, # ITVBe HD
-		3023: 176, # 5STAR
+		3023: 179, # 5STAR
 		3028: 200, # 5SELECT
 		6241: 218, # ITV2 +1
 		6261: 219, # ITV3 +1
@@ -178,19 +177,12 @@ except:
 		3310: 237, # More4 +1
 		3027: 250, # 5 USA +1
 		1839: 253, # Channel 5 +1
-		1076: 263, # 5Spike+1
-		1014: 269, # ITVBe +1
 		3024: 276, # 5STAR +1
+		2309: 277, # HGTV+1
 		1409: 301, #
 		1815: 304, #
 		1808: 306, #
 		1001: 307, #
-		3653: 358, # Box Upfront
-		1802: 359, # The Box
-		1350: 360, # Box Hits
-		1858: 361, # KISS
-		1877: 362, # Magic
-		1853: 363, # Kerrang!
 		1285: 407, # SkySp Tennis
 		2085: 503, # BBC News HD
 		3020: 504, # BBC Parliament HD
@@ -206,17 +198,7 @@ except:
 	}
 
 	itv_rename = {
-		1020: "ITV1 Border Scotland",
-		6000: "ITV1 London",
-#		6020: "ITV1 Wales",	#This is correct on stream, no need for rename.
-		6130: "ITV1 Granada",
-		6142: "ITV1 Meridian East",
-		6200: "ITV1 Channel Isles",
 		6210: "STV North",
-		6220: "STV West",
-#		6230: "UTV",	#This is correct on stream, no need for rename.
-		6300: "ITV1 Central West",
-		6325: "STV Tayside",
 		6371: "STV East",
 
 		# +1 Channels
@@ -232,9 +214,6 @@ except:
 		1061: "ITV1 Border England HD",
 		1062: "ITV1 West Country SW HD",
 		1063: "ITV1 West Country West HD",
-		1167: "STV Dundee HD",
-		1168: "STV North HD",
-		1170: "STV East HD",
 		1208: "ITV1 Meridian Thames Valley HD",
 		1209: "ITV1 Meridian South Coast HD",
 		1214: "ITV1 Yorkshire East HD",
@@ -242,12 +221,17 @@ except:
 		1219: "ITV1 Central East HD",
 		3062: "ITV1 Channel Isles HD",
 		3063: "ITV1 Border Scotland HD",
-#		4055: "STV West HD",	#This is correct on stream, no need for rename.
 #		6501: "ITV1 Wales HD",	#This is correct on stream, no need for rename.
 		6502: "ITV1 Meridian East HD",
 		6503: "ITV1 Central West HD",
 		6504: "ITV1 London HD",
 		6505: "ITV1 Granada HD",
+
+		1167: "STV Dundee HD",
+		1168: "STV North HD",
+		1170: "STV East HD",
+		4055: "STV West HD",
+
 #		6510: "UTV HD",	#This is correct on stream, no need for rename.
 	}
 

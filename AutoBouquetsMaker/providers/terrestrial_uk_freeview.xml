@@ -290,7 +290,7 @@ except:
 	servicehack_variable_cache["add_audio_channels_to_video_bouquet"] = True
 
 	# blacklist: channel names have quotes, channel numbers do not. Example: ['ITV HD', 250, 500]
-	blacklist = [250,695,696,697,698,"ADULT Section"]
+	blacklist = [61,62,63,207,250,695,696,697,698,"ADULT Section"]
 
 service["service_flags"] = flags
 service["provider_name"] = provider

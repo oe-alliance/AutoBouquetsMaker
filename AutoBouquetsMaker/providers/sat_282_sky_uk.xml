@@ -234,20 +234,16 @@
 	<swapchannels>
 		<channel number="103" with="803"/> <!-- ITV, STV and UTV HD -->
 		<channel number="103" with="176" conditional="'ITV' in service_hd['service_name']"/><!-- ITV HD -->
-		<channel number="104" with="138" conditional="'Channel 4' in service_sd['service_name'] and 'Channel 4' in service_hd['service_name']"/> <!-- Channel 4 HD -->
-		<channel number="104" with="804"/> <!-- Channel 4 HD -->
 		<channel number="105" with="805"/> <!-- Channel 5 HD -->
 		<channel number="106" with="806"/> <!-- Sky Sky Showcase HD -->
 		<channel number="107" with="807"/> <!-- Sky Witness -->
 		<channel number="108" with="808"/> <!-- Sky Atlantic HD -->
-		<channel number="108" with="138" conditional="'Channel 4' in service_sd['service_name'] and 'Channel 4' in service_hd['service_name']"/> <!-- Channel 4 HD -->
 		<channel number="109" with="809"/> <!-- Alibi HD -->
 		<channel number="110" with="810"/> <!-- GOLD HD -->
 		<channel number="111" with="811"/> <!-- Dave HD -->
 		<channel number="112" with="812"/> <!-- Comedy Central HD -->
 		<channel number="113" with="813"/> <!-- Sky Max HD -->
 		<channel number="114" with="814"/> <!-- Sky Comedy HD -->
-		<channel number="117" with="138" conditional="'Channel 4' in service_sd['service_name'] and 'Channel 4' in service_hd['service_name']"/> <!-- Channel 4 HD -->
 		<channel number="118" with="816"/> <!-- ITV2 HD -->
 		<channel number="121" with="819"/> <!-- SkyDocmntrsHD -->
 		<channel number="122" with="820"/> <!-- Sky Crime HD -->
@@ -333,7 +329,7 @@ except:
 	########################################################################
 
 	channels_to_add_by_name = {
-		"London Live": 173 #This is only added if you do not have an official local 173 service
+		"London Live": 199 #This is only added if you do not have an official local 199 service
 	}
 
 	channels_to_add_by_id = {
@@ -365,17 +361,7 @@ except:
 	}
 
 	itv_rename = {
-		1020: "ITV1 Border Scotland",
-		6000: "ITV1 London",
-#		6020: "ITV1 Wales",	#This is correct on stream, no need for rename.
-		6130: "ITV1 Granada",
-		6142: "ITV1 Meridian East",
-		6200: "ITV1 Channel Isles",
 		6210: "STV North",
-		6220: "STV West",
-#		6230: "UTV",	#This is correct on stream, no need for rename.
-		6300: "ITV1 Central West",
-		6325: "STV Tayside",
 		6371: "STV East",
 
 		# +1 Channels
@@ -391,9 +377,6 @@ except:
 		1061: "ITV1 Border England HD",
 		1062: "ITV1 West Country SW HD",
 		1063: "ITV1 West Country West HD",
-		1167: "STV Dundee HD",
-		1168: "STV North HD",
-		1170: "STV East HD",
 		1208: "ITV1 Meridian Thames Valley HD",
 		1209: "ITV1 Meridian South Coast HD",
 		1214: "ITV1 Yorkshire East HD",
@@ -401,12 +384,17 @@ except:
 		1219: "ITV1 Central East HD",
 		3062: "ITV1 Channel Isles HD",
 		3063: "ITV1 Border Scotland HD",
-#		4055: "STV West HD",	#This is correct on stream, no need for rename.
 #		6501: "ITV1 Wales HD",	#This is correct on stream, no need for rename.
 		6502: "ITV1 Meridian East HD",
 		6503: "ITV1 Central West HD",
 		6504: "ITV1 London HD",
 		6505: "ITV1 Granada HD",
+
+		1167: "STV Dundee HD",
+		1168: "STV North HD",
+		1170: "STV East HD",
+		4055: "STV West HD",
+
 #		6510: "UTV HD",	#This is correct on stream, no need for rename.
 	}
 
