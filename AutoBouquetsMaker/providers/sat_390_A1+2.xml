@@ -1,0 +1,31 @@
+<provider>
+	<name>A1</name>
+        <dependent>sat_390_A1</dependent>
+	<streamtype>dvbs</streamtype>
+	<protocol>lcnbat</protocol>
+	<transponder
+		orbital_position="390"
+		frequency="12309000"
+		symbol_rate="30000000"
+		polarization="0"
+		fec_inner="5"
+		inversion="2"
+		system="1"
+		modulation="2"
+		roll_off="0"
+		pilot="2"
+		tsid="2833"
+		onid="926"
+	/>
+	<dvbsconfigs>
+		<configuration key="sd_01" bouquet="0x01" region="0x83">Bouquet 1</configuration>
+	</dvbsconfigs>
+	<sections>
+		<section number="1">A1BG</section>
+	
+	</sections>
+	<servicehacks>
+<![CDATA[
+]]>
+	</servicehacks>
+</provider>

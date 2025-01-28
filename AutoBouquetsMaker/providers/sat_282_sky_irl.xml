@@ -151,7 +151,7 @@ except:
 	########################################################################
 
 	channels_to_add_by_name = {
-		"London Live": 199 #This is only added if you do not have an official local 199 service
+		"London TV": 199 #This is only added if you do not have an official local 199 service
 	}
 
 	channels_to_add_by_id = {
