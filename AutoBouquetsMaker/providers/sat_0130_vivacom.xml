@@ -4,22 +4,24 @@
 	<protocol>lcnbat</protocol>
 	<transponder
 		orbital_position="130"
-		frequency="12713000"
+		frequency="12616000"
 		symbol_rate="30000000"
-		polarization="1"
+		polarization="0"
 		fec_inner="2"
 		inversion="2"
 		system="1"
 		modulation="2"
 		roll_off="0"
 		pilot="2"
-		tsid="10000"
+		tsid="9500"
 		onid="213"
 	/>
 	<dvbsconfigs>
 		<configuration key="sd_24920" bouquet="0x6158" region="0xe2">Bouquet 1</configuration>
 		<configuration key="sd_24921" bouquet="0x6159" region="0xe2">Bouquet 2</configuration>
 		<configuration key="sd_24925" bouquet="0x615d" region="0xe2">Bouquet 3</configuration>
+		<configuration key="sd_99" bouquet="0x63" region="0xe2">Bouquet 4</configuration>
+                <configuration key="sd_98" bouquet="0x62" region="0xe2">Bouquet 5</configuration>
 	</dvbsconfigs>
 	<sections>
 		<section number="1">Vivacom</section>
