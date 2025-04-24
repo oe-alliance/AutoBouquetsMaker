@@ -1,0 +1,35 @@
+<provider>
+	<name>Tivibu</name>
+	<streamtype>dvbs</streamtype>
+	<protocol>nolcn</protocol>
+	<transponder
+		orbital_position="420"
+		frequency="11853000"
+		symbol_rate="25000000"
+		polarization="0"
+		fec_inner="3"
+		inversion="2"
+		system="1"
+		modulation="2"
+		roll_off="0"
+		pilot="2"
+		bat_pid="0x11"
+		nit_other_table_id="0x00"
+		tsid="43401"
+		onid="1070"
+	/>
+	<dvbsconfigs>
+		<configuration key="sd_88" bouquet="0x58" region="0xe2">Bouquet</configuration>
+		<configuration key="sd_89" bouquet="0x59" region="0xe2">Bouquet 4K</configuration>
+	</dvbsconfigs>
+	<sections>
+		<section number="1">Kanallar</section>
+	</sections>
+	<servicehacks>
+<![CDATA[
+provider = "Tivibu"
+
+service["provider_name"] = provider
+]]>
+	</servicehacks>
+</provider>
