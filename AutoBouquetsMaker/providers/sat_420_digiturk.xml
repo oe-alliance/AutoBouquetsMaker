@@ -1,0 +1,34 @@
+<provider>
+	<name>Digiturk</name>
+	<streamtype>dvbs</streamtype>
+	<protocol>nolcn</protocol>
+	<transponder
+		orbital_position="420"
+		frequency="11265000"
+		symbol_rate="30000000"
+		polarization="1"
+		fec_inner="3"
+		system="1"
+		modulation="2"
+		roll_off="2"
+		pilot="2"
+		bat_pid="0x11"
+		nit_other_table_id="0x00"
+		tsid="30901"
+		onid="42"
+	/>
+	<dvbsconfigs>
+		<configuration key="sd_151" bouquet="0x97" region="0xe2">HD</configuration>
+		<configuration key="sd_132" bouquet="0x84" region="0xe2">SD</configuration>
+	</dvbsconfigs>
+	<sections>
+		<section number="1">Digiturk</section>
+	</sections>
+	<servicehacks>
+<![CDATA[
+provider = "Digiturk"
+
+service["provider_name"] = provider
+]]>
+	</servicehacks>
+</provider>
