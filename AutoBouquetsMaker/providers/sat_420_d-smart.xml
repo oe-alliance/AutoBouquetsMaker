@@ -43,10 +43,18 @@
 		<configuration key="sd_24735" bouquet="0x609f" region="0xe2">D-SMART - OTELLER PLUS</configuration>
 	</dvbsconfigs>
 	<sections>
-		<section number="1">D-Smart</section>
+		<section number="1">Sinema</section>
+		<section number="22">Ulusal</section>
+		<section number="30">Haber</section>
+		<section number="56">Belgesel</section>
+		<section number="70">Spor</section>
+		<section number="120">Çocuk</section>
 	</sections>
 	<servicehacks>
 <![CDATA[
+provider = "D-Smart"
+
+service["provider_name"] = provider
 ]]>
 	</servicehacks>
 </provider>
