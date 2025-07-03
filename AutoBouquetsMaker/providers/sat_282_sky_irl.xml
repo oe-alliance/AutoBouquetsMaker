@@ -325,6 +325,9 @@ except:
 		0x177E,
 	]
 
+	# List channels to exclude from the whitelist_streamrelay file
+	stream_relay_blacklist = ["U1MON", "U2MON"]
+
 # Correct service type of HD channels not marked as such
 if service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and service["service_type"] not in DvbScanner.HD_ALLOWED_TYPES and service["service_name"][-2:] == 'HD':
 	print("[ABM-Hack] Sky IE: %s, changed from type %d to 25" % (service["service_name"], service["service_type"]))
@@ -378,7 +381,7 @@ if service["service_type"] != 2 and (service["number"] in whitelist or service["
 	pass
 elif custom and service["service_type"] != 2 and (service["number"] in blacklist or service["service_name"] in blacklist):
 	skip.skip = True
-elif streamrelay and service["service_type"] != 2 and service["transport_stream_id"] in broken_TSIDS and service["free_ca"] != 0 and (service["service_type"] not in DvbScanner.HD_ALLOWED_TYPES or "channel_id" in service and service["channel_id"] in broken_CHIDs):
+elif streamrelay and service["service_name"] not in stream_relay_blacklist and service["service_type"] != 2 and service["transport_stream_id"] in broken_TSIDS and service["free_ca"] != 0 and (service["service_type"] not in DvbScanner.HD_ALLOWED_TYPES or "channel_id" in service and service["channel_id"] in broken_CHIDs):
 	sref = makeServiceRef(service)
 	if sref not in streamrelay.data:
 		streamrelay.data += [sref]
