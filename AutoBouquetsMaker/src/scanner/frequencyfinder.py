@@ -1,7 +1,7 @@
 from __future__ import print_function
 
 # for localized messages
-from .. import _
+from .. import _, PluginLanguageDomain
 
 from Screens.Screen import Screen
 from Components.ActionMap import ActionMap
@@ -25,6 +25,7 @@ import re
 
 import datetime
 import time
+from gettext import dngettext
 
 from Tools.Directories import resolveFilename, fileExists, SCOPE_CURRENT_SKIN
 
@@ -183,7 +184,7 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 			self["progress_text"].value = self.progresscurrent
 			self["progress"].setValue(self.progresscurrent)
 			self["action"].setText(_("Tuning %s MHz (ch %s)") % (str(self.frequency // 1000000), getChannelNumber(self.frequency)))
-			self["status"].setText(ngettext("Found %d unique transponder", "Found %d unique transponders", len(self.transponders_unique)) % len(self.transponders_unique))  # noqa: F821
+			self["status"].setText(dngettext(PluginLanguageDomain, "Found %d unique transponder", "Found %d unique transponders", len(self.transponders_unique)) % len(self.transponders_unique))  # noqa: F821
 			self.index += 1
 			if self.frequency in self.transponders_found or self.system == eDVBFrontendParametersTerrestrial.System_DVB_T2 and self.isT2tuner is False:
 				print("[ABM-FrequencyFinder][Search] Skipping T2 search of %s MHz (ch %s)" % (str(self.frequency // 1000000), getChannelNumber(self.frequency)))
