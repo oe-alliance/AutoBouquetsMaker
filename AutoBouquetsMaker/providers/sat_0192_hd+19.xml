@@ -5,7 +5,7 @@
 	<protocol>lcn</protocol>
 	<transponder
 		orbital_position="192"
-		frequency="12662000"
+		frequency="12663000"
 		symbol_rate="22000000"
 		polarization="0"
 		fec_inner="4"
