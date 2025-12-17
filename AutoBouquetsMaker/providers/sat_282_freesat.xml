@@ -143,6 +143,14 @@ except:
 		51118: "WildEarth HD",
 	}
 
+	# These are HD channels that have wrong service type. They do not have "HD" in name on the SI table
+	hd_channels_by_id = {
+		930, # BBC RB 1
+		8012, # Gemporia
+		9009, # HobbyMaker
+		14008, # MUSTHAVEIDEAS
+	}
+
 	skiplist = ["Channel moved",]
 
 	servicehack_variable_cache["add_audio_channels_to_video_bouquet"] = True
@@ -169,7 +177,7 @@ if service["service_type"] == 22:
 	service["service_type"] = 1
 
 # Correct service type of HD channels not marked as 25
-if "service_info" in service and "HD" in service["service_info"] and service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and service["service_type"] not in DvbScanner.HD_ALLOWED_TYPES:
+if "service_info" in service and "HD" in service["service_info"] and service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and service["service_type"] not in DvbScanner.HD_ALLOWED_TYPES or "channel_id" in service and service["channel_id"] in hd_channels_by_id:
 	service["service_type"] = 25
 
 if (service["namespace"] >> 16) != 282:
