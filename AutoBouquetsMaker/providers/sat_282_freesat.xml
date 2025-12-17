@@ -164,6 +164,10 @@ if "service_id" in service and service["service_id"] in rename_by_sid:
 	service["service_name"] = rename_by_sid[service["service_id"]]
 	service["service_flags"] = dxHoldName
 
+# Convert service type 22 to 1. (Hex = 16)
+if service["service_type"] == 22:
+	service["service_type"] = 1
+
 # Correct service type of HD channels not marked as 25
 if "service_info" in service and "HD" in service["service_info"] and service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and service["service_type"] not in DvbScanner.HD_ALLOWED_TYPES:
 	service["service_type"] = 25
