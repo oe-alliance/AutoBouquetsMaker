@@ -136,14 +136,11 @@
 		<customtransponder key="craigkelly_________" frequency="666000000" transport_stream_id="5040" system="0"/>
 		<customtransponder key="crystal_palace_____" frequency="546000000" transport_stream_id="4084" system="1"/>
 		<customtransponder key="darvel_____________" frequency="482000000" transport_stream_id="107c" system="0"/>
-		<customtransponder key="darvel_____________" frequency="538000000" transport_stream_id="2011" system="0"/>
-		<customtransponder key="darvel_____________" frequency="554000000" transport_stream_id="800f" system="0"/>
+		<customtransponder key="darvel_____________" frequency="506000000" transport_stream_id="2011" system="0"/>
+		<customtransponder key="darvel_____________" frequency="530000000" transport_stream_id="40bc" system="1"/>
 		<customtransponder key="darvel_____________" frequency="562000000" transport_stream_id="3005" system="0"/>
 		<customtransponder key="darvel_____________" frequency="578000000" transport_stream_id="5040" system="0"/>
 		<customtransponder key="darvel_____________" frequency="586000000" transport_stream_id="6040" system="0"/>
-		<customtransponder key="darvel_____________" frequency="602000000" transport_stream_id="40bc" system="1"/>
-		<customtransponder key="darvel_____________" frequency="746000000" transport_stream_id="a000" system="1"/>
-		<customtransponder key="darvel_____________" frequency="754000000" transport_stream_id="b000" system="1"/>
 		<customtransponder key="dover______________" frequency="706000000" transport_stream_id="104c" system="0"/>
 		<customtransponder key="dover______________" frequency="714000000" transport_stream_id="2010" system="0"/>
 		<customtransponder key="dover______________" frequency="746000000" transport_stream_id="3006" system="0"/>
