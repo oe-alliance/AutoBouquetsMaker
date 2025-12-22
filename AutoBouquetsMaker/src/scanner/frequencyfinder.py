@@ -27,7 +27,7 @@ import datetime
 import time
 from gettext import dngettext
 
-from Tools.Directories import resolveFilename, fileExists, SCOPE_CURRENT_SKIN
+from Tools.Directories import resolveFilename, fileExists, SCOPE_CONFIG, SCOPE_CURRENT_SKIN
 
 
 def setParams(frequency, system, bandwidth=8):  # freq is nine digits (474000000)
@@ -132,8 +132,8 @@ class AutoBouquetsMaker_FrequencyFinder(Screen):
 # 		self.custom_dir = os.path.dirname(__file__) + "/../custom"
 # 		self.customfile = self.custom_dir + "/CustomTranspondersOverride.xml"
 # 		self.removeFileIfExists(self.customfile)
-		self.providers_dir = os.path.dirname(__file__) + "/../providers"
-		self.providersfile = self.providers_dir + "/terrestrial_finder.xml"
+		user_providers_dir = os.path.realpath(resolveFilename(SCOPE_CONFIG)) + "/AutoBouquetsMaker/providers"
+		self.providersfile = user_providers_dir + "/terrestrial_finder.xml"
 		self.network_name = None
 		self.onClose.append(self.__onClose)
 		self.onFirstExecBegin.append(self.firstExec)
