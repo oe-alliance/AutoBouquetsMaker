@@ -27,7 +27,7 @@ msgstr ""
 #: ../src/scanner/main.py:709
 #, python-format
 msgid "%s scheduled update"
-msgstr ""
+msgstr "%s plánovaná aktualizácia"
 
 #: ../src/scanner/main.py:707
 #, python-format
@@ -35,6 +35,8 @@ msgid ""
 "%s update is about to start.\n"
 "Do you want to allow this?"
 msgstr ""
+„Aktualizácia %s sa čoskoro spustí.\n“
+„Chcete to povoliť?“
 
 #: ../src/plugin.py:51 ../src/plugin.py:67
 msgid "---- ABM - 'text' ----"
@@ -74,312 +76,312 @@ msgstr ""
 
 #: ../src/scanner/frequencyfinder.py:142 ../src/scanner/frequencyfinder.py:147
 msgid "ABM frequency finder"
-msgstr ""
+msgstr "ABM vyhľadávač kmitočtu"
 
 #: ../src/menu.py:278
 msgid "ABM log file has been saved to the tmp directory"
-msgstr ""
+msgstr "Súbor protokolu ABM bol uložený do adresára tmp."
 
 #: ../src/about.py:24 ../src/menu.py:102
 msgid "About"
-msgstr ""
+msgstr "O"
 
 #: ../src/setup.py:498
 msgid "Add provider markers"
-msgstr ""
+msgstr "Pridať značky poskytovateľov"
 
 #: ../src/setup.py:497
 msgid "Add provider name to bouquets"
-msgstr ""
+msgstr "Pridať názov poskytovateľa do buketov"
 
 #: ../src/scanner/bouquetswriter.py:641
 msgid "All channels"
-msgstr ""
+msgstr "Všetky kanály"
 
 #: ../src/setup.py:488
 msgid "Allows you to set a schedule to perform a scan "
-msgstr ""
+msgstr "Umožňuje nastaviť harmonogram vykonávania skenovania "
 
 #: ../src/deletebouquets.py:38
 msgid "Are you sure you want to remove all bouquets created by ABM?"
-msgstr ""
+msgstr "Naozaj chcete odstrániť všetky bukety vytvorené ABM?"
 
 #: ../src/setup.py:590
 msgid "At least one day of the week must be selected"
-msgstr ""
+msgstr "Musí byť vybraný aspoň jeden deň v týždni"
 
 #: ../src/about.py:24 ../src/menu.py:44 ../src/plugin.py:96
 #: ../src/plugin.py:110 ../src/scanner/main.py:44 ../src/scanner/main.py:104
 #: ../src/setup.py:569 ../src/setup.py:591
 msgid "AutoBouquetsMaker"
-msgstr ""
+msgstr "Automatická značka buketov"
 
 #: ../src/setup.py:445
 msgid "AutoBouquetsMaker Configure"
-msgstr ""
+msgstr "Automatická značka buketov - Nastavenie"
 
 #: ../src/hidesections.py:26
 msgid "AutoBouquetsMaker Hide sections"
-msgstr ""
+msgstr "Automatická značka buketov - Skrytie"
 
 #: ../src/keepbouquets.py:27
 msgid "AutoBouquetsMaker Keep bouquets"
-msgstr ""
+msgstr "Automatická značka buketov - Zachovanie buketov"
 
 #: ../src/menu.py:257
 msgid "AutoBouquetsMaker Log"
-msgstr ""
+msgstr "Automatická značka buketov - Logovanie"
 
 #: ../src/setup.py:48
 msgid "AutoBouquetsMaker Providers"
-msgstr ""
+msgstr "Automatická značka buketov - Poskytovatelia"
 
 #: ../src/plugin.py:112
 msgid "AutoBouquetsMaker Scanner"
-msgstr ""
+msgstr "Automatická značka buketov - Prehľadávač"
 
 #: ../src/scanner/main.py:191
 msgid "Bouquets generation..."
-msgstr ""
+msgstr "Vytváranie buketov..."
 
 #: ../src/hidesections.py:31 ../src/keepbouquets.py:32 ../src/ordering.py:36
 #: ../src/setup.py:67 ../src/setup.py:464 ../src/setup.py:577
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #: ../src/scanner/frequencyfinder.py:347 ../src/scanner/main.py:363
 msgid "Cannot allocate the demuxer."
-msgstr ""
+msgstr "Nie je možné prideliť demultiplexer."
 
 #: ../src/scanner/frequencyfinder.py:322 ../src/scanner/main.py:334
 msgid "Cannot free NIM because a recording is in progress"
-msgstr ""
+msgstr "NIM nemožno uvoľniť, pretože prebieha nahrávanie."
 
 #: ../src/scanner/frequencyfinder.py:336 ../src/scanner/main.py:357
 msgid "Cannot get frontend"
-msgstr ""
+msgstr "Nemôžno získať frontend"
 
 #: ../src/scanner/frequencyfinder.py:326 ../src/scanner/main.py:338
 msgid "Cannot get the NIM"
-msgstr ""
+msgstr "Nemožno získať NIM"
 
 #: ../src/scanner/main.py:489
 msgid "Cannot read data"
-msgstr ""
+msgstr "Nemožno čítať údaje"
 
 #: ../src/updateproviders.py:167
 msgid "Cannot read version"
-msgstr ""
+msgstr "Nemožno čítať verziu"
 
 #: ../src/scanner/frequencyfinder.py:263 ../src/scanner/main.py:279
 msgid "Cannot retrieve Resource Manager instance"
-msgstr ""
+msgstr "Nemožno načítať inštanciu Správcu zdrojov"
 
 #: ../src/updateproviders.py:118
 msgid "Checking version compatibility..."
-msgstr ""
+msgstr "Kontrola kompatibility verzií..."
 
 #: ../src/setup.py:500
 msgid "Choose the style of markers that separate one provider from another in bouquet indexes."
-msgstr ""
+msgstr "Vyberte štýl značiek, ktoré oddeľujú jedného poskytovateľa od druhého v indexoch buketov."
 
 #: ../src/setup.py:501
 msgid "Choose the style of the markers that separate channels into groups in the channel lists."
-msgstr ""
+msgstr "Vyberte štýl značiek, ktoré oddeľujú kanály do skupín v zoznamoch kanálov."
 
 #: ../src/about.py:36 ../src/menu.py:272 ../src/updateproviders.py:287
 msgid "Close"
-msgstr ""
+msgstr "Zatvoriť"
 
 #: ../src/updateproviders.py:230
 #, python-format
 msgid "Config file for %s didn't need updating."
-msgstr ""
+msgstr "Konfiguračný súbor pre %s nebolo potrebné aktualizovať."
 
 #: ../src/updateproviders.py:228
 #, python-format
 msgid "Config file for %s does not need updating."
-msgstr ""
+msgstr "Konfiguračný súbor pre %s nie je potrebné aktualizovať."
 
 #: ../src/updateproviders.py:249
 #, python-format
 msgid "Config file for %s does not parse."
-msgstr ""
+msgstr "Konfiguračný súbor pre %s sa nedá analyzovať."
 
 #: ../src/updateproviders.py:240 ../src/updateproviders.py:242
 #, python-format
 msgid "Config file for %s has been updated."
-msgstr ""
+msgstr "Konfiguračný súbor pre %s bol aktualizovaný."
 
 #: ../src/updateproviders.py:259
 #, python-format
 msgid "Config file for %s is faulty."
-msgstr ""
+msgstr "Konfiguračný súbor pre %s je chybný."
 
 #: ../src/menu.py:88
 msgid "Configure"
-msgstr ""
+msgstr "Nastaviť"
 
 #: ../src/setup.py:319
 msgid "Create FTA HD bouquet"
-msgstr ""
+msgstr "Vytvoriť FTA HD buket"
 
 #: ../src/setup.py:316
 msgid "Create FTA bouquet"
-msgstr ""
+msgstr "Vytvoriť FTA buket"
 
 #: ../src/setup.py:313
 msgid "Create HD bouquet"
-msgstr ""
+msgstr "Vytvoriť HD buket"
 
 #: ../src/setup.py:304
 msgid "Create main bouquet"
-msgstr ""
+msgstr "Vytvoriť hlavný buket"
 
 #: ../src/setup.py:310
 msgid "Create sections bouquets"
-msgstr ""
+msgstr "Vytvoriť sekcie buketov"
 
 #: ../src/setup.py:307
 msgid "Custom bouquet for main"
-msgstr ""
+msgstr "Vlastný buket ako hlavný"
 
 #: ../src/menu.py:100
 msgid "DVB-T frequency finder"
-msgstr ""
+msgstr "Vyhľadávač frekvencií DVB-T"
 
 #: ../src/menu.py:97
 msgid "Delete ABM bouquets"
-msgstr ""
+msgstr "Odstrániť ABM bukety"
 
 #: ../src/scanner/main.py:508
 msgid "Done"
-msgstr ""
+msgstr "Hotovo"
 
 #: ../src/updateproviders.py:179
 msgid "Downloading latest file from Github..."
-msgstr ""
+msgstr "Sťahovanie najnovšieho súboru z Githubu..."
 
 #: ../src/scanner/main.py:726
 msgid "Enough Retries, delaying till next schedule."
-msgstr ""
+msgstr "Dosť pokusov, odloženie na ďalší plán."
 
 #: ../src/menu.py:79
 msgid "Exit"
-msgstr ""
+msgstr "Ukončiť"
 
 #: ../src/setup.py:505
 msgid "Extra debug"
-msgstr ""
+msgstr "Extra protokolovanie"
 
 #: ../src/scanner/bouquetswriter.py:906
 msgid "FTA Channels"
-msgstr ""
+msgstr "FTA kanály"
 
 #: ../src/scanner/bouquetswriter.py:690 ../src/scanner/bouquetswriter.py:863
 msgid "FTA HD Channels"
-msgstr ""
+msgstr "FTA HD kanály"
 
 #: ../src/setup.py:301
 msgid "FTA only"
-msgstr ""
+msgstr "Len FTA"
 
 #: ../src/updateproviders.py:194
 #, python-format
 msgid "Failed to retrieve file for %s. Error: %s %s"
-msgstr ""
+msgstr "Nepodarilo sa načítať súbor pre %s. Chyba: %s %s"
 
 #: ../src/updateproviders.py:141
 #, python-format
 msgid "Failed to retrieve version file. Error: %s %s"
-msgstr ""
+msgstr "Nepodarilo sa získať verziu súboru. Chyba: %s %s"
 
 #: ../src/updateproviders.py:195
 msgid "Failed..."
-msgstr ""
+msgstr "Neúspešné..."
 
 #: ../src/updateproviders.py:52
 msgid "Finding configured providers..."
-msgstr ""
+msgstr "Hľadanie nakonfigurovaných poskytovateľov..."
 
 #: ../src/scanner/frequencyfinder.py:186
 #, python-format
 msgid "Found %d unique transponder"
 msgid_plural "Found %d unique transponders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Nájdený %d jedinečný transpondér"
+msgstr[1] "Nájdené %d jedinečné transpondéry"
+msgstr[2] "Nájdených %d jedinečných transpondérov"
 
 #: ../src/scanner/frequencyfinder.py:79
 msgid "FrequencyFinder"
-msgstr ""
+msgstr "Vyhľadávač frekvencií"
 
 #: ../src/setup.py:573
 msgid "Friday"
-msgstr ""
+msgstr "Piatok"
 
 #: ../src/scanner/bouquetswriter.py:687 ../src/scanner/bouquetswriter.py:820
 msgid "HD Channels"
-msgstr ""
+msgstr "HD kanály"
 
 #: ../src/menu.py:93
 msgid "Hide sections"
-msgstr ""
+msgstr "Skryté sekcie"
 
 #: ../src/setup.py:503
 msgid "If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible."
-msgstr ""
+msgstr "Ak je služba poskytovaná prostredníctvom satelitu, ktorý nie je nakonfigurovaný, 'áno' znamená, že kanál sa nezobrazí v zozname kanálov, 'nie' znamená, že kanál sa zobrazí v zozname kanálov, ale bude sivý a nebude prístupný."
 
 #: ../src/setup.py:492
 msgid "If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan."
-msgstr ""
+msgstr "Ak je prijímač v režime 'Deep Standby' v čase, keď má prebehnúť plánované skenovanie, prebudí sa, aby vykonal skenovanie."
 
 #: ../src/setup.py:494
 msgid "If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed."
-msgstr ""
+msgstr "Ak bol prijímač prebudený z režimu 'Deep Standby' a momentálne je v režime 'Standby' a neprebieha žiadne nahrávanie, po dokončení vyhľadávania sa vráti do režimu 'Deep Standby'."
 
 #: ../src/setup.py:504
 msgid "Include 'not indexed' channels"
-msgstr ""
+msgstr "Zahrnúť 'neindexované' kanály"
 
 #: ../src/updateproviders.py:161
 #, python-format
 msgid "Incompatible versions: %s > %s"
-msgstr ""
+msgstr "Nezlučiteľné verzie: %s > %s"
 
 #: ../src/setup.py:496
 msgid "Keep all non-ABM bouquets"
-msgstr ""
+msgstr "Zachovať všetky bukety, ktoré nie sú od ABM."
 
 #: ../src/menu.py:95
 msgid "Keep bouquets"
-msgstr ""
+msgstr "Zachovať bukety"
 
 #: ../src/scanner/bouquetswriter.py:563
 msgid "Last Scanned"
-msgstr ""
+msgstr "Posledné skenovanie"
 
 #: ../src/scanner/main.py:90
 msgid "Loading bouquets..."
-msgstr ""
+msgstr "Načítavanie buketov..."
 
 #: ../src/setup.py:573
 msgid "Monday"
-msgstr ""
+msgstr "Pondelok"
 
 #: ../src/ordering.py:73 ../src/ordering.py:79 ../src/ordering.py:108
 #: ../src/ordering.py:114
 msgid "Move down"
-msgstr ""
+msgstr "Presunúť nadol"
 
 #: ../src/ordering.py:75 ../src/ordering.py:78 ../src/ordering.py:110
 #: ../src/ordering.py:113
 msgid "Move up"
-msgstr ""
+msgstr "Presunúť nahor"
 
 #: ../src/updateproviders.py:148 ../src/updateproviders.py:206
 msgid "Network connection error."
-msgstr ""
+msgstr "Chyba sieťového pripojenia."
 
 #: ../src/updateproviders.py:145 ../src/updateproviders.py:203
 #, python-format
@@ -387,316 +389,318 @@ msgid ""
 "Network connection error: \n"
 "%s"
 msgstr ""
+"Chyba sieťového pripojenia: \n"
+"%s"
 
 #: ../src/scanner/main.py:273
 msgid "No NIMs found for "
-msgstr ""
+msgstr "Nenašli sa žiadne NIM pre "
 
 #: ../src/scanner/main.py:230
 msgid "No area found"
-msgstr ""
+msgstr "Nenašla sa žiadna oblasť"
 
 #: ../src/scanner/frequencyfinder.py:172
 msgid "No frequencies to search"
-msgstr ""
+msgstr "Žiadne frekvencie na vyhľadávanie"
 
 #: ../src/updateproviders.py:131
 msgid "No providers are configured."
-msgstr ""
+msgstr "Nie sú nakonfigurovaní žiadni poskytovatelia."
 
 #: ../src/updateproviders.py:97
 msgid "No providers configured."
-msgstr ""
+msgstr "Nenakonfigurovaný žiadni poskytovatelia."
 
 #: ../src/scanner/frequencyfinder.py:216
 msgid "No terrestrial multiplexes found."
-msgstr ""
+msgstr "Nenašli sa žiadne pozemné multiplexy."
 
 #: ../src/scanner/frequencyfinder.py:239 ../src/scanner/frequencyfinder.py:257
 msgid "No terrestrial tuner found."
-msgstr ""
+msgstr "Nebol nájdený žiadny pozemný tuner."
 
 #: ../src/scanner/frequencyfinder.py:304
 msgid "No valid NIM found for terrestrial."
-msgstr ""
+msgstr "Nenašiel sa platný NIM pre pozemné vysielanie."
 
 #: ../src/scanner/frequencyfinder.py:213
 msgid "Only DVB-T2 multiplexes found. Insufficient data to create a provider file."
-msgstr ""
+msgstr "Nájdené sú iba multiplexy DVB-T2. Nedostatočné údaje na vytvorenie súboru poskytovateľa."
 
 #: ../src/setup.py:502
 msgid "Place bouquets at"
-msgstr ""
+msgstr "Bukety umiestnite na"
 
 #: ../src/scanner/main.py:96
 msgid "Please first setup, in configuration"
-msgstr ""
+msgstr "Najprv vykonajte nastavenie v konfigurácii."
 
 #: ../src/ordering.py:59 ../src/setup.py:76 ../src/setup.py:473
 msgid "Please wait..."
-msgstr ""
+msgstr "Čakajte, prosím..."
 
 #: ../src/plugin.py:28
 msgid "Press OK"
-msgstr ""
+msgstr "Stlačte OK"
 
 #: ../src/setup.py:491
 msgid "Press OK to select which days to perform a scan."
-msgstr ""
+msgstr "Stlačte tlačidlo OK, aby ste vybrali dni, v ktorých sa má skenovanie vykonávať."
 
 #: ../src/menu.py:89
 msgid "Providers"
-msgstr ""
+msgstr "Poskytovatelia"
 
 #: ../src/menu.py:91 ../src/ordering.py:25
 msgid "Providers order"
-msgstr ""
+msgstr "Zoradenie poskytovateľov"
 
 #: ../src/scanner/bouquetswriter.py:950 ../src/scanner/bouquetswriter.py:951
 msgid "Radio Channels"
-msgstr ""
+msgstr "Rádiové kanály"
 
 #: ../src/scanner/frequencyfinder.py:365
 #, python-format
 msgid "Reading %s MHz (ch %s)"
-msgstr ""
+msgstr "Čítanie %s MHz (kanál %s)"
 
 #: ../src/scanner/main.py:446
 #, python-format
 msgid "Reading %s..."
-msgstr ""
+msgstr "Čítanie %s..."
 
 #: ../src/hidesections.py:104 ../src/keepbouquets.py:104 ../src/ordering.py:153
 #: ../src/setup.py:434 ../src/setup.py:560 ../src/setup.py:599
 msgid "Really close without saving settings?"
-msgstr ""
+msgstr "Naozaj ukončiť bez uloženia nastavení?"
 
 #: ../src/setup.py:296
 msgid "Region"
-msgstr ""
+msgstr "Región"
 
 #: ../src/updateproviders.py:227 ../src/updateproviders.py:239
 #: ../src/updateproviders.py:248
 #, python-format
 msgid "Retrieved config file for %s"
-msgstr ""
+msgstr "Načítaný konfiguračný súbor pre %s"
 
 #: ../src/updateproviders.py:251
 #, python-format
 msgid "Retrieved config file for %s does not parse."
-msgstr ""
+msgstr "Načítaný konfiguračný súbor pre %s sa nedá analyzovať."
 
 #: ../src/updateproviders.py:261
 #, python-format
 msgid "Retrieved config file for %s is faulty or incomplete."
-msgstr ""
+msgstr "Načítaný konfiguračný súbor pre %s je chybný alebo neúplný."
 
 #: ../src/updateproviders.py:258
 #, python-format
 msgid "Retrieved provider file for %s"
-msgstr ""
+msgstr "Načítaný súbor poskytovateľa pre %s"
 
 #: ../src/updateproviders.py:178
 #, python-format
 msgid "Retrieving config file for %s"
-msgstr ""
+msgstr "Načítanie konfiguračného súboru pre %s"
 
 #: ../src/setup.py:573
 msgid "Saturday"
-msgstr ""
+msgstr "Sobota"
 
 #: ../src/hidesections.py:32 ../src/setup.py:68 ../src/setup.py:465
 #: ../src/setup.py:578
 msgid "Save"
-msgstr ""
+msgstr "Uložiť"
 
 #: ../src/menu.py:271
 msgid "Save Log"
-msgstr ""
+msgstr "Uložiť protokol"
 
 #: ../src/scanner/frequencyfinder.py:200
 msgid "Saving data"
-msgstr ""
+msgstr "Ukladanie údajov"
 
 #: ../src/menu.py:80
 msgid "Scan"
-msgstr ""
+msgstr "Skenovať"
 
 #: ../src/plugin.py:110 ../src/plugin.py:112
 msgid "Scan and create bouquets."
-msgstr ""
+msgstr "Skenuje a vytvára bukety."
 
 #: ../src/scanner/frequencyfinder.py:161
 msgid "Scanning for active transponders"
-msgstr ""
+msgstr "Vyhľadávanie aktívnych transpondérov"
 
 #: ../src/setup.py:491
 msgid "Schedule days of the week"
-msgstr ""
+msgstr "Plán dní v týždni"
 
 #: ../src/setup.py:494
 msgid "Schedule return to deep standby"
-msgstr ""
+msgstr "Naplánovať návrat do hlbokého pohotovostného režimu"
 
 #: ../src/setup.py:488
 msgid "Schedule scan"
-msgstr ""
+msgstr "Naplánovať skenovanie"
 
 #: ../src/setup.py:490
 msgid "Schedule time of day"
-msgstr ""
+msgstr "Naplánovať čas dňa"
 
 #: ../src/setup.py:492
 msgid "Schedule wake from deep standby"
-msgstr ""
+msgstr "Naplánovať prebudenie z hlbokého pohotovostného režimu"
 
 #: ../src/setup.py:506
 msgid "Select \"yes\" to show the \"DVB-T frequency finder\" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc."
-msgstr ""
+msgstr "Vyberte \"áno\", aby sa v hlavnom menu zobrazil nástroj \"Vyhľadávač frekvencií DVB-T\". Tento nástroj sa používa na vytvorenie funkčného súboru poskytovateľa pre problematické oblasti Spojeného kráľovstva, napr. oblasti pokryté opakovačmi atď."
 
 #: ../src/setup.py:569 ../src/setup.py:591
 msgid "Select days"
-msgstr ""
+msgstr "Vybrať dni"
 
 #: ../src/setup.py:307
 msgid "Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used."
-msgstr ""
+msgstr "Vyberať vlastný buket zo zoznamu, prosím, vezmite na vedomie, že sa použije len prvých 100 kanálov tohto buketu."
 
 #: ../src/scanner/frequencyfinder.py:252
 msgid "Selected tuner is not configured."
-msgstr ""
+msgstr "Vybraný tuner nie je nakonfigurovaný."
 
 #: ../src/scanner/main.py:192 ../src/scanner/main.py:207
 #: ../src/scanner/main.py:447 ../src/scanner/main.py:509
 #, python-format
 msgid "Services: %d video - %d radio"
-msgstr ""
+msgstr "Služby: %d video - %d rádio"
 
 #: ../src/scanner/main.py:91
 msgid "Services: 0 video - 0 radio"
-msgstr ""
+msgstr "Služby: 0 videí – 0 rádií"
 
 #: ../src/setup.py:490
 msgid "Set the time of day to perform a scan."
-msgstr ""
+msgstr "Nastaviť čas dňa, kedy sa má skenovanie vykonať."
 
 #: ../src/setup.py:506
 msgid "Show DVB-T frequency finder"
-msgstr ""
+msgstr "Zobraziť vyhľadávač frekvencií DVB-T"
 
 #: ../src/setup.py:507
 msgid "Show in extensions"
-msgstr ""
+msgstr "Zobraziť v rozšíreniach"
 
 #: ../src/menu.py:101
 msgid "Show log"
-msgstr ""
+msgstr "Zobraziť protokol"
 
 #: ../src/setup.py:503
 msgid "Skip services on not configured sats"
-msgstr ""
+msgstr "Preskočiť služby na nekonfigurovaných satelitoch"
 
 #: ../src/menu.py:96
 msgid "Start scan"
-msgstr ""
+msgstr "Spustiť skenovanie"
 
 #: ../src/scanner/frequencyfinder.py:86 ../src/scanner/main.py:58
 msgid "Starting scanner"
-msgstr ""
+msgstr "Spustenie skenera"
 
 #: ../src/scanner/frequencyfinder.py:160
 msgid "Starting search..."
-msgstr ""
+msgstr "Začínam vyhľadávanie..."
 
 #: ../src/updateproviders.py:117
 msgid "Starting update..."
-msgstr ""
+msgstr "Začínam aktualizáciu..."
 
 #: ../src/setup.py:501
 msgid "Style of bouquet marker"
-msgstr ""
+msgstr "Štýl označenia buketu"
 
 #: ../src/setup.py:500
 msgid "Style of provider marker"
-msgstr ""
+msgstr "Štýl značky poskytovateľa"
 
 #: ../src/setup.py:573
 msgid "Sunday"
-msgstr ""
+msgstr "Nedeľa"
 
 #: ../src/setup.py:322
 msgid "Swap channels"
-msgstr ""
+msgstr Zameniť kanály""
 
 #: ../src/setup.py:301
 msgid "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones."
-msgstr ""
+msgstr "Toto sa týka všetkých buketov. Vyberte 'nie', aby sa skenovali všetky služby. Vyberte 'áno', aby sa preskočili kódované služby."
 
 #: ../src/setup.py:505
 msgid "This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode."
-msgstr ""
+msgstr "Táto funkcia je určená iba na vývojové účely. Vyžaduje povolenie protokolovania alebo spustenie enigma2 v konzolovom režime."
 
 #: ../src/setup.py:296
 msgid "This option allows you to choose what region of the country you live in, so it populates the correct channels for your region."
-msgstr ""
+msgstr "Táto možnosť vám umožňuje vybrať región krajiny, v ktorom žijete, aby sa zobrazili správne kanály pre váš región."
 
 #: ../src/setup.py:293
 msgid "This option enables the current selected provider."
-msgstr ""
+msgstr "Táto možnosť aktivuje aktuálne vybraného poskytovateľa."
 
 #: ../src/setup.py:304
 msgid "This option has several choices \"Yes\", (create a bouquet with all the channels in it), \"Yes HD only\", (will group all HD channels into this bouquet), \"Custom\", (allows you to select your own bouquet), \"No\", (do not use a main bouquet)"
-msgstr ""
+msgstr "Táto možnosť má niekoľko volieb: \"Áno\", (vytvorí buket so všetkými kanálmi), \"Áno len HD\" (zoskupí všetky HD kanály do tohto buketu), \"Vlastné\" (umožňuje vybrať si vlastný buket), \"Nie\" (nepoužije hlavný buket)."
 
 #: ../src/setup.py:498
 msgid "This option places markers in the bouquet index to group all bouquets of each provider."
-msgstr ""
+msgstr "Táto možnosť umiestňuje značky do indexu buketu, aby zoskupila všetky bukety každého poskytovateľa."
 
 #: ../src/setup.py:497
 msgid "This option will add the provider's name to bouquet names."
-msgstr ""
+msgstr "Táto možnosť pridá meno poskytovateľa k názvom buketu."
 
 #: ../src/setup.py:502
 msgid "This option will allow you choose where to place the created bouquets."
-msgstr ""
+msgstr "Táto možnosť vám umožní vybrať si, kam umiestniť vytvorené bukety."
 
 #: ../src/setup.py:319
 msgid "This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet."
-msgstr ""
+msgstr "Táto voľba vytvorí buket FreeToAir High Definition, ktorý zoskupí všetky kanály FTA HD do tohto buketu."
 
 #: ../src/setup.py:316
 msgid "This option will create a FreeToAir bouquet, it will group all free channels into this bouquet."
-msgstr ""
+msgstr "Táto voľba vytvorí buket FreeToAir, ktorý zoskupí všetky bezplatné kanály do tohto buketu."
 
 #: ../src/setup.py:313
 msgid "This option will create a High Definition bouquet, it will group all HD channels into this bouquet."
-msgstr ""
+msgstr "Táto možnosť vytvorí buket High Definition, ktorý zoskupí všetky HD kanály do tohto buketu."
 
 #: ../src/setup.py:310
 msgid "This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary."
-msgstr ""
+msgstr "Táto možnosť vytvorí bukety pre každý typ kanála, t. j. Zábava, Filmy, Dokumentárne filmy."
 
 #: ../src/setup.py:322
 msgid "This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)"
-msgstr ""
+msgstr "Táto možnosť vymení SD verzie kanálov za HD verzie. (napr. BBC One SD za BBC One HD, Channel Four SD za Channel Four HD)"
 
 #: ../src/setup.py:573
 msgid "Thursday"
-msgstr ""
+msgstr "Štvrtok"
 
 #: ../src/setup.py:573
 msgid "Tuesday"
-msgstr ""
+msgstr "Utorok"
 
 #: ../src/scanner/frequencyfinder.py:185
 #, python-format
 msgid "Tuning %s MHz (ch %s)"
-msgstr ""
+msgstr "Naladenie %s MHz (kanál %s)"
 
 #: ../src/scanner/main.py:206
 #, python-format
 msgid "Tuning %s..."
-msgstr ""
+msgstr "Ladenie %s..."
 
 #: ../src/scanner/main.py:456
 #, python-format
@@ -713,6 +717,17 @@ msgid ""
 "Signal cabling issues,\n"
 "Any other reception issues."
 msgstr ""
+"Naladenie sa nepodarilo!\n"
+"\n"
+"Poskytovateľ: %s\n"
+"Tuner: %s\n"
+"Frekvencia: %d MHz\n"
+"\n"
+"Skontrolujte príslušný tuner, či neobsahuje:\n"
+"\n"
+"Chyby konfigurácie tunera,\n"
+"Problémy s káblovým pripojením signálu,\n"
+"Akékoľvek iné problémy s príjmom."
 
 #: ../src/scanner/main.py:462
 #, python-format
@@ -729,47 +744,58 @@ msgid ""
 "Signal cabling issues,\n"
 "Any other reception issues."
 msgstr ""
+"Časový limit ladenia uplynul!\n"
+"\n"
+"Poskytovateľ: %s\n"
+"Tuner: %s\n"
+"Frekvencia: %d MHz\n"
+"\n"
+"Skontrolujte príslušný tuner, či neobsahuje:\n"
+"\n"
+"Chyby konfigurácie tunera,\n"
+"Problémy s káblovým pripojením signálu,\n"
+"Akékoľvek iné problémy s príjmom."
 
 #: ../src/updateproviders.py:196
 #, python-format
 msgid "Unable to download config file for %s"
-msgstr ""
+msgstr "Nie je možné stiahnuť konfiguračný súbor pre %s"
 
 #: ../src/menu.py:98
 msgid "Update provider files"
-msgstr ""
+msgstr "Aktualizácia súborov poskytovateľa"
 
 #: ../src/updateproviders.py:285
 msgid "Update summary"
-msgstr ""
+msgstr "Súhrn aktualizácií"
 
 #: ../src/updateproviders.py:49 ../src/updateproviders.py:89
 msgid "UpdateProviders"
-msgstr ""
+msgstr "Poskytovatelia aktualizácií"
 
 #: ../src/setup.py:573
 msgid "Wednesday"
-msgstr ""
+msgstr "Streda"
 
 #: ../src/setup.py:504
 msgid "When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included."
-msgstr ""
+msgstr "Ak vyhľadávanie nájde ďalšie kanály, ktoré nemajú pridelené číslo kanála, voľba 'áno' ich pridá na koniec zoznamu kanálov a voľba 'nie' znamená, že nebudú zahrnuté."
 
 #: ../src/setup.py:496
 msgid "When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets."
-msgstr ""
+msgstr "Keď je táto funkcia vypnutá, v hlavnom menu sa aktivuje možnosť 'Zachovať bukety', ktorá vám umožní skryť niektoré 'existujúce' bukety."
 
 #: ../src/setup.py:507
 msgid "When enabled, allows you start a scan from the extensions list."
-msgstr ""
+msgstr "Keď je táto funkcia povolená, môžete spustiť skenovanie zo zoznamu rozšírení."
 
 #: ../src/plugin.py:71
 msgid "bottom"
-msgstr ""
+msgstr "spodok"
 
 #: ../src/plugin.py:17
 msgid "expert"
-msgstr ""
+msgstr "odborník"
 
 #: ../src/plugin.py:42 ../src/plugin.py:58
 msgid "indent + text"
@@ -777,36 +803,36 @@ msgstr ""
 
 #: ../src/setup.py:234 ../src/setup.py:243
 msgid "no"
-msgstr ""
+msgstr "nie"
 
 #: ../src/plugin.py:41 ../src/plugin.py:57
 msgid "none"
-msgstr ""
+msgstr "nič"
 
 #: ../src/plugin.py:17
 msgid "simple"
-msgstr ""
+msgstr "jednoducho"
 
 #: ../src/plugin.py:71
 msgid "top"
-msgstr ""
+msgstr "vrch"
 
 #: ../src/setup.py:243
 msgid "yes"
-msgstr ""
+msgstr "áno"
 
 #: ../src/setup.py:199
 msgid "yes (all channels)"
-msgstr ""
+msgstr "áno (všetky kanály)"
 
 #: ../src/setup.py:221
 msgid "yes (custom)"
-msgstr ""
+msgstr "áno (vybrané)"
 
 #: ../src/setup.py:202
 msgid "yes (only FTA HD)"
-msgstr ""
+msgstr "áno (len FTA HD)"
 
 #: ../src/setup.py:201
 msgid "yes (only HD)"
-msgstr ""
+msgstr "áno (len HD)"
