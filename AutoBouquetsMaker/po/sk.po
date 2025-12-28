@@ -34,9 +34,8 @@ msgstr "%s plánovaná aktualizácia"
 msgid ""
 "%s update is about to start.\n"
 "Do you want to allow this?"
-msgstr ""
-„Aktualizácia %s sa čoskoro spustí.\n“
-„Chcete to povoliť?“
+msgstr "Aktualizácia %s sa čoskoro spustí.\n"
+"Chcete to povoliť?"
 
 #: ../src/plugin.py:51 ../src/plugin.py:67
 msgid "---- ABM - 'text' ----"
@@ -630,7 +629,7 @@ msgstr "Nedeľa"
 
 #: ../src/setup.py:322
 msgid "Swap channels"
-msgstr Zameniť kanály""
+msgstr "Zameniť kanály"
 
 #: ../src/setup.py:301
 msgid "This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones."
