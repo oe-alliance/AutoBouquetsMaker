@@ -4,16 +4,16 @@
 	<protocol>sky</protocol>
 	<transponder
 		orbital_position="130"
-		frequency="11977000"
-		symbol_rate="29900000"
-		polarization="0"
+		frequency="11881000"
+		symbol_rate="27500000"
+		polarization="1"
 		fec_inner="3"
 		inversion="2"
-		system="1"
-		modulation="2"
+		system="0"
+		modulation="1"
 		roll_off="0"
 		pilot="2"
-		tsid="6300"
+		tsid="5800"
 		onid="64511"
 	/>
 	<dvbsconfigs>
