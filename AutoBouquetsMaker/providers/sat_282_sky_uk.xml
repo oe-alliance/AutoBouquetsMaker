@@ -244,50 +244,42 @@
 		<channel number="112" with="812"/> <!-- Comedy Central HD -->
 		<channel number="113" with="813"/> <!-- Sky Max HD -->
 		<channel number="114" with="814"/> <!-- Sky Comedy HD -->
-		<channel number="118" with="816"/> <!-- ITV2 HD -->
 		<channel number="121" with="819"/> <!-- SkyDocmntrsHD -->
 		<channel number="122" with="820"/> <!-- Sky Crime HD -->
 		<channel number="123" with="821"/> <!-- Sky History HD -->
-		<channel number="124" with="822"/> <!-- Sky Nature HD -->
+		<channel number="124" with="822"/> <!-- Sky Arts HD -->
 		<channel number="125" with="823"/> <!-- Discovery HD -->
 		<channel number="126" with="824"/> <!-- MTV HD -->
 		<channel number="129" with="825"/> <!-- Nat Geo HD -->
-		<channel number="130" with="826"/> <!-- Sky Arts HD -->
 		<channel number="133" with="828"/> <!-- TLC HD -->
 		<channel number="134" with="829"/> <!-- S4C HD -->
 		<channel number="135" with="830"/> <!-- E4 HD -->
 		<channel number="136" with="831"/> <!-- More4 HD -->
-		<channel number="139" with="836"/> <!-- Sky Sci-Fi HD -->
+		<channel number="139" with="837"/> <!-- Crime+Inv HD -->
 		<channel number="144" with="834"/> <!-- Quest HD -->
+		<channel number="145" with="826"/> <!-- Sky Nature HD -->
 		<channel number="152" with="836"/> <!-- Sky Sci-Fi HD -->
-		<channel number="156" with="837"/> <!-- Crime+Inv HD -->
-		<channel number="159" with="835"/> <!-- E! HD -->
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
 		<channel number="313" with="855"/> <!-- Film4 HD -->
 		<channel number="409" with="866"/> <!-- SkySp News HD -->
 		<channel number="410" with="868"/> <!-- TNT Sports1 HD -->
 		<channel number="411" with="869"/> <!-- TNT Sports2 HD -->
-		<channel number="413" with="870"/> <!-- Eurosport 1 HD -->
-		<channel number="414" with="871"/> <!-- Eurosport 2 HD -->
+		<channel number="413" with="870"/> <!-- TNT Sports3 HD -->
+		<channel number="414" with="871"/> <!-- TNT Sports4 HD-->
 		<channel number="416" with="873"/> <!-- SkySp Mix HD -->
-		<channel number="417" with="874"/> <!-- TNT Sports3 HD -->
-		<channel number="421" with="876"/> <!-- TNT Sports4 HD -->
 		<channel number="424" with="877"/> <!-- Racing TV HD -->
 		<channel number="501" with="881"/> <!-- Sky News HD -->
-		<channel number="505" with="883"/> <!-- CNBC HD -->
-		<channel number="506" with="884"/> <!-- CNN HD -->
 		<channel number="513" with="886"/> <!-- TRT World HD -->
 		<channel number="601" with="640"/> <!-- Cartoon Network HD -->
 		<channel number="603" with="641"/> <!-- Boomerang HD -->
 		<channel number="604" with="642"/> <!-- Nickelodeon HD -->
 		<channel number="606" with="645"/> <!-- Nick Jr HD -->
-		<channel number="662" with="890"/> <!-- TJC HD -->
 		<channel number="703" with="892"/> <!-- SONY TV HD -->
 		<channel number="705" with="893"/> <!-- Utsav Plus HD -->
 		<channel number="706" with="894"/> <!-- Colors HD -->
 		<channel number="709" with="898"/> <!-- Zee TV HD -->
-		<channel number="715" with="895"/> <!-- SONY MAX HD -->
-		<channel number="717" with="896"/> <!-- Utsav GOLD HD -->
+		<channel number="714" with="895"/> <!-- SONY MAX HD -->
+		<channel number="715" with="896"/> <!-- Utsav GOLD HD -->
 	</swapchannels>
 	<servicehacks>
 <![CDATA[
