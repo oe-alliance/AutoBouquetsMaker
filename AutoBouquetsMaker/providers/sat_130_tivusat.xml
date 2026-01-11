@@ -132,6 +132,22 @@
 	<servicehacks>
 <![CDATA[
 ftachannels = [1,2,3,20,21,22,23,24,26,28,31,32,33,35,36,37,41,42,43,44,55,57,60,61,62,63,64,65,66,67,68,69,71,73,74,75,76,77,120,122,145,188,701]
+
+# List of channels that are encrypted but incorrectly have an FTA flag on the SI table.
+incorrect_fta_flag = [
+	"20Mediaset HD",
+	"Cartoonito",
+	"DMAX",
+	"Discovery",
+	"Focus HD",
+	"Food Network",
+	"frisbee",
+	"RADIO MONTE CARLO",
+	"Rai YoYo HD",
+	"Real Time",
+	"VIRGIN RADIO",
+]
+
 if service["number"] in ftachannels:
 	service["free_ca"] = 0
 
@@ -143,6 +159,11 @@ service["service_flags"] = dxNoSDT | dxHoldName
 # Correct service type of HD channels not marked as such
 if service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and service["service_type"] not in DvbScanner.HD_ALLOWED_TYPES and service["service_name"][-2:] == 'HD':
 	service["service_type"] = 25
+
+#Some channels are encrypted but they have an FTA flag on SI table. Mark them as encrypted.
+if service["service_name"] in incorrect_fta_flag:
+	service["free_ca"] = 1
+
 ]]>
 	</servicehacks>
 </provider>
