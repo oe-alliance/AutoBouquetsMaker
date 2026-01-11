@@ -453,13 +453,13 @@ class AutoBouquetsMaker(Screen):
 			print("[ABM-main][checkTunerLock] LOSTLOCK", file=log)
 		elif tuner_state == "FAILED":
 			print("[ABM-main][checkTunerLock] TUNING FAILED FATAL", file=log)
-			self.showError(_('Tuning failed!\n\nProvider: %s\nTuner: %s\nFrequency: %d MHz\nPolarization: %s\n\nPlease check affected tuner for:\n\nTuner configuration errors,\nSignal cabling issues,\nAny other reception issues.') % (str(self.providers[self.currentAction]["name"]), chr(ord('A') + self.current_slotid), self.transponder["frequency"] // int(1e06 if self.providers[self.currentAction]["streamtype"] == "dvbt" else 1e03), self.transponder["polarization"]))
+			self.showError(_('Tuning failed!\n\nProvider: %s\nTuner: %s\nFrequency: %d MHz\nPolarization: %s\n\nPlease check the affected tuner for:\n\nTuner configuration errors,\nSignal cabling issues,\nAny other reception issues.') % (str(self.providers[self.currentAction]["name"]), chr(ord('A') + self.current_slotid), self.transponder["frequency"] // int(1e06 if self.providers[self.currentAction]["streamtype"] == "dvbt" else 1e03), self.transponder["polarization"]))
 			return
 
 		self.lockcounter += 1
 		if self.lockcounter > self.LOCK_TIMEOUT:
 			print("[AutoBouquetsMaker] Timeout for tuner lock, ", file=log)
-			self.showError(_('Tuning failed!\n\nProvider: %s\nTuner: %s\nFrequency: %d MHz\nPolarization: %s\n\nPlease check affected tuner for:\n\nTuner configuration errors,\nSignal cabling issues,\nAny other reception issues.') % (str(self.providers[self.currentAction]["name"]), chr(ord('A') + self.current_slotid), self.transponder["frequency"] // int(1e06 if self.providers[self.currentAction]["streamtype"] == "dvbt" else 1e03), self.transponder["polarization"]))
+			self.showError(_('Tuning failed!\n\nProvider: %s\nTuner: %s\nFrequency: %d MHz\nPolarization: %s\n\nPlease check the affected tuner for:\n\nTuner configuration errors,\nSignal cabling issues,\nAny other reception issues.') % (str(self.providers[self.currentAction]["name"]), chr(ord('A') + self.current_slotid), self.transponder["frequency"] // int(1e06 if self.providers[self.currentAction]["streamtype"] == "dvbt" else 1e03), self.transponder["polarization"]))
 			return
 
 		self.locktimer.start(100, 1)
