@@ -709,7 +709,7 @@ class DvbScanner():
 			if tpkey not in transponders:
 				continue
 
-			transponders[tpkey]["services"][service["service_id"]] = service
+			transponders[tpkey]["services"]["%x:%x" % (service["service_type"], service["service_id"])] = service
 			service_extra_count += 1
 
 			if service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES or service["service_type"] in DvbScanner.INTERACTIVE_ALLOWED_TYPES or service["service_type"] in DvbScanner.AUDIO_ALLOWED_TYPES and servicehack_variable_cache["add_audio_channels_to_video_bouquet"]:
@@ -856,7 +856,7 @@ class DvbScanner():
 				services_without_transponders += 1
 				continue
 
-			transponders[tpkey]["services"][service["service_id"]] = service
+			transponders[tpkey]["services"]["%x:%x" % (service["service_type"], service["service_id"])] = service
 			service_extra_count += 1
 
 			if service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES or service["service_type"] in DvbScanner.INTERACTIVE_ALLOWED_TYPES:
@@ -1098,7 +1098,7 @@ class DvbScanner():
 			if tpkey not in transponders:
 				continue
 
-			transponders[tpkey]["services"][service["service_id"]] = service
+			transponders[tpkey]["services"]["%x:%x" % (service["service_type"], service["service_id"])] = service
 			service_extra_count += 1
 
 			if service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES or service["service_type"] in DvbScanner.INTERACTIVE_ALLOWED_TYPES:
@@ -1356,7 +1356,7 @@ class DvbScanner():
 			if tpkey not in transponders:
 				continue
 
-			transponders[tpkey]["services"][service["service_id"]] = service
+			transponders[tpkey]["services"]["%x:%x" % (service["service_type"], service["service_id"])] = service
 			service_extra_count += 1
 
 			if service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES or service["service_type"] in DvbScanner.INTERACTIVE_ALLOWED_TYPES or service["service_type"] in DvbScanner.AUDIO_ALLOWED_TYPES and servicehack_variable_cache["add_audio_channels_to_video_bouquet"]:

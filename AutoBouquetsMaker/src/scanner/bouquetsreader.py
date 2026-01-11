@@ -196,7 +196,7 @@ class BouquetsReader():
 			key = "%x:%x:%x" % (service["namespace"], service["transport_stream_id"], service["original_network_id"])
 			if key not in transponders:
 				continue
-			transponders[key]["services"][service["service_id"]] = service
+			transponders[key]["services"]["%x:%x" % (service["service_type"], service["service_id"])] = service
 			services_count += 1
 
 		print("[ABM-BouquetsReader] Read %d transponders and %d services" % (transponders_count, services_count), file=log)
@@ -315,7 +315,7 @@ class BouquetsReader():
 				key = "%x:%x:%x" % (service["namespace"], service["transport_stream_id"], service["original_network_id"])
 				if key not in transponders:
 					continue
-				transponders[key]["services"][service["service_id"]] = service
+				transponders[key]["services"]["%x:%x" % (service["service_type"], service["service_id"])] = service
 				services_count += 1
 
 		print("[ABM-BouquetsReader] Read %d transponders and %d services" % (transponders_count, services_count), file=log)
