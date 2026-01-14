@@ -325,7 +325,7 @@ except:
 		#slow death section IRL alternatves
 		3705: 112, # ComedyCentral
 		2709: 127, # ComedyXtra
-		2418: 140, # ID
+		2418: 154, # ID
 		1409: 301, #
 		1815: 304, #
 		1808: 306, #
