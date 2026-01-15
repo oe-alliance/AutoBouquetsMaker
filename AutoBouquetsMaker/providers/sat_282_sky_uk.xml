@@ -256,8 +256,8 @@
 		<channel number="135" with="830"/> <!-- E4 HD -->
 		<channel number="136" with="831"/> <!-- More4 HD -->
 		<channel number="139" with="837"/> <!-- Crime+Inv HD -->
-		<channel number="140" with="834" conditional="'Quest' in service_hd['service_name']"/> <!-- Quest HD -->
-		<channel number="141" with="834" conditional="'Quest' in service_hd['service_name']"/> <!-- Quest HD Scotland-->
+		<channel number="140" with="834" conditional="'QUEST' in service_hd['service_name']"/> <!-- Quest HD -->
+		<channel number="141" with="834" conditional="'QUEST' in service_hd['service_name']"/> <!-- Quest HD Scotland-->
 		<channel number="145" with="826"/> <!-- Sky Nature HD -->
 		<channel number="152" with="836"/> <!-- Sky Sci-Fi HD -->
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
