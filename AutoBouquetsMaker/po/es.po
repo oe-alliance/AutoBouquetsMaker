@@ -69,7 +69,7 @@ msgid "ABM log file has been saved to the tmp directory"
 msgstr "Archivo log ABM guardado en carpeta tmp"
 
 msgid "About"
-msgstr "Acerca de"
+msgstr "Acerca de ABM"
 
 msgid "Add provider markers"
 msgstr "Añadir marcadores de proveedores"
