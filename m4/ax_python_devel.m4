@@ -283,7 +283,7 @@ EOD`
 			then
 				ac_python_libdir_XCompile=''
 			else
-				ac_python_libdir_XCompile=`echo "$ac_python_libdir" | sed "s_/usr/lib__"  | sed "s_-native__"`
+				ac_python_libdir_XCompile=`echo "$ac_python_libdir" | sed "s_/usr/lib__" | sed "s_sysroot-native_sysroot_"`
 			fi
 			ac_python_library=`echo "$ac_python_library" | sed "s/^lib//"`
 			AC_MSG_RESULT([$ac_python_libdir])
@@ -339,15 +339,14 @@ EOD`
 			if test "${plat_python_path}" != "${python_path}"; then
 				python_path="-I$python_path -I$plat_python_path"
 			else
-			# check for OpenPli 3.9 build returns full path
-				length=${#python_path}
-				AC_MSG_RESULT([$length])							
-				if [[ "${#python_path}" -gt 24 ]]
+			# short path (starts with /usr/) needs cross-compile prefix prepended
+			# full cross-compile path (e.g. OpenPli 3.9) is used directly after sysroot-native fix
+				if echo "$python_path" | grep -q "^/usr/"
 				then
-					plat_python_path=`echo "$plat_python_path" | sed "s_-native__"`
-					python_path="-I$plat_python_path"
-				else
 					python_path="-I$ac_python_libdir_XCompile$python_path"
+				else
+					plat_python_path=`echo "$plat_python_path" | sed "s_sysroot-native_sysroot_"`
+					python_path="-I$plat_python_path"
 				fi
 			fi
 		fi
