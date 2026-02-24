@@ -235,19 +235,24 @@
 		<channel number="103" with="803"/> <!-- ITV, STV and UTV HD -->
 		<channel number="103" with="176" conditional="'ITV' in service_hd['service_name']"/><!-- ITV HD -->
 		<channel number="105" with="805"/> <!-- Channel 5 HD -->
-		<channel number="106" with="806"/> <!-- Sky Sky Showcase HD -->
+		<channel number="106" with="806"/> <!-- Sky One -->
 		<channel number="107" with="807"/> <!-- Sky Witness -->
 		<channel number="108" with="808"/> <!-- Sky Atlantic HD -->
 		<channel number="109" with="809"/> <!-- Alibi HD -->
 		<channel number="110" with="810"/> <!-- GOLD HD -->
 		<channel number="111" with="811"/> <!-- Dave HD -->
 		<channel number="112" with="812"/> <!-- Comedy Central HD -->
-		<channel number="113" with="813"/> <!-- Sky Max HD -->
-		<channel number="114" with="814"/> <!-- Sky Comedy HD -->
-		<channel number="121" with="819"/> <!-- SkyDocmntrsHD -->
-		<channel number="122" with="820"/> <!-- Sky Crime HD -->
+		<channel number="113" with="813" conditional="'Sky Comedy' in service_sd['service_name']"/> <!-- Sky Comedy HD -->
+		<channel number="114" with="813" conditional="'Sky Comedy' in service_sd['service_name']"/> <!-- Sky Comedy HD Wales-->
+		<channel number="114" with="814" conditional="'SkyDocumntrs' in service_sd['service_name']"/> <!-- SkyDocmntrsHD -->
+		<channel number="115" with="814" conditional="'SkyDocumntrs' in service_sd['service_name']"/> <!-- SkyDocmntrsHD Wales-->
+		<channel number="121" with="819" conditional="'Sky Crime' in service_sd['service_name']"/> <!-- Sky Crime HD -->
+		<channel number="122" with="819" conditional="'Sky Crime' in service_sd['service_name']"/> <!-- Sky Crime HD Scotland-->
 		<channel number="123" with="821"/> <!-- Sky History HD -->
-		<channel number="124" with="822"/> <!-- Sky Arts HD -->
+		<channel number="122" with="820" conditional="'Sky Arts' in service_sd['service_name']"/> <!-- Sky Arts HD -->
+		<channel number="123" with="820" conditional="'Sky Arts' in service_sd['service_name']"/> <!-- Sky Arts HD Scotland-->
+		<channel number="124" with="822" conditional="'Sky Nature' in service_sd['service_name']"/> <!-- Sky Nature HD -->
+		<channel number="125" with="822" conditional="'Sky Nature' in service_sd['service_name']"/> <!-- Sky Nature HD Scotland-->
 		<channel number="125" with="823"/> <!-- Discovery HD -->
 		<channel number="126" with="824"/> <!-- MTV HD -->
 		<channel number="129" with="825"/> <!-- Nat Geo HD -->
@@ -258,8 +263,7 @@
 		<channel number="139" with="837"/> <!-- Crime+Inv HD -->
 		<channel number="140" with="834" conditional="'QUEST' in service_sd['service_name']"/> <!-- Quest HD -->
 		<channel number="141" with="834" conditional="'QUEST' in service_sd['service_name']"/> <!-- Quest HD Scotland-->
-		<channel number="145" with="826"/> <!-- Sky Nature HD -->
-		<channel number="152" with="836"/> <!-- Sky Sci-Fi HD -->
+		<channel number="145" with="836"/> <!-- Sky Sci-Fi HD -->
 		<channel number="165" with="841"/> <!-- Nat Geo Wild HD -->
 		<channel number="313" with="855"/> <!-- Film4 HD -->
 		<channel number="409" with="866"/> <!-- SkySp News HD -->
