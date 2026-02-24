@@ -15,6 +15,7 @@ from .updateproviders import AutoBouquetsMaker_UpdateProviders
 from .scanner.frequencyfinder import AutoBouquetsMaker_FrequencyFinder
 
 from Screens.Screen import Screen
+from Screens.Setup import SetupSummary
 from Screens.MessageBox import MessageBox
 
 from Components.ActionMap import ActionMap, NumberActionMap
@@ -54,7 +55,7 @@ class AutoBouquetsMaker_Menu(Screen):
 
 		self.onChangedEntry = []
 
-		self["list"] = List([])
+		self["config"] = self["list"] = List([])  # self["config"] used by summary
 
 		self["setupActions"] = NumberActionMap(["SetupActions"],
 		{
@@ -108,13 +109,14 @@ class AutoBouquetsMaker_Menu(Screen):
 			x()
 
 	def getCurrentEntry(self):
-		return str(self["list"].getCurrent()[1])
+		current = self["list"].getCurrent()
+		return str(current[1]) if current and len(current) > 1 else ""
 
 	def getCurrentValue(self):
 		return ""
 
 	def createSummary(self):
-		return AutoBouquetsMaker_MenuSummary
+		return SetupSummary
 
 	def buildListEntry(self, description, image):
 		pixmap = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "autobouquetsmaker/" + image))
@@ -222,30 +224,6 @@ class AutoBouquetsMaker_Menu(Screen):
 
 	def quit(self):
 		self.close()
-
-
-class AutoBouquetsMaker_MenuSummary(Screen):
-	def __init__(self, session, parent):
-		Screen.__init__(self, session, parent=parent)
-		self.skinName = ["AutoBouquetsMaker_MenuSummary", "SetupSummary"]
-		self["SetupTitle"] = StaticText(_(parent.setup_title))
-		self["SetupEntry"] = StaticText("")
-		self["SetupValue"] = StaticText("")
-		self.onShow.append(self.addWatcher)
-		self.onHide.append(self.removeWatcher)
-
-	def addWatcher(self):
-		self.parent.onChangedEntry.append(self.selectionChanged)
-		self.parent["list"].onSelectionChanged.append(self.selectionChanged)
-		self.selectionChanged()
-
-	def removeWatcher(self):
-		self.parent.onChangedEntry.remove(self.selectionChanged)
-		self.parent["list"].onSelectionChanged.remove(self.selectionChanged)
-
-	def selectionChanged(self):
-		self["SetupEntry"].text = self.parent.getCurrentEntry()
-		self["SetupValue"].text = self.parent.getCurrentValue()
 
 
 class AutoBouquetsMaker_Log(Screen):

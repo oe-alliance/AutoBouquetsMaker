@@ -5,6 +5,7 @@ from . import _
 
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
+from Screens.Setup import SetupSummary
 from Components.ActionMap import ActionMap
 from Components.Button import Button
 from Components.config import config, configfile, ConfigYesNo, ConfigSelection, getConfigListEntry
@@ -513,28 +514,3 @@ class AutoBouquetsMakerDaysScreen(ConfigListScreen, Screen):
 		for x in self["config"].list:
 			x[1].save()
 		self.close()
-
-
-class SetupSummary(Screen):  # why isn't this being imported from Screens.Setup
-	def __init__(self, session, parent):
-		Screen.__init__(self, session, parent=parent)
-		self["SetupTitle"] = StaticText(_(parent.setup_title))
-		self["SetupEntry"] = StaticText("")
-		self["SetupValue"] = StaticText("")
-		self.onShow.append(self.addWatcher)
-		self.onHide.append(self.removeWatcher)
-
-	def addWatcher(self):
-		self.parent.onChangedEntry.append(self.selectionChanged)
-		self.parent["config"].onSelectionChanged.append(self.selectionChanged)
-		self.selectionChanged()
-
-	def removeWatcher(self):
-		self.parent.onChangedEntry.remove(self.selectionChanged)
-		self.parent["config"].onSelectionChanged.remove(self.selectionChanged)
-
-	def selectionChanged(self):
-		self["SetupEntry"].text = self.parent.getCurrentEntry()
-		self["SetupValue"].text = self.parent.getCurrentValue()
-		if hasattr(self.parent, "getCurrentDescription"):
-			self.parent["description"].text = self.parent.getCurrentDescription()
