@@ -289,6 +289,8 @@ EOD`
 			AC_MSG_RESULT([$ac_python_libdir])
 			AC_MSG_RESULT([$ac_python_library])
 			PYTHON_LIBS="-L$ac_python_libdir -l$ac_python_library"
+			# For cross-compile, redirect native sysroot to target sysroot
+			PYTHON_LIBS=`echo "$PYTHON_LIBS" | sed "s_sysroot-native_sysroot_"`
 		else
 			# old way: use libpython from python_configdir
 			ac_python_libdir=`$PYTHON -c \
