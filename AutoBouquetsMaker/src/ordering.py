@@ -30,7 +30,7 @@ class AutoBouquetsMaker_Ordering(Screen):
 
 		self.onChangedEntry = []
 		self.list = []
-		self["list"] = List(self.list)
+		self["config"] = self["list"] = List(self.list)  # self["config"] used by summary
 		self["list"].onSelectionChanged.append(self.selectionChanged)
 
 		self["key_red"] = Button(_("Cancel"))
@@ -183,5 +183,5 @@ class AutoBouquetsMaker_Ordering(Screen):
 		return ""
 
 	def createSummary(self):
-		from .menu import AutoBouquetsMaker_MenuSummary
-		return AutoBouquetsMaker_MenuSummary
+		from Screens.Setup import SetupSummary
+		return SetupSummary
