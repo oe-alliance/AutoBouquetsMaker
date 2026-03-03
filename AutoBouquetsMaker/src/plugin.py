@@ -73,6 +73,7 @@ config.autobouquetsmaker.skipservices = ConfigYesNo(default=True)
 config.autobouquetsmaker.showextraservices = ConfigYesNo(default=False)
 config.autobouquetsmaker.extra_debug = ConfigYesNo(default=False)
 config.autobouquetsmaker.frequencyfinder = ConfigYesNo(default=False)
+config.autobouquetsmaker.custommode = ConfigYesNo(default=False)
 config.autobouquetsmaker.FTA_only = ConfigText("", False)
 
 user_providers_dir = os.path.realpath(resolveFilename(SCOPE_CONFIG)) + "/AutoBouquetsMaker/providers"
