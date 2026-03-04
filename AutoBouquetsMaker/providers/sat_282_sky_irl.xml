@@ -114,13 +114,14 @@ try:
 	is_assigned
 except:
 	is_assigned = True
-	custom = True if "custom" in bouquet_key else False
+
+	custom_mode = True if "custom" in bouquet_key else False
 
 	dxNoSDT = 0x1 # details of lamedb flags are in README.txt
 	dxDontshow = 0x2 # details of lamedb flags are in README.txt
 	dxHoldName = 0x8 # details of lamedb flags are in README.txt
 
-	# slot some extra channels into vacant slots in the provider list if "custom" == True
+	# slot some extra channels into vacant slots in the provider list if "custom_mode" == True
 	########################################################################
 	#
 	# format: "channel name": number,
@@ -347,13 +348,13 @@ if service["channel_id"] in fta_by_id:
 	service["free_ca"] = 0
 
 # Add channels by name
-if custom and service["service_name"] in channels_to_add_by_name and service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and channels_to_add_by_name[service["service_name"]] not in LCNs_in_use:
+if custom_mode and service["service_name"] in channels_to_add_by_name and service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and channels_to_add_by_name[service["service_name"]] not in LCNs_in_use:
 	LCNs_in_use.append(channels_to_add_by_name[service["service_name"]])
 	service["number"] = channels_to_add_by_name[service["service_name"]]
 	service["numbers"] = [channels_to_add_by_name[service["service_name"]]]
 
 # Add channels by ID
-if custom and service["channel_id"] in channels_to_add_by_id and service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and channels_to_add_by_id[service["channel_id"]] not in LCNs_in_use:
+if custom_mode and service["channel_id"] in channels_to_add_by_id and service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and channels_to_add_by_id[service["channel_id"]] not in LCNs_in_use:
 	LCNs_in_use.append(channels_to_add_by_id[service["channel_id"]])
 	service["number"] = channels_to_add_by_id[service["channel_id"]]
 	service["numbers"] = [channels_to_add_by_id[service["channel_id"]]]
@@ -363,17 +364,17 @@ if service["service_type"] == 0x02 and service["number"] > 3000:
 
 if service["service_type"] != 2 and (service["number"] in whitelist or service["service_name"] in whitelist or ("channel_id" in service and service["channel_id"] in whitelist_by_id)):
 	pass
-elif custom and service["service_type"] != 2 and (service["number"] in blacklist or service["service_name"] in blacklist):
+elif custom_mode and service["service_type"] != 2 and (service["number"] in blacklist or service["service_name"] in blacklist):
 	skip.skip = True
 elif streamrelay and service["service_name"] not in stream_relay_blacklist and service["service_type"] != 2 and service["transport_stream_id"] in broken_TSIDS and service["free_ca"] != 0 and (service["service_type"] not in DvbScanner.HD_ALLOWED_TYPES or "channel_id" in service and service["channel_id"] in broken_CHIDs):
 	sref = makeServiceRef(service)
 	if sref not in streamrelay.data:
 		streamrelay.data += [sref]
-elif custom and service["service_type"] in DvbScanner.HD_ALLOWED_TYPES and service["free_ca"] != 0:
+elif custom_mode and service["service_type"] in DvbScanner.HD_ALLOWED_TYPES and service["free_ca"] != 0:
 	while service["number"] in LCNs_in_use:
 		LCNs_in_use.remove(service["number"])
 	skip.skip = True
-elif custom and ("channel_id" in service and service["channel_id"] in blacklist_by_id):
+elif custom_mode and ("channel_id" in service and service["channel_id"] in blacklist_by_id):
 	skip.skip = True
 
 hidden_sections = config.autobouquetsmaker.hidesections.value.split("|")
