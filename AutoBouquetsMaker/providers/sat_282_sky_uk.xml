@@ -306,7 +306,11 @@ try:
 except:
 	is_assigned = True
 
-	custom_mode = True if "custom" in bouquet_key else False
+	from Components.config import config
+	try:
+		custom_mode = True if "custom" in bouquet_key or config.autobouquetsmaker.custommode.value else False
+	except AttributeError:
+		custom_mode = True if "custom" in bouquet_key else False
 
 	dxNoSDT = 0x1 # details of lamedb flags are in README.txt
 	dxDontshow = 0x2 # details of lamedb flags are in README.txt
