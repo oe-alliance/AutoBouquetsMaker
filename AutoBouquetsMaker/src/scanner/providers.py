@@ -98,6 +98,7 @@ class Providers():
 			provider["dependent"] = ''
 			provider["bouquets"] = {}
 			provider["ignore_visible_service_flag"] = 0
+			provider["show_fta_options"] = True
 			if dom.documentElement.nodeType == dom.documentElement.ELEMENT_NODE and dom.documentElement.tagName == "provider":
 				for node in dom.documentElement.childNodes:
 					if node.nodeType != node.ELEMENT_NODE:
@@ -115,6 +116,10 @@ class Providers():
 						node.normalize()
 						if len(node.childNodes) == 1 and node.childNodes[0].nodeType == node.TEXT_NODE and self.encodeNODE(node.childNodes[0].data) in self.VALID_PROTOCOLS:
 							provider["protocol"] = self.encodeNODE(node.childNodes[0].data)
+					elif node.tagName == "options":
+						for i in list(range(0, node.attributes.length)):
+							if node.attributes.item(i).name == "show_fta_options" and node.attributes.item(i).value.lower() == "false":
+								provider["show_fta_options"] = False
 					elif node.tagName == "transponder":
 						transponder = {}
 						transponder["nit_pid"] = 0x10

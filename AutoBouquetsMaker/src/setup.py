@@ -175,8 +175,9 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 					fta_default = providers_tmp_configs[provider].isMakeFTA()
 					ftahd_default = providers_tmp_configs[provider].isMakeFTAHD()
 				self.providers_makehd[provider] = ConfigYesNo(default=hd_default)
-				self.providers_makefta[provider] = ConfigYesNo(default=fta_default)
-				self.providers_makeftahd[provider] = ConfigYesNo(default=ftahd_default)
+				if self.providers[provider].get("show_fta_options", True):
+					self.providers_makefta[provider] = ConfigYesNo(default=fta_default)
+					self.providers_makeftahd[provider] = ConfigYesNo(default=ftahd_default)
 				custom_bouquets_exists = True
 
 			if sorted(list(self.providers[provider]["sections"].keys()))[0] > 1:
@@ -240,7 +241,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 
 			# FTA only
 			FTA_only = config.autobouquetsmaker.FTA_only.value.split("|")
-			FTA = self.providers[provider]["protocol"] != "fastscan" and config.autobouquetsmaker.level.value == "expert" and provider in FTA_only
+			FTA = self.providers[provider]["protocol"] != "fastscan" and self.providers[provider].get("show_fta_options", True) and config.autobouquetsmaker.level.value == "expert" and provider in FTA_only
 			self.providers_FTA_only[provider] = ConfigYesNo(default=FTA)
 
 		self.createSetup()
@@ -282,7 +283,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 
 				if config.autobouquetsmaker.level.value == "expert":
 					# fta only
-					if self.providers[provider]["protocol"] != "fastscan":
+					if self.providers[provider]["protocol"] != "fastscan" and self.providers[provider].get("show_fta_options", True):
 						setupList.append(getConfigListEntry(indent + _("FTA only"), self.providers_FTA_only[provider], _("This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones.")))
 
 					if self.providers_makemain[provider]:
