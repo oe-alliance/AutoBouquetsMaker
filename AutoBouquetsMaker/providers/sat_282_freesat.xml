@@ -2,6 +2,7 @@
 	<name>FreeSat UK</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>freesat</protocol>
+	<options show_fta_options="false" />
 	<transponder
 		orbital_position="282"
 		frequency="11426000"

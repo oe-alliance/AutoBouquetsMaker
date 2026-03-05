@@ -99,6 +99,7 @@ class Providers():
 			provider["bouquets"] = {}
 			provider["ignore_visible_service_flag"] = 0
 			provider["custom_list"] = False
+			provider["show_fta_options"] = True
 			if dom.documentElement.nodeType == dom.documentElement.ELEMENT_NODE and dom.documentElement.tagName == "provider":
 				for node in dom.documentElement.childNodes:
 					if node.nodeType != node.ELEMENT_NODE:
@@ -112,6 +113,8 @@ class Providers():
 						for i in list(range(0, node.attributes.length)):
 							if node.attributes.item(i).name == "custom_list":
 								provider["custom_list"] = self.parseBoolean("custom_list", node.attributes.item(i).value)
+							if node.attributes.item(i).name == "show_fta_options":
+								provider["show_fta_options"] = self.parseBoolean("show_fta_options", node.attributes.item(i).value)
 					elif node.tagName == "streamtype":
 						node.normalize()
 						if len(node.childNodes) == 1 and node.childNodes[0].nodeType == node.TEXT_NODE:
