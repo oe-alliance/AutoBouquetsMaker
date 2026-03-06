@@ -254,7 +254,8 @@ class Manager():
 					bouquet = providers[provider_key]["bouquets"][bouquet_key]
 					self.services[provider_key] = scanner.updateAndReadServicesSKY(bouquet["bouquet"],
 						bouquet["region"], bouquet["key"], self.transponders,
-						providers[provider_key]["servicehacks"])
+						providers[provider_key]["servicehacks"],
+						providers[provider_key].get("show_extra_services", False) and provider_key in config.autobouquetsmaker.extraservices.value.split("|"))
 
 					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
 

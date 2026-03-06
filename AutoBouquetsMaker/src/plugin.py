@@ -70,7 +70,7 @@ config.autobouquetsmaker.bouquetmarkerstyle = ConfigSelection(
 config.autobouquetsmaker.extensions = ConfigYesNo(default=False)
 config.autobouquetsmaker.placement = ConfigSelection(default="top", choices=[("top", _("top")), ("bottom", _("bottom"))])
 config.autobouquetsmaker.skipservices = ConfigYesNo(default=True)
-config.autobouquetsmaker.showextraservices = ConfigYesNo(default=False)
+config.autobouquetsmaker.extraservices = ConfigText("", False)
 config.autobouquetsmaker.extra_debug = ConfigYesNo(default=False)
 config.autobouquetsmaker.frequencyfinder = ConfigYesNo(default=False)
 config.autobouquetsmaker.FTA_only = ConfigText("", False)

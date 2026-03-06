@@ -551,7 +551,7 @@ class AutoBouquetsMaker(Screen):
 		print("[ABM-config] show in extensions menu: ", config.autobouquetsmaker.extensions.value, file=log)
 		print("[ABM-config] placement: ", config.autobouquetsmaker.placement.value, file=log)
 		print("[ABM-config] skip services on non-configured satellites: ", config.autobouquetsmaker.skipservices.value, file=log)
-		print("[ABM-config] show non-indexed: ", config.autobouquetsmaker.showextraservices.value, file=log)
+		print("[ABM-config] show non-indexed: ", config.autobouquetsmaker.extraservices.value, file=log)
 		if config.autobouquetsmaker.FTA_only.value:
 			print("[ABM-config] FTA_only: ", config.autobouquetsmaker.FTA_only.value, file=log)
 		print("[ABM-config] schedule: ", config.autobouquetsmaker.schedule.value, file=log)

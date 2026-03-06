@@ -876,7 +876,7 @@ class DvbScanner():
 			"radio": radio_services
 		}
 
-	def updateAndReadServicesSKY(self, bouquet_id, region_id, bouquet_key, transponders, servicehacks):
+	def updateAndReadServicesSKY(self, bouquet_id, region_id, bouquet_key, transponders, servicehacks, show_extra_services=False):
 		print("[ABM-DvbScanner] Reading services (SKY)...", file=log)
 
 		fd = dvbreader.open(self.demuxer_device, self.bat_pid, self.bat_table_id, 0xff, self.frontend)
@@ -892,7 +892,7 @@ class DvbScanner():
 		timeout = datetime.datetime.now()
 		timeout += datetime.timedelta(0, self.TIMEOUT_SEC)
 		transport_stream_id_list = []
-		extraservices = config.autobouquetsmaker.level.value == "expert" and config.autobouquetsmaker.showextraservices.value
+		extraservices = config.autobouquetsmaker.level.value == "expert" and show_extra_services
 		extra_channel_id_dict = {}
 		while True:
 			if datetime.datetime.now() > timeout:

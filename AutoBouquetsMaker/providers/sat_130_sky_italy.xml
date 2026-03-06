@@ -2,6 +2,7 @@
 	<name>Sky Italia</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>sky</protocol>
+	<options show_extra_services="true" />
 	<transponder
 		orbital_position="130"
 		frequency="11881000"

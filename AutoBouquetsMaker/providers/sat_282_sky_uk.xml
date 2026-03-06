@@ -2,6 +2,7 @@
 	<name>Sky UK</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>sky</protocol>
+	<options show_extra_services="true" />
 	<transponder
 		orbital_position="282"
 		frequency="11778000"
