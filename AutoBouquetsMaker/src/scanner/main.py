@@ -537,7 +537,6 @@ class AutoBouquetsMaker(Screen):
 		return self.providers[self.currentAction]["streamtype"] != "dvbs" or self.providers[self.currentAction]["transponder"]["orbital_position"] in [sat[0] for sat in nimmanager.getSatListForNim(slot)]
 
 	def printconfig(self):
-		print("[ABM-config] level: ", config.autobouquetsmaker.level.value, file=log)
 		print("[ABM-config] providers: ", config.autobouquetsmaker.providers.value, file=log)
 		if config.autobouquetsmaker.bouquetsorder.value:
 			print("[ABM-config] bouquetsorder: ", config.autobouquetsmaker.bouquetsorder.value, file=log)

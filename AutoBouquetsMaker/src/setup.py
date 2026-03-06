@@ -245,7 +245,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 
 			# FTA only
 			FTA_only = config.autobouquetsmaker.FTA_only.value.split("|")
-			FTA = self.providers[provider]["protocol"] != "fastscan" and self.providers[provider].get("show_fta_options", True) and config.autobouquetsmaker.level.value == "expert" and provider in FTA_only
+			FTA = self.providers[provider]["protocol"] != "fastscan" and self.providers[provider].get("show_fta_options", True) and provider in FTA_only
 			self.providers_FTA_only[provider] = ConfigYesNo(default=FTA)
 
 			# extra services (non-indexed channels)
@@ -297,37 +297,36 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 				if len(self.providers[provider]["bouquets"]) > 0:
 					setupList.append(getConfigListEntry(indent + _("Region"), self.providers_area[provider], _("This option allows you to choose what region of the country you live in, so it populates the correct channels for your region.")))
 
-				if config.autobouquetsmaker.level.value == "expert":
-					# fta only
-					if self.providers[provider]["protocol"] != "fastscan" and self.providers[provider].get("show_fta_options", True):
-						setupList.append(getConfigListEntry(indent + _("FTA only"), self.providers_FTA_only[provider], _("This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones.")))
+				# fta only
+				if self.providers[provider]["protocol"] != "fastscan" and self.providers[provider].get("show_fta_options", True):
+					setupList.append(getConfigListEntry(indent + _("FTA only"), self.providers_FTA_only[provider], _("This affects all bouquets. Select 'no' to scan in all services. Select 'yes' to skip encrypted ones.")))
 
-					if self.providers_makemain[provider]:
-						setupList.append(getConfigListEntry(indent + _("Create main bouquet"), self.providers_makemain[provider], _('This option has several choices "Yes", (create a bouquet with all the channels in it), "Yes HD only", (will group all HD channels into this bouquet), "Custom", (allows you to select your own bouquet), "No", (do not use a main bouquet)')))
+				if self.providers_makemain[provider]:
+					setupList.append(getConfigListEntry(indent + _("Create main bouquet"), self.providers_makemain[provider], _('This option has several choices "Yes", (create a bouquet with all the channels in it), "Yes HD only", (will group all HD channels into this bouquet), "Custom", (allows you to select your own bouquet), "No", (do not use a main bouquet)')))
 
-					if self.providers_custommain[provider] and self.providers_makemain[provider] and self.providers_makemain[provider].value == "custom":
-						setupList.append(getConfigListEntry(indent + _("Custom bouquet for main"), self.providers_custommain[provider], _("Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used.")))
+				if self.providers_custommain[provider] and self.providers_makemain[provider] and self.providers_makemain[provider].value == "custom":
+					setupList.append(getConfigListEntry(indent + _("Custom bouquet for main"), self.providers_custommain[provider], _("Select your own bouquet from the list, please note that the only the first 100 channels for this bouquet will be used.")))
 
-					if self.providers_makesections[provider]:
-						setupList.append(getConfigListEntry(indent + _("Create sections bouquets"), self.providers_makesections[provider], _("This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary.")))
+				if self.providers_makesections[provider]:
+					setupList.append(getConfigListEntry(indent + _("Create sections bouquets"), self.providers_makesections[provider], _("This option will create bouquets for each type of channel, ie Entertainment, Movies, Documentary.")))
 
-					if self.providers_makehd[provider] and (self.providers_makemain[provider] is None or self.providers_makemain[provider].value != "hd"):
-						setupList.append(getConfigListEntry(indent + _("Create HD bouquet"), self.providers_makehd[provider], _("This option will create a High Definition bouquet, it will group all HD channels into this bouquet.")))
+				if self.providers_makehd[provider] and (self.providers_makemain[provider] is None or self.providers_makemain[provider].value != "hd"):
+					setupList.append(getConfigListEntry(indent + _("Create HD bouquet"), self.providers_makehd[provider], _("This option will create a High Definition bouquet, it will group all HD channels into this bouquet.")))
 
-					if self.providers_makefta[provider] and not self.providers_FTA_only[provider].value:
-						setupList.append(getConfigListEntry(indent + _("Create FTA bouquet"), self.providers_makefta[provider], _("This option will create a FreeToAir bouquet, it will group all free channels into this bouquet.")))
+				if self.providers_makefta[provider] and not self.providers_FTA_only[provider].value:
+					setupList.append(getConfigListEntry(indent + _("Create FTA bouquet"), self.providers_makefta[provider], _("This option will create a FreeToAir bouquet, it will group all free channels into this bouquet.")))
 
-					if self.providers_makeftahd[provider] and (self.providers_makemain[provider] is None or self.providers_makemain[provider].value != "ftahd") and not self.providers_FTA_only[provider].value:
-						setupList.append(getConfigListEntry(indent + _("Create FTA HD bouquet"), self.providers_makeftahd[provider], _("This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet.")))
+				if self.providers_makeftahd[provider] and (self.providers_makemain[provider] is None or self.providers_makemain[provider].value != "ftahd") and not self.providers_FTA_only[provider].value:
+					setupList.append(getConfigListEntry(indent + _("Create FTA HD bouquet"), self.providers_makeftahd[provider], _("This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet.")))
 
-					if self.providers_extraservices[provider]:
-						setupList.append(getConfigListEntry(indent + _("Include non-indexed channels"), self.providers_extraservices[provider], _("When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included.")))
+				if self.providers_extraservices[provider]:
+					setupList.append(getConfigListEntry(indent + _("Include non-indexed channels"), self.providers_extraservices[provider], _("When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included.")))
 
-					if self.providers_custommode[provider]:
-						setupList.append(getConfigListEntry(indent + _("Custom mode"), self.providers_custommode[provider], _("Enable custom mode to apply provider-specific channel adjustments such as adding, removing or renaming channels.")))
+				if self.providers_custommode[provider]:
+					setupList.append(getConfigListEntry(indent + _("Custom mode"), self.providers_custommode[provider], _("Enable custom mode to apply provider-specific channel adjustments such as adding, removing or renaming channels.")))
 
-					if ((self.providers_makemain[provider] and self.providers_makemain[provider].value == "yes") or (self.providers_makesections[provider] and self.providers_makesections[provider].value is True)) and len(self.providers[provider]["swapchannels"]) > 0:
-						setupList.append(getConfigListEntry(indent + _("Swap channels"), self.providers_swapchannels[provider], _("This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)")))
+				if ((self.providers_makemain[provider] and self.providers_makemain[provider].value == "yes") or (self.providers_makesections[provider] and self.providers_makesections[provider].value is True)) and len(self.providers[provider]["swapchannels"]) > 0:
+					setupList.append(getConfigListEntry(indent + _("Swap channels"), self.providers_swapchannels[provider], _("This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)")))
 
 				providers_enabled.append(provider)
 
@@ -479,7 +478,6 @@ class AutoBouquetsMaker_Setup(ConfigListScreen, Screen):
 		setupList = []
 		indent = '-  '
 
-		# setupList.append(getConfigListEntry(_("Setup mode"), config.autobouquetsmaker.level, _("Choose which level of settings to display. 'Expert'-level shows all items, this also adds more options in the providers menu.")))
 		setupList.append(getConfigListEntry(_("Schedule scan"), config.autobouquetsmaker.schedule, _("Allows you to set a schedule to perform a scan ")))
 		if config.autobouquetsmaker.schedule.getValue():
 			setupList.append(getConfigListEntry(indent + _("Schedule time of day"), config.autobouquetsmaker.scheduletime, _("Set the time of day to perform a scan.")))
@@ -487,17 +485,16 @@ class AutoBouquetsMaker_Setup(ConfigListScreen, Screen):
 			setupList.append(getConfigListEntry(indent + _("Schedule wake from deep standby"), config.autobouquetsmaker.schedulewakefromdeep, _("If the receiver is in 'Deep Standby' when the schedule is due, wake it up to perform a scan.")))
 			if config.autobouquetsmaker.schedulewakefromdeep.getValue():
 				setupList.append(getConfigListEntry(indent + _("Schedule return to deep standby"), config.autobouquetsmaker.scheduleshutdown, _("If the receiver was woken from 'Deep Standby' and is currently in 'Standby' and no recordings are in progress return it to 'Deep Standby' once the scan has completed.")))
-		if config.autobouquetsmaker.level.value == "expert":
-			setupList.append(getConfigListEntry(_("Keep all non-ABM bouquets"), config.autobouquetsmaker.keepallbouquets, _("When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets.")))
-			setupList.append(getConfigListEntry(_("Add provider name to bouquets"), config.autobouquetsmaker.addprefix, _("This option will add the provider's name to bouquet names.")))
-			setupList.append(getConfigListEntry(_("Add provider markers"), config.autobouquetsmaker.markersinindex, _("This option places markers in the bouquet index to group all bouquets of each provider.")))
-			if config.autobouquetsmaker.markersinindex.getValue():
-				setupList.append(getConfigListEntry(indent + _("Style of provider marker"), config.autobouquetsmaker.indexmarkerstyle, _("Choose the style of markers that separate one provider from another in bouquet indexes.")))
-			setupList.append(getConfigListEntry(_("Style of bouquet marker"), config.autobouquetsmaker.bouquetmarkerstyle, _("Choose the style of the markers that separate channels into groups in the channel lists.")))
-			setupList.append(getConfigListEntry(_("Place bouquets at"), config.autobouquetsmaker.placement, _("This option will allow you choose where to place the created bouquets.")))
-			setupList.append(getConfigListEntry(_("Skip services on not configured sats"), config.autobouquetsmaker.skipservices, _("If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible.")))
-			setupList.append(getConfigListEntry(_("Extra debug"), config.autobouquetsmaker.extra_debug, _("This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode.")))
-			setupList.append(getConfigListEntry(_("Show DVB-T frequency finder"), config.autobouquetsmaker.frequencyfinder, _('Select "yes" to show the "DVB-T frequency finder" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc.')))
+		setupList.append(getConfigListEntry(_("Keep all non-ABM bouquets"), config.autobouquetsmaker.keepallbouquets, _("When disabled this will enable the 'Keep bouquets' option in the main menu, allowing you to hide some 'existing' bouquets.")))
+		setupList.append(getConfigListEntry(_("Add provider name to bouquets"), config.autobouquetsmaker.addprefix, _("This option will add the provider's name to bouquet names.")))
+		setupList.append(getConfigListEntry(_("Add provider markers"), config.autobouquetsmaker.markersinindex, _("This option places markers in the bouquet index to group all bouquets of each provider.")))
+		if config.autobouquetsmaker.markersinindex.getValue():
+			setupList.append(getConfigListEntry(indent + _("Style of provider marker"), config.autobouquetsmaker.indexmarkerstyle, _("Choose the style of markers that separate one provider from another in bouquet indexes.")))
+		setupList.append(getConfigListEntry(_("Style of bouquet marker"), config.autobouquetsmaker.bouquetmarkerstyle, _("Choose the style of the markers that separate channels into groups in the channel lists.")))
+		setupList.append(getConfigListEntry(_("Place bouquets at"), config.autobouquetsmaker.placement, _("This option will allow you choose where to place the created bouquets.")))
+		setupList.append(getConfigListEntry(_("Skip services on not configured sats"), config.autobouquetsmaker.skipservices, _("If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible.")))
+		setupList.append(getConfigListEntry(_("Extra debug"), config.autobouquetsmaker.extra_debug, _("This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode.")))
+		setupList.append(getConfigListEntry(_("Show DVB-T frequency finder"), config.autobouquetsmaker.frequencyfinder, _('Select "yes" to show the "DVB-T frequency finder" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc.')))
 		setupList.append(getConfigListEntry(_("Show in extensions"), config.autobouquetsmaker.extensions, _("When enabled, allows you start a scan from the extensions list.")))
 
 		self["config"].list = setupList
