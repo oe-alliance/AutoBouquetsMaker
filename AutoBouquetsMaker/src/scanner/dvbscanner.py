@@ -36,6 +36,7 @@ class DvbScanner():
 		self.fastscan_table_id = 0x00
 		self.ignore_visible_service_flag = 0
 		self.extra_debug = config.autobouquetsmaker.level.value == "expert" and config.autobouquetsmaker.extra_debug.value
+		self.extra_debug = config.autobouquetsmaker.extra_debug.value
 		self.namespace_complete = not (config.usage.subnetwork.value if hasattr(config.usage, "subnetwork") else True)  # config.usage.subnetwork not available in all images
 		self.namespace_complete_cable = not (config.usage.subnetwork_cable.value if hasattr(config.usage, "subnetwork_cable") else True)  # config.usage.subnetwork not available in all images
 		self.namespace_complete_terrestrial = not (config.usage.subnetwork_terrestrial.value if hasattr(config.usage, "subnetwork_terrestrial") else True)  # config.usage.subnetwork not available in all images
