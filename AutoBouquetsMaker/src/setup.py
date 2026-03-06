@@ -75,6 +75,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 		self.providers_makeftahd = {}
 		self.providers_FTA_only = {}
 		self.providers_extraservices = {}
+		self.providers_custommode = {}
 		self.providers_order = []
 		self.orbital_supported = []
 
@@ -160,6 +161,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 			self.providers_makefta[provider] = None
 			self.providers_makeftahd[provider] = None
 			self.providers_extraservices[provider] = None
+			self.providers_custommode[provider] = None
 
 			if len(list(self.providers[provider]["sections"].keys())) > 1:  # only if there's more than one section
 				sections_default = True
@@ -252,6 +254,12 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 				extraservices_default = provider in extraservices_list
 				self.providers_extraservices[provider] = ConfigYesNo(default=extraservices_default)
 
+			# custom mode
+			if self.providers[provider].get("show_custom_mode", False):
+				custommode_list = config.autobouquetsmaker.custommode.value.split("|")
+				custommode_default = provider in custommode_list
+				self.providers_custommode[provider] = ConfigYesNo(default=custommode_default)
+
 		self.createSetup()
 		self["pleasewait"].hide()
 		self["actions"].setEnabled(True)
@@ -315,6 +323,9 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 					if self.providers_extraservices[provider]:
 						setupList.append(getConfigListEntry(indent + _("Include non-indexed channels"), self.providers_extraservices[provider], _("When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included.")))
 
+					if self.providers_custommode[provider]:
+						setupList.append(getConfigListEntry(indent + _("Custom mode"), self.providers_custommode[provider], _("Enable custom mode to apply provider-specific channel adjustments such as adding, removing or renaming channels.")))
+
 					if ((self.providers_makemain[provider] and self.providers_makemain[provider].value == "yes") or (self.providers_makesections[provider] and self.providers_makesections[provider].value is True)) and len(self.providers[provider]["swapchannels"]) > 0:
 						setupList.append(getConfigListEntry(indent + _("Swap channels"), self.providers_swapchannels[provider], _("This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)")))
 
@@ -345,6 +356,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 
 		FTA_only = []
 		extraservices = []
+		custommode = []
 
 		config_string = ""
 		for provider in self.providers_order:
@@ -392,6 +404,9 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 				if self.providers_extraservices[provider] and self.providers_extraservices[provider].value:
 					extraservices.append(provider)
 
+				if self.providers_custommode[provider] and self.providers_custommode[provider].value:
+					custommode.append(provider)
+
 		# fta only
 		config.autobouquetsmaker.FTA_only.value = ''
 		if FTA_only:
@@ -403,6 +418,12 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 		if extraservices:
 			config.autobouquetsmaker.extraservices.value = '|'.join(extraservices)
 		config.autobouquetsmaker.extraservices.save()
+
+		# custom mode
+		config.autobouquetsmaker.custommode.value = ''
+		if custommode:
+			config.autobouquetsmaker.custommode.value = '|'.join(custommode)
+		config.autobouquetsmaker.custommode.save()
 
 		config.autobouquetsmaker.providers.value = config_string
 		config.autobouquetsmaker.providers.save()

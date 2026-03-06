@@ -100,6 +100,7 @@ class Providers():
 			provider["ignore_visible_service_flag"] = 0
 			provider["show_fta_options"] = True
 			provider["show_extra_services"] = False
+			provider["show_custom_mode"] = False
 			if dom.documentElement.nodeType == dom.documentElement.ELEMENT_NODE and dom.documentElement.tagName == "provider":
 				for node in dom.documentElement.childNodes:
 					if node.nodeType != node.ELEMENT_NODE:
@@ -123,6 +124,8 @@ class Providers():
 								provider["show_fta_options"] = False
 							elif node.attributes.item(i).name == "show_extra_services" and node.attributes.item(i).value.lower() == "true":
 								provider["show_extra_services"] = True
+							elif node.attributes.item(i).name == "show_custom_mode" and node.attributes.item(i).value.lower() == "true":
+								provider["show_custom_mode"] = True
 					elif node.tagName == "transponder":
 						transponder = {}
 						transponder["nit_pid"] = 0x10

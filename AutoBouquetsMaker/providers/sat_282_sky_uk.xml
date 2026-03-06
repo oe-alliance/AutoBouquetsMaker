@@ -2,7 +2,9 @@
 	<name>Sky UK</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>sky</protocol>
-	<options show_extra_services="true" />
+	<options
+		show_extra_services="true"
+		show_custom_mode="true" />
 	<transponder
 		orbital_position="282"
 		frequency="11778000"
@@ -307,7 +309,10 @@ try:
 except:
 	is_assigned = True
 
-	custom_mode = True if "custom" in bouquet_key else False
+	try:
+		custom_mode = True if "custom" in bouquet_key or config.autobouquetsmaker.custommode.value and "sat_282_sky_uk" in config.autobouquetsmaker.custommode.value.split("|") else False
+	except AttributeError:
+		custom_mode = True if "custom" in bouquet_key else False
 
 	dxNoSDT = 0x1 # details of lamedb flags are in README.txt
 	dxDontshow = 0x2 # details of lamedb flags are in README.txt
