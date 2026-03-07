@@ -222,7 +222,7 @@ class Manager():
 						tmp["logical_channel_number_dict"], tmp["TSID_ONID_list"] = scanner.readLCNBAT(bouquet_id, providers[provider_key]["bouquets"][bouquet_key]["region"], tmp["TSID_ONID_list"])
 					self.services[provider_key] = scanner.updateAndReadServicesLCN(
 						self.transponders, providers[provider_key]["servicehacks"], tmp["TSID_ONID_list"],
-						tmp["logical_channel_number_dict"], tmp["service_dict_tmp"], providers[provider_key]["protocol"], bouquet_key)
+						tmp["logical_channel_number_dict"], tmp["service_dict_tmp"], providers[provider_key]["protocol"], bouquet_key, provider_config)
 
 					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
 
@@ -236,7 +236,7 @@ class Manager():
 					tmp = scanner.updateTransponders(self.transponders, True)
 					self.services[provider_key] = scanner.updateAndReadServicesFastscan(
 						self.transponders, providers[provider_key]["servicehacks"],
-						tmp["logical_channel_number_dict"])
+						tmp["logical_channel_number_dict"], provider_config)
 
 					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
 
@@ -254,7 +254,7 @@ class Manager():
 					bouquet = providers[provider_key]["bouquets"][bouquet_key]
 					self.services[provider_key] = scanner.updateAndReadServicesSKY(bouquet["bouquet"],
 						bouquet["region"], bouquet["key"], self.transponders,
-						providers[provider_key]["servicehacks"])
+						providers[provider_key]["servicehacks"], provider_config)
 
 					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
 
@@ -272,7 +272,7 @@ class Manager():
 					bouquet = providers[provider_key]["bouquets"][bouquet_key]
 					self.services[provider_key] = scanner.updateAndReadServicesFreeSat(bouquet["bouquet"],
 						bouquet["region"], bouquet["key"], self.transponders,
-						providers[provider_key]["servicehacks"])
+						providers[provider_key]["servicehacks"], provider_config)
 
 					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
 

@@ -73,55 +73,64 @@ class ProviderConfig():
 		return (self.flags & 0x20) == 0x20
 
 	def setMakeNormalMain(self):
-		self.flags = (self.flags & 0xbc) | 0x01
+		self.flags = (self.flags & 0x1bc) | 0x01
 
 	def setMakeCustomMain(self):
-		self.flags = (self.flags & 0xbc) | 0x02
+		self.flags = (self.flags & 0x1bc) | 0x02
 
 	def setMakeHDMain(self):
-		self.flags = (self.flags & 0xbc) | 0x03
+		self.flags = (self.flags & 0x1bc) | 0x03
 
 	def setMakeFTAHDMain(self):
-		self.flags = (self.flags & 0xbc) | 0x40
+		self.flags = (self.flags & 0x1bc) | 0x40
 
 	def unsetMakeMain(self):
-		self.flags &= 0xbc
+		self.flags &= 0x1bc
 
 	def unsetMakeFTAMain(self):
-		self.flags &= 0xbc
+		self.flags &= 0x1bc
 
 	def unsetMakeFTAHDMain(self):
-		self.flags &= 0xbc
+		self.flags &= 0x1bc
 
 	def setMakeSections(self):
 		self.flags |= 0x04
 
 	def unsetMakeSections(self):
-		self.flags &= 0xfb
+		self.flags &= 0x1fb
 
 	def setMakeHD(self):
 		self.flags |= 0x08
 
 	def unsetMakeHD(self):
-		self.flags &= 0xf7
+		self.flags &= 0x1f7
 
 	def setMakeFTA(self):
 		self.flags |= 0x10
 
 	def unsetMakeFTA(self):
-		self.flags &= 0xef
+		self.flags &= 0x1ef
 
 	def setMakeFTAHD(self):
 		self.flags |= 0x80
 
 	def unsetMakeFTAHD(self):
-		self.flags &= 0x7f
+		self.flags &= 0x17f
 
 	def setSwapChannels(self):
 		self.flags |= 0x20
 
 	def unsetSwapChannels(self):
-		self.flags &= 0xdf
+		self.flags &= 0x1df
+
+	def setCustomList(self):
+		self.flags |= 0x100
+
+	def isCustomList(self):
+		return (self.flags & 0x100) == 0x100
+
+	def unsetCustomList(self):
+		self.flags &= 0xff
 
 	def unsetAllFlags(self):
 		self.flags = 0x00

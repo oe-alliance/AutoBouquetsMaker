@@ -1,5 +1,5 @@
 Package: enigma2-plugin-systemplugins-autobouquetsmaker
-Version: 3.4.r0
+Version: 3.5.r0
 Description: Automatically build and update bouquets from the satellite stream.
 Maintainer: Skaman & AndyBlac
 Depends: enigma2

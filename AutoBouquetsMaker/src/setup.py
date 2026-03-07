@@ -74,6 +74,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 		self.providers_makefta = {}
 		self.providers_makeftahd = {}
 		self.providers_FTA_only = {}
+		self.providers_custom_list = {}
 		self.providers_order = []
 		self.orbital_supported = []
 
@@ -158,6 +159,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 			self.providers_makehd[provider] = None
 			self.providers_makefta[provider] = None
 			self.providers_makeftahd[provider] = None
+			self.providers_custom_list[provider] = None
 
 			if len(list(self.providers[provider]["sections"].keys())) > 1:  # only if there's more than one section
 				sections_default = True
@@ -226,6 +228,9 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 				if provider in providers_tmp_configs and providers_tmp_configs[provider].isMakeNormalMain():
 					makemain_default = "yes"
 				self.providers_makemain[provider] = ConfigSelection(default=makemain_default, choices=[("yes", _("yes")), ("no", _("no"))])
+
+			if self.providers[provider]["custom_list"]:
+				self.providers_custom_list[provider] = ConfigYesNo(default=(provider in providers_tmp_configs and providers_tmp_configs[provider].isCustomList()))
 
 			arealist = []
 			bouquets = self.providers[provider]["bouquets"]
@@ -305,6 +310,9 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 
 					if ((self.providers_makemain[provider] and self.providers_makemain[provider].value == "yes") or (self.providers_makesections[provider] and self.providers_makesections[provider].value is True)) and len(self.providers[provider]["swapchannels"]) > 0:
 						setupList.append(getConfigListEntry(indent + _("Swap channels"), self.providers_swapchannels[provider], _("This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)")))
+		
+					if self.providers_custom_list[provider]:
+						setupList.append(getConfigListEntry(indent + _("Custom mode"), self.providers_custom_list[provider], _("Enable custom mode to apply provider-specific channel adjustments such as adding, removing or renaming channels.")))
 
 				providers_enabled.append(provider)
 
@@ -370,6 +378,9 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 
 				if self.providers_swapchannels[provider] and self.providers_swapchannels[provider].value:
 					provider_config.setSwapChannels()
+
+				if self.providers_custom_list[provider] and self.providers_custom_list[provider].value:
+					provider_config.setCustomList()
 
 				config_string += provider_config.serialize()
 

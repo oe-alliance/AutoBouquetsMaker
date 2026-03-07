@@ -553,7 +553,7 @@ class DvbScanner():
 
 		return logical_channel_number_dict, TSID_ONID_list
 
-	def updateAndReadServicesLCN(self, transponders, servicehacks, TSID_ONID_list, logical_channel_number_dict, service_dict_tmp, protocol, bouquet_key):
+	def updateAndReadServicesLCN(self, transponders, servicehacks, TSID_ONID_list, logical_channel_number_dict, service_dict_tmp, protocol, bouquet_key, provider_config):
 		print("[ABM-DvbScanner] Reading services (LCN)...", file=log)
 
 		if self.sdt_other_table_id == 0x00:
@@ -727,7 +727,7 @@ class DvbScanner():
 			"radio": radio_services
 		}
 
-	def updateAndReadServicesFastscan(self, transponders, servicehacks, logical_channel_number_dict):
+	def updateAndReadServicesFastscan(self, transponders, servicehacks, logical_channel_number_dict, provider_config):
 		print("[ABM-DvbScanner] Reading services (fastscan)...", file=log)
 
 		fd = dvbreader.open(self.demuxer_device, self.fastscan_pid, self.fastscan_table_id, 0xff, self.frontend)
@@ -876,7 +876,7 @@ class DvbScanner():
 			"radio": radio_services
 		}
 
-	def updateAndReadServicesSKY(self, bouquet_id, region_id, bouquet_key, transponders, servicehacks):
+	def updateAndReadServicesSKY(self, bouquet_id, region_id, bouquet_key, transponders, servicehacks, provider_config):
 		print("[ABM-DvbScanner] Reading services (SKY)...", file=log)
 
 		fd = dvbreader.open(self.demuxer_device, self.bat_pid, self.bat_table_id, 0xff, self.frontend)
@@ -1119,7 +1119,7 @@ class DvbScanner():
 			"radio": radio_services
 		}
 
-	def updateAndReadServicesFreeSat(self, bouquet_id, region_id, bouquet_key, transponders, servicehacks):
+	def updateAndReadServicesFreeSat(self, bouquet_id, region_id, bouquet_key, transponders, servicehacks, provider_config):
 		print("[ABM-DvbScanner] Reading services (Freesat)...", file=log)
 
 		fd = dvbreader.open(self.demuxer_device, self.bat_pid, self.bat_table_id, 0xff, self.frontend)
