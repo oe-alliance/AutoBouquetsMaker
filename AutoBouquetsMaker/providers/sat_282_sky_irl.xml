@@ -20,8 +20,8 @@
 		onid="2"
 	/>
 	<dvbsconfigs>
-		<configuration key="hd_republic_of_ireland" bouquet="0x1008" region="0x32">ROI</configuration>
-		<!-- configuration key="sd_republic_of_ireland" bouquet="0x1004" region="0x32">ROI SD</configuration -->
+		<configuration key="hd_republic_of_ireland" bouquet="0x1008" region="0x32">ROI HD</configuration>
+		<configuration key="sd_republic_of_ireland" bouquet="0x1004" region="0x32">ROI SD</configuration>
 	</dvbsconfigs>
 	<sections>
 		<section number="101">Entertainment</section>
