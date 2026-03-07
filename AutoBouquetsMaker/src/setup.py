@@ -75,6 +75,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 		self.providers_makeftahd = {}
 		self.providers_FTA_only = {}
 		self.providers_custom_list = {}
+		self.providers_extraservices = {}
 		self.providers_order = []
 		self.orbital_supported = []
 
@@ -160,6 +161,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 			self.providers_makefta[provider] = None
 			self.providers_makeftahd[provider] = None
 			self.providers_custom_list[provider] = None
+			self.providers_extraservices[provider] = None
 
 			if len(list(self.providers[provider]["sections"].keys())) > 1:  # only if there's more than one section
 				sections_default = True
@@ -249,6 +251,12 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 			FTA = self.providers[provider]["protocol"] != "fastscan" and self.providers[provider].get("show_fta_options", True) and config.autobouquetsmaker.level.value == "expert" and provider in FTA_only
 			self.providers_FTA_only[provider] = ConfigYesNo(default=FTA)
 
+			# extra services (non-indexed channels)
+			if self.providers[provider]["protocol"] == "sky":
+				extraservices_list = config.autobouquetsmaker.extraservices.value.split("|")
+				extraservices_default = provider in extraservices_list
+				self.providers_extraservices[provider] = ConfigYesNo(default=extraservices_default)
+
 		self.createSetup()
 		self["pleasewait"].hide()
 		self["actions"].setEnabled(True)
@@ -314,6 +322,9 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 		
 					if self.providers_custom_list[provider]:
 						setupList.append(getConfigListEntry(indent + _("Custom mode"), self.providers_custom_list[provider], _("Enable custom mode to apply provider-specific channel adjustments such as adding, removing or renaming channels.")))
+		
+					if self.providers[provider]["protocol"] == "sky":
+						setupList.append(getConfigListEntry(indent + _("Include non-indexed channels"), self.providers_extraservices[provider], _("When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included.")))
 
 				providers_enabled.append(provider)
 
@@ -341,6 +352,7 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 			x[1].save()
 
 		FTA_only = []
+		extraservices = []
 
 		config_string = ""
 		for provider in self.providers_order:
@@ -388,11 +400,20 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 				if self.providers_FTA_only[provider].value:
 					FTA_only.append(provider)
 
+				if self.providers_extraservices[provider] and self.providers_extraservices[provider].value:
+					extraservices.append(provider)
+
 		# fta only
 		config.autobouquetsmaker.FTA_only.value = ''
 		if FTA_only:
 			config.autobouquetsmaker.FTA_only.value = '|'.join(FTA_only)
 		config.autobouquetsmaker.FTA_only.save()
+
+		# extra services
+		config.autobouquetsmaker.extraservices.value = ''
+		if extraservices:
+			config.autobouquetsmaker.extraservices.value = '|'.join(extraservices)
+		config.autobouquetsmaker.extraservices.save()
 
 		config.autobouquetsmaker.providers.value = config_string
 		config.autobouquetsmaker.providers.save()
@@ -465,7 +486,6 @@ class AutoBouquetsMaker_Setup(ConfigListScreen, Screen):
 			setupList.append(getConfigListEntry(_("Style of bouquet marker"), config.autobouquetsmaker.bouquetmarkerstyle, _("Choose the style of the markers that separate channels into groups in the channel lists.")))
 			setupList.append(getConfigListEntry(_("Place bouquets at"), config.autobouquetsmaker.placement, _("This option will allow you choose where to place the created bouquets.")))
 			setupList.append(getConfigListEntry(_("Skip services on not configured sats"), config.autobouquetsmaker.skipservices, _("If a service is carried on a satellite that is not configured, 'yes' means the channel will not appear in the channel list, 'no' means the channel will show in the channel list but be greyed out and not be accessible.")))
-			setupList.append(getConfigListEntry(_("Include 'not indexed' channels"), config.autobouquetsmaker.showextraservices, _("When a search finds extra channels that do not have an allocated channel number, 'yes' will add these at the end of the channel list, and 'no' means these will not be included.")))
 			setupList.append(getConfigListEntry(_("Extra debug"), config.autobouquetsmaker.extra_debug, _("This feature is for development only. Requires debug logs to be enabled or enigma2 to be started in console mode.")))
 			setupList.append(getConfigListEntry(_("Show DVB-T frequency finder"), config.autobouquetsmaker.frequencyfinder, _('Select "yes" to show the "DVB-T frequency finder" tool in the main menu. This tool is used to create a working provider file for difficult areas of the UK, e.g. areas covered by repeaters, etc.')))
 		setupList.append(getConfigListEntry(_("Show in extensions"), config.autobouquetsmaker.extensions, _("When enabled, allows you start a scan from the extensions list.")))

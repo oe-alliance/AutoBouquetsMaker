@@ -113,7 +113,7 @@ class Providers():
 						for i in list(range(0, node.attributes.length)):
 							if node.attributes.item(i).name == "custom_list":
 								provider["custom_list"] = self.parseBoolean("custom_list", node.attributes.item(i).value)
-							if node.attributes.item(i).name == "show_fta_options":
+							elif node.attributes.item(i).name == "show_fta_options":
 								provider["show_fta_options"] = self.parseBoolean("show_fta_options", node.attributes.item(i).value)
 					elif node.tagName == "streamtype":
 						node.normalize()

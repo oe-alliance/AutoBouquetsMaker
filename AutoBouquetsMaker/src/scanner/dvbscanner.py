@@ -892,7 +892,7 @@ class DvbScanner():
 		timeout = datetime.datetime.now()
 		timeout += datetime.timedelta(0, self.TIMEOUT_SEC)
 		transport_stream_id_list = []
-		extraservices = config.autobouquetsmaker.level.value == "expert" and config.autobouquetsmaker.showextraservices.value
+		extraservices = config.autobouquetsmaker.level.value == "expert" and provider_config.getProvider() in config.autobouquetsmaker.extraservices.value.split("|")
 		extra_channel_id_dict = {}
 		while True:
 			if datetime.datetime.now() > timeout:
