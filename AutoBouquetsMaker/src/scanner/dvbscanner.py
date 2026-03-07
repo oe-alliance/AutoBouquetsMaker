@@ -35,7 +35,7 @@ class DvbScanner():
 		self.fastscan_pid = 0x00
 		self.fastscan_table_id = 0x00
 		self.ignore_visible_service_flag = 0
-		self.extra_debug = config.autobouquetsmaker.level.value == "expert" and config.autobouquetsmaker.extra_debug.value
+		self.extra_debug = config.autobouquetsmaker.extra_debug.value
 		self.namespace_complete = not (config.usage.subnetwork.value if hasattr(config.usage, "subnetwork") else True)  # config.usage.subnetwork not available in all images
 		self.namespace_complete_cable = not (config.usage.subnetwork_cable.value if hasattr(config.usage, "subnetwork_cable") else True)  # config.usage.subnetwork not available in all images
 		self.namespace_complete_terrestrial = not (config.usage.subnetwork_terrestrial.value if hasattr(config.usage, "subnetwork_terrestrial") else True)  # config.usage.subnetwork not available in all images
@@ -892,7 +892,7 @@ class DvbScanner():
 		timeout = datetime.datetime.now()
 		timeout += datetime.timedelta(0, self.TIMEOUT_SEC)
 		transport_stream_id_list = []
-		extraservices = config.autobouquetsmaker.level.value == "expert" and provider_config.getProvider() in config.autobouquetsmaker.extraservices.value.split("|")
+		extraservices = provider_config.getProvider() in config.autobouquetsmaker.extraservices.value.split("|")
 		extra_channel_id_dict = {}
 		while True:
 			if datetime.datetime.now() > timeout:

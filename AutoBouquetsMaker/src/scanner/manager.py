@@ -111,7 +111,7 @@ class Manager():
 		for provider_key in self.bouquetsOrder:
 			if provider_key in providers:
 				# FTA_only
-				if config.autobouquetsmaker.level.value == "expert" and provider_key in config.autobouquetsmaker.FTA_only.value:
+				if provider_key in config.autobouquetsmaker.FTA_only.value:
 					video_services_tmp = {}
 					for number in self.services[provider_key]["video"]:
 						if self.services[provider_key]["video"][number]["free_ca"] == 0:
