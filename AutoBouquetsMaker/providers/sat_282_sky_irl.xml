@@ -259,7 +259,7 @@ except:
 		5237, # TRT World HD
 	]
 
-	broken_TSIDS = [  # not currently used
+	broken_TSIDS = [
 		0x7D3,
 		0x7D7,
 		0x7D8,
@@ -343,6 +343,12 @@ if custom_mode and service["channel_id"] in channels_to_add_by_id and service["s
 	LCNs_in_use.append(channels_to_add_by_id[service["channel_id"]])
 	service["number"] = channels_to_add_by_id[service["channel_id"]]
 	service["numbers"] = [channels_to_add_by_id[service["channel_id"]]]
+
+# Remove encrypted services from specific transport streams
+if custom_mode and service["service_type"] != 2 and service["transport_stream_id"] in broken_TSIDS and service["free_ca"] != 0:
+	while service["number"] in LCNs_in_use:
+		LCNs_in_use.remove(service["number"])
+	skip.skip = True
 
 if service["service_type"] == 0x02 and service["number"] > 3000:
 	service["number"] -= 3000
