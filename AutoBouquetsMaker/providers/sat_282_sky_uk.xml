@@ -23,7 +23,7 @@
 		<configuration key="hd_atherstone" bouquet="0x1005" region="0x13">Atherstone HD</configuration>
 		<configuration key="hd_border_england" bouquet="0x1005" region="0x0c">Border England HD</configuration>
 		<configuration key="hd_border_scotland" bouquet="0x1006" region="0x24">Border Scotland HD</configuration>
-		<configuration key="hd_brighton" bouquet="0x1007" region="0x41">Brighton</configuration>
+		<configuration key="hd_brighton" bouquet="0x1007" region="0x41">Brighton HD</configuration>
 		<configuration key="hd_central_midlands" bouquet="0x1005" region="0x03">Central Midlands HD</configuration>
 		<configuration key="hd_channel_isles" bouquet="0x1008" region="0x22">Channel Isles HD</configuration>
 		<configuration key="hd_dundee" bouquet="0x1006" region="0x27">Dundee HD</configuration>
