@@ -2,7 +2,7 @@
 	<name>Sky UK</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>sky</protocol>
-	<options 
+	<options
 		custom_list="yes"
 	/>
 	<transponder
@@ -321,8 +321,10 @@ except:
 		5272, # Racing UK HD
 	]
 
+#A list of channels that will be skipped/removed while in custom_mode.
 	blacklist = ["10001", "10002"]
 
+#A list of channel IDs that will be skipped/removed while in custom_mode.
 	blacklist_by_id = [
 		1306, # ___4109
 		1307, # ___4110
@@ -342,6 +344,7 @@ except:
 		5237, # TRT World HD
 	]
 
+#A list of tranponders on which we remove encrypted HD TV services while in custom_mode.
 	broken_TSIDS = [
 		0x7D3,
 		0x7D7,
