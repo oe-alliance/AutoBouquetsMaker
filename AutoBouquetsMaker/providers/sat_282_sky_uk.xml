@@ -143,7 +143,6 @@
 	<swapchannels>
 		<channel number="103" with="803"/> <!-- ITV, STV and UTV HD -->
 		<channel number="103" with="176" conditional="'ITV' in service_hd['service_name']"/><!-- ITV HD -->
-		<channel number="105" with="805"/> <!-- Channel 5 HD -->
 		<channel number="106" with="806"/> <!-- Sky One -->
 		<channel number="107" with="807"/> <!-- Sky Witness -->
 		<channel number="108" with="808"/> <!-- Sky Atlantic HD -->
