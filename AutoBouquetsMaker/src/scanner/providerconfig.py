@@ -17,6 +17,10 @@ class ProviderConfig():
 				self.customfilename = str(chunks[3].strip())
 			except:
 				return
+			# temporary workaround for fallout from https://github.com/oe-alliance/AutoBouquetsMaker/commit/759216d8617efae9615b3b9999947f38eacefcc4
+			if self.provider.startswith("sat_282_sky") and "custom" in self.area:
+				self.area = self.area.replace("custom", "")
+				self.setCustomList()
 
 	def isValid(self):
 		return len(self.provider) > 0
