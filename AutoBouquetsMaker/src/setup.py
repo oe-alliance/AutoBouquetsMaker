@@ -317,7 +317,11 @@ class AutoBouquetsMaker_ProvidersSetup(ConfigListScreen, Screen):
 				if self.providers_makeftahd[provider] and (self.providers_makemain[provider] is None or self.providers_makemain[provider].value != "ftahd") and not self.providers_FTA_only[provider].value:
 					setupList.append(getConfigListEntry(indent + _("Create FTA HD bouquet"), self.providers_makeftahd[provider], _("This option will create a FreeToAir High Definition bouquet, it will group all FTA HD channels into this bouquet.")))
 
-				if ((self.providers_makemain[provider] and self.providers_makemain[provider].value not in ("no", "custom")) or (self.providers_makesections[provider] and self.providers_makesections[provider].value is True)) and self.providers[provider]["swapchannels"]:
+				if self.providers[provider]["swapchannels"] and (
+					(self.providers_makemain[provider] and self.providers_makemain[provider].value not in ("no", "custom")) or
+					(self.providers_makesections[provider] and self.providers_makesections[provider].value) or
+					(self.providers_makefta[provider] and not self.providers_FTA_only[provider].value and self.providers_makefta[provider].value)
+				):
 					setupList.append(getConfigListEntry(indent + _("Swap channels"), self.providers_swapchannels[provider], _("This option will swap SD versions of channels with HD versions. (eg BBC One SD with BBC One HD, Channel Four SD with with Channel Four HD)")))
 		
 				if self.providers_custom_list[provider]:

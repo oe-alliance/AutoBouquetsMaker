@@ -627,7 +627,8 @@ class BouquetsWriter():
 		if provider_config.isMakeHDMain() or \
 			provider_config.isMakeFTAHDMain() or \
 			provider_config.isMakeHD() or \
-			provider_config.isMakeFTAHD():
+			provider_config.isMakeFTAHD() or \
+			provider_config.isMakeFTA():
 			services_swapped = {"video": {}}
 			for number in services["video"]:
 				if number in swapDict:
@@ -905,14 +906,16 @@ class BouquetsWriter():
 			current_bouquet_list = []
 			current_bouquet_list.append("#NAME %s%s%s\n" % (section_prefix, section_sep, _('FTA Channels')))
 
+			services_for_fta_bouquet = services_swapped if provider_config.isSwapChannels() else services
+
 			# Clear unused sections
 			sections_c = sections.copy()
-			sections_c = Tools().clearsections(services, sections_c, "FTA", "video")
+			sections_c = Tools().clearsections(services_for_fta_bouquet, sections_c, "FTA", "video")
 
 			section_keys_temp = sorted(list(sections_c.keys()))
 			section_key_current = section_keys_temp[0]
 
-			higher_number = sorted(list(services["video"].keys()))[-1]
+			higher_number = sorted(list(services_for_fta_bouquet["video"].keys()))[-1]
 
 			todo = None
 			for number in list(range(1, higher_number + 1)):
@@ -932,9 +935,9 @@ class BouquetsWriter():
 						section_key_current = 65535
 
 				if todo and number >= todo:
-					if number in services["video"] and 'free_ca' in services["video"][number] and services["video"][number]["free_ca"] == 0 and number not in bouquets_to_hide:
+					if number in services_for_fta_bouquet["video"] and 'free_ca' in services_for_fta_bouquet["video"][number] and services_for_fta_bouquet["video"][number]["free_ca"] == 0 and number not in bouquets_to_hide:
 						current_number += 1
-						current_bouquet_list.append(self.bouquetServiceLine(services["video"][number]))
+						current_bouquet_list.append(self.bouquetServiceLine(services_for_fta_bouquet["video"][number]))
 
 			for x in list(range(current_number, (int(current_number / 1000) + 1) * 1000)):
 				current_bouquet_list.append(self.spacer())
