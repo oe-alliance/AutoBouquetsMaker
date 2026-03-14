@@ -308,11 +308,7 @@ except:
 	whitelist = ['ITV HD',752,]
 
 	whitelist_by_id = [
-		1003, # MUTV HD
 		1372,
-		3080, # W HD
-		3077, # Alibi HD
-		3078, # Dave HD
 		3812,
 		3831,
 		4039,
