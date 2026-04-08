@@ -1,5 +1,5 @@
 <provider>
-	<name>NC+</name>
+	<name>CANAL+</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcnbat</protocol>
 	<transponder
@@ -7,7 +7,7 @@
 		frequency="10719000"		
 		symbol_rate="27500000"
 		polarization="1"
-		fec_inner="3"
+		fec_inner="5"
 		inversion="2"
 		system="1"
 		modulation="2"
@@ -18,7 +18,7 @@
 		onid="318"
 	/>
 	<sections>
-		<section number="1">NC+</section>
+		<section number="1">CANAL+</section>
 	</sections>
 	<dvbsconfigs>
 		<configuration key="sd_02020" bouquet="0x2020" region="0x83">NC+</configuration>
