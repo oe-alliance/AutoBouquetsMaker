@@ -2,6 +2,7 @@
 	<name>FreeView (UK)</name>
 	<streamtype>dvbt</streamtype>
 	<protocol>lcn</protocol>
+	<options show_fta_options="false" />
 	<dvbtconfigs>
 		<configuration key="angus______________" frequency="785800000">Angus</configuration>
 		<configuration key="beacon_hill________" frequency="785800000">Beacon Hill</configuration>
