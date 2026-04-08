@@ -2,6 +2,7 @@
 	<name>Saorview</name>
 	<streamtype>dvbt</streamtype>
 	<protocol>lcn</protocol>
+	<options show_fta_options="false" />
 	<dvbtconfigs>
 		<configuration key="clare_ennistymon" frequency="570000000">Clare, Ennistymon</configuration>
 		<configuration key="clare_maghera" frequency="690000000">Clare, Maghera</configuration>
