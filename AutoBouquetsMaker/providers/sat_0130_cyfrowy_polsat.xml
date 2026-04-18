@@ -21,6 +21,14 @@
 	</sections>
 	<servicehacks>
 <![CDATA[
+
+dxNoSDT = 0x1 # details of lamedb flags are in README.txt
+dxHoldName = 0x8 # details of lamedb flags are in README.txt
+
+service["service_flags"] = dxNoSDT | dxHoldName
+
+if service["service_type"] == 1 and service["service_name"][-2:] == 'HD':
+	service["service_type"] = 25
 ]]>
 	</servicehacks>
 </provider>
