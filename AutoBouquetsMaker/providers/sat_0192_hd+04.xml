@@ -1,5 +1,5 @@
 <provider>
-	<name>HD+ #4</name>
+	<name>HD+ #04</name>
 	<dependent>sat_0192_hd+</dependent>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcn</protocol>
