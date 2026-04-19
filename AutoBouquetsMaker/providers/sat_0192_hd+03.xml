@@ -1,20 +1,21 @@
 <provider>
-	<name>HD+ #21</name>
+	<name>HD+ #03</name>
 	<dependent>sat_0192_hd+</dependent>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcn</protocol>
 	<transponder
 		orbital_position="192"
-		frequency="11391000"
+		frequency="10832000"
 		symbol_rate="22000000"
 		polarization="0"
-		fec_inner="4"
+		fec_inner="2"
 		inversion="2"
-		system="0"
-		modulation="1"
+		system="1"
+		modulation="2"
 		roll_off="0"
 		pilot="2"
-		tsid="1013"
+		nit_other_table_id="0x00"
+		tsid="1057"
 		onid="1"
 	/>
 	<sections>
@@ -22,8 +23,6 @@
 	</sections>
 	<servicehacks>
 <![CDATA[
-if service["service_name"] in (".",):
-	skip.skip = True
-]]>	
+]]>
 	</servicehacks>
 </provider>

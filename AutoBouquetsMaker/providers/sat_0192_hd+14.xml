@@ -1,20 +1,20 @@
 <provider>
-	<name>HD+ #7</name>
+	<name>HD+ #14</name>
 	<dependent>sat_0192_hd+</dependent>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcn</protocol>
 	<transponder
 		orbital_position="192"
-		frequency="11973000"
-		symbol_rate="27500000"
+		frequency="12670000"
+		symbol_rate="23500000"
 		polarization="1"
 		fec_inner="3"
 		inversion="2"
-		system="0"
-		modulation="1"
+		system="1"
+		modulation="2"
 		roll_off="0"
 		pilot="2"
-		tsid="1078"
+		tsid="1116"
 		onid="1"
 	/>
 	<sections>
@@ -22,8 +22,8 @@
 	</sections>
 	<servicehacks>
 <![CDATA[
-# Skip non-HD+ encrypted services.
-if service["service_name"][-11:] == " HD Austria" or service["service_name"][-6:] == " HD AT":
+# Skip test services.
+if service["service_name"] == ".":
 	skip.skip = True
 ]]>
 	</servicehacks>
