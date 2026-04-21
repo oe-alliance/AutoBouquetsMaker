@@ -1380,6 +1380,59 @@ PyObject *ss_read_fastscan(PyObject *self, PyObject *args) {
 	return ret;
 }
 
+// Sky Deutschland / Sky Q channel-list carousel (table 0x9E, variable_id 0x0055 on PID 0x08AE).
+// One section carries a raw chunk of a larger NDS-ARCHIVE blob; the Python layer reassembles
+// all sections of the same version_number and parses the archive.
+PyObject *ss_parse_header_skyq(unsigned char *data, int length)
+{
+	return Py_BuildValue("{s:i,s:i,s:i,s:i,s:i,s:i,s:i}",
+		"table_id",               data[0],
+		"section_length",         length,
+		"variable_id",            (data[3] << 8) | data[4],
+		"version_number",         (data[5] >> 1) & 0x1F,
+		"current_next_indicator", data[5] & 0x01,
+		"section_number",         data[6],
+		"last_section_number",    data[7]);
+}
+
+PyObject *ss_read_skyq(PyObject *self, PyObject *args) {
+	PyObject *content = NULL, *header = NULL;
+	unsigned char buffer[4096], table_id;
+	int fd;
+
+	if (!PyArg_ParseTuple(args, "ib", &fd, &table_id))
+		return Py_None;
+
+	int size = read(fd, buffer, sizeof(buffer));
+	if (size < 14)
+		return Py_None;
+
+	if (buffer[0] != table_id)
+		return Py_None;
+
+	int section_length = ((buffer[1] & 0x0f) << 8) | buffer[2];
+
+	if (size != section_length + 3)
+		return Py_None;
+
+	// payload: bytes 13..section_length-2 inclusive (excludes 8-byte section header,
+	// 5-byte NDS sub-header and trailing 4-byte CRC32)
+	int payload_len = section_length - 14;
+	if (payload_len < 0)
+		return Py_None;
+
+	header = ss_parse_header_skyq(buffer, section_length);
+	content = PyBytes_FromStringAndSize((const char *)(buffer + 13), payload_len);
+
+	if (!header || !content)
+		return Py_None;
+
+	PyObject *ret = Py_BuildValue("{s:O,s:O}", "header", header, "content", content);
+	Py_DECREF(header);
+	Py_DECREF(content);
+	return ret;
+}
+
 PyObject *ss_read_nit(PyObject *self, PyObject *args) {
 	PyObject *content = NULL, *header = NULL;
 	unsigned char buffer[4096], table_id_current, table_id_other;
@@ -1419,6 +1472,7 @@ static PyMethodDef dvbreaderMethods[] = {
 	{ "read_nit", ss_read_nit, METH_VARARGS },
 	{ "read_sdt", ss_read_sdt, METH_VARARGS },
 	{ "read_fastscan", ss_read_fastscan, METH_VARARGS },
+	{ "read_skyq", ss_read_skyq, METH_VARARGS },
 	{ "read_ts", ss_read_ts, METH_VARARGS },
 	{ NULL, NULL }
 };

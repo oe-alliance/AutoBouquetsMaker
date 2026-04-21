@@ -1,7 +1,7 @@
 <provider>
 	<name>Sky Deutschland</name>
 	<streamtype>dvbs</streamtype>
-	<protocol>nolcn</protocol>
+	<protocol>skyde</protocol>
 	<transponder
 		orbital_position="192"
 		frequency="12031500"
@@ -15,7 +15,13 @@
 		pilot="2"
 		tsid="4"
 		onid="133"
+		skyq_pid="0x08ae"
+		skyq_table_id="0x9e"
+		skyq_variable_id="0x0055"
 	/>
+	<dvbsconfigs>
+		<configuration key="sat_hd" bouquet="0x4" region="0x0" bouquet_file="Q-skyHDTVchannels-4.txt">Satellit HD</configuration>
+	</dvbsconfigs>
 	<sections>
 		<section number="100">Entertainment</section>
 		<section number="200">Sport</section>
@@ -39,6 +45,12 @@ for number in service["numbers"]:
 		skip.skip = True
 
 if service["service_name"] in blacklist:
+	skip.skip = True
+
+# Sky DE sometimes wraps service names in DVB emphasis bytes (0x86/0x87),
+# which defeats startswith() — use a substring check so we catch e.g.
+# "STEST1" too.
+if "STEST" in service["service_name"]:
 	skip.skip = True
 
 ]]>

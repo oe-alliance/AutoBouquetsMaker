@@ -185,7 +185,7 @@ class Manager():
 
 		# providers = Providers().read()
 		if provider_key in providers:
-			if bouquet_key in providers[provider_key]["bouquets"] or providers[provider_key]["protocol"] != "sky":
+			if bouquet_key in providers[provider_key]["bouquets"] or providers[provider_key]["protocol"] not in ("sky", "skyde"):
 				scanner = DvbScanner()
 				scanner.setAdapter(self.adapter)
 				scanner.setDemuxer(self.demuxer)
@@ -261,7 +261,27 @@ class Manager():
 					self.serviceVideoRead += len(list(self.services[provider_key]["video"].keys()))
 					self.serviceAudioRead += len(list(self.services[provider_key]["radio"].keys()))
 
+				elif providers[provider_key]["protocol"] == "skyde":
+					scanner.setSdtPid(providers[provider_key]["transponder"]["sdt_pid"])
+					scanner.setSdtCurrentTableId(providers[provider_key]["transponder"]["sdt_current_table_id"])
+					scanner.setSdtOtherTableId(providers[provider_key]["transponder"]["sdt_other_table_id"])
+					scanner.setSkyqPid(providers[provider_key]["transponder"]["skyq_pid"])
+					scanner.setSkyqTableId(providers[provider_key]["transponder"]["skyq_table_id"])
+					scanner.setSkyqVariableId(providers[provider_key]["transponder"]["skyq_variable_id"])
+
+					scanner.updateTransponders(self.transponders, False)
+					bouquet = providers[provider_key]["bouquets"][bouquet_key]
+					self.services[provider_key] = scanner.updateAndReadServicesSKYDE(
+						bouquet["bouquet_file"], self.transponders,
+						providers[provider_key]["servicehacks"], provider_config)
+
+					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
+
+					self.serviceVideoRead += len(list(self.services[provider_key]["video"].keys()))
+					self.serviceAudioRead += len(list(self.services[provider_key]["radio"].keys()))
+
 				elif providers[provider_key]["protocol"] == "freesat":
+
 					scanner.setSdtPid(providers[provider_key]["transponder"]["sdt_pid"])
 					scanner.setSdtCurrentTableId(providers[provider_key]["transponder"]["sdt_current_table_id"])
 					scanner.setSdtOtherTableId(providers[provider_key]["transponder"]["sdt_other_table_id"])

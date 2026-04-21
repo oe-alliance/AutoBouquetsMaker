@@ -18,7 +18,7 @@ minimum_cache_date = mktime(datetime.strptime("21/09/2023", "%d/%m/%Y").timetupl
 
 
 class Providers():
-	VALID_PROTOCOLS = ("fastscan", "freesat", "lcn", "lcn2", "lcnbat", "lcnbat2", "nolcn", "sky", "vmuk", "vmuk2")
+	VALID_PROTOCOLS = ("fastscan", "freesat", "lcn", "lcn2", "lcnbat", "lcnbat2", "nolcn", "sky", "skyde", "vmuk", "vmuk2")
 	PROVIDERS_DIR = os.path.dirname(__file__) + "/../providers"
 	USER_PROVIDERS_DIR = os.path.realpath(resolveFilename(SCOPE_CONFIG)) + "/AutoBouquetsMaker/providers"
 
@@ -135,6 +135,9 @@ class Providers():
 						transponder["bat_table_id"] = 0x4a
 						transponder["fastscan_pid"] = 0x00  # no default value
 						transponder["fastscan_table_id"] = 0x00  # no default value
+						transponder["skyq_pid"] = 0x08ae  # Sky Q channel-list carousel (PID on 19.2E Sky DE)
+						transponder["skyq_table_id"] = 0x9e
+						transponder["skyq_variable_id"] = 0x0055
 						transponder["system"] = eDVBFrontendParametersSatellite.System_DVB_S
 						transponder["polarization"] = eDVBFrontendParametersSatellite.Polarisation_Horizontal
 						transponder["fec_inner"] = eDVBFrontendParametersSatellite.FEC_Auto
@@ -197,12 +200,18 @@ class Providers():
 								transponder["fastscan_pid"] = int(node.attributes.item(i).value, 16)
 							elif node.attributes.item(i).name == "fastscan_table_id":
 								transponder["fastscan_table_id"] = int(node.attributes.item(i).value, 16)
+							elif node.attributes.item(i).name == "skyq_pid":
+								transponder["skyq_pid"] = int(node.attributes.item(i).value, 16)
+							elif node.attributes.item(i).name == "skyq_table_id":
+								transponder["skyq_table_id"] = int(node.attributes.item(i).value, 16)
+							elif node.attributes.item(i).name == "skyq_variable_id":
+								transponder["skyq_variable_id"] = int(node.attributes.item(i).value, 16)
 							elif node.attributes.item(i).name == "onid":
 								transponder["onid"] = int(node.attributes.item(i).value)
 							elif node.attributes.item(i).name == "tsid":
 								transponder["tsid"] = int(node.attributes.item(i).value)
 
-						if len(list(transponder.keys())) in (22, 18):
+						if len(list(transponder.keys())) in (25, 18):
 							provider["transponder"] = transponder
 
 					elif node.tagName == "bouquettype":
@@ -227,12 +236,15 @@ class Providers():
 									elif node2.attributes.item(i).name == "region":
 										# allow region to be a list of values (e.g. so we can accept both SD and HD descriptors)
 										configuration["region"] = list(map(lambda x: int(x.strip(), 16), node2.attributes.item(i).value.split(",")))
+									elif node2.attributes.item(i).name == "bouquet_file":
+										# skyde protocol: filename inside the Sky Q NDS-ARCHIVE
+										configuration["bouquet_file"] = self.encodeNODE(node2.attributes.item(i).value)
 
 								node2.normalize()
 								if len(node2.childNodes) == 1 and node2.childNodes[0].nodeType == node2.TEXT_NODE:
 									configuration["name"] = self.encodeNODE(node2.childNodes[0].data)
 
-								if len(list(configuration.keys())) == 4:
+								if len(list(configuration.keys())) in (4, 5):
 									provider["bouquets"][configuration["key"]] = configuration
 
 					elif node.tagName == "dvbcconfigs":

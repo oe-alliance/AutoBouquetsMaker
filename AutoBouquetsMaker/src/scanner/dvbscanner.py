@@ -4,13 +4,102 @@ from .. import log
 
 import dvbreader
 import datetime
+import re
+import struct
 import time
 from Components.config import config
+
+
+# --- Sky Q / Sky Deutschland NDS-ARCHIVE parser -------------------------------
+# The channel-list carousel on 19.2E (PID 0x08AE, table 0x9E, variable_id 0x0055)
+# delivers an NDS-ARCHIVE container holding a nested NDS-ARCHIVE of per-bouquet
+# .txt files. Each bouquet file maps LCN to (ONID, TSID, SID) using lines of
+# the form "<lcn>=<channel_id>=dvb://<onid_hex>.<tsid_hex>.<sid_hex>;<f>;<f>".
+
+_SKYQ_LINE_RE = re.compile(rb"^\s*(\d+)=(\d+)=dvb://([0-9A-Fa-f]+)\.([0-9A-Fa-f]+)\.([0-9A-Fa-f]+)")
+_SKYQ_NDS_MAGIC = b"NDS-ARCHIVE\x00"
+
+
+def _skyq_parse_archive(data, magic_off, archive_base):
+	"""Return list of (name, bytes) for one NDS-ARCHIVE container.
+
+	magic_off      absolute offset of the 'NDS-ARCHIVE\\0' magic inside data
+	archive_base   origin for the file-offset field in each entry; 0 for the
+	               outer archive, magic_off - 6 empirically for nested
+	               archives (a 6-byte pre-magic header we do not decode).
+	"""
+	if data[magic_off:magic_off + 12] != _SKYQ_NDS_MAGIC:
+		raise ValueError("NDS-ARCHIVE magic not found at 0x%x" % magic_off)
+	off = magic_off + 12
+	# 18-byte post-magic header: FF FF | 32-bit unknown | 16-bit unknown | uint32 nfiles | 6 pad
+	nfiles = struct.unpack(">I", data[off + 8:off + 12])[0]
+	off += 18
+	entries = []
+	for _ in range(nfiles):
+		if off + 23 > len(data):
+			break
+		entry_len = data[off]
+		file_off = struct.unpack(">I", data[off + 5:off + 9])[0]
+		file_size = struct.unpack(">I", data[off + 9:off + 13])[0]
+		fname_len = data[off + 22]
+		fname = data[off + 23:off + 23 + fname_len].rstrip(b"\x00").decode("latin-1", "replace")
+		start = archive_base + file_off
+		entries.append((fname, data[start:start + file_size]))
+		off += entry_len
+	return entries
+
+
+def skyq_extract_bouquet_file(archive_data, bouquet_file):
+	"""Locate a given '.txt' filename inside the Sky Q NDS-ARCHIVE blob.
+	Raises KeyError listing the available channel-list files on miss."""
+	magic_positions = [m.start() for m in re.finditer(_SKYQ_NDS_MAGIC, archive_data)]
+	if len(magic_positions) < 2:
+		raise RuntimeError("Malformed NDS-ARCHIVE: expected at least 2 magics, got %d" % len(magic_positions))
+	root = _skyq_parse_archive(archive_data, magic_positions[0], archive_base=0)
+	nested = None
+	for name, body in root:
+		if name.endswith("sky_de_configuration.nsa"):
+			nested = body
+			break
+	if nested is None:
+		raise RuntimeError("sky_de_configuration.nsa not found in NDS-ARCHIVE")
+	nested_magic = nested.find(_SKYQ_NDS_MAGIC)
+	if nested_magic < 0:
+		raise RuntimeError("Nested NDS-ARCHIVE magic not found")
+	inner = _skyq_parse_archive(nested, nested_magic, archive_base=nested_magic - 6)
+	for name, body in inner:
+		if name == bouquet_file:
+			return body
+	available = sorted(n for n, _ in inner if "channels-" in n and not n.endswith(".headers"))
+	raise KeyError("bouquet_file %r not in archive; available: %s" % (bouquet_file, available))
+
+
+def skyq_parse_channel_list(body):
+	"""Parse a bouquet .txt into {(onid, tsid, sid): logical_channel_number}.
+	LCN 0 entries (data/interactive slots) are skipped."""
+	out = {}
+	for line in body.split(b"\r\n"):
+		m = _SKYQ_LINE_RE.match(line)
+		if not m:
+			continue
+		lcn = int(m.group(1))
+		if lcn == 0:
+			continue
+		onid = int(m.group(3), 16)
+		tsid = int(m.group(4), 16)
+		sid = int(m.group(5), 16)
+		key = (onid, tsid, sid)
+		if key not in out:
+			out[key] = lcn
+	return out
+
+# --- end Sky Q NDS-ARCHIVE parser ---------------------------------------------
 
 
 class DvbScanner():
 	TIMEOUT_SEC = 20
 	SDT_TIMEOUT = 20
+	SKYQ_TIMEOUT = 60
 
 	VIDEO_ALLOWED_TYPES = [1, 4, 5, 17, 22, 24, 25, 27, 31, 135]
 	AUDIO_ALLOWED_TYPES = [2, 10]
@@ -34,6 +123,9 @@ class DvbScanner():
 		self.bat_table_id = 0x4a
 		self.fastscan_pid = 0x00
 		self.fastscan_table_id = 0x00
+		self.skyq_pid = 0x08ae
+		self.skyq_table_id = 0x9e
+		self.skyq_variable_id = 0x0055
 		self.ignore_visible_service_flag = 0
 		self.extra_debug = config.autobouquetsmaker.extra_debug.value
 		self.namespace_complete = not (config.usage.subnetwork.value if hasattr(config.usage, "subnetwork") else True)  # config.usage.subnetwork not available in all images
@@ -102,6 +194,18 @@ class DvbScanner():
 	def setFastscanTableId(self, value):
 		self.fastscan_table_id = value
 		print("[ABM-DvbScanner] Fastscan table id: 0x%x" % self.fastscan_table_id, file=log)
+
+	def setSkyqPid(self, value):
+		self.skyq_pid = value
+		print("[ABM-DvbScanner] SkyQ pid: 0x%x" % self.skyq_pid, file=log)
+
+	def setSkyqTableId(self, value):
+		self.skyq_table_id = value
+		print("[ABM-DvbScanner] SkyQ table id: 0x%x" % self.skyq_table_id, file=log)
+
+	def setSkyqVariableId(self, value):
+		self.skyq_variable_id = value
+		print("[ABM-DvbScanner] SkyQ variable id: 0x%x" % self.skyq_variable_id, file=log)
 
 	def setVisibleServiceFlagIgnore(self, value):
 		self.ignore_visible_service_flag = value
@@ -726,6 +830,103 @@ class DvbScanner():
 			"video": video_services,
 			"radio": radio_services
 		}
+
+	def readSkyQArchive(self):
+		"""Reassemble the Sky Q / Sky Deutschland channel-list NDS-ARCHIVE.
+		Returns raw archive bytes, or None on timeout / incomplete delivery."""
+		print("[ABM-DvbScanner] Reading Sky Q channel-list carousel (PID 0x%x, table 0x%x, var_id 0x%x)..."
+			% (self.skyq_pid, self.skyq_table_id, self.skyq_variable_id), file=log)
+
+		fd = dvbreader.open(self.demuxer_device, self.skyq_pid, self.skyq_table_id, 0xff, self.frontend)
+		if fd < 0:
+			print("[ABM-DvbScanner] Cannot open the demuxer", file=log)
+			return None
+
+		version = None
+		expected = None
+		received = {}
+
+		timeout = datetime.datetime.now()
+		timeout += datetime.timedelta(0, self.SKYQ_TIMEOUT)
+		while True:
+			if datetime.datetime.now() > timeout:
+				print("[ABM-DvbScanner] Timed out reading Sky Q archive", file=log)
+				break
+
+			section = dvbreader.read_skyq(fd, self.skyq_table_id)
+			if section is None:
+				time.sleep(0.1)
+				continue
+
+			header = section["header"]
+			if header["variable_id"] != self.skyq_variable_id:
+				continue
+
+			ver = header["version_number"]
+			if version is None:
+				version = ver
+				expected = header["last_section_number"] + 1
+			elif ver != version:
+				# carousel updated mid-read - start over
+				version = ver
+				expected = header["last_section_number"] + 1
+				received = {}
+
+			sn = header["section_number"]
+			if sn in received:
+				continue
+			received[sn] = section["content"]
+			if len(received) == expected:
+				break
+
+		dvbreader.close(fd)
+
+		if not expected or len(received) != expected:
+			print("[ABM-DvbScanner] Incomplete Sky Q archive (%d/%s sections)"
+				% (len(received), expected), file=log)
+			return None
+
+		blob = b"".join(received[n] for n in range(expected))
+		print("[ABM-DvbScanner] Sky Q archive v%d assembled, %d bytes, %d sections"
+			% (version, len(blob), expected), file=log)
+		return blob
+
+	def updateAndReadServicesSKYDE(self, bouquet_file, transponders, servicehacks, provider_config):
+		print("[ABM-DvbScanner] Reading services (SKYDE, bouquet_file=%s)..." % bouquet_file, file=log)
+
+		blob = self.readSkyQArchive()
+		if not blob:
+			return {"video": {}, "radio": {}}
+
+		try:
+			body = skyq_extract_bouquet_file(blob, bouquet_file)
+		except (KeyError, RuntimeError, ValueError) as e:
+			print("[ABM-DvbScanner] Sky Q archive: %s" % e, file=log)
+			return {"video": {}, "radio": {}}
+
+		lcn_map = skyq_parse_channel_list(body)
+		print("[ABM-DvbScanner] Sky Q channel list %r: %d entries" % (bouquet_file, len(lcn_map)), file=log)
+		if not lcn_map:
+			return {"video": {}, "radio": {}}
+
+		# Convert into the shape the shared LCN path expects
+		TSID_ONID_list = []
+		logical_channel_number_dict = {}
+		for (onid, tsid, sid), lcn in lcn_map.items():
+			key = "%x:%x" % (tsid, onid)
+			if key not in TSID_ONID_list:
+				TSID_ONID_list.append(key)
+			servicekey = "%x:%x:%x" % (tsid, onid, sid)
+			logical_channel_number_dict[servicekey] = {
+				"transport_stream_id": tsid,
+				"original_network_id": onid,
+				"service_id": sid,
+				"logical_channel_number": lcn,
+			}
+
+		return self.updateAndReadServicesLCN(
+			transponders, servicehacks, TSID_ONID_list,
+			logical_channel_number_dict, {}, "skyde", bouquet_file, provider_config)
 
 	def updateAndReadServicesFastscan(self, transponders, servicehacks, logical_channel_number_dict, provider_config):
 		print("[ABM-DvbScanner] Reading services (fastscan)...", file=log)
