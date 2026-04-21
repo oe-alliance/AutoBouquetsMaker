@@ -100,6 +100,7 @@ class Providers():
 			provider["ignore_visible_service_flag"] = 0
 			provider["custom_list"] = False
 			provider["show_fta_options"] = True
+			provider["lcn_overrides"] = []
 			if dom.documentElement.nodeType == dom.documentElement.ELEMENT_NODE and dom.documentElement.tagName == "provider":
 				for node in dom.documentElement.childNodes:
 					if node.nodeType != node.ELEMENT_NODE:
@@ -368,6 +369,21 @@ class Providers():
 
 						if len(list(transponder.keys())) == 8:
 							provider["transponder"] = transponder
+
+					elif node.tagName == "lcn_overrides":
+						provider["lcn_overrides"] = []
+						for node2 in node.childNodes:
+							if node2.nodeType == node2.ELEMENT_NODE and node2.tagName == "override":
+								ov = {}
+								for i in list(range(0, node2.attributes.length)):
+									n = node2.attributes.item(i).name
+									v = node2.attributes.item(i).value
+									if n in ("onid", "tsid", "sid"):
+										ov[n] = int(v, 16 if v.lower().startswith("0x") else 10)
+									elif n == "lcn":
+										ov[n] = int(v)
+								if set(ov.keys()) >= {"onid", "tsid", "sid", "lcn"}:
+									provider["lcn_overrides"].append(ov)
 
 					elif node.tagName == "sections":
 						provider["sections"] = {}

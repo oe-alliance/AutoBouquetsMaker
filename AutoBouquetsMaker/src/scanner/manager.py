@@ -273,7 +273,8 @@ class Manager():
 					bouquet = providers[provider_key]["bouquets"][bouquet_key]
 					self.services[provider_key] = scanner.updateAndReadServicesSKYDE(
 						bouquet["bouquet_file"], self.transponders,
-						providers[provider_key]["servicehacks"], provider_config)
+						providers[provider_key]["servicehacks"], provider_config,
+						lcn_overrides=providers[provider_key].get("lcn_overrides", []))
 
 					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
 

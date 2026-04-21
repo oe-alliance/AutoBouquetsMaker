@@ -891,7 +891,7 @@ class DvbScanner():
 			% (version, len(blob), expected), file=log)
 		return blob
 
-	def updateAndReadServicesSKYDE(self, bouquet_file, transponders, servicehacks, provider_config):
+	def updateAndReadServicesSKYDE(self, bouquet_file, transponders, servicehacks, provider_config, lcn_overrides=None):
 		print("[ABM-DvbScanner] Reading services (SKYDE, bouquet_file=%s)..." % bouquet_file, file=log)
 
 		blob = self.readSkyQArchive()
@@ -906,6 +906,20 @@ class DvbScanner():
 
 		lcn_map = skyq_parse_channel_list(body)
 		print("[ABM-DvbScanner] Sky Q channel list %r: %d entries" % (bouquet_file, len(lcn_map)), file=log)
+
+		# Provider-level manual overrides — for services Sky broadcasts but does
+		# not list in the carousel (e.g. after a transponder re-allocation that
+		# Sky has not yet propagated to the channel-list .txt). Applied only
+		# when the carousel itself has no entry for the same (ONID, TSID, SID).
+		if lcn_overrides:
+			injected = 0
+			for ov in lcn_overrides:
+				key = (ov["onid"], ov["tsid"], ov["sid"])
+				if key not in lcn_map:
+					lcn_map[key] = ov["lcn"]
+					injected += 1
+			if injected:
+				print("[ABM-DvbScanner] Injected %d provider LCN override(s) for services missing from carousel" % injected, file=log)
 		if not lcn_map:
 			return {"video": {}, "radio": {}}
 

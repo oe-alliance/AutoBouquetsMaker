@@ -22,6 +22,13 @@
 	<dvbsconfigs>
 		<configuration key="sat_hd" bouquet="0x4" region="0x0" bouquet_file="Q-skyHDTVchannels-4.txt">Satellit HD</configuration>
 	</dvbsconfigs>
+	<!-- Services Sky broadcasts but does not list in the current carousel file.
+	     Entries here are applied only when the carousel has no LCN for the
+	     same (ONID, TSID, SID). Remove an entry once Sky restores it. -->
+	<lcn_overrides>
+		<override onid="0x85" tsid="0x0b" sid="0x8e" lcn="100">Sky Showcase HD</override>
+		<override onid="0x85" tsid="0x0b" sid="0x71" lcn="122">HISTORY Channel HD</override>
+	</lcn_overrides>
 	<sections>
 		<section number="100">Entertainment</section>
 		<section number="200">Sport</section>
