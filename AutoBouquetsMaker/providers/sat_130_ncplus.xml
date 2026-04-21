@@ -7,7 +7,7 @@
 		frequency="10719000"		
 		symbol_rate="27500000"
 		polarization="1"
-		fec_inner="5"
+		fec_inner="4"
 		inversion="2"
 		system="1"
 		modulation="2"
@@ -21,7 +21,7 @@
 		<section number="1">CANAL+</section>
 	</sections>
 	<dvbsconfigs>
-		<configuration key="sd_02020" bouquet="0x2020" region="0x83">NC+</configuration>
+		<configuration key="sd_02020" bouquet="0x2020" region="0x83">CANAL+</configuration>
 		<!--configuration key="sd_02021" bouquet="0x2021" region="0x83">2021</configuration-->
 		<!--configuration key="sd_02022" bouquet="0x2022" region="0x83">2022</configuration-->
 		<!--configuration key="sd_0C022" bouquet="0xC022" region="0x83">C023</configuration-->
