@@ -22,6 +22,42 @@
 	<servicehacks>
 <![CDATA[
 
+incorrectly_have_fta_flag = [
+	"13 Ulica HD",
+	"AXN HD",
+	"BBC Brit HD",
+	"BBC Cbeebies",
+	"BBC Lifestyle HD",
+	"CI Polsat HD",
+	"Disney Channel HD",
+	"Dla Abonentow",
+	"FX HD",
+	"Fx Comedy HD",
+	"History HD",
+	"Jedynka - PR",
+	"National Geographic Wild HD",
+	"Nicktoons HD",
+	"Polsat 2 HD",
+	"Polsat Cafe HD",
+	"Polsat Doku HD",
+	"Polsat Film HD",
+	"Polsat Games HD",
+	"Polsat HD",
+	"Polsat Music HD",
+	"Polsat News 2 HD",
+	"Polsat News HD",
+	"Polsat Play HD ",
+	"Polsat Play HD",
+	"Polsat Sport 1",
+	"SciFi HD",
+	"TV4 HD ",
+	"TVN 7 HD",
+	"TVN HD",
+	"TVP 2 HD",
+	"Trójka - PR",
+	]
+
+
 dxNoSDT = 0x1 # details of lamedb flags are in README.txt
 dxHoldName = 0x8 # details of lamedb flags are in README.txt
 
@@ -29,6 +65,11 @@ service["service_flags"] = dxNoSDT | dxHoldName
 
 if service["service_type"] == 1 and service["service_name"][-2:] == 'HD':
 	service["service_type"] = 25
+
+#Force encrypted flag for channels that incorrectly have an FTA flag
+if service["service_name"] in incorrectly_have_fta_flag:
+	service["free_ca"] = 1
+
 ]]>
 	</servicehacks>
 </provider>
