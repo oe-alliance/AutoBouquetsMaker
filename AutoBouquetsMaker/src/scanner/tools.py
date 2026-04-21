@@ -60,6 +60,12 @@ class Tools():
 					servicename = unicode(services[type][number]["service_name"], errors='ignore')  # noqa: F821
 				else:
 					servicename = six.ensure_text(services[type][number]["service_name"], encoding='utf-8', errors='ignore')
+				# Strip DVB control bytes from the description so generated EXAMPLE
+				# CustomLCN files show clean readable names. Covers both the C0 range
+				# (charset indicators like 0x05) and the C1 range (DVB emphasis
+				# 0x86 / 0x87, which Sky DE wraps around channel-name fragments
+				# and which six.ensure_text has already decoded to U+0086 / U+0087).
+				servicename = re.sub(r"[\x00-\x1f\x7f-\x9f]", "", servicename)
 				service_id = services[type][number]["service_id"]
 				channel_id = ("channelid=\"%d\" " % services[type][number]["channel_id"]) if "channel_id" in services[type][number] else ""
 				xml_out_list.append("\t\t<configuration lcn=\"%d\" channelnumber=\"%d\" serviceid=\"%d\" %sdescription=\"%s\"></configuration>\n" % (
