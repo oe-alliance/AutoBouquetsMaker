@@ -2,6 +2,7 @@
 	<name>Sky Deutschland</name>
 	<streamtype>dvbs</streamtype>
 	<protocol>skyde</protocol>
+	<options show_fta_options="false" />
 	<transponder
 		orbital_position="192"
 		frequency="12031500"
