@@ -1,0 +1,37 @@
+<provider>
+	<name>Astra TV Spain</name>
+	<streamtype>dvbs</streamtype>
+	<protocol>lcnbat</protocol>
+	<transponder
+		orbital_position="192"
+		frequency="11009000"
+		symbol_rate="23500000"
+		polarization="1"
+		fec_inner="3"
+		inversion="2"
+		system="1"
+		modulation="2"
+		roll_off="3"
+		pilot="2"
+		tsid="1036"
+		onid="1"
+		bat_pid="0x11"
+		bat_table_id="0x4a"
+		sdt_pid="0x11"
+		sdt_current_table_id="0x42"
+		sdt_other_table_id="0x46"
+		nit_other_table_id="0x41"
+	/>
+	<dvbsconfigs>
+		<configuration key="astratv_spain" bouquet="0x5012" region="0x83">Astra TV Spain</configuration>
+	</dvbsconfigs>
+	<sections>
+		<section number="1">Main Channels</section>
+		<section number="30">Regional Channels</section>
+		<section number="50">International Channels</section>
+	</sections>
+	<servicehacks>
+<![CDATA[
+]]>
+	</servicehacks>
+</provider>
