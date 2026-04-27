@@ -646,7 +646,7 @@ class BouquetsWriter():
 			sections_c = Tools().clearsections(services, sections_c, 'ALL', "video")
 
 			# small hack to handle the "preferred_order" list
-			higher_number = sorted(list(services["video"].keys()))[-1]
+			higher_number = sorted(list(services["video"].keys()))[-1] if services["video"] else 0
 			preferred_order_tmp = []
 
 			# expand a range into a list
@@ -764,7 +764,7 @@ class BouquetsWriter():
 						key_found = True
 
 				if higher_number == 0:  # it mean this is the last section
-					higher_number = sorted(list(services["video"].keys()))[-1]  # the highest number!
+					higher_number = sorted(list(services["video"].keys()))[-1] if services["video"] else 0  # the highest number!
 
 				# write it!
 				bouquet_current = open(path + "/%s%s.%d.tv" % (self.ABM_BOUQUET_PREFIX, section_identifier, section_number), "w")
