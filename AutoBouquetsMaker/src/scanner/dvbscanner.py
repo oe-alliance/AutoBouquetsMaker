@@ -566,6 +566,8 @@ class DvbScanner():
 		timeout = datetime.datetime.now()
 		timeout += datetime.timedelta(0, self.TIMEOUT_SEC)
 		tmp_TSID_ONID_list = []
+		seen_bouquet_ids = set()
+		bat_cycled = False
 
 		if self.extra_debug:
 			lcn_list = []
@@ -594,7 +596,21 @@ class DvbScanner():
 						xml_dict[service["bouquet_id"]] = service["description"]
 
 			if section["header"]["table_id"] == self.bat_table_id:
-				if section["header"]["bouquet_id"] != bouquet_id:
+				current_bouquet_id = section["header"]["bouquet_id"]
+				section_number = section["header"]["section_number"]
+
+				# Detect when the BAT has completed a full cycle without finding the target bouquet.
+				# If we see a bouquet_id + section_number combination we have already seen,
+				# the BAT has looped and the target bouquet is not present.
+				cycle_key = (current_bouquet_id, section_number)
+				if cycle_key in seen_bouquet_ids:
+					bat_cycled = True
+				seen_bouquet_ids.add(cycle_key)
+
+				if current_bouquet_id != bouquet_id:
+					if bat_cycled:
+						print("[ABM-DvbScanner] BAT cycled without finding bouquet 0x%x" % bouquet_id, file=log)
+						break
 					continue
 
 				if section["header"]["version_number"] != bat_section_version:
@@ -603,8 +619,8 @@ class DvbScanner():
 					bat_content = []
 					bat_sections_count = section["header"]["last_section_number"] + 1
 
-				if section["header"]["section_number"] not in bat_sections_read:
-					bat_sections_read.append(section["header"]["section_number"])
+				if section_number not in bat_sections_read:
+					bat_sections_read.append(section_number)
 					bat_content += section["content"]
 
 					if len(bat_sections_read) == bat_sections_count:
