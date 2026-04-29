@@ -47,11 +47,11 @@ class Providers():
 	def getProviderPaths(self):
 		self.USER_PROVIDERS_DIR = os.path.realpath(resolveFilename(SCOPE_CONFIG)) + "/AutoBouquetsMaker/providers"
 		paths_dict = {}
-		for filename in os.listdir(self.PROVIDERS_DIR):
+		for filename in sorted(os.listdir(self.PROVIDERS_DIR)):
 			if filename[-4:] != ".xml":
 				continue
 			paths_dict[filename] = self.PROVIDERS_DIR + "/" + filename
-		for filename in os.listdir(self.USER_PROVIDERS_DIR):  # user files take priority
+		for filename in sorted(os.listdir(self.USER_PROVIDERS_DIR)):  # user files take priority
 			if filename[-4:] != ".xml":
 				continue
 			paths_dict[filename] = self.USER_PROVIDERS_DIR + "/" + filename
