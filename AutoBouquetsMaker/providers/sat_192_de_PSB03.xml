@@ -1,22 +1,22 @@
 <provider>
-	<name>Deutsche Sender 4/9</name>
+	<name>Deutsche Sender #03</name>
 	<dependent>sat_192_de_PSB1</dependent>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcn</protocol>
 	<!-- 11836, 12187, 12460, 12545 -->
 	<transponder
 		orbital_position="192"
-		frequency="12460000"
-		symbol_rate="27500000"
+		frequency="12545000"
+		symbol_rate="22000000"
 		polarization="0"
-		fec_inner="3"
+		fec_inner="4"
 		inversion="2"
 		system="0"
 		modulation="1"
 		roll_off="0"
 		pilot="2"
-		tsid="5"
-		onid="133"
+		tsid="1107"
+		onid="1"
 	/>
 	<sections>
 		<section number="1">Deutsche Sender</section>
@@ -27,7 +27,6 @@ try:
 	is_assigned
 except:
 	is_assigned = True
-	import six
 	
 	# Where HD is available remove SD channels
 	duplicates = []
@@ -37,14 +36,6 @@ except:
 			duplicates.append(''.join(tmp_services_dict[sid]["service_name"].split(findme)))
 			
 if service['service_name'] in duplicates:
-	skip.skip = True
-
-if six.PY2:
-	service['service_name'] = service['service_name'].decode('utf_8', 'ignore').encode('ASCII', 'ignore')
-else:
-	service['service_name'] = six.ensure_text(six.ensure_str(service["service_name"], encoding='utf_8'), encoding='ASCII', errors='ignore')
-
-if 'provider_name' in service and service['provider_name'] == 'SKY':
 	skip.skip = True
 
 if service['service_name'] in ('', '.'):

@@ -1,20 +1,20 @@
 <provider>
-	<name>Deutsche Sender 8/9</name>
+	<name>Deutsche Sender #05</name>
 	<dependent>sat_192_de_PSB1</dependent>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcn</protocol>
 	<transponder
 		orbital_position="192"
-		frequency="11464000"
+		frequency="10773000"
 		symbol_rate="22000000"
 		polarization="0"
-		fec_inner="2"
+		fec_inner="3"
 		inversion="2"
 		system="1"
 		modulation="2"
 		roll_off="0"
 		pilot="2"
-		tsid="1017"
+		tsid="1053"
 		onid="1"
 	/>
 	<sections>

@@ -1,11 +1,11 @@
 <provider>
-	<name>Deutsche Sender 9/9</name>
+	<name>Deutsche Sender #12</name>
 	<dependent>sat_192_de_PSB1</dependent>
 	<streamtype>dvbs</streamtype>
 	<protocol>lcn</protocol>
 	<transponder
 		orbital_position="192"
-		frequency="12574000"
+		frequency="11553000"
 		symbol_rate="22000000"
 		polarization="0"
 		fec_inner="2"
@@ -14,7 +14,7 @@
 		modulation="2"
 		roll_off="0"
 		pilot="2"
-		tsid="1109"
+		tsid="1023"
 		onid="1"
 	/>
 	<sections>
