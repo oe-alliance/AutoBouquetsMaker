@@ -21,7 +21,7 @@
 		skyq_variable_id="0x0055"
 	/>
 	<dvbsconfigs>
-		<configuration key="sat_hd" bouquet="0x4" region="0x0" bouquet_file="Q-skyHDTVchannels-4.txt">Satellit HD</configuration>
+		<configuration key="sat_hd" bouquet="0x4" region="0x0" bouquet_file="QskyHDTVchannels-4.txt">Satellit HD</configuration>
 	</dvbsconfigs>
 	<!-- Services Sky broadcasts but does not list in the current carousel file.
 	     Entries here are applied only when the carousel has no LCN for the
