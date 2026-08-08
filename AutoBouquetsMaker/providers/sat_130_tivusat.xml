@@ -156,6 +156,15 @@ dxHoldName = 0x8 # details of lamedb flags are in README.txt
 
 service["service_flags"] = dxNoSDT | dxHoldName
 
+rename_by_sid = {
+	4120: "Cielo HD",
+}
+
+# Rename channels by sid
+if "service_id" in service and service["service_id"] in rename_by_sid:
+	service["service_name"] = rename_by_sid[service["service_id"]]
+	service["service_flags"] = dxNoSDT | dxHoldName
+
 # Correct service type of HD channels not marked as such
 if service["service_type"] in DvbScanner.VIDEO_ALLOWED_TYPES and service["service_type"] not in DvbScanner.HD_ALLOWED_TYPES and service["service_name"][-2:] == 'HD':
 	service["service_type"] = 25
