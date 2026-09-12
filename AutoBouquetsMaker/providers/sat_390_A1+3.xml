@@ -2,7 +2,7 @@
 	<name>A1</name>
         <dependent>sat_390_A1</dependent>
 	<streamtype>dvbs</streamtype>
-	<protocol>lcnbat</protocol>
+	<protocol>lcnbat2</protocol>
 	<transponder
 		orbital_position="390"
 		frequency="12137000"
