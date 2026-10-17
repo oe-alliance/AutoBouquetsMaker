@@ -1,18 +1,15 @@
-from __future__ import print_function
-from __future__ import absolute_import
+from __future__ import absolute_import, print_function
+from os import makedirs
+from os.path import exists, join, realpath
 
-# for localized messages
-from . import _
-import os
-
-from Plugins.Plugin import PluginDescriptor
+from Components.config import ConfigClock, ConfigEnableDisable, ConfigNumber, ConfigSelection, ConfigSubDict, ConfigSubsection, ConfigText, ConfigYesNo, NoSave, config
 from Components.NimManager import nimmanager
-from Tools.Directories import resolveFilename, SCOPE_CONFIG
+from Plugins.Plugin import PluginDescriptor
+from Tools.Directories import SCOPE_CONFIG, resolveFilename
 
-from .menu import AutoBouquetsMaker_Menu
-from .scanner.main import Scheduleautostart, AutoBouquetsMaker
+from . import _
+from .scanner.main import Scheduleautostart
 
-from Components.config import config, ConfigSubsection, ConfigYesNo, ConfigSelection, ConfigText, ConfigNumber, NoSave, ConfigClock, ConfigEnableDisable, ConfigSubDict
 config.autobouquetsmaker = ConfigSubsection()
 config.autobouquetsmaker.providers = ConfigText("", False)
 config.autobouquetsmaker.bouquetsorder = ConfigText("", False)
@@ -73,19 +70,21 @@ config.autobouquetsmaker.extra_debug = ConfigYesNo(default=False)
 config.autobouquetsmaker.frequencyfinder = ConfigYesNo(default=False)
 config.autobouquetsmaker.FTA_only = ConfigText("", False)
 
-user_providers_dir = os.path.realpath(resolveFilename(SCOPE_CONFIG)) + "/AutoBouquetsMaker/providers"
-user_custom_dir = os.path.realpath(resolveFilename(SCOPE_CONFIG)) + "/AutoBouquetsMaker/custom"
-if not os.path.exists(user_providers_dir):
-	os.makedirs(user_providers_dir, mode=0o755)
-if not os.path.exists(user_custom_dir):
-	os.makedirs(user_custom_dir, mode=0o755)
+user_providers_dir = join(realpath(resolveFilename(SCOPE_CONFIG)), "AutoBouquetsMaker", "providers")
+user_custom_dir = join(realpath(resolveFilename(SCOPE_CONFIG)), "AutoBouquetsMaker", "custom")
+if not exists(user_providers_dir):
+	makedirs(user_providers_dir, mode=0o755)
+if not exists(user_custom_dir):
+	makedirs(user_custom_dir, mode=0o755)
 
 
 def main(session, **kwargs):
+	from .menu import AutoBouquetsMaker_Menu  # Load the setup screens only when opened.
 	session.open(AutoBouquetsMaker_Menu)
 
 
 def startscan(session, **kwargs):
+	from .scanner.scan import AutoBouquetsMaker  # Load the scanner only when a scan starts.
 	session.open(AutoBouquetsMaker)
 
 
@@ -109,3 +108,13 @@ def Plugins(**kwargs):
 		if config.autobouquetsmaker.extensions.getValue():
 			plist.append(PluginDescriptor(name=_("AutoBouquetsMaker Scanner"), description=_("Scan and create bouquets."), where=PluginDescriptor.WHERE_EXTENSIONSMENU, fnc=startscan, needsRestart=True))
 	return plist
+
+
+def __getattr__(name):
+	if name == "AutoBouquetsMaker":
+		from .scanner.scan import AutoBouquetsMaker  # Keep external scan screen imports compatible.
+		return AutoBouquetsMaker
+	if name == "AutoBouquetsMaker_Menu":
+		from .menu import AutoBouquetsMaker_Menu  # Keep external setup screen imports compatible.
+		return AutoBouquetsMaker_Menu
+	raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
