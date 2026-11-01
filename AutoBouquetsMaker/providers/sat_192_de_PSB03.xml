@@ -15,6 +15,7 @@
 		modulation="1"
 		roll_off="0"
 		pilot="2"
+		nit_other_table_id="0x00"
 		tsid="1107"
 		onid="1"
 	/>
