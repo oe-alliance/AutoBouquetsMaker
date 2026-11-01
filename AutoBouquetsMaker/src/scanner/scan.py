@@ -502,6 +502,9 @@ class AutoBouquetsMaker(Screen):
 		self.timer.start(2000, 1)
 
 	def releaseFrontend(self):
+		for name in ("timer", "locktimer"):  # a pending timer must not fire once the frontend is gone
+			if hasattr(self, name):
+				getattr(self, name).stop()
 		if hasattr(self, 'frontend'):
 			del self.frontend
 		if hasattr(self, 'rawchannel'):
