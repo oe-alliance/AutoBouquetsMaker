@@ -35,6 +35,7 @@ class AutoBouquetsMaker(Screen):
 		self.frontend = None
 		self.rawchannel = None
 		self.postScanService = None
+		self.beacon = None  # tkgs: the transponder being tried instead of the provider's one
 		self.providers = Manager().getProviders()
 
 		self["actions"] = ActionMap(["OkCancelActions", "ColorActions"],
@@ -187,6 +188,7 @@ class AutoBouquetsMaker(Screen):
 
 		self.currentAction = self.actionsList[0]
 		del (self.actionsList[0])
+		self.beacon = None
 
 		self.progresscurrent += 1
 		if not inStandby:
@@ -203,7 +205,7 @@ class AutoBouquetsMaker(Screen):
 		print("[ABM-main][doTune] searching for tuner for %s" % self.providers[self.currentAction]["name"], file=log)
 		from Screens.Standby import inStandby
 		if self.providers[self.currentAction]["streamtype"] == "dvbs":
-			transponder = self.providers[self.currentAction]["transponder"]
+			transponder = self.beacon or self.providers[self.currentAction]["transponder"]
 		else:
 			bouquet_key = None
 			providers_tmp = self.abm_settings_str.split("|")
@@ -442,12 +444,16 @@ class AutoBouquetsMaker(Screen):
 			print("[ABM-main][checkTunerLock] LOSTLOCK", file=log)
 		elif tuner_state == "FAILED":
 			print("[ABM-main][checkTunerLock] TUNING FAILED FATAL", file=log)
+			if self.retuneBeacon():
+				return
 			self.showError(_('Tuning failed!\n\nProvider: %s\nTuner: %s\nFrequency: %d MHz%s\n\nPlease check the affected tuner for:\n\nTuner configuration errors,\nSignal cabling issues,\nAny other reception issues.') % (str(self.providers[self.currentAction]["name"]), chr(ord('A') + self.current_slotid), self.transponder["frequency"] // int(1e06 if self.providers[self.currentAction]["streamtype"] == "dvbt" else 1e03), ('\nPolarization: %s' % self.transponder["polarization"]) if "polarization" in self.transponder else ''))
 			return
 
 		self.lockcounter += 1
 		if self.lockcounter > self.LOCK_TIMEOUT:
 			print("[AutoBouquetsMaker] Timeout for tuner lock, ", file=log)
+			if self.retuneBeacon():
+				return
 			self.showError(_('Tuning lock timed out!\n\nProvider: %s\nTuner: %s\nFrequency: %d MHz%s\n\nPlease check the affected tuner for:\n\nTuner configuration errors,\nSignal cabling issues,\nAny other reception issues.') % (str(self.providers[self.currentAction]["name"]), chr(ord('A') + self.current_slotid), self.transponder["frequency"] // int(1e06 if self.providers[self.currentAction]["streamtype"] == "dvbt" else 1e03), ('\nPolarization: %s' % self.transponder["polarization"]) if "polarization" in self.transponder else ''))
 			return
 
@@ -474,10 +480,26 @@ class AutoBouquetsMaker(Screen):
 
 	def doScan(self):
 		if not self.manager.read(self.selectedProviders[self.currentAction], self.providers, self.motorised):
+			if self.manager.noData and self.retuneBeacon():
+				self.progresscurrent -= 1  # the lock of the next transponder counts again
+				return
 			print("[ABM-main][doScan] Cannot read data", file=log)
 			self.showError(_('Cannot read data'))
 			return
 		self.doActions()
+
+	def retuneBeacon(self):
+		"""tkgs: the table is not on this transponder (or it did not lock), tune to the next one it may be on. False if there is none left."""
+		if self.providers[self.currentAction].get("protocol") != "tkgs" or self.providers[self.currentAction]["streamtype"] != "dvbs":
+			return False
+		self.beacon = self.manager.nextBeacon(self.currentAction, self.providers)
+		if not self.beacon:
+			return False
+		print("[ABM-main][retuneBeacon] trying %d %s" % (self.beacon["frequency"], "S2" if self.beacon["system"] else "S"), file=log)
+		self.timer = eTimer()
+		self.timer.callback.append(self.doTune)
+		self.timer.start(100, 1)
+		return True
 
 	def doBuildIndex(self):
 		self.manager.save(self.providers, self.dependents)

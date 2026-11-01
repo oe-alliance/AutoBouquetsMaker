@@ -18,7 +18,7 @@ minimum_cache_date = mktime(datetime.strptime("21/09/2023", "%d/%m/%Y").timetupl
 
 
 class Providers():
-	VALID_PROTOCOLS = ("fastscan", "freesat", "lcn", "lcn2", "lcnbat", "lcnbat2", "nolcn", "sky", "skyde", "vmuk", "vmuk2")
+	VALID_PROTOCOLS = ("fastscan", "freesat", "lcn", "lcn2", "lcnbat", "lcnbat2", "nolcn", "sky", "skyde", "tkgs", "vmuk", "vmuk2")
 	PROVIDERS_DIR = os.path.dirname(__file__) + "/../providers"
 	USER_PROVIDERS_DIR = os.path.realpath(resolveFilename(SCOPE_CONFIG)) + "/AutoBouquetsMaker/providers"
 
@@ -124,7 +124,7 @@ class Providers():
 						node.normalize()
 						if len(node.childNodes) == 1 and node.childNodes[0].nodeType == node.TEXT_NODE and self.encodeNODE(node.childNodes[0].data) in self.VALID_PROTOCOLS:
 							provider["protocol"] = self.encodeNODE(node.childNodes[0].data)
-					elif node.tagName == "transponder":
+					elif node.tagName in ("transponder", "beacon"):
 						transponder = {}
 						transponder["nit_pid"] = 0x10
 						transponder["nit_current_table_id"] = 0x40
@@ -213,7 +213,10 @@ class Providers():
 								transponder["tsid"] = int(node.attributes.item(i).value)
 
 						if len(list(transponder.keys())) in (25, 18):
-							provider["transponder"] = transponder
+							if node.tagName == "beacon":  # the transponders to try, in order, when the provider's one has no data (tkgs)
+								provider.setdefault("beacons", []).append(transponder)
+							else:
+								provider["transponder"] = transponder
 
 					elif node.tagName == "bouquettype":
 						node.normalize()
@@ -237,6 +240,8 @@ class Providers():
 									elif node2.attributes.item(i).name == "region":
 										# allow region to be a list of values (e.g. so we can accept both SD and HD descriptors)
 										configuration["region"] = list(map(lambda x: int(x.strip(), 16), node2.attributes.item(i).value.split(",")))
+									elif node2.attributes.item(i).name == "order":
+										configuration["order"] = self.encodeNODE(node2.attributes.item(i).value)
 									elif node2.attributes.item(i).name == "bouquet_file":
 										# skyde protocol: filename inside the Sky Q NDS-ARCHIVE
 										configuration["bouquet_file"] = self.encodeNODE(node2.attributes.item(i).value)

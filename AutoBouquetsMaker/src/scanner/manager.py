@@ -26,6 +26,13 @@ class Manager():
 		self.adapter = 0
 		self.demuxer = 0
 		self.frontend = 0
+		self.noData = False  # tkgs: the last read found nothing on the transponder it was tuned to
+		self.beacons = {}  # tkgs: the transponders still to try, by provider
+
+	def nextBeacon(self, provider_key, providers):
+		"""tkgs: the next transponder to look for the table on, None if there is none left."""
+		left = self.beacons.setdefault(provider_key, list(providers[provider_key].get("beacons", [])))
+		return left.pop(0) if left else None
 
 	def setAdapter(self, id):
 		self.adapter = id
@@ -275,6 +282,25 @@ class Manager():
 						bouquet["bouquet_file"], self.transponders,
 						providers[provider_key]["servicehacks"], provider_config,
 						lcn_overrides=providers[provider_key].get("lcn_overrides", []))
+
+					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
+
+					self.serviceVideoRead += len(list(self.services[provider_key]["video"].keys()))
+					self.serviceAudioRead += len(list(self.services[provider_key]["radio"].keys()))
+
+				elif providers[provider_key]["protocol"] == "tkgs":
+					from . import tkgs
+					self.noData = False
+					try:
+						table = tkgs.read(scanner.demuxer_device, scanner.frontend, scanner.extra_debug)
+					except tkgs.NoData:
+						self.noData = True
+						print("[ABM-Manager][read] No TKGS data on this transponder", file=log)
+						return False
+					except (IOError, OSError, ValueError) as e:
+						print("[ABM-Manager][read] TKGS: %s" % e, file=log)
+						return False
+					self.services[provider_key] = tkgs.services(scanner, table, self.transponders, providers[provider_key]["servicehacks"], providers[provider_key]["bouquets"][bouquet_key]["order"])
 
 					ret = len(list(self.services[provider_key]["video"].keys())) > 0 or len(list(self.services[provider_key]["radio"].keys())) > 0
 
