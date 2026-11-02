@@ -99,7 +99,6 @@ def skyq_parse_channel_list(body):
 class DvbScanner():
 	TIMEOUT_SEC = 20
 	SDT_TIMEOUT = 20
-	SDT_IDLE_TIMEOUT = 5
 	SKYQ_TIMEOUT = 60
 
 	VIDEO_ALLOWED_TYPES = [1, 4, 5, 17, 22, 24, 25, 27, 31, 135]
@@ -697,14 +696,10 @@ class DvbScanner():
 
 		timeout = datetime.datetime.now()
 		timeout += datetime.timedelta(0, self.SDT_TIMEOUT)
-		last_new = None
 		while True:
 			if datetime.datetime.now() > timeout:
 				print("[ABM-DvbScanner] Timed out reading SDT", file=log)
 				break
-
-			if last_new and (datetime.datetime.now() - last_new).total_seconds() > self.SDT_IDLE_TIMEOUT:
-				break  # no new sections for a while.
 
 			section = dvbreader.read_sdt(fd, self.sdt_current_table_id, self.sdt_other_table_id)
 			if section is None:
@@ -729,7 +724,6 @@ class DvbScanner():
 				if section["header"]["section_number"] not in sdt_secions_status[TSID_ONID]["sections_read"]:
 					sdt_secions_status[TSID_ONID]["sections_read"].append(section["header"]["section_number"])
 					sdt_secions_status[TSID_ONID]["content"] += section["content"]
-					last_new = datetime.datetime.now()
 
 					if len(sdt_secions_status[TSID_ONID]["sections_read"]) == sdt_secions_status[TSID_ONID]["sections_count"]:
 						TSID_ONID_list.remove(TSID_ONID)
