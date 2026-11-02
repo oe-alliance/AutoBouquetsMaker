@@ -16,6 +16,8 @@
 		pilot="2"
 		tsid="1101"
 		onid="1"
+		nit_other_table_id="0x00"
+		sdt_other_table_id="0x00"
 	/>
 	<sections>
 		<section number="1">Deutsche Sender</section>

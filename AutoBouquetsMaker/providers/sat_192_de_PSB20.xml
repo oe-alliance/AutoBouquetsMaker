@@ -13,6 +13,7 @@
 		system="0"
 		modulation="1"
 		nit_other_table_id="0x00"
+		sdt_other_table_id="0x00"
 		tsid="1003"
 		onid="1"
 	/>
