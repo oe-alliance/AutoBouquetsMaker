@@ -28,11 +28,13 @@ class Manager():
 		self.frontend = 0
 		self.noData = False  # tkgs: the last read found nothing on the transponder it was tuned to
 		self.beacons = {}  # tkgs: the transponders still to try, by provider
+		self.tuned = {}  # tkgs: the beacon the provider is tuned to, if it is not on the provider's own transponder
 
 	def nextBeacon(self, provider_key, providers):
 		"""tkgs: the next transponder to look for the table on, None if there is none left."""
 		left = self.beacons.setdefault(provider_key, list(providers[provider_key].get("beacons", [])))
-		return left.pop(0) if left else None
+		self.tuned[provider_key] = left.pop(0) if left else None
+		return self.tuned[provider_key]
 
 	def setAdapter(self, id):
 		self.adapter = id
@@ -291,6 +293,10 @@ class Manager():
 				elif providers[provider_key]["protocol"] == "tkgs":
 					from . import tkgs
 					self.noData = False
+					tuned = self.tuned.get(provider_key) or providers[provider_key]["transponder"]
+					if motorised and not scanner.tsidOnidTest(tuned["onid"], tuned["tsid"]):  # make sure the dish has arrived at the correct satellite, if not try the next beacon
+						self.noData = True
+						return False
 					try:
 						table = tkgs.read(scanner.demuxer_device, scanner.frontend, scanner.extra_debug)
 					except tkgs.NoData:
